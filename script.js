@@ -197,25 +197,144 @@
 //=> catch() function is used to check the error or Promise rejected.
 //=>finally function is used whether Promise resolve or reject, this function will excute 100%.
 
-let data = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("Promise resolved");
-    //reject("Promiese rejected");
-    // here if we use both so first will excute and second will not.
-  }, 2000);
-});
+// let data = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Promise resolved");
+//     //reject("Promiese rejected");
+//     // here if we use both so first will excute and second will not.
+//   }, 2000);
+// });
 
-data
-  .then((item1) => {
-    console.log("item1", item1);
-    return item1;
-  })
-  .then((item2) => {
-    console.log("item2", item2);
-  })
-  .catch((error) => {
-    console.log("error is:", error);
-  })
-  .finally(() => {
-    console.log("finally statement excuted");
-  });
+// data
+//   .then((item1) => {
+//     console.log("item1", item1);
+//     return item1;
+//   })
+//   .then((item2) => {
+//     console.log("item2", item2);
+//   })
+//   .catch((error) => {
+//     console.log("error is:", error);
+//   })
+//   .finally(() => {
+//     console.log("finally statement excuted");
+//   });
+
+/////////////////////////////////////////// Promise.all / Promies.allsettled / Promise.race ///////////////////////////////
+//=> Promiese.all :- used when multiple promises is used + when all Promise completed then it will give response + if any reject it will response reject + it will not tell other promises solved or rejected  + it takes array and console's array + eg-
+
+// let data = Promise.all([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2 sec promise resolved");
+//     }, 2000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3 sec promise resolved");
+//     }, 3000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("4 sec promise resolved");
+//     }, 4000);
+//   }),
+// ]);
+
+// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+
+
+// => Promise.allSettled :- it responds which promise is resolved and which is rejected + it consoles array of objects + it responds when all promise completed. eg-
+
+// let data = Promise.allSettled([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2 sec promise resolved");
+//     }, 2000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3 sec promise resolved");
+//     }, 3000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject("4 sec promise rejected");
+//     }, 4000);
+//   }),
+// ]);
+
+// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+
+//=> Promise.race : -  which promise first resolves or rejected, it returnes that. eg-
+
+// let data = Promise.race([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2 sec promise resolved");
+//     }, 2000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3 sec promise resolved");
+//     }, 3000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject("4 sec promise rejected");
+//     }, 4000);
+//   }),
+// ]);
+
+// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(!!10+20) // 21 because (!! true + 20)
+
+// const obj = {
+//     a:"one",
+//     b:"two",
+//     a:"three"
+// }
+
+// console.log(obj) // here on 'a'  key "three" will updated. and "one" will overwrited 
+
+//////////////////////////////////////////////////////////////////////////////
+
+// let person = {
+//     name:"salil"
+// }
+
+// const member = person
+// person = null
+// console.log(member)
+
+/////////////////////////////////////////////////////////////////////////
+
+// var a = 8;
+// var a =10;
+
+// console.log(a) // variable can be redeclare and reassign. but last assign value will store
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+let data = "Hello, How are you?"
+ 
+
+// console.log(data.split())
+// console.log(data.split(''))
+// console.log(data.split(' '))
+// console.log(data.split('a'))
+
+// console.log(data.replace('H','_'))
+// console.log(data.replace(/H/g,'_'))
+
+// console.log(data.substring(1,data.length)) // remove first character
+// console.log(data.substring(0,data.length-1)) // remove last character
+// console.log(data.split('o')[0]) // remove string before specific character
+// console.log(data.split('o')[1]) // remove string after specific character
+//console.log(data.split('').reverse().join('')) // reverse string
+//console.log(data.trim()) // remove extra space
+
+//////////////////////////////////////// Prototypes in JS ////////////////////////////////////////////
