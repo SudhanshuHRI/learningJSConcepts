@@ -272,7 +272,9 @@
 // user.address.city = "Gurgaon";
 // console.log(obj)
 // console.log(user)
+
 //////////////////////////////////////////////////// Generator functions in Js //////////////////////////////////////////////////////////
+
 // => These are functions whoes excution we can control. we can pause and resume their excution. eg -
 // function* simpleGenerator (){
 //     console.log("function activated");
@@ -293,6 +295,16 @@
 // console.log(simpleGen.next())
 
 // => we have to call the function each time to count steps. also value written in front of yield with be console in object. when all steps completed  it will console "{value:undefined, done:true}"
+
+////////////////////////////////// Quama Operator ////////////////////////////////////////////////
+
+// let x = 10;
+// let y = 20;
+
+// x = ((y += 20), y);
+// console.log(x) // here first argument (y = y+20) is calculated and stored in y and second argument y is printed.
+
+// => in quama operator first argument is calculated and second argument will be print . it is important to store first argument calculation result in a variable.
 
 ///////////////////////////////////////////  some object concepts //////////////////////////////////////
 
@@ -316,8 +328,8 @@
 
 // const user = {
 //   name: "peter",
-//   ["pin code"]: 241001, 
-//   state: "Haryana", 
+//   ["pin code"]: 241001,
+//   state: "Haryana",
 //   city:"faridabad"
 // };
 
@@ -325,8 +337,6 @@
 //     console.log(item) // for keys
 //     console.log(user[item]) // for values
 // }
-
-
 
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
@@ -515,3 +525,27 @@
 //  }
 
 //  console.table(data) // console data in table format
+
+///////////////////////////////////////////////////////////////////////////////////
+
+// let data = [4, 7, 1, 7, 4, 9, 2, 4];
+
+// data.length = 4;
+// console.log(data); // to delete other values form array;
+
+// let sum = data.reduce((x, y) => x + y);
+// console.log(sum); // to sum all values of array;
+
+//  => to remove duplicate  values form array:-
+// let data = [1, 2, 3, 1, 2, 3];
+// let unique = new Set(data);
+// console.log(unique); // returnes value in {};
+// console.log([...unique]); // returnes value in array[]
+
+////////////////////////////////////////////////////////////////////////////////
+// => if want to swipe values without third variable with destructuring:-
+// var a = 1;
+// var b = 2;
+// [a, b] = [b, a];
+// console.log("a:", a);
+// console.log("b:", b);
