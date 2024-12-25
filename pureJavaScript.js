@@ -272,6 +272,61 @@
 // user.address.city = "Gurgaon";
 // console.log(obj)
 // console.log(user)
+//////////////////////////////////////////////////// Generator functions in Js //////////////////////////////////////////////////////////
+// => These are functions whoes excution we can control. we can pause and resume their excution. eg -
+// function* simpleGenerator (){
+//     console.log("function activated");
+//     console.log("step 1 start")
+//     yield "Reached at step 1";
+//     console.log("step 2 start");
+//     yield "Reached at step 2";
+//     console.log("step3 start")
+//     yield 'Reached at step 3'
+//     console.log("function deactivated")
+// }
+
+// let simpleGen = simpleGenerator();
+
+// console.log(simpleGen.next())
+// console.log(simpleGen.next())
+// console.log(simpleGen.next())
+// console.log(simpleGen.next())
+
+// => we have to call the function each time to count steps. also value written in front of yield with be console in object. when all steps completed  it will console "{value:undefined, done:true}"
+
+///////////////////////////////////////////  some object concepts //////////////////////////////////////
+
+// =>  in js object is collection of related data or functionallity.
+// => if we declare object in const, we can change their property but cannot reassign that object.
+// => to delete any property or function from object- delete user.name;
+// =>if we want to access or assign a object's property who contains space then :- user['pin code'] = 241001;
+
+// let key = "State";
+// let city = "hardoi"
+
+// const user = {
+//     name:"peter",
+//     ['pin code']: 241001, // if contains space;
+//     [key]: "Haryana", // if key is dynamic;
+//     city // these are called short hand properties
+// }
+// console.log(user)
+
+// => how to loop a object:-
+
+// const user = {
+//   name: "peter",
+//   ["pin code"]: 241001, 
+//   state: "Haryana", 
+//   city:"faridabad"
+// };
+
+// for (item in user){
+//     console.log(item) // for keys
+//     console.log(user[item]) // for values
+// }
+
+
 
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
@@ -451,3 +506,12 @@
 // console.log(data.split('o')[1]) // remove string after specific character
 //console.log(data.split('').reverse().join('')) // reverse string
 //console.log(data.trim()) // remove extra space
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//  let data = {
+//     name:"Sudhanshu",
+//     age:29,
+//     city:"hardoi"
+//  }
+
+//  console.table(data) // console data in table format
