@@ -1,3 +1,279 @@
+//////////////////////////////////////////////// working of JS/////////////////////////////////////////////////////////////////
+
+// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
+// => Memeory Heap :- where variable are saved. browser's memeory
+// => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
+//=> js is single threaded. means it has single call stack so it can do only one task in one time.
+// => js is single threaded and syncronous by default but it has built in features to handl async operations like callback, Promises, async/await, Event loop.
+//=>syncronise example:-
+// console.log("start")
+// console.log("end")
+
+// => async example:-
+
+// console.log("start");
+// setTimeout(() => console.log("async operation"), 2000);
+// console.log("end");
+
+// => js use event loop and task que to manage asyncronous operation without blocking main thread. it helps in fetching api and file reading
+// => in call stack which task is on top it will excute first.
+
+//*code                                //*WebAPI
+// *task Que/callback que
+//*call stack                  //*event loop
+
+// ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
+
+// reference links :- 1. https://www.jsv9000.app
+//                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
+//                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
+
+/////////////////////////////////////// Laxical Scope and closures //////////////////////////////////////////////////////
+
+// Laxical Scope => when inner function can access outer function's variable. eg-
+
+// function hello(){
+//     var a = 10;
+
+//     function innerFunction (){
+//         return a;
+//     }
+
+//     return innerFunction();
+// }
+
+// console.log(hello())
+
+// Clouser => it is a inner function who remembers outer function's variables while outer function is excuted fully.eg-
+
+// function hello() {
+//   var a = 10;
+//   function innerFunction() {
+//     return a;
+//   }
+//   return innerFunction;
+// }
+
+// var inner = hello();
+
+// console.log(inner());//10
+
+///////////////////////////////////////////////// Promises in JS //////////////////////////////////////////////////////////////
+
+// => it is a object which returns a value which can be recived in future. Promise means task will ither solve or reject.
+// => JS is single threaded so it dont wait for function to excute fully when it takes time to excute. if it takes time, js start excuting next code.
+// => fetch() always returns 2 Promieses. so we use 2 times .then and await. it's called "Promise chaining". it can be more then 2 .
+// => then() function takes a call back. it is excuted when Promise is completed(resolve or reject)
+//=> catch() function is used to check the error or Promise rejected.
+//=>finally function is used whether Promise resolve or reject, this function will excute 100%.
+
+// let data = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("Promise resolved");
+//     //reject("Promiese rejected");
+//     // here if we use both so first will excute and second will not.
+//   }, 2000);
+// });
+
+// data
+//   .then((item1) => {
+//     console.log("item1", item1);
+//     return item1;
+//   })
+//   .then((item2) => {
+//     console.log("item2", item2);
+//   })
+//   .catch((error) => {
+//     console.log("error is:", error);
+//   })
+//   .finally(() => {
+//     console.log("finally statement excuted");
+//   });
+
+/////////////////////////////////////////// Promise.all / Promies.allsettled / Promise.race ///////////////////////////////
+//=> Promiese.all :- used when multiple promises is used + when all Promise completed then it will give response + if any reject it will response reject + it will not tell other promises solved or rejected  + it takes array and console's array + eg-
+
+// let data = Promise.all([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2 sec promise resolved");
+//     }, 2000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3 sec promise resolved");
+//     }, 3000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("4 sec promise resolved");
+//     }, 4000);
+//   }),
+// ]);
+
+// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+
+// => Promise.allSettled :- it responds which promise is resolved and which is rejected + it consoles array of objects + it responds when all promise completed. eg-
+
+// let data = Promise.allSettled([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2 sec promise resolved");
+//     }, 2000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3 sec promise resolved");
+//     }, 3000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject("4 sec promise rejected");
+//     }, 4000);
+//   }),
+// ]);
+
+// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+
+//=> Promise.race : -  which promise first resolves or rejected, it returnes that. eg-
+
+// let data = Promise.race([
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2 sec promise resolved");
+//     }, 2000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3 sec promise resolved");
+//     }, 3000);
+//   }),
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       reject("4 sec promise rejected");
+//     }, 4000);
+//   }),
+// ]);
+
+// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+
+//////////////////////////////////////// Prototypes in JS ////////////////////////////////////////////
+
+// => prototypes are concepts in which object inherit features from one another + before Ecma script , prototypes are used
+// => eg-
+
+// let student = {
+//     firstName:"Sudhanshu",
+//     lastName:"Srivastava",
+//     getFullName: function (){
+//         return this.firstName +" " + this.lastName
+//     }
+// }
+
+// let teacher  = {
+//     firstName:"Anil",
+//     lastName:"Sidhu",
+//     getFullName:function(){
+//         return this.firstName + " " + this.lastName
+//     }
+// }
+
+// => here getFullName is used in both objects. So, we use prototype. eg-;
+
+// let person = {
+//   getFullName: function () {
+//     return this.firstName + " " + this.lastName;
+//   },
+// };
+
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+// };
+// let teacher = {
+//   firstName: "Anil",
+//   lastName: "Sidhau",
+// };
+
+// student.__proto__ = person;
+// teacher.__proto__ = person;
+
+// console.log(student.getFullName());
+// console.log(teacher.getFullName());
+
+//=> if you want to do same without prototype then :-
+
+// let person = {
+//     getFullName: function () {
+//       return this.firstName + " " + this.lastName;
+//     },
+//   };
+
+//   let student = {
+//     firstName: "Sudhanshu",
+//     lastName: "Srivastava",
+//     getFullName:person.getFullName
+//   };
+//   let teacher = {
+//     firstName: "Anil",
+//     lastName: "Sidhau",
+//     getFullName:person.getFullName
+//   };
+
+//   console.log(student.getFullName());
+//   console.log(teacher.getFullName());
+
+// =>  here we dont use prototype. but if we use prototype, property will load when required while without it is default loaded.
+
+// => if you want that in all object used in project a variable or function is stored by default then :-
+// Object.prototype.defaultData = "This is default data";
+// var a = {};
+// console.log(a.defaultData);
+
+//=> Same for string:-
+// String.prototype.defaultData = "This is string default data"
+// var a = "this is a string"
+// console.log(a.defaultData)
+
+//////////////////////////////////////////////// Deep copy and shallow copy //////////////////////////////////////////
+
+// let obj ={
+//     name:"Peter"
+// }
+
+// let user = obj;
+
+// user.name = "Bruce"
+// console.log(obj) //Bruce beacuse when we copy object it copy only referenct not value so obj's value is changed. variable copy only value
+
+// =>  to solve refrence issue we use shallow copy and deep copy.
+
+// => Shallow copy : - it works only on first level of object. it copy object values of first level.  eg:-
+
+// let obj = {
+//   name: "Peter",
+// };
+
+// let user = Object.assign({}, obj);
+// user.name = "Bruce";
+// console.log(obj);
+
+// => Deep copy:- to copy all levels of object values, we use Deep copy . also deep copy dont work with data and functions. eg:-
+//     let obj = {
+//         name:"Peter",
+//         address:{
+//             city:"Faridabad",
+//             state:"Haryana",
+//             country:"India"
+//         }
+//     }
+
+// let user = JSON.parse(JSON.stringify(obj))
+// user.address.city = "Gurgaon";
+// console.log(obj)
+// console.log(user)
+
+/////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
 //     var a = b = 3;
 // })();
@@ -128,166 +404,6 @@
 //   })
 // ); //[1,3,7,12,23,45] it will sort array according.
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-// Laxical Scope => when inner function can access outer function's variable. eg-
-
-// function hello(){
-//     var a = 10;
-
-//     function innerFunction (){
-//         return a;
-//     }
-
-//     return innerFunction();
-// }
-
-// console.log(hello())
-
-// Clouser => it is a inner function who remembers outer function's variables while outer function is excuted fully.eg-
-
-// function hello() {
-//   var a = 10;
-//   function innerFunction() {
-//     return a;
-//   }
-//   return innerFunction;
-// }
-
-// var inner = hello();
-
-// console.log(inner());//10
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
-// => Memeory Heap :- where variable are saved. browser's memeory
-// => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
-//=> js is single threaded. means it has single call stack so it can do only one task in one time.
-// => js is single threaded and syncronous by default but it has built in features to handl async operations like callback, Promises, async/await, Event loop.
-//=>syncronise example:-
-// console.log("start")
-// console.log("end")
-
-// => async example:-
-
-// console.log("start");
-// setTimeout(() => console.log("async operation"), 2000);
-// console.log("end");
-
-// => js use event loop and task que to manage asyncronous operation without blocking main thread. it helps in fetching api and file reading
-// => in call stack which task is on top it will excute first.
-
-//*code                                //*WebAPI
-// *task Que/callback que
-//*call stack                  //*event loop
-
-// ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
-
-// reference links :- 1. https://www.jsv9000.app
-//                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
-//                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
-
-///////////////////////////////////////////////// Promises in JS //////////////////////////////////////////////////////////////
-
-// => it is a object which returns a value which can be recived in future. Promise means task will ither solve or reject.
-// => JS is single threaded so it dont wait for function to excute fully when it takes time to excute. if it takes time, js start excuting next code.
-// => fetch() always returns 2 Promieses. so we use 2 times .then and await. it's called "Promise chaining". it can be more then 2 .
-// => then() function takes a call back. it is excuted when Promise is completed(resolve or reject)
-//=> catch() function is used to check the error or Promise rejected.
-//=>finally function is used whether Promise resolve or reject, this function will excute 100%.
-
-// let data = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     resolve("Promise resolved");
-//     //reject("Promiese rejected");
-//     // here if we use both so first will excute and second will not.
-//   }, 2000);
-// });
-
-// data
-//   .then((item1) => {
-//     console.log("item1", item1);
-//     return item1;
-//   })
-//   .then((item2) => {
-//     console.log("item2", item2);
-//   })
-//   .catch((error) => {
-//     console.log("error is:", error);
-//   })
-//   .finally(() => {
-//     console.log("finally statement excuted");
-//   });
-
-/////////////////////////////////////////// Promise.all / Promies.allsettled / Promise.race ///////////////////////////////
-//=> Promiese.all :- used when multiple promises is used + when all Promise completed then it will give response + if any reject it will response reject + it will not tell other promises solved or rejected  + it takes array and console's array + eg-
-
-// let data = Promise.all([
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2 sec promise resolved");
-//     }, 2000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3 sec promise resolved");
-//     }, 3000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("4 sec promise resolved");
-//     }, 4000);
-//   }),
-// ]);
-
-// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
-
-
-// => Promise.allSettled :- it responds which promise is resolved and which is rejected + it consoles array of objects + it responds when all promise completed. eg-
-
-// let data = Promise.allSettled([
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2 sec promise resolved");
-//     }, 2000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3 sec promise resolved");
-//     }, 3000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       reject("4 sec promise rejected");
-//     }, 4000);
-//   }),
-// ]);
-
-// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
-
-//=> Promise.race : -  which promise first resolves or rejected, it returnes that. eg-
-
-// let data = Promise.race([
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2 sec promise resolved");
-//     }, 2000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3 sec promise resolved");
-//     }, 3000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       reject("4 sec promise rejected");
-//     }, 4000);
-//   }),
-// ]);
-
-// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // console.log(!!10+20) // 21 because (!! true + 20)
@@ -298,7 +414,7 @@
 //     a:"three"
 // }
 
-// console.log(obj) // here on 'a'  key "three" will updated. and "one" will overwrited 
+// console.log(obj) // here on 'a'  key "three" will updated. and "one" will overwrited
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -320,7 +436,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 
 // let data = "Hello, How are you?"
- 
 
 // console.log(data.split())
 // console.log(data.split(''))
@@ -336,5 +451,3 @@
 // console.log(data.split('o')[1]) // remove string after specific character
 //console.log(data.split('').reverse().join('')) // reverse string
 //console.log(data.trim()) // remove extra space
-
-//////////////////////////////////////// Prototypes in JS ////////////////////////////////////////////
