@@ -358,6 +358,8 @@
 // let str = "hello world"
 // console.log(str.at(6))
 
+// => map vs foreach function :- map function returns new array and foreach function dont return anything.
+
 ///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
 
 // 1. Program to find longest word in a given sentence ?
@@ -826,7 +828,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //let z = [1,2,3,4];
-//console.log(...z) // output will come in 1 2 3 4 in string without array. when we use spread operator it will destruct. 
+//console.log(...z) // output will come in 1 2 3 4 in string without array. when we use spread operator it will destruct.
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -840,3 +842,101 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// const data = ["peter","bruce","tony"];
+
+// //const [y] = data;
+// const[,,y] = data; // getting items from array through destructuring.
+// console.log(y); // peter becz it will take first value of array.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const data = {name:"sudhanshu",age:29, city:"faridabad"};
+
+// const {age} = data; // getting property from object without dot operator.
+// console.log(age) // sudhanshu
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// how to concat 2 objects
+
+// let data1={name:"sudhanshu", age:29};
+// let data2={city:"faridabad", country:"india"};
+
+// let data = {...data1, ...data2};
+
+// console.log(data)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const result = false || {} || null;
+// console.log(result)
+
+// it will return first true value. if all are false then it will return last value. here it will return {} becz it is first true value.
+// empty string is false value.
+// blank array is true value.
+// 0 is false value.
+// blank object is true value.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log('emoji' === 'emoji') // true becz emoji's have unicode value so it will be true.
+
+//console.log(`${(x=>x)('I love')} to code`) // here  it  is immidiate invoked funciton . So, "i love" will pass as params in x and it is returning x so 'i love ' will be returned . so output will be "i love to code"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function sumValues(a, b, c) {
+//   console.log(a + b + c);
+// }
+
+//sumValues([...1, 2, 3]);
+//sumValues([...[1, 2, 3]]);
+//sumValues(...[1, 2, 3]);
+//sumValues([1, 2, 3]);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let person = {name:"Anil"};
+// Object.seal(person);
+// person.age = 29;
+// console.log(person);
+
+// if we seal the object then we cannot add new properties in object. but we can change the existing properties.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const data = [1, 2, 3, 4, 5];
+
+// data.shift(); // to remove first element of array
+// data.pop(); // to remove last element of array
+// data.unshift(0); // to add element in front of array
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const data = ["peter", "bruce", "tony"];
+// delete data[1];
+// console.log(data);
+//console.log(data.length);
+// it will remove bruce and make it empty. null and undefined take some space but empty dont take any space. array's length will remain same.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let a = 2;
+// setTimeout(() => {
+//   console.log(a);
+// }, 0);
+
+// a = 100;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let a = "like";
+// let b = `like`
+
+// console.log(a === b) // true becz both are same. backticks are used to write multi line strings and to use variables in strings.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+let a = 1;
+let c=2;
+console.log(--c===a) // true becz first c will be decremented then compared with a.
