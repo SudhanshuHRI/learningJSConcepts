@@ -338,6 +338,52 @@
 //     console.log(user[item]) // for values
 // }
 
+/////////////////////////////////  Some definations in JS ///////////////////////////////////////////////
+
+// => optional chaining operator (?.) is used to avoid errors while accessing properties.
+
+// => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
+
+// => matchAll() is Ecma script feature. powerful way to find all maches in string. eg-
+// const str = "The rain in Spain stays mainly in the plain.";
+// const regex = /in/g;
+
+// const matches = str.matchAll(regex);
+
+// for (const match of matches) {
+//   console.log(match);
+// }
+
+// => str.at() method is used to find index of specific charactor. eg-
+// let str = "hello world"
+// console.log(str.at(6))
+
+///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
+
+// 1. Program to find longest word in a given sentence ?
+//  2. How to check whether a string is palindrome or not ?
+//  3. Write a program to remove duplicates from an array ?
+//  4. Program to find Reverse of a string without using built-in method ?
+//  5. Find the max count of consecutive 1’s in an array ?
+//  6. Find the factorial of given number ?
+//  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ?
+//  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same.
+//  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.
+//  10. Write logic to get unique objects from below array ?
+//  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
+//  O/P: [{name: "sai"},{name:"Nang"}{name: "111111"}
+//  11. Write a JavaScript program to find the maximum number in an array.
+//  12. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+//  13. Write a JavaScript function to check if a given number is prime.
+//  14. Write a JavaScript program to find the largest element in a nested array.
+//  [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]
+//  15. Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
+//  16. Given a string, write a javascript function to count the occurrences of each character in the string.
+//  17. Write a javascript function that sorts an array of numbers in ascending order.
+//  18. Write a javascript function that sorts an array of numbers in descending order.
+//  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
+//  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
+
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
 //     var a = b = 3;
@@ -550,4 +596,140 @@
 // console.log("a:", a);
 // console.log("b:", b);
 
-//optional chaining. nullish coalescing . bigInt . globalThis . matchAll() . str.at() . 
+/////////////////////////////////////////////////////////////////////////////////////
+
+// function fruit() {
+//   console.log(name);
+//   console.log(price);
+
+//   var name = "apple";
+//   let price = 20;
+// }
+// fruit();
+
+// => hoisting is not applied on const and let
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// for (var i=0;i <3; i++){
+//     setTimeout(()=>{console.log(i)},2000)
+// }
+
+// =>beacuse var have global scope. first full loop will finished and setTimout will be in callback que. so all values will be 3
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// for (let i=0; i<3; i++){
+//     setTimeout(()=>{console.log(i)},2000)
+// }
+// => beacuse let have block scope . so when all 3 setTimeout will be in callback que, each have unique value of i so it will be 0,1,2.
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// let data = "size";
+// const bird={
+//     size:"small",
+// }
+
+// console.log(bird[data]) //small beacuse it will treat it as bird['size].   it is getting key dynamically.
+// console.log(bird['size']) // small because  it is a dynamic way to acces object's keys.
+// console.log(bird.size) // small beause it is used if key is static
+// console.log(bird.data) // undefined because  it dont have data property and it is static key getting method.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let c = {
+//   name: "peter",
+// };
+// let d;
+// d = c;
+// c.name = "bruce";
+// console.log(d.name); // copy by memory reference;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// var x;
+// var x = 10;
+// var x = 14
+// var x = 20;
+// console.log(x) // we  can declare same varibale multiple times with var not let. but latest value will be considered . var have global scope and let have block scope.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// var x;
+// let x = 10;
+// console.log(x) // error beacuse var have global scope so x cannot be redeclare.
+
+// let x;
+// let x = 10;
+// console.log(x) // error beacuse var have global scope so x cannot be redeclare.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let a = 3;
+// let b = new Number(3);
+
+// console.log(a==b) //true beacuse it check only value that is 3
+// console.log(a===b) // false becz new Number is a object.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// a=20;
+// console.log(a) // if no let var const is used to declare a variable it will be treat as var and global variable. it will be hoisted, reassigned and accessed from anywhare.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function fruit() {
+//   console.log("woof");
+// }
+
+// fruit.name = "apple";
+
+// fruit();
+// if fruit is function then we can assign multiple properties still funciton will have no effect on excuting.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let number = 0;
+// console.log(number++)//0
+// console.log(++number)//2
+// console.log(number)//2
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function getAge(){
+//     'use strict';
+//     age = 21;
+//     console.log(age);
+// }
+
+// getAge()
+// beacuse we are using strict mode so we have to put var or let in front of age. this use strict is limited to this function only. when we use 'use strict ' on top of page , it will apply on all page.
+// strict mode :- dont allow recieving argument with same name + always have to declare with let const var + stops "this" keyword and make it undefined +  not accepts octal values
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const obj = {
+//   1: "a",
+//   2: "b",
+//   3: "c",
+//   hello:"d"
+// };
+
+// console.log(obj.hasOwnProperty("1")); //true
+// console.log(obj.hasOwnProperty(1)); // true
+// console.log(obj.hasOwnProperty('hello')); // true
+// console.log(obj.hasOwnProperty(hello));// error
+// hasOwnProperty() function is used to check that object have that key or not.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+for(let i = 1; i<=5; i++){
+    if (i===3){
+        continue;
+    }
+    console.log(i)
+}
+
+//when go to contiue , it will exit current loop and not go to console.log(i).
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
