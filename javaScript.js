@@ -723,13 +723,120 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-for(let i = 1; i<=5; i++){
-    if (i===3){
-        continue;
-    }
-    console.log(i)
-}
+// for (let i = 1; i <= 5; i++) {
+//   if (i === 3) {
+//     continue;
+//   }
+//   console.log(i);
+// }
 
 //when go to contiue , it will exit current loop and not go to console.log(i).
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+{
+  /* <div onclick='console.log("first div clicked")'>
+  <div onclick='console.log("second div clicked")'>
+    <button onclick="console.log('button clicked')">Click</button>
+  </div>
+</div> */
+}
+
+// first button, then second div ,then first div.
+// it is called event bubbling in js. it works from inside to outside.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const person = {name:"Nadia"};
+
+// function sayHi(age) {
+//     return `${this.name} is ${age}`;
+// }
+
+// console.log(sayHi.call(person,21))
+// console.log(sayHi.bind(person,21))
+// console.log(sayHi.bind(person,21)())
+
+// call() dont have to call again but bind have to call itself again.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function sayHi() {
+//   //   return (() => 0)();
+//   return (() => 0)();
+// }
+// console.log(typeof sayHi());
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(typeof typeof 1) // string  because typeof 1 is "number" then it is string.
+//console.log([..."Sudhanshu"]) // it will break string in array.
+// console.log(!!undefined); // false becz null and undefined both are consider as false value.
+// console.log(!!null); //false
+// console.log(!!"a"); // true
+// console.log(!!""); // false because empty string consider as false but proper string consider as true;
+// console.log(!!-2); // true but if we use zero it will consider as false. negative value will also consider as true.
+// console.log(!!0); // false
+// console.log(!!2); // true
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const numbers = [1,2,3];
+// numbers[4] = numbers;
+// console.log(numbers)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(setInterval(()=> console.log('HI'),1000))
+// console.log(setInterval(()=> console.log('HI'),1000))
+// console.log(setInterval(()=> console.log('HI'),1000))
+
+// every setInterval returns a unique id. so it will return 3 unique id.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//console.log(typeof 3 + 4 + "5"); // number45
+// in funciton when we return nothing and only type return, it will pass undefined.
+// when we pass object as params it passes  by reference.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// (() => {
+//   let x = y = 10;
+// })();
+// console.log(typeof y);
+// console.log(typeof x);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let x = 100;
+// (() => {
+//   var x = 20; // now this x is local variable;
+// })();
+
+// console.log(x);
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let a = [];
+// let b = a;
+
+// console.log(a==b);//true
+// console.log(a===b);//true becz memory  reference is same and copied in b.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//let z = [1,2,3,4];
+//console.log(...z) // output will come in 1 2 3 4 in string without array. when we use spread operator it will destruct. 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//let data = {name:"sudhanshu"}
+//console.log(delete data.name) // true becz delete action is completed  successfully and it will return true. if action is not completed, then it will be false.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//let data = {name:"sudhanshu"};
+//console.log(delete data); // false becz we cannot delete whole object with delete keyword. we can delete only properties;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
