@@ -975,7 +975,7 @@
 // printX();
 // console.log(x);
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////// chat gpt
 // function testScope() {
 //   if (true) {
 //     var a = 5;
@@ -1004,15 +1004,304 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-function createFunctionsFixed() {
-  let funcs = [];
-  for (var i = 0; i < 3; i++) {
-    funcs.push(((index) => () => console.log(index))(i));
-  }
-  return funcs;
-}
+// function createFunctionsFixed() {
+//   let funcs = [];
+//   for (var i = 0; i < 3; i++) {
+//     funcs.push(((index) => () => console.log(index))(i));
+//   }
+//   return funcs;
+// }
 
-const functionsFixed = createFunctionsFixed();
-functionsFixed[0](); // ?
-functionsFixed[1](); // ?
-functionsFixed[2](); // ?
+// const functionsFixed = createFunctionsFixed();
+// functionsFixed[0](); // ?
+// functionsFixed[1](); // ?
+// functionsFixed[2](); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// function outer() {
+//   let outerVar = "I’m outside!";
+
+//   function inner() {
+//     console.log(outerVar);
+//   }
+
+//   return inner;
+// }
+
+// const myInner = outer();
+// myInner();
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function Counter() {
+//   let count = 0;
+
+//   return {
+//     increment: () => count++,
+//     getCount: () => count
+//   };
+// }
+
+// const counter1 = Counter();
+// counter1.increment();
+// counter1.increment();
+// console.log(counter1.getCount()); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const add = (function () {
+//   let counter = 0;
+//   return function () {
+//     counter += 1;
+//     return counter;
+//   };
+// })();
+
+// console.log(add()); // ?
+// console.log(add()); // ?
+// console.log(add()); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(myVar); // ?
+// var myVar = 10;
+
+// console.log(myFunc()); // ?
+// function myFunc() {
+//   return 20;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(myLetVar); // ?
+// let myLetVar = 5;
+
+// console.log(myConstVar); // ?
+// const myConstVar = 10;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function test() {
+//   console.log(a); // ?
+//   var a = 10;
+//   console.log(a); // ?
+// }
+
+// test();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// {
+//   console.log(myVar); // ?
+//   let myVar = 100;
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// var x = 1;
+
+// function test() {
+//   console.log(x); // ?
+//   var x = 2;
+//   console.log(x); // ?
+// }
+
+// test();
+// console.log(x); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("Timeout");
+// }, 0);
+
+// console.log("End");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// setTimeout(() => {
+//   console.log("First timeout");
+//   setTimeout(() => {
+//     console.log("Second timeout");
+//   }, 0);
+// }, 0);
+
+// console.log("Sync log");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log("Start");
+
+// setTimeout(() => {
+//   console.log("setTimeout");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//   console.log("Promise");
+// });
+
+// console.log("End");
+
+//The reason the Promise callback executes before the setTimeout callback lies in JavaScript's event loop and task queues.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log("A");
+
+// setTimeout(() => {
+//   console.log("B");
+// }, 100);
+
+// setTimeout(() => {
+//   console.log("C");
+// }, 0);
+
+// Promise.resolve().then(() => {
+//   console.log("D");
+// });
+
+// console.log("E");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// async function asyncFunc() {
+//   console.log("1");
+//   await Promise.resolve();
+//   console.log("2");
+// }
+
+// console.log("3");
+// asyncFunc();
+// console.log("4");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayHello = function () {
+//   return `Hello, my name is ${this.name}`;
+// };
+
+// const john = new Person("John");
+
+// console.log(john.sayHello()); // ?
+// console.log(john.__proto__ === Person.prototype); // ?
+// console.log(Person.prototype.__proto__ === Object.prototype); // ?
+// console.log(Object.prototype.__proto__); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const obj1 = {
+//   value: 10,
+// };
+
+// const obj2 = Object.create(obj1);
+// obj2.value = 20;
+
+// console.log(obj2.value); // ?
+// delete obj2.value;
+// console.log(obj2.value); // ?
+// delete obj1.value;
+// console.log(obj2.value); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function Animal() {
+//   this.legs = 4;
+// }
+
+// Animal.prototype.walk = function () {
+//   return `I walk on ${this.legs} legs`;
+// };
+
+// const dog = new Animal();
+// dog.legs = 3;
+
+// console.log(dog.walk()); // ?
+// delete dog.legs;
+// console.log(dog.walk()); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Array.prototype.sum = function () {
+//   return this.reduce((a, b) => a + b, 0);
+// };
+
+// const numbers = [1, 2, 3];
+// console.log(numbers.sum()); // ?
+
+// delete Array.prototype.sum;
+// console.log(numbers.sum()); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function Car(model) {
+//   this.model = model;
+// }
+
+// Car.prototype.getModel = function () {
+//   return this.model;
+// };
+
+// const tesla = new Car("Model S");
+
+// console.log(tesla.constructor === Car); // ?
+// console.log(tesla.getModel()); // ?
+// Car.prototype = {};
+// console.log(tesla.constructor === Car); // ?
+// console.log(tesla.getModel()); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(1 == "1"); // ?
+// console.log(0 == false); // ?
+// console.log(null == undefined); // ?
+// console.log([] == false); // ?
+// console.log([] == ![]); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(1 === "1"); // ?
+// console.log(0 === false); // ?
+// console.log(null === undefined); // ?
+// console.log([] === []); // ?
+// console.log({} === {}); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// console.log("5" - 2); // ?
+// console.log("5" + 2); // ?
+// console.log("5" * "2"); // ?
+// console.log(true + false); // ?
+// console.log("5" - true); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// const obj = { value: 10 };
+
+// console.log(obj == "[object Object]"); // ?
+// console.log(obj.toString() == "[object Object]"); // ?
+// console.log(obj + 10); // ?
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// console.log(false || "Hello"); // ?
+// console.log(true && "World"); // ?
+// console.log(null || undefined); // ?
+// console.log("" && 0); // ?
+// console.log(0 || (1 && 2)); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function outer() {
+//   console.log("Outer Start");
+//   function inner() {
+//     console.log("Inner Start");
+//   }
+//   inner();
+//   console.log("Outer End");
+// }
+// outer();
+// console.log("Global End");
+
