@@ -359,6 +359,7 @@
 // console.log(str.at(6))
 
 // => map vs foreach function :- map function returns new array and foreach function dont return anything.
+// => navigator object is used to get information about browser in js
 
 ///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
 
@@ -937,6 +938,81 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let a = 1;
-let c=2;
-console.log(--c===a) // true becz first c will be decremented then compared with a.
+// let a = 1;
+// let c=2;
+// console.log(--c===a) // true becz first c will be decremented then compared with a.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// let a = 1;
+// let b = 1;
+// let c = 2;
+// console.log(a === b === --c); //false becz first a===b will be true then it will compare with c.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function testBlockScope() {
+//   if (true) {
+//     let x = 10;
+//     const y = 20;
+//     var z = 30;
+//   }
+//   console.log(typeof x); // ?
+//   console.log(typeof y); // ?
+//   console.log(typeof z); // ?
+// }
+// testBlockScope();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//  let x = 10;
+
+// function printX() {
+//   let x = 20;
+//   console.log(x);
+// }
+
+// printX();
+// console.log(x);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// function testScope() {
+//   if (true) {
+//     var a = 5;
+//     let b = 10;
+//   }
+//   console.log(a);
+//   console.log(b);
+// }
+
+// testScope();
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// function createFunctions() {
+//   let funcs = [];
+//   for (var i = 0; i < 3; i++) {
+//     funcs.push(() => console.log(i));
+//   }
+//   return funcs;
+// }
+
+// const functions = createFunctions();
+// functions[0](); // ?
+// functions[1](); // ?
+// functions[2](); // ?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function createFunctionsFixed() {
+  let funcs = [];
+  for (var i = 0; i < 3; i++) {
+    funcs.push(((index) => () => console.log(index))(i));
+  }
+  return funcs;
+}
+
+const functionsFixed = createFunctionsFixed();
+functionsFixed[0](); // ?
+functionsFixed[1](); // ?
+functionsFixed[2](); // ?
