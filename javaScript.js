@@ -388,6 +388,31 @@
 // => map vs foreach function :- map function returns new array and foreach function dont return anything.
 // => navigator object is used to get information about browser in js
 
+
+//////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
+
+// Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
+// Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
+// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed. 
+// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.  
+// Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
+// Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
+// Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
+// Algorithm and Data Structure Puzzles: Practice solving common algorithmic challenges like sorting, searching, and optimization.
+// Destructuring and Spread Operator Puzzles: Solve puzzles that involve destructuring arrays and objects, and using the spread operator for both objects and arrays.
+// Regular Expression Puzzles: Challenge yourself to write regular expressions that match specific patterns.
+// Error Handling and Exception Puzzles: Predict and handle errors in code, such as try-catch blocks and asynchronous error handling.
+// Bitwise Operations Puzzles: Solve challenges using bitwise operators for efficient calculations.
+// Logical Puzzles and Challenges: Solve logical puzzles that require reasoning through JavaScript’s behavior.
+// Functional Programming Puzzles: Work with higher-order functions, immutability, and pure functions.
+// Performance and Optimization Puzzles: Optimize code for performance and solve challenges related to memory usage and execution time.
+// Recursion Puzzles: Solve puzzles that involve recursive function calls.
+// Promise and Async/Await Puzzles: Dive into asynchronous code and solve challenges using promises and async/await.
+// Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
+// Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
+// Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
+
+
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
 //     var a = b = 3;
