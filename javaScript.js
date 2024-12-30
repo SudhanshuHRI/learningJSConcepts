@@ -1,3 +1,7 @@
+// javascript =  1.concepts
+//               2.puzzles on concepts
+//               3.practice
+
 ///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
 
 // 1. Program to find longest word in a given sentence ?
@@ -24,7 +28,7 @@
 //  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
 //  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
 
-//////////////////////////////////////////////// working of JS/////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////// working of JS /////////////////////////////////////////////////////////////////
 
 // => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
 // => Memeory Heap :- where variable are saved. browser's memeory
@@ -70,7 +74,7 @@
 
 // console.log(hello())
 
-// Clouser => it is a inner function who remembers outer function's variables while outer function is excuted fully.eg-
+// Clousers => it is a inner function who remembers outer function's variables while outer function is excuted fully.eg-
 
 // function hello() {
 //   var a = 10;
@@ -388,13 +392,12 @@
 // => map vs foreach function :- map function returns new array and foreach function dont return anything.
 // => navigator object is used to get information about browser in js
 
-
 //////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
 
 // Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
 // Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
-// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed. 
-// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.  
+// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed.
+// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.
 // Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
 // Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
 // Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
@@ -411,7 +414,6 @@
 // Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
 // Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
 // Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
-
 
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
