@@ -385,6 +385,8 @@ Practice();
 
 /////////////////////////////////  Some definations in JS ///////////////////////////////////////////////
 
+// Semantic elements
+
 // => optional chaining operator (?.) is used to avoid errors while accessing properties.
 
 // => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
