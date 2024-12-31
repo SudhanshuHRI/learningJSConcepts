@@ -31,3 +31,31 @@
 // Clustering and Load Balancing: Implement load balancing in Node.js for scaling applications.
 // Implementing Worker Threads: Use worker threads to handle CPU-intensive tasks in Node.js.
 // Testing with Mocha, Chai, and Jest: Write unit and integration tests for Node.js applications.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//how node.js worker
+//is node.js sigle threaded? yes, then how it handle concurrency
+// what kind of api function is supported by node.js
+// what is module in node.js
+// what is control flow in node.js
+// what is event loop in node.js
+// what is REPL in node.js
+// difference between node.js and ajax
+// what is event driven programming in node.js
+// what is buffer in node.js
+// what are streams in node.js
+// crypto module in node.js
+// what is callback hell
+// use of timers module , crypto module in node.js
+// difference between setImmediate() and process.nextTick();
+// difference between setTimiout and set immidiate
+//fork in nod.js
+//difference between fork and spawn
+// passport module in node.js
+// three methods to avoid callback hell
+// evenyEmitter in node.js
+// url module in node.js
+
+
