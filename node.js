@@ -35,9 +35,11 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//how node.js worker
+//1. What is Node.js and it's history?
+// 
+// how node.js work
 //is node.js sigle threaded? yes, then how it handle concurrency
-// what kind of api function is supported by node.js
+// what kind of api function is supported by node.js. 
 // what is module in node.js
 // what is control flow in node.js
 // what is event loop in node.js
