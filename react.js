@@ -47,41 +47,17 @@
 
 // 2.What are the advantages of react? and disadvantages
 // => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
+// => disadvantages :- not major disadvantages
 
-// 3. What are Call, apply and bind methods, what is currying in JavaScript.
-// => these method is used to set value of "this" in function.
-// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional .
-// eg:-
-// const person = {
-//   name: "john",
-// };
+// 3. What are Call, apply and bind methods, what is currying in JavaScript?
 
-// function greet(greeting, punctuation) {
-//   console.log(`${greeting} , ${this.name}${punctuation}`);
-
-// }
-
-// greet.call(person, "hello", "!");
+// => when we want to attach a function to different object for re-use then we use these methods + 
+// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional.
 
 // => apply() :- similer to call() but takes arguments in array .
-// eg :-
-// const person = {
-//   name: "Alice",
-// };
-
-// function greet(greeting, punctuation) {
-//   console.log(`${greeting} , ${this.name}${punctuation}`);
-// }
-
-// greet.apply(person, ["hi", "."]);
-// => bind() :- didnot invokes immidiately + returns a function.
-// eg :-
-// const person = {
-//   name: "Jane",
-// };
-
-// const boundGreet = greet.bind(person, "Hey");
-// boundGreet("!"); // Output: Hey, Jane!
+//
+// => bind() :- did not invokes immidiately + returns a function.
+// 
 
 // 3. difference between function and class component
 // 4.What are higher-order components
