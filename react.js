@@ -51,17 +51,68 @@
 
 // 3. What are Call, apply and bind methods, what is currying in JavaScript?
 
-// => when we want to attach a function to different object for re-use then we use these methods + 
-// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional.
+// => when we want to attach a function to different object for re-use then we use these methods.
 
-// => apply() :- similer to call() but takes arguments in array .
-//
-// => bind() :- did not invokes immidiately + returns a function.
-// 
+// Problem:-
+// function getFullName(firstName, lastName) {
+//   return `${firstName} ${lastName}`;
+// }
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+//   getFullName: getFullName(this.firstName, this.lastName),
+// };
 
-// 3. difference between function and class component
-// 4.What are higher-order components
-// 5. How to modularize code in ReactJs, How to perform test, what is typescript and how it's different.
+// console.log(student.getFullName); // here it will come undefined undefined so we need call apply bind methods + normal functions cannot be called in object for reuse
+
+// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional. + attached function called autometically
+// example : -
+
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+// };
+
+// let teacher = {
+//   firstName: "Anil",
+//   lastName: "Siddhu",
+// };
+
+// function getFullName() {
+//   return `${this.firstName} ${this.lastName}`;
+// }
+
+//console.log(getFullName.call(student)); // here getFullName function is attached with student's object.
+//console.log(getFullName.call(teacher)); // here getFullName function is attached with techer's object.
+
+// function chooseSubject(sub1,sub2){
+//     return [sub1,sub2]
+// }
+
+//console.log(chooseSubject.call(teacher,"maths","hindi")) // here cooseSubject function is attached with teacher object and 2 arguments are passed in chooseSubject(). if we want to send a lot of arguments then we use apply() method. call() takes any datatype of params.
+
+// => apply() :- similer to call() but takes arguments in array. it takes only array as params + function called autometically
+// example:-
+
+//console.log(chooseSubject.apply(teacher,["maths","hindi"]))
+
+// => bind() :- did not invokes immidiately + returns a function +  attach function in object but dont call it + it can called when ever required.
+//example:-
+//  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
+
+//  console.log(bindVariable());
+
+// 3. difference between function and class component?
+// => function based components :- uses simple js funciton to define component + no render () method needed to return jsx + uses useState hook to manage state + uses useEffect hook to handle side effects and lifecycle behaviours .
+
+// => class based components:- uses ES6's class syntax to define component + require render () to return jsx + uses "this.state" and "setState"  to manage state + uses dedicated life cycle method like componentDidMount(),componentDidUpdate(), componentWillUnmount().
+
+// 4.What are higher-order components?
+// => Mostly used in class based components + HOC is a function who takes component as a parameter and returns a new component +
+// example:-
+
+// 5. what is typescript and how it's different.
+// => developed by microsoft + define datatype of variable + typing error caught instant + JS is dynamic typed and ts is static typed + 
 // 6. How are data passed from children to parents in react component?
 // 7.Explain UseMemo, UseCallback, UseEffect and all hooks of react.js and lifecycle method in the class component.
 // What are lifecycle methods of react? How we can achieve same in functional components?
