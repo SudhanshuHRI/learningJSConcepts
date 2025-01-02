@@ -4,19 +4,19 @@
 
 ///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
 
-function Practice() {
-  let data = 5;
+// function Practice() {
+//   let data = 5;
 
-  let factorial = 1;
+//   let factorial = 1;
 
-  for (let i = 0; i <= data; i++) {
-    factorial = factorial * (data - 1);
-    data = data - 1;
-  }
-  console.log(factorial);
-}
+//   for (let i = 0; i <= data; i++) {
+//     factorial = factorial * (data - 1);
+//     data = data - 1;
+//   }
+//   console.log(factorial);
+// }
 
-Practice();
+// Practice();
 
 // 1. Program to find longest word in a given sentence ?
 //  2. How to check whether a string is palindrome or not ?

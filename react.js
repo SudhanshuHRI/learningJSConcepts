@@ -41,11 +41,48 @@
 // Convert decimal to binary without using inbuilt functions.
 // Number to word like 102 one hundred two
 
-
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
 // 1. What is React.js  and it's history?
-// What are the advantages of react? and disadvantages
-// 2.What are Call, apply and bind methods, what is currying in JavaScript, closure , promises, hoisting, event Loop, restructuring.
+// => facebook created it in 2011
+
+// 2.What are the advantages of react? and disadvantages
+// => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
+
+// 3. What are Call, apply and bind methods, what is currying in JavaScript.
+// => these method is used to set value of "this" in function.
+// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional .
+// eg:-
+// const person = {
+//   name: "john",
+// };
+
+// function greet(greeting, punctuation) {
+//   console.log(`${greeting} , ${this.name}${punctuation}`);
+
+// }
+
+// greet.call(person, "hello", "!");
+
+// => apply() :- similer to call() but takes arguments in array .
+// eg :-
+// const person = {
+//   name: "Alice",
+// };
+
+// function greet(greeting, punctuation) {
+//   console.log(`${greeting} , ${this.name}${punctuation}`);
+// }
+
+// greet.apply(person, ["hi", "."]);
+// => bind() :- didnot invokes immidiately + returns a function.
+// eg :-
+// const person = {
+//   name: "Jane",
+// };
+
+// const boundGreet = greet.bind(person, "Hey");
+// boundGreet("!"); // Output: Hey, Jane!
+
 // 3. difference between function and class component
 // 4.What are higher-order components
 // 5. How to modularize code in ReactJs, How to perform test, what is typescript and how it's different.
@@ -101,4 +138,3 @@
 // How to perform automatic redirect after login?
 //  How to pass data between sibling components using React router?
 // How to prevent re-renders in React?
-
