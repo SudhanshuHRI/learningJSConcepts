@@ -462,6 +462,16 @@
 // console.log("A" - "B" + "2"); // NaN2
 // console.log("A" - "B" + 2); // NaN
 // console.log(typeof NaN); // it will consider as number
+// console.log(0==false)
+// console.log(''==false)
+// console.log(0==false)
+// console.log(null <=0) // true
+// console.log(null>=0) //true when comparison operator is used the null treated as zero.
+// console.log(NaN==NaN) // false
+// console.log( true && 'hello') // hello becz && returns the first false value. if no of those are false then last value will considered.
+// console.log(Array(3)==",,") // true
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
