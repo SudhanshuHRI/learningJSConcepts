@@ -197,22 +197,149 @@
 // export default Parent;
 
 // => useMemo :- avoid re-calling functions during every render + when a function is declared and called in jsx then on every re-reder it excuted so use useMemo.
-// example:- 
+// example:-
 // import {useMemo} from "react";
 
 // const multiCount = useMemo(()=>{console.log("multicount")})
 
-// <div>{multiCount}</div> 
+// <div>{multiCount}</div>
 
 // every time when page re-renders then multiCount will call again and again. so we use this function in useMemo.
 
-// => useRef :-
-// => useLayoutEffect.
-//
-// Q. how to implement context api?
-// What are lifecycle methods of react? How we can achieve same in functional components?
-//  what is custom hook?
-// diff between var let const
+// => useRef :- used when we want to manipulate DOM directly through React
+// example-
+// import { useRef } from "react";
+// function App() {
+//   let inputRef = useRef(null); // here null is default value.
+
+//   function handleRef() {
+//     console.log("hello");
+//     inputRef.current.value = "1000";
+//     inputRef.current.focus();
+//     inputRef.current.style.color = "red";
+//     inputRef.current.style.display = "none";
+//   }
+
+//   return (
+//     <>
+//       <input type="text" ref={inputRef} />
+//       <button onclick={handleRef}>Click</button>
+//     </>
+//   );
+// }
+
+//here input field is usedd to manipulate DOM. ref attribute given to  input to identify.
+
+// Q. how to implement context api? give code.
+// Ans.
+// // step 1 : Creating a context
+// import { createContext, useContext } from "react";
+
+// const ThemeContext = createContext();
+
+// // Step 2 : context Provider
+
+// function Provider({ children }) {
+//   const [theme, setTheme] = useState("light");
+
+//   return (
+//     <ThemeContext.Provider value={{ theme, setTheme }}>
+//       {children}
+//     </ThemeContext.Provider>
+//   );
+// }
+
+// // Step 3 : consume the context
+// function Consumer() {
+//   const { theme, setTheme } = useContext(ThemeContext);
+
+//   return (
+//     <button onclick={setTheme(theme === "light" ? "dark" : "light")}>
+//       click
+//     </button>
+//   );
+// }
+
+// // Step 4 : use Provider in App
+
+// function App() {
+//   return (
+//     <Provider>
+//       <ThemeToggler />
+//     </Provider>
+//   );
+// }
+
+// Q.What are lifecycle methods of component in react? How we can achieve same in functional components?
+// Ans.
+// =>In class component  lifecycle methods are :mounting/componentDidMount()(birth of a component or can say display:block ), updating/componentDidUpdate()(updated yourself with state or props), unmounting/componentWillUnmount()(expire a component or display:none).
+// => In function Component same behaviour can achive with useEffect.
+// example:-
+// import React, { useEffect } from "react";
+
+// function Component() {
+
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     console.log("Component mounted");
+
+//     return () => {
+//       console.log("Component unmounted");
+//     };
+//   }, []); // Empty dependency array ensures this runs once
+
+//   useEffect(() => {
+//     console.log(`Count updated to: ${count}`);
+//   }, [count]); // Runs when `count` changes
+
+//   return <h1>Hello, World!</h1>;
+// }
+
+// Q. how to make custom hooks ?
+// Ans.
+// => step 1 : Create useCustomHook.js
+// import { useState } from 'react';
+
+// function useCounter(initialValue = 0) {
+//   const [count, setCount] = useState(initialValue);
+
+//   const increment = () => setCount((prev) => prev + 1);
+//   const decrement = () => setCount((prev) => prev - 1);
+//   const reset = () => setCount(initialValue);
+
+//   return { count, increment, decrement, reset };
+// }
+
+// export default useCounter;
+
+// => step 2 : use hook
+
+// import React from 'react';
+// import useCounter from './useCounter';
+
+// function CounterApp() {
+//   const { count, increment, decrement, reset } = useCounter(5);
+
+//   return (
+//     <div>
+//       <h1>Count: {count}</h1>
+//       <button onClick={increment}>Increment</button>
+//       <button onClick={decrement}>Decrement</button>
+//       <button onClick={reset}>Reset</button>
+//     </div>
+//   );
+// }
+
+// export default CounterApp;
+
+// Q.diff between var let const ?
+// Ans.
+// var : function scope + hoisted + allowed to redeclare in same scope and reassign values
+// let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
+// const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
+
+
 // Props are immutable and passed from parent component, while state is mutable and managed within the component.
 // What are callback function ? Give disadvantages
 // Super class is a class that is inherited by another class.
@@ -261,3 +388,4 @@
 // How to perform automatic redirect after login?
 //  How to pass data between sibling components using React router?
 // How to prevent re-renders in React?
+// lazy loading
