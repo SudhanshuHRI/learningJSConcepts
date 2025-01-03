@@ -339,13 +339,20 @@
 // let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
 // const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
 
+//  Q. Props vs state
+//  Ans. Props are immutable and passed from parent component, while state is mutable and managed within the component.
 
-// Props are immutable and passed from parent component, while state is mutable and managed within the component.
-// What are callback function ? Give disadvantages
-// Super class is a class that is inherited by another class.
-// When to use class component over functional component?
-// React.memo or PureComponent
+// Q.What are callback function ? Give disadvantages
+// Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
+  // => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
+
+// Q.When to use class component over functional component?
+// Ans. if working on old project + using older libraries
+
+// Q. what is  React.memo and how to use it?
+// Ans. React.memo and useMemo are not same. both used in optimising application + 
 // mounting and shallow concept in testing library
+// or PureComponent
 // What is reducer and it's flow
 // ES6 features and its use where and why?
 // memoization techniques like useMemo and useCallback to prevent unnecessary re-renders
