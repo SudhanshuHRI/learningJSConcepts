@@ -196,10 +196,17 @@
 
 // export default Parent;
 
-// => useMemo :- avoid re-calculating expensive computations during every render 
-// example:-
+// => useMemo :- avoid re-calling functions during every render + when a function is declared and called in jsx then on every re-reder it excuted so use useMemo.
+// example:- 
+// import {useMemo} from "react";
 
-// => useRef.
+// const multiCount = useMemo(()=>{console.log("multicount")})
+
+// <div>{multiCount}</div> 
+
+// every time when page re-renders then multiCount will call again and again. so we use this function in useMemo.
+
+// => useRef :-
 // => useLayoutEffect.
 //
 // Q. how to implement context api?
