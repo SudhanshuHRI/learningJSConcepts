@@ -1,4 +1,4 @@
-// javascript =  1.concepts
+// javascript =  1.interview questions
 //               2.puzzles on concepts
 //               3.practice
 

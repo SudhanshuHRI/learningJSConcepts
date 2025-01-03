@@ -42,16 +42,17 @@
 // Number to word like 102 one hundred two
 
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
-// 1. What is React.js  and it's history?
-// => facebook created it in 2011
+// Q. What is React.js  and it's history?
+// Ans. facebook created it in 2011
 
-// 2.What are the advantages of react? and disadvantages
+// Q. What are the advantages of react? and disadvantages
+// Ans.
 // => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
 // => disadvantages :- not major disadvantages
 
-// 3. What are Call, apply and bind methods, what is currying in JavaScript?
+// Q. What are Call, apply and bind methods, what is currying in JavaScript?
 
-// => when we want to attach a function to different object for re-use then we use these methods.
+// Ans. when we want to attach a function to different object for re-use then we use these methods.
 
 // Problem:-
 // function getFullName(firstName, lastName) {
@@ -102,21 +103,108 @@
 
 //  console.log(bindVariable());
 
-// 3. difference between function and class component?
+// Q. difference between function and class component?
+// Ans.
 // => function based components :- uses simple js funciton to define component + no render () method needed to return jsx + uses useState hook to manage state + uses useEffect hook to handle side effects and lifecycle behaviours .
 
 // => class based components:- uses ES6's class syntax to define component + require render () to return jsx + uses "this.state" and "setState"  to manage state + uses dedicated life cycle method like componentDidMount(),componentDidUpdate(), componentWillUnmount().
 
-// 4.What are higher-order components?
-// => Mostly used in class based components + HOC is a function who takes component as a parameter and returns a new component +
+// Q.What are higher-order components?
+// Ans. Mostly used in class based components + HOC is a function who takes component as a parameter and returns a new component
+
+// Q. what is typescript and how it's different.
+// Ans. developed by microsoft + define datatype of variable + typing error caught instant + JS is dynamic typed and ts is static typed +
+
+// Q. How are data passed from children to parents in react component?
+// Ans. through call back function.
+// example:-
+// function Parent() {
+//     const [message, setMessage] = useState('');
+
+//     const handleDataFromChild = (data) => {
+//       setMessage(data);
+//     };
+
+//     return (
+//       <div>
+//         <h1>Message from Child: {message}</h1>
+//         <Child sendDataToParent={handleDataFromChild} />
+//       </div>
+//     );
+//   }
+
+//   // Child Component
+//   function Child({ sendDataToParent }) {
+//     const handleClick = () => {
+//       sendDataToParent('Hello from Child!');
+//     };
+
+//     return <button onClick={handleClick}>Send Data to Parent</button>;
+//   }
+
+// Q.Explain all hooks in React.js .
+// Ans.
+// => UseState.
+// => useEffect.
+// => useContext :- allows you to access data from a React Context api
+// => useReducer :- when a lot of useState are used, then we use useReducer
+// example:-
+// import {useReducer} from react;
+
+// const reducer = (state,action)=>{
+//     console.log(state,action)
+//     if(action.type == "INCREMENT"){
+//         return state +1;
+//     }else if(action.type = "DECREMENT"){
+//         return state -1;
+//     }
+
+// }
+// const initialState = 0;
+// const [state, dispach] = useReducer(reducer, initialState);
+
+{
+  /* <button onclick={()=> dispatch({type:"INCREMENT"})}>Increment</button>
+<button onclick={()=> dispatch({type:"DECREMENT"})}>Decrement</button> */
+}
+
+// => useCallback :- used to memorise a function to prevent unnecessory recalling of function during re-renders + only on changing dependency variable it will trigger re render + in js if we declare 2 same functions with different and compare it then it will be false so when parent re-renders, paraent's function takes as changed and this function passed in child then child component is also re-render so we put parent's function in useCallback. then it will not re-render +
+// example:-
+// import React, { useState, useCallback } from "react";
+
+// function Parent() {
+//   const [count, setCount] = useState(0);
+
+//   // Memoize/ freeze the function using useCallback
+//   const showMessage = useCallback(() => {
+//     alert("Hello from Child!");
+//   }, []); // No dependencies, so the function will never be recreated
+
+//   return (
+//     <div>
+//       <button onClick={() => setCount(count + 1)}>Increment</button>
+//       <Child showMessage={showMessage} />
+//     </div>
+//   );
+// }
+
+// function Child({ showMessage }) {
+//   console.log("Child rendered");
+
+//   return <button onClick={showMessage}>Show Message</button>;
+// }
+
+// export default Parent;
+
+// => useMemo :- avoid re-calculating expensive computations during every render 
 // example:-
 
-// 5. what is typescript and how it's different.
-// => developed by microsoft + define datatype of variable + typing error caught instant + JS is dynamic typed and ts is static typed + 
-// 6. How are data passed from children to parents in react component?
-// 7.Explain UseMemo, UseCallback, UseEffect and all hooks of react.js and lifecycle method in the class component.
+// => useRef.
+// => useLayoutEffect.
+//
+// Q. how to implement context api?
 // What are lifecycle methods of react? How we can achieve same in functional components?
-// custom hook?
+//  what is custom hook?
 // diff between var let const
 // Props are immutable and passed from parent component, while state is mutable and managed within the component.
 // What are callback function ? Give disadvantages
@@ -130,6 +218,7 @@
 // hat is difference between get for each and map
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
+// pure functions in React and what are side effects in react
 // How to mock test cases using jest and react-testing library
 // what is difference between get props and set props
 // What is pure component?
