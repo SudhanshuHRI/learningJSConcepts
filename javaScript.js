@@ -2,6 +2,18 @@
 //               2.puzzles on concepts
 //               3.practice
 
+
+  
+var str = " 'string1'"
+function removeQuotes(str){
+  for(let i = 0; i <str.length;i++){
+       console.log(str[i])
+}
+   
+
+}
+
+removeQuotes(str)
 ///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
 
 // function Practice() {
@@ -387,7 +399,7 @@
 
 // Semantic elements
 
-// => optional chaining operator (?.) is used to avoid errors while accessing properties.
+// => optional chaining operator (?.) is used to avoid errors while accessing object's properties.
 
 // => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
 
@@ -470,8 +482,6 @@
 // console.log(NaN==NaN) // false
 // console.log( true && 'hello') // hello becz && returns the first false value. if no of those are false then last value will considered.
 // console.log(Array(3)==",,") // true
-
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 

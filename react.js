@@ -175,7 +175,7 @@
 // function Parent() {
 //   const [count, setCount] = useState(0);
 
-//   // Memoize/ freeze the function using useCallback
+//   // Memoize / freeze the function using useCallback
 //   const showMessage = useCallback(() => {
 //     alert("Hello from Child!");
 //   }, []); // No dependencies, so the function will never be recreated
@@ -313,7 +313,7 @@
 
 // export default useCounter;
 
-// => step 2 : use hook
+// => step 2 : use of hook
 
 // import React from 'react';
 // import useCounter from './useCounter';
@@ -344,27 +344,120 @@
 
 // Q.What are callback function ? Give disadvantages
 // Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
-  // => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
+// => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
 
 // Q.When to use class component over functional component?
 // Ans. if working on old project + using older libraries
 
 // Q. what is  React.memo and how to use it?
-// Ans. React.memo and useMemo are not same. both used in optimising application + 
-// mounting and shallow concept in testing library
-// or PureComponent
-// What is reducer and it's flow
+// Ans. React.memo and useMemo are not same + both used in optimising application + memo works as pure components + memo is HOC + it insures child component will re-render only if it's props updated + generally when you update a state in parent component, child component will also be re-render. in this we use memo in child component +  useCallback hooks looks like same but it rereder's only when dependency array will update. +  memo works on component level while useCallback works on functional level  + if a object is passed as props, react.memo will not work
+// example:-
+// import React, { useState } from "react";
+
+// // A simple child component
+// const ChildComponent = React.memo(({ value }) => {
+//   console.log("ChildComponent rendered");
+//   return <div>Value: {value}</div>;
+// });
+
+// const ParentComponent = () => {
+//   const [count, setCount] = useState(0);
+//   const [otherState, setOtherState] = useState(false);
+
+//   return (
+//     <div>
+//       <h1>React.memo Example</h1>
+//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
+//       <button onClick={() => setOtherState(!otherState)}>Toggle Other State</button>
+//       <p>Count: {count}</p>
+//       <ChildComponent value={count} />
+//     </div>
+//   );
+// };
+
+// export default ParentComponent;
+
+// here when count will update only then child component will re- render and when we update otherState, child component will not re-render.
+
+//  Q. difference between useCallback, useMemo, React.memo?
+// Ans. 
+// => Purpose:- useCallback memorise function to avoid re-creation , useMemo memorise value or result , React.memo prevent re-rendering of component.
+// =>type:- useCallback is hook, useMemo is hook, React.memo is HOC
+
+// example (useCallback):- Optimizing a callback function passed as a prop
+
+// const Child = React.memo(({ onClick }) => {
+//   console.log("Child rendered");
+//   return <button onClick={onClick}>Click Me</button>;
+// });
+
+// const Parent = () => {
+//   const [count, setCount] = useState(0);
+
+//   const handleClick = useCallback(() => {
+//     console.log("Button clicked");
+//   }, []);
+
+//   return (
+//     <div>
+//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
+//       <Child onClick={handleClick} />
+//     </div>
+//   );
+// };
+
+// example:- useMemo : Optimizing an expensive calculation
+// const Parent = () => {
+//   const [count, setCount] = useState(0);
+//   const [otherState, setOtherState] = useState(false);
+
+//   const expensiveValue = useMemo(() => {
+//     console.log("Expensive computation");
+//     return count * 2;
+//   }, [count]);
+
+//   return (
+//     <div>
+//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
+//       <button onClick={() => setOtherState(!otherState)}>Toggle</button>
+//       <p>Value: {expensiveValue}</p>
+//     </div>
+//   );
+// };
+
+//example:- React.memo : Preventing unnecessary re-rendering of a component
+// const Child = React.memo(({ value }) => {
+//   console.log("Child rendered");
+//   return <div>{value}</div>;
+// });
+
+// const Parent = () => {
+//   const [count, setCount] = useState(0);
+//   const [toggle, setToggle] = useState(false);
+
+//   return (
+//     <div>
+//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
+//       <button onClick={() => setToggle(!toggle)}>Toggle</button>
+//       <Child value={count} />
+//     </div>
+//   );
+// };
+
+
+
+
+
+
+// Q.What is reducer and it's flow
 // ES6 features and its use where and why?
-// memoization techniques like useMemo and useCallback to prevent unnecessary re-renders
 // hat is difference between get for each and map
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
-// pure functions in React and what are side effects in react
-// How to mock test cases using jest and react-testing library
+// pure functions in React and what are side effects in react, when it is used ?
+
 // what is difference between get props and set props
-// What is pure component?
 // Virtual DOM is a lightweight copy of the actual DOM.
-// what is performance optimization in reactjs
 // What is function currying
 // What is Data binding in react js?
 // What is one way data binding?
