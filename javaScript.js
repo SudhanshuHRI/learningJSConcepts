@@ -2,33 +2,28 @@
 //               2.puzzles on concepts
 //               3.practice
 
-
-  
-var str = " 'string1'"
-function removeQuotes(str){
-  for(let i = 0; i <str.length;i++){
-       console.log(str[i])
-}
-   
-
-}
-
-removeQuotes(str)
 ///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
 
-// function Practice() {
-//   let data = 5;
+function Practice(arr1, arr2) {
+  let mergedArray = [];
+  for (let i = 0; i < arr1.length; i++) {
+    mergedArray[mergedArray.length] = arr1[i];
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    mergedArray[mergedArray.length] = arr2[i];
+  }
+  console.log("merged Array:", mergedArray);
 
-//   let factorial = 1;
+  const sortedArray = [];
 
-//   for (let i = 0; i <= data; i++) {
-//     factorial = factorial * (data - 1);
-//     data = data - 1;
-//   }
-//   console.log(factorial);
-// }
+  for (let i = 0; i < mergedArray.length; i++) {
+    if(mergedArray[0] > mergedArray[i+1]){
+      // You only find the smallest element in the unsorted portion and swap it into its correct position.
+    }
+  }
+}
 
-// Practice();
+Practice([0, 3, 4, 31], [4, 6, 30]);
 
 // 1. Program to find longest word in a given sentence ?
 //  2. How to check whether a string is palindrome or not ?
