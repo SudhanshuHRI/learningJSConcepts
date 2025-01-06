@@ -17,12 +17,13 @@
 //  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.
 
 (function (str1, str2) {
-  const result = [];
-
-
+  const result = false;
+    
+ 
+  
  
   console.log(result);
-})("abcd", "dcba");
+})("listen", "silent");
 
 //  10. Write logic to get unique objects from below array ?
 //  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
