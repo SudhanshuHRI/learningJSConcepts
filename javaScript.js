@@ -4,40 +4,26 @@
 
 ///////////////////////////////////////////////////// Practice Questions ///////////////////////////////////////////
 
-function Practice(arr1, arr2) {
-  let mergedArray = [];
-  for (let i = 0; i < arr1.length; i++) {
-    mergedArray[mergedArray.length] = arr1[i];
-  }
-  for (let i = 0; i < arr2.length; i++) {
-    mergedArray[mergedArray.length] = arr2[i];
-  }
-  console.log("merged Array:", mergedArray);
-
-  const sortedArray = [];
-
-  for (let i = 0; i <= mergedArray.length; i++) {
-
-    console.log("i:", i);
-
-    
-    // if (mergedArray[0] > mergedArray[i + 1]) {
-    //   // You only find the smallest element in the unsorted portion and swap it into its correct position.
-    // }
-  }
-}
-
-Practice([0, 3, 4, 31], [4, 6, 30]);
-
 // 1. Program to find longest word in a given sentence ?
 //  2. How to check whether a string is palindrome or not ?
 //  3. Write a program to remove duplicates from an array ?
 //  4. Program to find Reverse of a string without using built-in method ?
 //  5. Find the max count of consecutive 1’s in an array ?
 //  6. Find the factorial of given number ?
-//  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ?
-//  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same.
+
+//  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
+//  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
+
 //  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.
+
+(function (str1, str2) {
+  const result = [];
+
+
+ 
+  console.log(result);
+})("abcd", "dcba");
+
 //  10. Write logic to get unique objects from below array ?
 //  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
 //  O/P: [{name: "sai"},{name:"Nang"}{name: "111111"}
