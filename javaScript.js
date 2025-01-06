@@ -14,11 +14,15 @@
 //  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
 //  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
 
-//  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.
+//  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.  find anagrams
 
 (function (str1, str2) {
   const result = false;
-    
+
+  let strBreak1 = [];
+  let strBreak2 = [];
+
+  str1
  
   
  
