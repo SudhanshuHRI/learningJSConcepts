@@ -2,7 +2,7 @@
 //               2.puzzles on concepts
 //               3.practice
 
-///////////////////////////////////////////////////// some tasks to practice ///////////////////////////////////////////
+///////////////////////////////////////////////////// Practice Questions ///////////////////////////////////////////
 
 function Practice(arr1, arr2) {
   let mergedArray = [];
@@ -16,10 +16,14 @@ function Practice(arr1, arr2) {
 
   const sortedArray = [];
 
-  for (let i = 0; i < mergedArray.length; i++) {
-    if(mergedArray[0] > mergedArray[i+1]){
-      // You only find the smallest element in the unsorted portion and swap it into its correct position.
-    }
+  for (let i = 0; i <= mergedArray.length; i++) {
+
+    console.log("i:", i);
+
+    
+    // if (mergedArray[0] > mergedArray[i + 1]) {
+    //   // You only find the smallest element in the unsorted portion and swap it into its correct position.
+    // }
   }
 }
 
