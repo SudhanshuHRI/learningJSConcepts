@@ -1,7 +1,3 @@
-// javascript =  1.interview questions
-//               2.puzzles on concepts
-//               3.practice
-
 ///////////////////////////////////////////////////// Practice Questions for DSA ///////////////////////////////////////////
 
 // 1. Program to find longest word in a given sentence ?
@@ -10,7 +6,6 @@
 //  4. Program to find Reverse of a string without using built-in method ?
 //  5. Find the max count of consecutive 1’s in an array ?
 //  6. Find the factorial of given number ?
-
 //  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
 //  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
 //  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.  find anagrams
@@ -28,6 +23,29 @@
 //  18. Write a javascript function that sorts an array of numbers in descending order.
 //  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
 //  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
+
+//////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
+
+// Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
+// Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
+// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed.
+// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.
+// Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
+// Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
+// Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
+// Algorithm and Data Structure Puzzles: Practice solving common algorithmic challenges like sorting, searching, and optimization.
+// Destructuring and Spread Operator Puzzles: Solve puzzles that involve destructuring arrays and objects, and using the spread operator for both objects and arrays.
+// Regular Expression Puzzles: Challenge yourself to write regular expressions that match specific patterns.
+// Error Handling and Exception Puzzles: Predict and handle errors in code, such as try-catch blocks and asynchronous error handling.
+// Bitwise Operations Puzzles: Solve challenges using bitwise operators for efficient calculations.
+// Logical Puzzles and Challenges: Solve logical puzzles that require reasoning through JavaScript’s behavior.
+// Functional Programming Puzzles: Work with higher-order functions, immutability, and pure functions.
+// Performance and Optimization Puzzles: Optimize code for performance and solve challenges related to memory usage and execution time.
+// Recursion Puzzles: Solve puzzles that involve recursive function calls.
+// Promise and Async/Await Puzzles: Dive into asynchronous code and solve challenges using promises and async/await.
+// Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
+// Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
+// Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
 
 //////////////////////////////////////////////// working of JS /////////////////////////////////////////////////////////////////
 
@@ -372,8 +390,6 @@
 
 /////////////////////////////////  Some definations in JS ///////////////////////////////////////////////
 
-// Semantic elements
-
 // => optional chaining operator (?.) is used to avoid errors while accessing object's properties.
 
 // => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
@@ -395,29 +411,73 @@
 // => map vs foreach function :- map function returns new array and foreach function dont return anything.
 // => navigator object is used to get information about browser in js
 
-//////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
+///////////////////////////////////// string built-in methods ///////////////////////////////////////////////////
 
-// Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
-// Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
-// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed.
-// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.
-// Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
-// Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
-// Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
-// Algorithm and Data Structure Puzzles: Practice solving common algorithmic challenges like sorting, searching, and optimization.
-// Destructuring and Spread Operator Puzzles: Solve puzzles that involve destructuring arrays and objects, and using the spread operator for both objects and arrays.
-// Regular Expression Puzzles: Challenge yourself to write regular expressions that match specific patterns.
-// Error Handling and Exception Puzzles: Predict and handle errors in code, such as try-catch blocks and asynchronous error handling.
-// Bitwise Operations Puzzles: Solve challenges using bitwise operators for efficient calculations.
-// Logical Puzzles and Challenges: Solve logical puzzles that require reasoning through JavaScript’s behavior.
-// Functional Programming Puzzles: Work with higher-order functions, immutability, and pure functions.
-// Performance and Optimization Puzzles: Optimize code for performance and solve challenges related to memory usage and execution time.
-// Recursion Puzzles: Solve puzzles that involve recursive function calls.
-// Promise and Async/Await Puzzles: Dive into asynchronous code and solve challenges using promises and async/await.
-// Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
-// Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
-// Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
+// let data = "Hello, How are you?"
 
+// console.log(data.split())
+// console.log(data.split(''))
+// console.log(data.split(' '))
+// console.log(data.split('a'))
+
+// console.log(data.replace('H','_'))
+// console.log(data.replace(/H/g,'_'))
+
+// console.log(data.substring(1,data.length)) // remove first character
+// console.log(data.substring(0,data.length-1)) // remove last character
+// console.log(data.split('o')[0]) // remove string before specific character
+// console.log(data.split('o')[1]) // remove string after specific character
+//console.log(data.split('').reverse().join('')) // reverse string
+//console.log(data.trim()) // remove extra space
+
+////////////////////////////////////////////////// some outputs ///////////////////////////////////////////////////////////////////
+
+// console.log(1 + "2" + "2"); // it will give 122
+// console.log(1 + +"2" + "2"); // it will take it as (1 + (+"2") + "2") // it will give 32
+// console.log(1 + +"2" + +"2"); // it will give 5
+// console.log(1 + -"2" + "2"); // it will give -12
+// console.log("A" - "B" + "2"); // NaN2
+// console.log("A" - "B" + 2); // NaN
+// console.log(typeof NaN); // it will consider as number
+// console.log(0==false)
+// console.log(''==false)
+// console.log(0==false)
+// console.log(null <=0) // true
+// console.log(null>=0) //true when comparison operator is used the null treated as zero.
+// console.log(NaN==NaN) // false
+// console.log( true && 'hello') // hello becz && returns the first false value. if no of those are false then last value will considered.
+// console.log(Array(3)==",,") // true
+// console.log(!!10+20) // 21 because (!! true + 20)
+// console.log(typeof typeof 1) // string  because typeof 1 is "number" then it is string.
+//console.log([..."Sudhanshu"]) // it will break string in array.
+// console.log(!!undefined); // false becz null and undefined both are consider as false value.
+// console.log(!!null); //false
+// console.log(!!"a"); // true
+// console.log(!!""); // false because empty string consider as false but proper string consider as true;
+// console.log(!!-2); // true but if we use zero it will consider as false. negative value will also consider as true.
+// console.log(!!0); // false
+// console.log(!!2); // true
+//console.log(typeof 3 + 4 + "5"); // number45
+// console.log(false || "Hello"); // ?
+// console.log(true && "World"); // ?
+// console.log(null || undefined); // ?
+// console.log("" && 0); // ?
+// console.log(0 || (1 && 2)); // ?
+// console.log("5" - 2); // ?
+// console.log("5" + 2); // ?
+// console.log("5" * "2"); // ?
+// console.log(true + false); // ?
+// console.log("5" - true); // ?
+// console.log(1 === "1"); // ?
+// console.log(0 === false); // ?
+// console.log(null === undefined); // ?
+// console.log([] === []); // ?
+// console.log({} === {}); // ?
+// console.log(1 == "1"); // ?
+// console.log(0 == false); // ?
+// console.log(null == undefined); // ?
+// console.log([] == false); // ?
+// console.log([] == ![]); // ?
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
 //     var a = b = 3;
@@ -439,24 +499,6 @@
 // console.log(foo())
 
 //it is required to set data in front of "return" statement. other wise it will return "undefined"
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// console.log(1 + "2" + "2"); // it will give 122
-// console.log(1 + +"2" + "2"); // it will take it as (1 + (+"2") + "2") // it will give 32
-// console.log(1 + +"2" + +"2"); // it will give 5
-// console.log(1 + -"2" + "2"); // it will give -12
-// console.log("A" - "B" + "2"); // NaN2
-// console.log("A" - "B" + 2); // NaN
-// console.log(typeof NaN); // it will consider as number
-// console.log(0==false)
-// console.log(''==false)
-// console.log(0==false)
-// console.log(null <=0) // true
-// console.log(null>=0) //true when comparison operator is used the null treated as zero.
-// console.log(NaN==NaN) // false
-// console.log( true && 'hello') // hello becz && returns the first false value. if no of those are false then last value will considered.
-// console.log(Array(3)==",,") // true
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -559,8 +601,6 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// console.log(!!10+20) // 21 because (!! true + 20)
-
 // const obj = {
 //     a:"one",
 //     b:"two",
@@ -585,25 +625,6 @@
 // var a =10;
 
 // console.log(a) // variable can be redeclare and reassign. but last assign value will store
-
-////////////////////////////////////////////////////////////////////////////////////////
-
-// let data = "Hello, How are you?"
-
-// console.log(data.split())
-// console.log(data.split(''))
-// console.log(data.split(' '))
-// console.log(data.split('a'))
-
-// console.log(data.replace('H','_'))
-// console.log(data.replace(/H/g,'_'))
-
-// console.log(data.substring(1,data.length)) // remove first character
-// console.log(data.substring(0,data.length-1)) // remove last character
-// console.log(data.split('o')[0]) // remove string before specific character
-// console.log(data.split('o')[1]) // remove string after specific character
-//console.log(data.split('').reverse().join('')) // reverse string
-//console.log(data.trim()) // remove extra space
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //  let data = {
@@ -809,18 +830,6 @@
 // }
 // console.log(typeof sayHi());
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// console.log(typeof typeof 1) // string  because typeof 1 is "number" then it is string.
-//console.log([..."Sudhanshu"]) // it will break string in array.
-// console.log(!!undefined); // false becz null and undefined both are consider as false value.
-// console.log(!!null); //false
-// console.log(!!"a"); // true
-// console.log(!!""); // false because empty string consider as false but proper string consider as true;
-// console.log(!!-2); // true but if we use zero it will consider as false. negative value will also consider as true.
-// console.log(!!0); // false
-// console.log(!!2); // true
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // const numbers = [1,2,3];
@@ -834,12 +843,6 @@
 // console.log(setInterval(()=> console.log('HI'),1000))
 
 // every setInterval returns a unique id. so it will return 3 unique id.
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//console.log(typeof 3 + 4 + "5"); // number45
-// in funciton when we return nothing and only type return, it will pass undefined.
-// when we pass object as params it passes  by reference.
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1295,41 +1298,12 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// console.log(1 == "1"); // ?
-// console.log(0 == false); // ?
-// console.log(null == undefined); // ?
-// console.log([] == false); // ?
-// console.log([] == ![]); // ?
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// console.log(1 === "1"); // ?
-// console.log(0 === false); // ?
-// console.log(null === undefined); // ?
-// console.log([] === []); // ?
-// console.log({} === {}); // ?
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-// console.log("5" - 2); // ?
-// console.log("5" + 2); // ?
-// console.log("5" * "2"); // ?
-// console.log(true + false); // ?
-// console.log("5" - true); // ?
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // const obj = { value: 10 };
 
 // console.log(obj == "[object Object]"); // ?
 // console.log(obj.toString() == "[object Object]"); // ?
 // console.log(obj + 10); // ?
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// console.log(false || "Hello"); // ?
-// console.log(true && "World"); // ?
-// console.log(null || undefined); // ?
-// console.log("" && 0); // ?
-// console.log(0 || (1 && 2)); // ?
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
