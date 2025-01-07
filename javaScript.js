@@ -378,6 +378,7 @@
 
 // => map vs foreach function :- map function returns new array and foreach function dont return anything.
 // => navigator object is used to get information about browser in js
+// => how to know in js if function is called by use click or by any script? button me onclick me jo function call hota hai use event object pass hota hai. to if event.isTrusted==true then user clicked and if false then script clicked.
 
 ///////////////////////////////////////////  some object concepts //////////////////////////////////////
 

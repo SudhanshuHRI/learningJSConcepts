@@ -298,7 +298,7 @@
 // export default CounterApp;
 
 // Q.diff between var let const ? ============================================================
-// Ans.
+// Ans. 
 // var : function scope + hoisted + allowed to redeclare in same scope and reassign values
 // let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
 // const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
@@ -330,11 +330,10 @@
 
 // Q.What is reducer and it's flow ============================================================
 // ES6 features and its use where and why?
-// hat is difference between get for each and map
+// all built- in array functions in react
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
 // pure functions in React and what are side effects in react, when it is used ?
-
 // what is difference between get props and set props
 // Virtual DOM is a lightweight copy of the actual DOM.
 // What is function currying
