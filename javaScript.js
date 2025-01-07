@@ -356,6 +356,29 @@
 
 // => in quama operator first argument is calculated and second argument will be print . it is important to store first argument calculation result in a variable.
 
+/////////////////////////////////  Some definations in JS ///////////////////////////////////////////////
+
+// => optional chaining operator (?.) is used to avoid errors while accessing object's properties.
+
+// => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
+
+// => matchAll() is Ecma script feature. powerful way to find all maches in string. eg-
+// const str = "The rain in Spain stays mainly in the plain.";
+// const regex = /in/g;
+
+// const matches = str.matchAll(regex);
+
+// for (const match of matches) {
+//   console.log(match);
+// }
+
+// => str.at() method is used to find index of specific charactor. eg-
+// let str = "hello world"
+// console.log(str.at(6))
+
+// => map vs foreach function :- map function returns new array and foreach function dont return anything.
+// => navigator object is used to get information about browser in js
+
 ///////////////////////////////////////////  some object concepts //////////////////////////////////////
 
 // =>  in js object is collection of related data or functionallity.
@@ -388,28 +411,7 @@
 //     console.log(user[item]) // for values
 // }
 
-/////////////////////////////////  Some definations in JS ///////////////////////////////////////////////
 
-// => optional chaining operator (?.) is used to avoid errors while accessing object's properties.
-
-// => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
-
-// => matchAll() is Ecma script feature. powerful way to find all maches in string. eg-
-// const str = "The rain in Spain stays mainly in the plain.";
-// const regex = /in/g;
-
-// const matches = str.matchAll(regex);
-
-// for (const match of matches) {
-//   console.log(match);
-// }
-
-// => str.at() method is used to find index of specific charactor. eg-
-// let str = "hello world"
-// console.log(str.at(6))
-
-// => map vs foreach function :- map function returns new array and foreach function dont return anything.
-// => navigator object is used to get information about browser in js
 
 ///////////////////////////////////// string built-in methods ///////////////////////////////////////////////////
 

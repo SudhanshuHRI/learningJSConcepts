@@ -349,46 +349,19 @@
 // Q.When to use class component over functional component?
 // Ans. if working on old project + using older libraries
 
-// Q. what is  React.memo and how to use it?
-// Ans. React.memo and useMemo are not same + both used in optimising application + memo works as pure components + memo is HOC + it insures child component will re-render only if it's props updated + generally when you update a state in parent component, child component will also be re-render. in this we use memo in child component +  useCallback hooks looks like same but it rereder's only when dependency array will update. +  memo works on component level while useCallback works on functional level  + if a object is passed as props, react.memo will not work
-// example:-
-// import React, { useState } from "react";
-
-// // A simple child component
-// const ChildComponent = React.memo(({ value }) => {
-//   console.log("ChildComponent rendered");
-//   return <div>Value: {value}</div>;
-// });
-
-// const ParentComponent = () => {
-//   const [count, setCount] = useState(0);
-//   const [otherState, setOtherState] = useState(false);
-
-//   return (
-//     <div>
-//       <h1>React.memo Example</h1>
-//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
-//       <button onClick={() => setOtherState(!otherState)}>Toggle Other State</button>
-//       <p>Count: {count}</p>
-//       <ChildComponent value={count} />
-//     </div>
-//   );
-// };
-
-// export default ParentComponent;
-
-// here when count will update only then child component will re- render and when we update otherState, child component will not re-render.
-
 //  Q. difference between useCallback, useMemo, React.memo?
-// Ans. 
-// React.memo : - when parent's state is changed, it's children also re-render. so we use React.memo() in child component to stop unnessasory render + it is pure component + also HOC + syntex = export defalut React.memo(child); + it will only re-render when props will change + it works on shallow level only means it wont work on nested objects.
+// Ans.
+// 1. React.memo : - when parent's state is changed, it's children also re-render. so we use React.memo() in child component to stop unnessasory render + it is pure component + also HOC + syntex = export defalut React.memo(child); + it will only re-render when props will change + it works on shallow level only means it wont work on nested objects.
 
-// React.useCallback :- 
+// 2. React.useCallback :- in js if we create 2 same functions with different name and compare, it will return false + When we create a function in parent and send that function as a prop in child component, then when parent re-reders it take parent's same function as unique function so it re-reders child component also because we pass parent's function to child as props + here memo will not work becz according to js props is changing. sot we use useCallback in parent's function to tell js that function is same at all renders + useCallback is used to freeze a function so it will not consider as updated function +  it will take dependency array + so when dependency updated, only then child re-rendered + we only use useCallback hook when function will be static in program that's why it is called useCallback is used to chache a function 
+// example:-.
+// const parentComponentFunction = useCallback(()=>{
+//   //task to do
+// },[])
 
 
 
-
-
+// 3. React.useMemo:-
 
 // Q.What is reducer and it's flow
 // ES6 features and its use where and why?
