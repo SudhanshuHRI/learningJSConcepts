@@ -381,68 +381,7 @@
 
 //  Q. difference between useCallback, useMemo, React.memo?
 // Ans. 
-// => Purpose:- useCallback memorise function to avoid re-creation , useMemo memorise value or result , React.memo prevent re-rendering of component.
-// =>type:- useCallback is hook, useMemo is hook, React.memo is HOC
-
-// example (useCallback):- Optimizing a callback function passed as a prop
-
-// const Child = React.memo(({ onClick }) => {
-//   console.log("Child rendered");
-//   return <button onClick={onClick}>Click Me</button>;
-// });
-
-// const Parent = () => {
-//   const [count, setCount] = useState(0);
-
-//   const handleClick = useCallback(() => {
-//     console.log("Button clicked");
-//   }, []);
-
-//   return (
-//     <div>
-//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
-//       <Child onClick={handleClick} />
-//     </div>
-//   );
-// };
-
-// example:- useMemo : Optimizing an expensive calculation
-// const Parent = () => {
-//   const [count, setCount] = useState(0);
-//   const [otherState, setOtherState] = useState(false);
-
-//   const expensiveValue = useMemo(() => {
-//     console.log("Expensive computation");
-//     return count * 2;
-//   }, [count]);
-
-//   return (
-//     <div>
-//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
-//       <button onClick={() => setOtherState(!otherState)}>Toggle</button>
-//       <p>Value: {expensiveValue}</p>
-//     </div>
-//   );
-// };
-
-//example:- React.memo : Preventing unnecessary re-rendering of a component
-// const Child = React.memo(({ value }) => {
-//   console.log("Child rendered");
-//   return <div>{value}</div>;
-// });
-
-// const Parent = () => {
-//   const [count, setCount] = useState(0);
-//   const [toggle, setToggle] = useState(false);
-
-//   return (
-//     <div>
-//       <button onClick={() => setCount(count + 1)}>Increase Count</button>
-//       <button onClick={() => setToggle(!toggle)}>Toggle</button>
-//       <Child value={count} />
-//     </div>
-//   );
-// };
+// 
 
 
 
