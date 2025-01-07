@@ -42,15 +42,15 @@
 // Number to word like 102 one hundred two
 
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
-// Q. What is React.js  and it's history?
+// Q. What is React.js  and it's history?============================================================
 // Ans. facebook created it in 2011
 
-// Q. What are the advantages of react? and disadvantages
+// Q. What are the advantages of react? and disadvantages ============================================================
 // Ans.
 // => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
 // => disadvantages :- not major disadvantages
 
-// Q. What are Call, apply and bind methods, what is currying in JavaScript?
+// Q. What are Call, apply and bind methods, what is currying in JavaScript? ============================================================
 
 // Ans. when we want to attach a function to different object for re-use then we use these methods.
 
@@ -103,19 +103,19 @@
 
 //  console.log(bindVariable());
 
-// Q. difference between function and class component?
+// Q. difference between function and class component? ============================================================
 // Ans.
 // => function based components :- uses simple js funciton to define component + no render () method needed to return jsx + uses useState hook to manage state + uses useEffect hook to handle side effects and lifecycle behaviours .
 
 // => class based components:- uses ES6's class syntax to define component + require render () to return jsx + uses "this.state" and "setState"  to manage state + uses dedicated life cycle method like componentDidMount(),componentDidUpdate(), componentWillUnmount().
 
-// Q.What are higher-order components?
+// Q.What are higher-order components? ============================================================
 // Ans. Mostly used in class based components + HOC is a function who takes component as a parameter and returns a new component
 
-// Q. what is typescript and how it's different.
+// Q. what is typescript and how it's different. ============================================================
 // Ans. developed by microsoft + define datatype of variable + typing error caught instant + JS is dynamic typed and ts is static typed +
 
-// Q. How are data passed from children to parents in react component?
+// Q. How are data passed from children to parents in react component? ============================================================
 // Ans. through call back function.
 // example:-
 // function Parent() {
@@ -142,10 +142,12 @@
 //     return <button onClick={handleClick}>Send Data to Parent</button>;
 //   }
 
-// Q.Explain all hooks in React.js .
+// Q.Explain all hooks in React.js. ============================================================
 // Ans.
 // => UseState.
 // => useEffect.
+// => useCallback : given downwords.
+// => useMemo :- given downwords.
 // => useContext :- allows you to access data from a React Context api
 // => useReducer :- when a lot of useState are used, then we use useReducer
 // example:-
@@ -167,44 +169,6 @@
   /* <button onclick={()=> dispatch({type:"INCREMENT"})}>Increment</button>
 <button onclick={()=> dispatch({type:"DECREMENT"})}>Decrement</button> */
 }
-
-// => useCallback :- used to memorise a function to prevent unnecessory recalling of function during re-renders + only on changing dependency variable it will trigger re render + in js if we declare 2 same functions with different and compare it then it will be false so when parent re-renders, paraent's function takes as changed and this function passed in child then child component is also re-render so we put parent's function in useCallback. then it will not re-render +
-// example:-
-// import React, { useState, useCallback } from "react";
-
-// function Parent() {
-//   const [count, setCount] = useState(0);
-
-//   // Memoize / freeze the function using useCallback
-//   const showMessage = useCallback(() => {
-//     alert("Hello from Child!");
-//   }, []); // No dependencies, so the function will never be recreated
-
-//   return (
-//     <div>
-//       <button onClick={() => setCount(count + 1)}>Increment</button>
-//       <Child showMessage={showMessage} />
-//     </div>
-//   );
-// }
-
-// function Child({ showMessage }) {
-//   console.log("Child rendered");
-
-//   return <button onClick={showMessage}>Show Message</button>;
-// }
-
-// export default Parent;
-
-// => useMemo :- avoid re-calling functions during every render + when a function is declared and called in jsx then on every re-reder it excuted so use useMemo.
-// example:-
-// import {useMemo} from "react";
-
-// const multiCount = useMemo(()=>{console.log("multicount")})
-
-// <div>{multiCount}</div>
-
-// every time when page re-renders then multiCount will call again and again. so we use this function in useMemo.
 
 // => useRef :- used when we want to manipulate DOM directly through React
 // example-
@@ -230,7 +194,7 @@
 
 //here input field is usedd to manipulate DOM. ref attribute given to  input to identify.
 
-// Q. how to implement context api? give code.
+// Q. how to implement context api? give code. ============================================================
 // Ans.
 // // step 1 : Creating a context
 // import { createContext, useContext } from "react";
@@ -270,7 +234,7 @@
 //   );
 // }
 
-// Q.What are lifecycle methods of component in react? How we can achieve same in functional components?
+// Q.What are lifecycle methods of component in react? How we can achieve same in functional components? ========================================
 // Ans.
 // =>In class component  lifecycle methods are :mounting/componentDidMount()(birth of a component or can say display:block ), updating/componentDidUpdate()(updated yourself with state or props), unmounting/componentWillUnmount()(expire a component or display:none).
 // => In function Component same behaviour can achive with useEffect.
@@ -296,7 +260,7 @@
 //   return <h1>Hello, World!</h1>;
 // }
 
-// Q. how to make custom hooks ?
+// Q. how to make custom hooks ? ============================================================
 // Ans.
 // => step 1 : Create useCustomHook.js
 // import { useState } from 'react';
@@ -333,23 +297,23 @@
 
 // export default CounterApp;
 
-// Q.diff between var let const ?
+// Q.diff between var let const ? ============================================================
 // Ans.
 // var : function scope + hoisted + allowed to redeclare in same scope and reassign values
 // let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
 // const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
 
-//  Q. Props vs state
+//  Q. Props vs state ============================================================
 //  Ans. Props are immutable and passed from parent component, while state is mutable and managed within the component.
 
-// Q.What are callback function ? Give disadvantages
+// Q.What are callback function ? Give disadvantages ============================================================
 // Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
 // => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
 
-// Q.When to use class component over functional component?
+// Q.When to use class component over functional component? ============================================================
 // Ans. if working on old project + using older libraries
 
-//  Q. difference between useCallback, useMemo, React.memo?
+//  Q. difference between useCallback, useMemo, React.memo? ============================================================
 // Ans.
 // 1. React.memo : - when parent's state is changed, it's children also re-render. so we use React.memo() in child component to stop unnessasory render + it is pure component + also HOC + syntex = export defalut React.memo(child); + it will only re-render when props will change + it works on shallow level only means it wont work on nested objects.
 
@@ -364,8 +328,7 @@
 // example:-
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
-
-// Q.What is reducer and it's flow
+// Q.What is reducer and it's flow ============================================================
 // ES6 features and its use where and why?
 // hat is difference between get for each and map
 // how would you add a Dynamic title on every page in React
