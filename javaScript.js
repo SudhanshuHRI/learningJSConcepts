@@ -22,7 +22,15 @@
   let strBreak1 = [];
   let strBreak2 = [];
 
-  
+  for(let i=0; i < str1.length;i++){
+    strBreak1[i] = str1[i]
+  }
+
+  for(let i=0; i < str2.length;i++){
+    strBreak2[i] = str2[i]
+  }
+
+  console.log("A">"B")
  
   
  
