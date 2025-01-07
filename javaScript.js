@@ -2,7 +2,7 @@
 //               2.puzzles on concepts
 //               3.practice
 
-///////////////////////////////////////////////////// Practice Questions ///////////////////////////////////////////
+///////////////////////////////////////////////////// Practice Questions for DSA ///////////////////////////////////////////
 
 // 1. Program to find longest word in a given sentence ?
 //  2. How to check whether a string is palindrome or not ?
@@ -13,30 +13,7 @@
 
 //  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
 //  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
-
 //  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.  find anagrams
-
-(function (str1, str2) {
-  const result = false;
-
-  let strBreak1 = [];
-  let strBreak2 = [];
-
-  for(let i=0; i < str1.length;i++){
-    strBreak1[i] = str1[i]
-  }
-
-  for(let i=0; i < str2.length;i++){
-    strBreak2[i] = str2[i]
-  }
-
-  console.log("A">"B")
- 
-  
- 
-  console.log(result);
-})("listen", "silent");
-
 //  10. Write logic to get unique objects from below array ?
 //  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
 //  O/P: [{name: "sai"},{name:"Nang"}{name: "111111"}
@@ -351,7 +328,7 @@
 
 // => we have to call the function each time to count steps. also value written in front of yield with be console in object. when all steps completed  it will console "{value:undefined, done:true}"
 
-////////////////////////////////// Quama Operator ////////////////////////////////////////////////
+////////////////////////////////////////////////////// Quama Operator ////////////////////////////////////////////////
 
 // let x = 10;
 // let y = 20;
