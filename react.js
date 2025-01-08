@@ -42,6 +42,7 @@
 // Number to word like 102 one hundred two
 
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
+
 // Q. What is React.js  and it's history?============================================================
 // Ans. facebook created it in 2011
 
@@ -50,7 +51,7 @@
 // => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
 // => disadvantages :- not major disadvantages
 
-// Q. What are Call, apply and bind methods, what is currying in JavaScript? ============================================================
+// Q. What are Call, apply and bind methods? ============================================================
 
 // Ans. when we want to attach a function to different object for re-use then we use these methods.
 
@@ -381,7 +382,7 @@
 // 9.object.seal():- 	Prevent adding/removing properties.
 // 10. object.is():- 	Compare values with improved edge cases.
 
-// Q. how would you add a Dynamic title on every page in React??
+// Q. how would you add a Dynamic title on every page in React??=====================================================
 //Ans. useEffect(()=>{document.title = "Home - My Website";},[]) + we can also do it with react-router-dom 's useLocation
 
 //
@@ -405,24 +406,25 @@
 // }
 // console.log(Sum(1)(2)(3))
 
-// What is Data binding in react js? ==================================================================
+// Q.What is Data binding in react js? ==================================================================
 // Ans. 2 type of data binding:- one way and 2 way + in one way data binding data goes from parent to child component + in two way data binding data flows from both direction + in react one way data binding is commonly used.
 
-// Q. what is uni directioanl data flow in react?
+// Q. what is uni directioanl data flow in react? ====================================================================
 // Ans. in uni-directional data flows from parent to child through props + child cannot modify props, it can be done only by callback + it works on one way data binding.
 
-// Q.Difference between promise and async await ?
+// Q.Difference between promise and async await ?===========================================================================================
 // Ans. Promise : - it is a object + uses .then() and .catch()  + harder to readable + uses .catch() to hadle error
 // Async/await :- uses async and await keyword + easy to read + uses try-catch to handle error
 
-// Q. Throw keyword in js ?
+// Q. Throw keyword in js ?=============================================================================
 // Ans. throw stops the excution of current function and pass the error to the catch block of calling function + if we use try-catch block, throw will send error in catch function.
-// Q.What is anti pattern in react?
+
+// Q.What is anti pattern in react?=========================================================================================
 // Ans. means write code neglecting core principles as:- changing actual DOM directly + over use of state and props  + not using key in array's loop +
 
-// Q.how to handle cors error on front end?
+// Q.how to handle cors error on front end?==============================================================================
 // Ans. ideally solve it in backend using "cors" library (app.use(cors({origin:"front end url"}))) + in front end add {"proxy":"backend url"} in package.json
-// Q.what we send in header to authentication?
+// Q.what we send in header to authentication?========================================================================
 // Ans. fetch('sdfsfds',{
 // method:GET,
 // headers:{
@@ -433,26 +435,26 @@
 
 // in postman  > headers > origin > http://www....... (it is not recommended)
 
-// Q.What is reconcilation in ReactJs?
+// Q.What is reconcilation in ReactJs?===============================================================================
 // Ans. process of comparing the current virtual Dom to previous virtual Dom and do minimal update to make virtual dom to actual dom + it efficiently update the UI by minimizing DOM manupulations.
 
-// Q.statefull vs stateless ?
+// Q.statefull vs stateless ?===========================================================
 // Ans. statefull :- a component that has its own state and manages it internally.
 // stateless:- A component that does not maintain its own state and relies entirely on props for data.
 
-// Q.controlled and uncontrolled components?
+// Q.controlled and uncontrolled components?========================================================================
 // Ans.
 // controlled:- when input fields controlled by state 
 // uncontrolled:- those who directly controlled by DOM + get input field value with getElementById +
 
-// Q.Explain about the Oops concepts.
+// Q.Explain about the Oops concepts.========================================================================
 // Ans. 4 priciple-
 // 1.Encapsulation:- building data and methods and restricting direact access to database + goal is data security and integrity.
 // 2. Abstraction:- hiding implimentation details and exposing only essential features + goal is to simplify complexicity
 // 3. inheritance:- reusing properties and behaviours of parent class + goal is code reuse and hierarchy.
 // 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
-// What is the role of babel
-// Explain microfrontend approach in react?
+
+// Explain microfrontend approach in react?=========================================================
 // Do you follow CI/CD process?
 // What react router dom?
 // What is the difference between useref and createRef in React ?
