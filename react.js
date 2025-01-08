@@ -347,8 +347,28 @@
 
 // 2. map() :- itrate over each element + return array + params - value,index,array
 // 3. filter( ) :- returns array with filter value + params - value, index, array
-// 4. find() :- returns first element that satisfies the condition 
-// 5.
+// 4. find() :- returns first element that satisfies the condition
+// 5. findIndex() :- returns the index of first element that satisfies condition
+// 6. some() :- checks if at least one element satisfies the condition.
+// 7. every() :- checks if all elements satisfies the condition.
+// 8. push():-  to add element on last index of array.
+// 9. pop():- removes last element.
+// 10. unshift(value) :- add element on first index.
+// 11. shift ():- removes first element .
+// 12. splice() :- 
+// 13. concat() :- add two array.
+// 14. slice():- remove portion in array + returnes new array + params-start,end
+// 15. reduce():-
+// 16. reduceRight():-
+// 17. sort():- sorts array by converting elements in string.
+// 18. reverse() : - reverse array.
+// 19. includes():- checks if array contains specific value.
+// 20. indexOf() :- to know the index of element.
+// 21. lastIndexOf() :- returns last index of value.
+// 22. join():- join all elemnts with secific separator.
+// 23. Array.from('123') :- creates an array of [1,2,3]
+// 24. Array.of(1,2,3):- creates array of [1,2,3]
+
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
 // pure functions in React and what are side effects in react, when it is used ?
