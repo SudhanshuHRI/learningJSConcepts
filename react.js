@@ -368,7 +368,19 @@
 // 23. Array.from('123') :- creates an array of [1,2,3] /const arr = Array.from('123'); // ['1', '2', '3']
 // 24. Array.of(1,2,3):- creates array of [1,2,3] / const arr = Array.of(1, 2, 3); // [1, 2, 3]
 
-// all object buit in functions
+// all object buit-in functions??
+
+// 1.Object.create():- Create an object with a specified prototype.
+// 2.Object.assign():- 	Shallow copy properties into a target object.
+// 3.Object.keys():- 	Get enumerable property names.
+// 4.object.values():- Get enumerable property values.
+// 5.object.entries():- 	Get key-value pairs as arrays.
+// 6.Object.getOwnPropertyNames():- Get all property names (including non-enumerable).
+// 7.Object.defineProperty():- 	Define or modify a property.
+// 8.object.freeze():- 	Freeze an object to make it immutable.
+// 9.object.seal():- 	Prevent adding/removing properties.
+// 10. object.is():- 	Compare values with improved edge cases.
+
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
 // pure functions in React and what are side effects in react, when it is used ?
