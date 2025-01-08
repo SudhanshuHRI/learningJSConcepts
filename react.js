@@ -454,11 +454,25 @@
 // 3. inheritance:- reusing properties and behaviours of parent class + goal is code reuse and hierarchy.
 // 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
 
-// Explain microfrontend approach in react?=========================================================
-// Do you follow CI/CD process?
-// What react router dom?
-// What is the difference between useref and createRef in React ?
-// Explain why and how to update state of components using callback?
+// Q.Explain microfrontend approach in react?=========================================================
+// Ans. microfrontend approch means break application in small, manageble pieces + this approch inspired by microservices(where different parts of application developed, diployed, maintained sepreratly) + each component and feature is modularise and maintain by different teams like e-commerce. 
+
+// Q. What is CI/CD pipeline ? ===========================================================
+// Ans. continous integratino and continous deployemnt
+// CI (Continous Integration) :- Developers integrate their code changes into a shared repository multiple times a day. Automated tests and builds are triggered to verify the changes.
+// CD (Continous Deployment) :- automatically deploying every successful build to a production or staging environment without manual approval.
+
+// example:-
+// step1. developer pushes changes to github repo
+// step2.github action triggers
+// step3. if ci pipeline passes, app is build and passes to production environment autoamtically;
+
+
+// Q.What is the difference between useref and createRef in React ?==============================
+// Ans. useRef used in functional comp and createRef used in class component
+
+// Q.Explain why and how to update state of components using callback? =========================================
+// Ans.
 // Does React useState Hook update immediately ?
 // What is StrictMode in React ?
 // Explain the concept of lazy loading in React and how it can be implemented..
@@ -476,3 +490,4 @@
 // what is webpack in react
 // how to do SSR in React
 // how can we change local server port in react
+// slice vs splice who modify orignal array??
