@@ -444,7 +444,7 @@
 
 // Q.controlled and uncontrolled components?========================================================================
 // Ans.
-// controlled:- when input fields controlled by state 
+// controlled:- when input fields controlled by state
 // uncontrolled:- those who directly controlled by DOM + get input field value with getElementById +
 
 // Q.Explain about the Oops concepts.========================================================================
@@ -468,9 +468,11 @@
 // Explain the concept of tree shaking in the context of React and its benefits.
 // What are the advantages and disadvantages of using TypeScript with React?
 // Explain the concept of pure components in React and how they differ from regular components.
-// What are the differences between controlled and uncontrolled components?
 // How to perform automatic redirect after login?
 //  How to pass data between sibling components using React router?
-// How to prevent re-renders in React?
-// lazy loading
 // react 19 fearures
+// what is portal in react
+// export default vs export 
+// what is webpack in react
+// how to do SSR in React
+// how can we change local server port in react

@@ -23,6 +23,10 @@
 //  18. Write a javascript function that sorts an array of numbers in descending order.
 //  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
 //  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
+// write a program to find element accurence in array; ex-{1:2,4:6,8:7times}
+// remove duplicate from array
+// multiply 2 no without multiply sign
+// document.designMode = 'on'
 
 //////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
 
@@ -46,6 +50,22 @@
 // Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
 // Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
 // Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
+
+
+/////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
+// spread and rest operator
+// promise vs callback
+// event bubbling and event capturing
+// throttling vs debouncing
+// null vs undefined
+// all false values in js
+// setTimeout vs setInterval
+// object.seal vs object.freeze
+// weakmap vs weakSet.
+// json.stringify vs parse
+// how to stop event prapagation in js
+// what is dead zone in js
+// what is mutation observer in js
 
 //////////////////////////////////////////////// working of JS /////////////////////////////////////////////////////////////////
 
