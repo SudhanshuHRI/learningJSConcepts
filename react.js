@@ -142,8 +142,8 @@
 //     return <button onClick={handleClick}>Send Data to Parent</button>;
 //   }
 
-// Q.Explain all hooks in React.js. ============================================================
-// Ans.
+// Q.Explain all hooks in React.js. why react hooks are use full?============================================================
+// Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
 // => UseState.
 // => useEffect.
 // => useCallback : given downwords.
@@ -304,7 +304,7 @@
 // const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
 
 //  Q. Props vs state ============================================================
-//  Ans. Props are immutable and passed from parent component, while state is mutable and managed within the component.
+//  Ans. Props are immutable and passed from parent component, while state is mutable and managed within the component + props are immutable, which means you cannot directly modify or set props within a child component. Props can only be set by the parent component when they pass them down to the child component.
 
 // Q.What are callback function ? Give disadvantages ============================================================
 // Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
@@ -381,22 +381,76 @@
 // 9.object.seal():- 	Prevent adding/removing properties.
 // 10. object.is():- 	Compare values with improved edge cases.
 
-// how would you add a Dynamic title on every page in React
-//  why react hooks are use full?
-// pure functions in React and what are side effects in react, when it is used ?
-// what is difference between get props and set props
-// Virtual DOM is a lightweight copy of the actual DOM.
-// What is function currying
-// What is Data binding in react js?
-// What is one way data binding?
-// Difference between promise and async await ?
-// Explain the reducer method in js using the example
-// Difference beetween thow and new thow
-// What is anti pattern in react?
-// how to handle cors error on front end
-// what we send in header to authentication
-// What is reconcilation in ReactJs
-// Explain about the Oops concepts.
+// Q. how would you add a Dynamic title on every page in React??
+//Ans. useEffect(()=>{document.title = "Home - My Website";},[]) + we can also do it with react-router-dom 's useLocation
+
+//
+// Q. pure functions and impure functions in js and what are side effects in js. ======================================
+// Ans. if we have a component, when we pass 2 variable in a function whose value is static and not changing in whole component then those funtion's output will always return same because we pass static variables as a parameters. so it will called pure function. when we pass dynamic variable or state whos value is changing in compnent then each time output of a function will change so it will called impure function.
+
+// side effect :- side effect is called when function update variable or state's value in it.
+
+// Q. virtual DOM Vs Actual DOM ?  ================================================================
+// Virtual DOM is a lightweight copy of the actual DOM + when state changes in a component, react only update it in virtual dom + react dont update actual dom every time + when page re-renders , new updates are shown .
+
+// Q.What is  currying in react?====================================================
+// Ans. in curring one funciton with multiple arguments is break in multiple funciton with single arguments + benifits:- reusability of functions + improve code readability etc.
+// eg:-
+// function Sum(a) {
+//   return function (b) {
+//     return function (c) {
+//       return a + b + c;
+//     };
+//   };
+// }
+// console.log(Sum(1)(2)(3))
+
+// What is Data binding in react js? ==================================================================
+// Ans. 2 type of data binding:- one way and 2 way + in one way data binding data goes from parent to child component + in two way data binding data flows from both direction + in react one way data binding is commonly used.
+
+// Q. what is uni directioanl data flow in react?
+// Ans. in uni-directional data flows from parent to child through props + child cannot modify props, it can be done only by callback + it works on one way data binding.
+
+// Q.Difference between promise and async await ?
+// Ans. Promise : - it is a object + uses .then() and .catch()  + harder to readable + uses .catch() to hadle error
+// Async/await :- uses async and await keyword + easy to read + uses try-catch to handle error
+
+// Q. Throw keyword in js ?
+// Ans. throw stops the excution of current function and pass the error to the catch block of calling function + if we use try-catch block, throw will send error in catch function.
+// Q.What is anti pattern in react?
+// Ans. means write code neglecting core principles as:- changing actual DOM directly + over use of state and props  + not using key in array's loop +
+
+// Q.how to handle cors error on front end?
+// Ans. ideally solve it in backend using "cors" library (app.use(cors({origin:"front end url"}))) + in front end add {"proxy":"backend url"} in package.json
+// Q.what we send in header to authentication?
+// Ans. fetch('sdfsfds',{
+// method:GET,
+// headers:{
+//   "Authorization": `Bearern ${yourToken}`,
+//   'content-Type':"application/json"
+// }
+// })
+
+// in postman  > headers > origin > http://www....... (it is not recommended)
+
+// Q.What is reconcilation in ReactJs?
+// Ans. process of comparing the current virtual Dom to previous virtual Dom and do minimal update to make virtual dom to actual dom + it efficiently update the UI by minimizing DOM manupulations.
+
+// Q.statefull vs stateless ?
+// Ans. statefull :- a component that has its own state and manages it internally.
+// stateless:- A component that does not maintain its own state and relies entirely on props for data.
+
+// Q.controlled and uncontrolled components?
+// Ans.
+// controlled:- when input fields controlled by state 
+// uncontrolled:- those who directly controlled by DOM + get input field value with getElementById +
+
+// Q.Explain about the Oops concepts.
+// Ans. 4 priciple-
+// 1.Encapsulation:- building data and methods and restricting direact access to database + goal is data security and integrity.
+// 2. Abstraction:- hiding implimentation details and exposing only essential features + goal is to simplify complexicity
+// 3. inheritance:- reusing properties and behaviours of parent class + goal is code reuse and hierarchy.
+// 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
 // What is the role of babel
 // Explain microfrontend approach in react?
 // Do you follow CI/CD process?
