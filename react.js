@@ -298,7 +298,7 @@
 // export default CounterApp;
 
 // Q.diff between var let const ? ============================================================
-// Ans. 
+// Ans.
 // var : function scope + hoisted + allowed to redeclare in same scope and reassign values
 // let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
 // const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
@@ -328,9 +328,27 @@
 // example:-
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
-// Q.What is reducer and it's flow ============================================================
-// ES6 features and its use where and why?
-// all built- in array functions in react
+// Q. What are ES6 features ?? ==========================================================
+// Ans.
+// 1. block scoped variabels (let, const)
+// 2. Arrow function
+// 3. templete letrals
+// 4. Rest and spread operators
+// 5. array and object destructuring .
+// eg- const [a,b] = [1,2];
+// const {name,age} = {name:"John",age:25}
+
+// Q. difference between normal funciton and arrow funciton ? ====================================================
+// Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line function
+
+// Q. all built - in array functions in react==================================================
+// Ans. React dont have any built in methods. it takes form js.
+// 1. forEach() :- itrate over each element + dont return array + params - value,index,array
+
+// 2. map() :- itrate over each element + return array + params - value,index,array
+// 3. filter( ) :- returns array with filter value + params - value, index, array
+// 4. find() :- returns first element that satisfies the condition 
+// 5.
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
 // pure functions in React and what are side effects in react, when it is used ?
@@ -367,3 +385,4 @@
 //  How to pass data between sibling components using React router?
 // How to prevent re-renders in React?
 // lazy loading
+// react 19 fearures
