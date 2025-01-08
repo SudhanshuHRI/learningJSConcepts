@@ -344,10 +344,9 @@
 // Q. all built - in array functions in react==================================================
 // Ans. React dont have any built in methods. it takes form js.
 // 1. forEach() :- itrate over each element + dont return array + params - value,index,array
-
 // 2. map() :- itrate over each element + return array + params - value,index,array
-// 3. filter( ) :- returns array with filter value + params - value, index, array
-// 4. find() :- returns first element that satisfies the condition
+// 3. filter( ) :- returns array with filter value / const even = [1, 2, 3, 4].filter(num => num % 2 === 0);
+// 4. find() :- returns first element that satisfies the condition / const found = [1, 2, 3].find(num => num > 2); // 3
 // 5. findIndex() :- returns the index of first element that satisfies condition
 // 6. some() :- checks if at least one element satisfies the condition.
 // 7. every() :- checks if all elements satisfies the condition.
@@ -355,20 +354,21 @@
 // 9. pop():- removes last element.
 // 10. unshift(value) :- add element on first index.
 // 11. shift ():- removes first element .
-// 12. splice() :- 
+// 12. splice() :- add or remove elements at specific index + returns arry containing removed elements + if no elements removed, return blank array + arr.splice(1,2) means remove 2 elements starting from 1 index + arr.splice(1,0,2,3) means add 2 and 3 at index 1 without removing anything + arr.splice(0) means remove all elements from array.
 // 13. concat() :- add two array.
-// 14. slice():- remove portion in array + returnes new array + params-start,end
-// 15. reduce():-
-// 16. reduceRight():-
-// 17. sort():- sorts array by converting elements in string.
+// 14. slice():- remove portion in array + returnes new array + params-start,end / const subArray = [1, 2, 3, 4].slice(1, 3); // [2, 3]
+// 15. reduce():- Reduces the array to a single value by applying a callback. / const sum = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
+// 16. reduceRight():- Similar to reduce but starts from the end of the array. / const reversed = [1, 2, 3].reduceRight((acc, num) => acc + num, ''); // '321'
+// 17. sort():- sorts array by converting elements in string. / const sorted = [3, 1, 2].sort((a, b) => a - b); // [1, 2, 3]
 // 18. reverse() : - reverse array.
 // 19. includes():- checks if array contains specific value.
-// 20. indexOf() :- to know the index of element.
-// 21. lastIndexOf() :- returns last index of value.
-// 22. join():- join all elemnts with secific separator.
-// 23. Array.from('123') :- creates an array of [1,2,3]
-// 24. Array.of(1,2,3):- creates array of [1,2,3]
+// 20. indexOf() :- to know the index of element. /const index = [1, 2, 3].indexOf(2); // 1
+// 21. lastIndexOf() :- returns last index of value. / const lastIndex = [1, 2, 3, 2].lastIndexOf(2); // 3
+// 22. join():- join all elemnts with secific separator. / const joined = [1, 2, 3].join('-'); // '1-2-3'
+// 23. Array.from('123') :- creates an array of [1,2,3] /const arr = Array.from('123'); // ['1', '2', '3']
+// 24. Array.of(1,2,3):- creates array of [1,2,3] / const arr = Array.of(1, 2, 3); // [1, 2, 3]
 
+// all object buit in functions
 // how would you add a Dynamic title on every page in React
 //  why react hooks are use full?
 // pure functions in React and what are side effects in react, when it is used ?
