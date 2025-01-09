@@ -49,7 +49,7 @@
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
 
 // Q. What is React.js  and it's history? ============================================================
-// Ans. facebook created it in 2011
+// Ans. facebook created it in 2011 + oper source + front end library + built SPA + created by jordan walke(facebook employee) + 
 
 // Q. What are the advantages of react? and disadvantages ============================================================
 // Ans.
@@ -198,7 +198,7 @@
 //   );
 // }
 
-//here input field is usedd to manipulate DOM. ref attribute given to  input to identify.
+// here input field is usedd to manipulate DOM. ref attribute given to  input to identify.
 
 // Q. how to implement context api? give code. ============================================================
 // Ans.
@@ -660,5 +660,15 @@
 
 // Q.what is portal in react ===================================================================================
 // Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
-// Q.API polling
+// Q.API polling ? 
 // Ans. API Polling is a technique where a client repeatedly makes requests to a server at regular intervals to check for updates or changes + used in live scroes, monitoring data that changes frequently.
+
+
+// Profiler
+// Q.element vs component ?
+// Ans. elements are created by React.createElement(<h1>hello</h1>) + component is js function that returns jsx
+
+// Q.lifting state up in react ?
+// Ans. sharing common state to siblings 
+// why fragments are better then div
+// why react use className over class

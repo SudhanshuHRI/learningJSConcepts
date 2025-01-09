@@ -66,6 +66,12 @@
 // how to stop event prapagation in js
 // what is dead zone in js
 // what is mutation observer in js
+// Q.high order functions??
+// Ans. it is a function that accepts function as parameter and returns function. eg:-map(),filter(), reduce(),some() etc.
+// null vs undefined
+// Module, Factory, Observer, and Singleton
+// Memory Leaks
+
 
 //////////////////////////////////////////////// working of JS /////////////////////////////////////////////////////////////////
 
@@ -90,6 +96,18 @@
 //*code                                //*WebAPI
 // *task Que/callback que
 //*call stack                  //*event loop
+
+// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: 
+// - This is where JavaScript runs your code one step at a time.
+
+// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬: 
+// - Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
+
+// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞: 
+// - Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
+
+// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: 
+// - The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
 // ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
 
