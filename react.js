@@ -548,14 +548,25 @@
 //   </>
 // }
 
-// Q.react 19 and its fearures?
-// Ans.
-// what is portal in react
-// export default vs export
-// what is webpack in react
-// how to do SSR in React
-// how can we change local server port in react
+// Q.react 19 and its fearures?====================================================================================
+// Ans. released on 25 april 2024 +
+// 1.Actions :-use asynchronous functions withe pending states, forms, errors.
+// 2. hooks:- useTransition , useOptimistic, useActionState, useFormStatus
+// 3."use" function
+
+
+
+
+// Q.export default vs export ? ============================================================================
+// Q.what is webpack in react ?
+// Ans. webpack is module bundler to compile js files with their dependencies and create single bundle + march 2012 release date + mainly used to make build + minify js and css + webpack also set entry file . we can change intry file with webpach configration +
+
+// Q.how can we change local server port in react =====================================================================
+// Ans. create .env and their declare PORT=3001 and restart.
+
 // slice vs splice who modify orignal array??.
 // Debouncing in js
 // Throttling
 // polyfills in js
+// Q.what is portal in react ===================================================================================
+// Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
