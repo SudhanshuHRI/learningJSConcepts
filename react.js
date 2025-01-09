@@ -48,7 +48,7 @@
 
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
 
-// Q. What is React.js  and it's history?============================================================
+// Q. What is React.js  and it's history? ============================================================
 // Ans. facebook created it in 2011
 
 // Q. What are the advantages of react? and disadvantages ============================================================
@@ -568,9 +568,97 @@
 
 // Q.slice vs splice who modify orignal array?? =================================================================
 // Ans.
+// 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
+// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
+// Q. setTimeout vs setInterval
+// Ans. both used to shedule the excution of function
+// 1.setTimeout:- excutes the function when time is completed + we can also clear it by using clearTimeout();
+// eg:-
+// const timeoutId = setTimeout(() => {
+//   console.log("This won't be executed");
+// }, 2000);
+
+// clearTimeout(timeoutId); // Cancels the timeout
+
+// 2.setInterval:- excute the function repeted when time is over.
+// eg:-
+// const intervalId = setInterval(() => {
+//   console.log("This will console every 1 sec");
+// }, 1000);
+
+//   clearInterval(intervalId); // Cancel the intervel
+
 // Q.Debouncing in js =====================================================================
-// Ans.
+// Ans. when we use onchange function , it call multiple times when any key presses + debouncing delays the excution of a function for certain time but if in that time any event triggered then its delay time extends + good tech for searchBox's list recommendation
+// eg:-
+// import React, { useState } from "react";
+
+// const DebouncedSearch = () => {
+//   const [query, setQuery] = useState("");
+//   const [debouncedQuery, setDebouncedQuery] = useState("");
+
+//   const handleInputChange = (e) => { 
+//     const value = e.target.value;
+//     setQuery(value);
+
+//     
+//     clearTimeout(this.debounceTimeout); // Clear previous timer
+
+//     // Set a new timer
+//     this.debounceTimeout = setTimeout(() => {
+//       setDebouncedQuery(value); // Simulate API call or state update
+//     }, 500); // Delay of 500ms
+//   };
+
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         placeholder="Search..."
+//         value={query}
+//         onChange={handleInputChange}
+//       />
+//       <p>Debounced Value: {debouncedQuery}</p>
+//     </div>
+//   );
+// };
+
+// export default DebouncedSearch;
+
 // Q.Throttling ===========================================================================
+// Ans. In throttling function will be called only once in a time  while how many times user clicked the button. it dont reset the time + main difference in them is that throttling dont reset time while debounding restet time on button click + throttling mainly work on scrolling. you want to show a popup on page scroll. of user scroll sudden up and down , then it will not work properly. so we use throttling.
+// eg:-
+// import React, { useState, useRef } from "react";
+
+// const ThrottledScroll = () => {
+//   const [scrollPosition, setScrollPosition] = useState(0);
+//   const throttleTimeout = useRef(null);
+
+//   const handleScroll = () => {
+//     if (throttleTimeout.current) return; // If there's an active timer, skip execution
+
+//     throttleTimeout.current = setTimeout(() => {
+//       setScrollPosition(window.scrollY); // Update scroll position
+//       throttleTimeout.current = null; // Clear the timer
+//     }, 500); // Throttle interval of 500ms
+//   };
+
+//   React.useEffect(() => {
+//     window.addEventListener("scroll", handleScroll);
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, []);
+
+//   return <div>Scroll Position: {scrollPosition}</div>;
+// };
+
+// export default ThrottledScroll;
+
 // Q.polyfills in js ===========================================================================
+// Ans.polyfills are commonly used to ensure compatibility with older browsers like Internet Explorer or older versions of Safari.
+
 // Q.what is portal in react ===================================================================================
 // Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
+// Q.API polling
+// Ans. API Polling is a technique where a client repeatedly makes requests to a server at regular intervals to check for updates or changes + used in live scroes, monitoring data that changes frequently.
