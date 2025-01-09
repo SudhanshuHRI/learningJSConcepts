@@ -37,6 +37,7 @@
 // write a code for context api
 // write a code to fetch data from child component
 // write a code using memoization  useCallback, useMemo, React.Memo
+// write a code for update array and object in array
 // Find largest element in array without sort, find sum of all element in array, find count of each element in array like how many times each element occurred in array?
 // Two arrays passed to one function, then remove the elements passed from source array and present in another array
 //Given an array of integers, return the sum of all even numbers.
@@ -530,7 +531,7 @@
 // Q.How do you handle internationalization (i18n) in React applications?===================================
 // Ans. develop react app to support multiple languages like hindi, chineese, korien etc. we have libraries for that.
 
-// Q.Explain the concept of tree shaking in the context of React and its benefits.==================================
+// Q.tree shaking .==================================
 // Ans. it is  technique in react which removes unused dependency, functions, code when bundules are made in build. if it is not happen then build will be heavy weight +  webpack module in react do this task automatically with ES6's import/export only + those libraries dont support import/export, they will not be removed( like moment library for date time)
 
 // Q. How to pass data between sibling components using React router?
@@ -554,19 +555,22 @@
 // 2. hooks:- useTransition , useOptimistic, useActionState, useFormStatus
 // 3."use" function
 
-
-
-
 // Q.export default vs export ? ============================================================================
-// Q.what is webpack in react ?
+// Ans.
+// 1. export(named exports) :- this allows to export multiple values/ function from file + when importing give specific name.  import {sum,multiply} from "./utils"
+// 2. export defalut (defalut export) :- one file can export only one + when importing you dont need to give specific name. ex:- you export Greet then you can import it as GreetFunction.
+
+// Q.what is webpack in react ? ==============================================================================
 // Ans. webpack is module bundler to compile js files with their dependencies and create single bundle + march 2012 release date + mainly used to make build + minify js and css + webpack also set entry file . we can change intry file with webpach configration +
 
 // Q.how can we change local server port in react =====================================================================
 // Ans. create .env and their declare PORT=3001 and restart.
 
-// slice vs splice who modify orignal array??.
-// Debouncing in js
-// Throttling
-// polyfills in js
+// Q.slice vs splice who modify orignal array?? =================================================================
+// Ans.
+// Q.Debouncing in js =====================================================================
+// Ans.
+// Q.Throttling ===========================================================================
+// Q.polyfills in js ===========================================================================
 // Q.what is portal in react ===================================================================================
 // Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
