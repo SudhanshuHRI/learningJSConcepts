@@ -490,4 +490,7 @@
 // what is webpack in react
 // how to do SSR in React
 // how can we change local server port in react
-// slice vs splice who modify orignal array??
+// slice vs splice who modify orignal array??.
+// Debouncing in js
+// Throttling
+// polyfills in js
