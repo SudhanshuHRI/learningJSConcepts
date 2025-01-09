@@ -520,15 +520,36 @@
 //   );
 // }
 
-// Q.What are some common patterns for managing side effects in React applications?
-// Describe the differences between server-side rendering (SSR), client-side rendering (CSR), and static site generation (SSG) in the context of React.
-// How do you handle internationalization (i18n) in React applications?
-// Explain the concept of tree shaking in the context of React and its benefits.
-// What are the advantages and disadvantages of using TypeScript with React?
-// Explain the concept of pure components in React and how they differ from regular components.
-// How to perform automatic redirect after login?
-//  How to pass data between sibling components using React router?
-// react 19 fearures
+// Q. Describe static site generation (SSG) in the context of React.============================
+// Ans. we can use SSG in react with help of Next.js + server side rendering is also called pre-rendering + server side rendering have 2 types.
+// 1.Server side rendering (SSR):- when we request a page , each time js is converted to html on server side and server send it to client.
+// 2.Static site generation (SSG):- when we make build, at that time js is converted to html and on every request that html comes to client
+
+// ex- we fetch user list and each user details when we get dynamically , each time request goes to server and makes SSR. so we can use SSG to make html of each page on build time. it will speed up . to make SSG we use generateStaticParams() funciton in next.js.
+
+// Q.How do you handle internationalization (i18n) in React applications?===================================
+// Ans. develop react app to support multiple languages like hindi, chineese, korien etc. we have libraries for that.
+
+// Q.Explain the concept of tree shaking in the context of React and its benefits.==================================
+// Ans. it is  technique in react which removes unused dependency, functions, code when bundules are made in build. if it is not happen then build will be heavy weight +  webpack module in react do this task automatically with ES6's import/export only + those libraries dont support import/export, they will not be removed( like moment library for date time)
+
+// Q. How to pass data between sibling components using React router?
+// Ans. we so that with shared state using react router dom + where routing is doing , we create a state. then we send setSharedData to other component and use sharedData state in sibling component.
+// eg:-
+// import {Router,Routes,Route} from "react-router-dom";
+
+// function App(){
+//   const [sharedData,setSharedData] = useState('')
+//   return<>
+//   <Routes>
+//     <Route path ="/sibling1" setSharedData= {setSharedData}/>
+//     <Route path = "/sibling2" sharedData={sharedData}/>
+//   </Routes>
+//   </>
+// }
+
+// Q.react 19 and its fearures?
+// Ans.
 // what is portal in react
 // export default vs export
 // what is webpack in react
