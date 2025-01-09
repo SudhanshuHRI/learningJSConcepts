@@ -33,6 +33,10 @@
 
 /////////////////////////////////////////////  Exersises  ///////////////////////////////////////////////////////
 // Implement counter such that it has 2 buttons to increment and decrement the values
+// write a code to create custom hook in React.
+// write a code for context api
+// write a code to fetch data from child component
+// write a code using memoization  useCallback, useMemo, React.Memo
 // Find largest element in array without sort, find sum of all element in array, find count of each element in array like how many times each element occurred in array?
 // Two arrays passed to one function, then remove the elements passed from source array and present in another array
 //Given an array of integers, return the sum of all even numbers.
@@ -455,7 +459,7 @@
 // 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
 
 // Q.Explain microfrontend approach in react?=========================================================
-// Ans. microfrontend approch means break application in small, manageble pieces + this approch inspired by microservices(where different parts of application developed, diployed, maintained sepreratly) + each component and feature is modularise and maintain by different teams like e-commerce. 
+// Ans. microfrontend approch means break application in small, manageble pieces + this approch inspired by microservices(where different parts of application developed, diployed, maintained sepreratly) + each component and feature is modularise and maintain by different teams like e-commerce.
 
 // Q. What is CI/CD pipeline ? ===========================================================
 // Ans. continous integratino and continous deployemnt
@@ -467,16 +471,56 @@
 // step2.github action triggers
 // step3. if ci pipeline passes, app is build and passes to production environment autoamtically;
 
-
 // Q.What is the difference between useref and createRef in React ?==============================
 // Ans. useRef used in functional comp and createRef used in class component
 
 // Q.Explain why and how to update state of components using callback? =========================================
+// Ans. setCount((prevCount) => prevCount + 1);
+
+// Q. Does React useState Hook update immediately ? ==============================================
+// Ans. No it dont update immidiately + state updates are ayncronous so when we update state, it updates on next re-render of component + if we want to make update immidiately then put code in useEffect and give dependency that state.
+
+// Q.how to update array or object that is in state in React??===========================================
 // Ans.
-// Does React useState Hook update immediately ?
-// What is StrictMode in React ?
-// Explain the concept of lazy loading in React and how it can be implemented..
-// What are some common patterns for managing side effects in React applications?
+// update array:
+// const addItem = () => {
+//   setItems([...items, 4]); // Create a new array and add an item
+// };
+
+// updating object:
+// const updateName = () => {
+//   setUser({ ...user, name: "Jane" }); // Update the 'name' property
+// };
+
+// Q.What is StrictMode in React ?===================================
+// Ans. strict mode is used to impliment validation + if we don's use priciple or not following rules of react then strict mode send error and warnings + strict mode works in development mode not in production mode + in react development many consoles comes 2 time beacuse of strict mode.
+
+// Q.what is use strict in js?===========================================
+// Ans. with this we cannot use variable without declaring + it maintains syntex validation in js + added in ES5 + it is implimented only on that function
+
+// Q.Explain the concept of lazy loading in React and how it can be implemented?
+// Ans. when application become heavy then it takes time to load so with use of lazy loading heavy component will load later and fast component will load first
+// eg:-
+// import React, { Suspense, lazy } from "react";
+// import FirstFastComp from "./";
+// const FirstHeavyComponent = lazy(() => import("./firstHeavyComp"));
+// const SecondHeavyComponent = lazy(() => import("./secondHeavyComp"));
+
+// function App() {
+//   return (
+//     <div>
+//       <FirstFastComp />
+//       <Suspense fallback = {<div>First Lazy component is loading. Please Wait.......</div>}>
+//         <FirstHeavyComponent />
+//       </Suspense>
+//       <Suspense fallback = {<div>Second Lazy component is loading. Please Wait.......</div>}>
+//         <SecondHeavyComponent />
+//       </Suspense>
+//     </div>
+//   );
+// }
+
+// Q.What are some common patterns for managing side effects in React applications?
 // Describe the differences between server-side rendering (SSR), client-side rendering (CSR), and static site generation (SSG) in the context of React.
 // How do you handle internationalization (i18n) in React applications?
 // Explain the concept of tree shaking in the context of React and its benefits.
@@ -486,7 +530,7 @@
 //  How to pass data between sibling components using React router?
 // react 19 fearures
 // what is portal in react
-// export default vs export 
+// export default vs export
 // what is webpack in react
 // how to do SSR in React
 // how can we change local server port in react
