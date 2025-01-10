@@ -1,110 +1,8 @@
-///////////////////////////////////////////////////// Practice Questions for DSA ///////////////////////////////////////////
-
-// 1. Program to find longest word in a given sentence ?
-//  2. How to check whether a string is palindrome or not ?
-//  3. Write a program to remove duplicates from an array ?
-//  4. Program to find Reverse of a string without using built-in method ?
-//  5. Find the max count of consecutive 1’s in an array ?
-//  6. Find the factorial of given number ?
-//  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
-//  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
-//  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.  find anagrams
-//  10. Write logic to get unique objects from below array ?
-//  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
-//  O/P: [{name: "sai"},{name:"Nang"}{name: "111111"}
-//  11. Write a JavaScript program to find the maximum number in an array.
-//  12. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
-//  13. Write a JavaScript function to check if a given number is prime.
-//  14. Write a JavaScript program to find the largest element in a nested array.
-//  [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]
-//  15. Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
-//  16. Given a string, write a javascript function to count the occurrences of each character in the string.
-//  17. Write a javascript function that sorts an array of numbers in ascending order.
-//  18. Write a javascript function that sorts an array of numbers in descending order.
-//  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
-//  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
-// write a program to find element accurence in array; ex-{1:2,4:6,8:7times}
-// remove duplicate from array
-// multiply 2 no without multiply sign
-// document.designMode = 'on'
-
-//////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
-
-// Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
-// Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
-// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed.
-// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.
-// Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
-// Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
-// Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
-// Algorithm and Data Structure Puzzles: Practice solving common algorithmic challenges like sorting, searching, and optimization.
-// Destructuring and Spread Operator Puzzles: Solve puzzles that involve destructuring arrays and objects, and using the spread operator for both objects and arrays.
-// Regular Expression Puzzles: Challenge yourself to write regular expressions that match specific patterns.
-// Error Handling and Exception Puzzles: Predict and handle errors in code, such as try-catch blocks and asynchronous error handling.
-// Bitwise Operations Puzzles: Solve challenges using bitwise operators for efficient calculations.
-// Logical Puzzles and Challenges: Solve logical puzzles that require reasoning through JavaScript’s behavior.
-// Functional Programming Puzzles: Work with higher-order functions, immutability, and pure functions.
-// Performance and Optimization Puzzles: Optimize code for performance and solve challenges related to memory usage and execution time.
-// Recursion Puzzles: Solve puzzles that involve recursive function calls.
-// Promise and Async/Await Puzzles: Dive into asynchronous code and solve challenges using promises and async/await.
-// Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
-// Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
-// Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
+// 1.  Interview Questions
+// 2.  Practice Questions
+// 3.  Puzzles
 
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
-
-// Q. What are Call, apply and bind methods? ============================================================
-
-// Ans. when we want to attach a function to different object for re-use then we use these methods.
-
-// Problem:-
-// function getFullName(firstName, lastName) {
-//   return `${firstName} ${lastName}`;
-// }
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-//   getFullName: getFullName(this.firstName, this.lastName),
-// };
-
-// console.log(student.getFullName); // here it will come undefined undefined so we need call apply bind methods + normal functions cannot be called in object for reuse
-
-// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional. + attached function called autometically
-// example : -
-
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-// };
-
-// let teacher = {
-//   firstName: "Anil",
-//   lastName: "Siddhu",
-// };
-
-// function getFullName() {
-//   return `${this.firstName} ${this.lastName}`;
-// }
-
-//console.log(getFullName.call(student)); // here getFullName function is attached with student's object.
-//console.log(getFullName.call(teacher)); // here getFullName function is attached with techer's object.
-
-// function chooseSubject(sub1,sub2){
-//     return [sub1,sub2]
-// }
-
-//console.log(chooseSubject.call(teacher,"maths","hindi")) // here cooseSubject function is attached with teacher object and 2 arguments are passed in chooseSubject(). if we want to send a lot of arguments then we use apply() method. call() takes any datatype of params.
-
-// => apply() :- similer to call() but takes arguments in array. it takes only array as params + function called autometically
-// example:-
-
-//console.log(chooseSubject.apply(teacher,["maths","hindi"]))
-
-// => bind() :- did not invokes immidiately + returns a function +  attach function in object but dont call it + it can called when ever required.
-//example:-
-//  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
-
-//  console.log(bindVariable());
 
 // Q.diff between var let const ? ============================================================
 // Ans.
@@ -174,7 +72,89 @@
 // 9.object.seal():- 	Prevent adding/removing properties.
 // 10. object.is():- 	Compare values with improved edge cases.
 
-// Q.// object.seal vs object.freeze ==============================================================
+
+// Q. What are Call, apply and bind methods? ============================================================
+
+// Ans. when we want to attach a function to different object for re-use then we use these methods.
+
+// Problem:-
+// function getFullName(firstName, lastName) {
+//   return `${firstName} ${lastName}`;
+// }
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+//   getFullName: getFullName(this.firstName, this.lastName),
+// };
+
+// console.log(student.getFullName); // here it will come undefined undefined so we need call apply bind methods + normal functions cannot be called in object for reuse
+
+// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional. + attached function called autometically
+// example : -
+
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+// };
+
+// let teacher = {
+//   firstName: "Anil",
+//   lastName: "Siddhu",
+// };
+
+// function getFullName() {
+//   return `${this.firstName} ${this.lastName}`;
+// }
+
+//console.log(getFullName.call(student)); // here getFullName function is attached with student's object.
+//console.log(getFullName.call(teacher)); // here getFullName function is attached with techer's object.
+
+// function chooseSubject(sub1,sub2){
+//     return [sub1,sub2]
+// }
+
+//console.log(chooseSubject.call(teacher,"maths","hindi")) // here cooseSubject function is attached with teacher object and 2 arguments are passed in chooseSubject(). if we want to send a lot of arguments then we use apply() method. call() takes any datatype of params.
+
+// => apply() :- similer to call() but takes arguments in array. it takes only array as params + function called autometically
+// example:-
+
+//console.log(chooseSubject.apply(teacher,["maths","hindi"]))
+
+// => bind() :- did not invokes immidiately + returns a function +  attach function in object but dont call it + it can called when ever required.
+//example:-
+//  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
+
+//  console.log(bindVariable());
+
+
+
+// Q. object.seal vs object.freeze ==============================================================
+// Ans.
+// 1. Object.seal():- prevents new properties to added or existing property to remove in Object + allowes modification of existing properties 
+// eg:-
+// const obj = {
+//   name: 'Alice',
+//   age: 30
+// };
+
+// Object.seal(obj);
+
+// obj.age = 35;  // Allowed (value modification)
+// obj.city = 'New York';  // Not allowed (adding new properties)
+// delete obj.name;  // Not allowed (deleting properties)
+
+// 2. Object.freeze() :- prevent new properties + prevent remove properties + prevent modification of existing properties
+// eg:-
+// const obj = {
+//   name: 'Alice',
+//   age: 30
+// };
+
+// Object.freeze(obj);
+
+// obj.age = 35;  // Not allowed (value modification)
+// obj.city = 'New York';  // Not allowed (adding new properties)
+// delete obj.name;  // Not allowed (deleting properties)
 
 // Q. pure functions and impure functions in js and what are side effects in js. ======================================
 // Ans. if we have a component, when we pass 2 variable in a function whose value is static and not changing in whole component then those funtion's output will always return same because we pass static variables as a parameters. so it will called pure function. when we pass dynamic variable or state whos value is changing in compnent then each time output of a function will change so it will called impure function.
@@ -202,7 +182,7 @@
 // Q.what is use strict in js?===========================================
 // Ans. with this we cannot use variable without declaring + it maintains syntex validation in js + added in ES5 + it is implimented only on that function
 
-// Q. setTimeout vs setInterval
+// Q. setTimeout vs setInterval ============================================================
 // Ans. both used to shedule the excution of function
 // 1.setTimeout:- excutes the function when time is completed + we can also clear it by using clearTimeout();
 // eg:-
@@ -220,45 +200,83 @@
 
 //   clearInterval(intervalId); // Cancel the intervel
 
-// Q.spread and rest operator ?
+// Q.spread and rest operator ?=====================================================================
 // Ans.
 // 1. Spread operator:- used to expand array or object elements to individuls. + used to copy arrys (const arr2 = [...arr1]) + merge arrays (const merged = [...arr1, ...arr2]) + copy objects (obj2 = { ...obj1 }) + merge objects (const merged = { ...obj1, ...obj2 })
 
 // 2. Rest Operator:- used to collect multiple elements into single array or object + used in function Parameter( function Sum(...numbers){}) + destructure arrays (const [first, ...rest] = [1, 2, 3, 4]) + destructure Objects (const { a, ...others } = { a: 1, b: 2, c: 3 })
 
-// Q.event bubbling and event capturing 
-// Ans. 1.event bubbling : works from child to parent element + mostly used in gaming website + event.stopPropagation() function is used stop bubbling 
-// 2.event capturing : works form parent to child + onClickCapture={handleParentClick} used to start event capturing.
+// Q.event bubbling and event capturing .how to stop event prapagation in js ?=================================================
+// Ans. event propogation :- flow of event in DOM when event is triggered.
+// 1.event bubbling : works from child to parent element + mostly used in gaming website + event.stopPropagation() function is used stop bubbling
+// 2.event capturing : works form parent to child + onClickCapture={handleParentClick} used to stop event capturing.
 
-// Q. null vs undefined
+// Q. null vs undefined====================================================================
 // Ans. null :- absance of value + it's typeof is Object.
 // undefined:- value not assigned but can be assign later + its typeof is "undefined"
 // null==undefined // true
 // null===undefined//false
 
-// Q. all false values in js?
-// Ans. 0 / -0 / "" / null / undefined / NaN / 
+// Q. all false values in js?====================================================
+// Ans. 0 / -0 / "" / null / undefined / NaN /
 
-// Q. all true values in js?
-// Ans. non-zero numbers / non-empty strings / {} / [] / any symbol / all functions(buit-in and user defined) / 
+// Q. all true values in js? ==========================================
+// Ans. non-zero numbers / non-empty strings / {} / [] / any symbol / all functions(buit-in and user defined) /
 
-// Q.weakmap vs weakSet.
-// Ans. 1. weakmap :- 
-// 2. weakset :- 
-// Ans.
-// json.stringify vs parse
-// how to stop event prapagation in js
-// what is dead zone in js
-// what is mutation observer in js
-// Q.high order functions??
+// Q.json.stringify vs parse ==================================================================
+// Ans.Stringify():- convert object or value to JSON String.
+// parse():- convert JSON String to object or value.
+
+// Q.what is dead zone in js ? ========================================================
+// Ans. part of code where variable is declared (with let and const) but not initialized + in this zone accesing vaiable results ReferenceError.
+// ex:-
+// console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
+// const myConst = 10;
+
+// Q.what is mutation observer in js? =====================================================================
+// Ans. changes and updation happening in html element can be detected by mutation observer + also works on full component to observe what user is doing with full page and component +
+// eg:-
+// // // Create a MutationObserver instance
+// const observer = new MutationObserver(callback);
+
+// // Configuration options
+// const config = {
+//   childList: true, // Observe direct child node additions/removals
+//   attributes: true, // Observe attribute changes
+//   subtree: true, // Observe all descendants, not just the direct children
+//   characterData: true, // Observe changes to text content
+// };
+
+// // Start observing an element for mutations
+// observer.observe(targetNode, config); // targetNode== id of that element
+
+// // Stop observing mutations
+// observer.disconnect();
+
+// Q.high order functions?? ================================================================
 // Ans. it is a function that accepts function as parameter and returns function. eg:-map(),filter(), reduce(),some() etc.
 //
-// Module, Factory, Observer, and Singleton
-// Memory Leaks
-// Private property and fucntion in js
 
-//////////////////////////////////////////////// working of JS /////////////////////////////////////////////////////////////////
+// Q.Private property and private fucntion in js ? ====================================================
+// Ans. introduced in ECMA 2022 + means class's property that cannot be access directly + by adding # in front of property it become private property +  private property cannot access outside it's class + object dont have private property
+// eg:-
+// class BankDetails{
+//   #name="Sudhanshu";
+//   #pin="1234567";
+//   getName(){
+//     return this.name
+//   }
+//   getPin(){
+//     return this.pin
+//   }
+// }
 
+// const details = new BankDetails();
+// console.log(details.pin)
+// console.log(details.name)
+
+// Q. Explain the working of JavaScript ? =============================================================================
+// Ans.
 // => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
 // => Memeory Heap :- where variable are saved. browser's memeory
 // => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
@@ -299,8 +317,7 @@
 //                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
 //                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
 
-/////////////////////////////////////// Laxical Scope and closures //////////////////////////////////////////////////////
-
+// Q. What is Laxical Scope vs closures ?===========================================================================
 // Laxical Scope => when inner function can access outer function's variable. eg-
 
 // function hello(){
@@ -329,8 +346,8 @@
 
 // console.log(inner());//10
 
-///////////////////////////////////////////////// Promises in JS //////////////////////////////////////////////////////////////
-
+// Q. What are promises in js ?======================================================================
+// Ans.
 // => it is a object which returns a value which can be recived in future. Promise means task will ither solve or reject.
 // => JS is single threaded so it dont wait for function to excute fully when it takes time to excute. if it takes time, js start excuting next code.
 // => fetch() always returns 2 Promieses. so we use 2 times .then and await. it's called "Promise chaining". it can be more then 2 .
@@ -361,7 +378,7 @@
 //     console.log("finally statement excuted");
 //   });
 
-/////////////////////////////////////////// Promise.all / Promies.allsettled / Promise.race ///////////////////////////////
+// Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
 
 //=> Promiese.all :- used when multiple promises is used + when all Promise completed then it will give response + if any reject it will response reject + it will not tell other promises solved or rejected  + it takes array and console's array + eg-
 
@@ -429,7 +446,7 @@
 
 // data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
 
-//////////////////////////////////////// Prototypes in JS ////////////////////////////////////////////
+// Q. What are Prototypes in JS  ? =====================================================================
 
 // => prototypes are concepts in which object inherit features from one another + before Ecma script , prototypes are used
 // => eg-
@@ -507,7 +524,7 @@
 // var a = "this is a string"
 // console.log(a.defaultData)
 
-//////////////////////////////////////////////// Deep copy and shallow copy //////////////////////////////////////////
+// Q. What is  Deep copy and shallow copy  of object ? ===================================================
 
 // let obj ={
 //     name:"Peter"
@@ -545,7 +562,7 @@
 // console.log(obj)
 // console.log(user)
 
-//////////////////////////////////////////////////// Generator functions in Js //////////////////////////////////////////////////////////
+// Q. What are Generator functions in Js ?? =====================================================================
 
 // => These are functions whoes excution we can control. we can pause and resume their excution. eg -
 // function* simpleGenerator (){
@@ -568,7 +585,7 @@
 
 // => we have to call the function each time to count steps. also value written in front of yield with be console in object. when all steps completed  it will console "{value:undefined, done:true}"
 
-////////////////////////////////////////////////////// Quama Operator ////////////////////////////////////////////////
+// Q. What is Quama Operator in js ===========================================================
 
 // let x = 10;
 // let y = 20;
@@ -578,13 +595,14 @@
 
 // => in quama operator first argument is calculated and second argument will be print . it is important to store first argument calculation result in a variable.
 
-/////////////////////////////////  Some definations in JS ///////////////////////////////////////////////
+// Q. Optinal chiaing operator in js?========================================================
+// Ans. optional chaining operator (?.) is used to avoid errors while accessing object's properties.
 
-// => optional chaining operator (?.) is used to avoid errors while accessing object's properties.
+// Q. Nullish operator in js??=============================================================
+// Ans. Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
 
-// => Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
-
-// => matchAll() is Ecma script feature. powerful way to find all maches in string. eg-
+// Q. What is matchAll() function in js ? ==========================================================
+// Ans. matchAll() is Ecma script feature. powerful way to find all maches in string. eg-
 // const str = "The rain in Spain stays mainly in the plain.";
 // const regex = /in/g;
 
@@ -593,17 +611,22 @@
 // for (const match of matches) {
 //   console.log(match);
 // }
-
-// => str.at() method is used to find index of specific charactor. eg-
+// Q. What is str.at() in js ?==============================================
+// Ans. str.at() method is used to find index of specific charactor. eg-
 // let str = "hello world"
 // console.log(str.at(6))
 
-// => map vs foreach function :- map function returns new array and foreach function dont return anything.
-// => navigator object is used to get information about browser in js
-// => how to know in js if function is called by use click or by any script? button me onclick me jo function call hota hai use event object pass hota hai. to if event.isTrusted==true then user clicked and if false then script clicked.
+// Q. map vs foreach function ?==========================================
+// Ans. map function returns new array and foreach function dont return anything.
 
-///////////////////////////////////////////  some object concepts //////////////////////////////////////
+// Q.What is navigator in js ? ============================================
+// Ans. navigator object is used to get information about browser in js
 
+// Q. how to know in js if function is called by use click or by any script? =======================================
+// Ans. button me onclick me jo function call hota hai use event object pass hota hai. to if event.isTrusted==true then user clicked and if false then script clicked.
+
+// Q. Wha is object ? tell me some concepts of it ? ==================================
+// Ans.
 // =>  in js object is collection of related data or functionallity.
 // => if we declare object in const, we can change their property but cannot reassign that object.
 // => to delete any property or function from object- delete user.name;
@@ -620,8 +643,8 @@
 // }
 // console.log(user)
 
-// => how to loop a object:-
-
+// Q. How to loop a object ?? =========================================================
+// Ans.
 // const user = {
 //   name: "peter",
 //   ["pin code"]: 241001,
@@ -634,8 +657,8 @@
 //     console.log(user[item]) // for values
 // }
 
-///////////////////////////////////// string built-in methods ///////////////////////////////////////////////////
-
+// Q. Describe some string built-in methods with examples?===================================================================
+// Ans.
 // let data = "Hello, How are you?"
 
 // console.log(data.split())
@@ -653,8 +676,8 @@
 //console.log(data.split('').reverse().join('')) // reverse string
 //console.log(data.trim()) // remove extra space
 
-////////////////////////////////////////////////// some outputs ///////////////////////////////////////////////////////////////////
-
+// Q. guess the output of the following ?
+// Ans.
 // console.log(1 + "2" + "2"); // it will give 122
 // console.log(1 + +"2" + "2"); // it will take it as (1 + (+"2") + "2") // it will give 32
 // console.log(1 + +"2" + +"2"); // it will give 5
@@ -701,6 +724,59 @@
 // console.log(null == undefined); // ?
 // console.log([] == false); // ?
 // console.log([] == ![]); // ?
+
+///////////////////////////////////////////////////// Practice Questions for DSA ///////////////////////////////////////////
+
+// 1. Program to find longest word in a given sentence ?
+//  2. How to check whether a string is palindrome or not ?
+//  3. Write a program to remove duplicates from an array ?
+//  4. Program to find Reverse of a string without using built-in method ?
+//  5. Find the max count of consecutive 1’s in an array ?
+//  6. Find the factorial of given number ?
+//  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
+//  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
+//  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.  find anagrams
+//  10. Write logic to get unique objects from below array ?
+//  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
+//  O/P: [{name: "sai"},{name:"Nang"}{name: "111111"}
+//  11. Write a JavaScript program to find the maximum number in an array.
+//  12. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
+//  13. Write a JavaScript function to check if a given number is prime.
+//  14. Write a JavaScript program to find the largest element in a nested array.
+//  [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]
+//  15. Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
+//  16. Given a string, write a javascript function to count the occurrences of each character in the string.
+//  17. Write a javascript function that sorts an array of numbers in ascending order.
+//  18. Write a javascript function that sorts an array of numbers in descending order.
+//  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
+//  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
+// write a program to find element accurence in array; ex-{1:2,4:6,8:7times}
+// remove duplicate from array
+// multiply 2 no without multiply sign
+// document.designMode = 'on'
+
+//////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
+
+// Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
+// Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
+// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed.
+// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.
+// Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
+// Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
+// Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
+// Algorithm and Data Structure Puzzles: Practice solving common algorithmic challenges like sorting, searching, and optimization.
+// Destructuring and Spread Operator Puzzles: Solve puzzles that involve destructuring arrays and objects, and using the spread operator for both objects and arrays.
+// Regular Expression Puzzles: Challenge yourself to write regular expressions that match specific patterns.
+// Error Handling and Exception Puzzles: Predict and handle errors in code, such as try-catch blocks and asynchronous error handling.
+// Bitwise Operations Puzzles: Solve challenges using bitwise operators for efficient calculations.
+// Logical Puzzles and Challenges: Solve logical puzzles that require reasoning through JavaScript’s behavior.
+// Functional Programming Puzzles: Work with higher-order functions, immutability, and pure functions.
+// Performance and Optimization Puzzles: Optimize code for performance and solve challenges related to memory usage and execution time.
+// Recursion Puzzles: Solve puzzles that involve recursive function calls.
+// Promise and Async/Await Puzzles: Dive into asynchronous code and solve challenges using promises and async/await.
+// Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
+// Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
+// Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
 
 /////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
 // (function (){
