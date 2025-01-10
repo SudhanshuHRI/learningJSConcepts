@@ -4,7 +4,7 @@
 
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
 
-// Q.diff between var let const ? ============================================================
+// Q.diff between var ,let ,const ? ============================================================
 // Ans.
 // var : function scope + hoisted + allowed to redeclare in same scope and reassign values
 // let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
@@ -25,7 +25,7 @@
 // const {name,age} = {name:"John",age:25}
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
-// Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line function
+// Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line arrow function
 
 // Q. all built - in array functions in react==================================================
 // Ans. React dont have any built in methods. it takes form js.
@@ -37,8 +37,8 @@
 // 6. some() :- checks if at least one element satisfies the condition.
 // 7. every() :- checks if all elements satisfies the condition.
 // 8. push():-  to add element on last index of array.
-// 9. pop():- removes last element.
-// 10. unshift(value) :- add element on first index.
+// 9. pop():- removes last element + return removed element + removes from orignal array. + no argument required, it will ignored.
+// 10. unshift(value) :- add element on first index. + returns array's lenth after adding
 // 11. shift ():- removes first element .
 // 12. splice() :- add or remove elements at specific index + returns arry containing removed elements + if no elements removed, return blank array + arr.splice(1,2) means remove 2 elements starting from 1 index + arr.splice(1,0,2,3) means add 2 and 3 at index 1 without removing anything + arr.splice(0) means remove all elements from array.
 // 13. concat() :- add two array.
