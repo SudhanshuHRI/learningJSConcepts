@@ -51,7 +51,6 @@
 // Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
 // Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
 
-
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
 
 // Q. What are Call, apply and bind methods? ============================================================
@@ -106,7 +105,6 @@
 //  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
 
 //  console.log(bindVariable());
-
 
 // Q.diff between var let const ? ============================================================
 // Ans.
@@ -163,7 +161,7 @@
 // 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
 // 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
 
-// Q.all object buit-in functions??
+// Q.all object buit-in functions??========================================================================
 
 // 1.Object.create():- Create an object with a specified prototype.
 // 2.Object.assign():- 	Shallow copy properties into a target object.
@@ -175,6 +173,8 @@
 // 8.object.freeze():- 	Freeze an object to make it immutable.
 // 9.object.seal():- 	Prevent adding/removing properties.
 // 10. object.is():- 	Compare values with improved edge cases.
+
+// Q.// object.seal vs object.freeze ==============================================================
 
 // Q. pure functions and impure functions in js and what are side effects in js. ======================================
 // Ans. if we have a component, when we pass 2 variable in a function whose value is static and not changing in whole component then those funtion's output will always return same because we pass static variables as a parameters. so it will called pure function. when we pass dynamic variable or state whos value is changing in compnent then each time output of a function will change so it will called impure function.
@@ -220,26 +220,42 @@
 
 //   clearInterval(intervalId); // Cancel the intervel
 
+// Q.spread and rest operator ?
+// Ans.
+// 1. Spread operator:- used to expand array or object elements to individuls. + used to copy arrys (const arr2 = [...arr1]) + merge arrays (const merged = [...arr1, ...arr2]) + copy objects (obj2 = { ...obj1 }) + merge objects (const merged = { ...obj1, ...obj2 })
 
-// spread and rest operator
-// promise vs callback
-// event bubbling and event capturing
-// 
-// null vs undefined
-// all false values in js
-// setTimeout vs setInterval
-// object.seal vs object.freeze
-// weakmap vs weakSet.
+// 2. Rest Operator:- used to collect multiple elements into single array or object + used in function Parameter( function Sum(...numbers){}) + destructure arrays (const [first, ...rest] = [1, 2, 3, 4]) + destructure Objects (const { a, ...others } = { a: 1, b: 2, c: 3 })
+
+// Q.event bubbling and event capturing 
+// Ans. 1.event bubbling : works from child to parent element + mostly used in gaming website + event.stopPropagation() function is used stop bubbling 
+// 2.event capturing : works form parent to child + onClickCapture={handleParentClick} used to start event capturing.
+
+// Q. null vs undefined
+// Ans. null :- absance of value + it's typeof is Object.
+// undefined:- value not assigned but can be assign later + its typeof is "undefined"
+// null==undefined // true
+// null===undefined//false
+
+// Q. all false values in js?
+// Ans. 0 / -0 / "" / null / undefined / NaN / 
+
+// Q. all true values in js?
+// Ans. non-zero numbers / non-empty strings / {} / [] / any symbol / all functions(buit-in and user defined) / 
+
+// Q.weakmap vs weakSet.
+// Ans. 1. weakmap :- 
+// 2. weakset :- 
+// Ans.
 // json.stringify vs parse
 // how to stop event prapagation in js
 // what is dead zone in js
 // what is mutation observer in js
 // Q.high order functions??
 // Ans. it is a function that accepts function as parameter and returns function. eg:-map(),filter(), reduce(),some() etc.
-// 
+//
 // Module, Factory, Observer, and Singleton
 // Memory Leaks
-
+// Private property and fucntion in js
 
 //////////////////////////////////////////////// working of JS /////////////////////////////////////////////////////////////////
 
@@ -265,16 +281,16 @@
 // *task Que/callback que
 //*call stack                  //*event loop
 
-// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: 
+// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤:
 // - This is where JavaScript runs your code one step at a time.
 
-// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬: 
+// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬:
 // - Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
 
-// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞: 
+// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞:
 // - Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
 
-// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: 
+// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩:
 // - The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
 // ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
@@ -617,8 +633,6 @@
 //     console.log(item) // for keys
 //     console.log(user[item]) // for values
 // }
-
-
 
 ///////////////////////////////////// string built-in methods ///////////////////////////////////////////////////
 

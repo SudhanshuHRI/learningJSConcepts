@@ -524,14 +524,43 @@
 
 // Q.what is portal in react ===================================================================================
 // Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
+
 // Q.API polling ? =========================================================================
 // Ans. API Polling is a technique where a client repeatedly makes requests to a server at regular intervals to check for updates or changes + used in live scroes, monitoring data that changes frequently.
 
-// Profiler============================================
+//  Q. React Profiler ============================================
+// Ans. it is a tool to measure and analyse the performance of react components in application + capture render timings, identifies wasted renders etc.
+// eg:-
+// import React, { Profiler } from "react";
+
+// function App() {
+//   const onRenderCallback = (
+//     id, // The "id" of the Profiler tree that has just committed
+//     phase, // "mount" or "update"
+//     actualDuration, // Time spent rendering the committed update
+//     baseDuration, // Estimated time to render without memoization
+//     startTime, // When React began rendering this update
+//     commitTime, // When React committed this update
+//     interactions // Set of interactions triggered during this update
+//   ) => {
+//     console.log({ id, phase, actualDuration });
+//   };
+
+//   return (
+//     <Profiler id="App" onRender={onRenderCallback}>
+//       <MyComponent />
+//     </Profiler>
+//   );
+// }
+
 // Q.element vs component ?=======================================================
-// Ans. elements are created by React.createElement(<h1>hello</h1>) + component is js function that returns jsx
+// Ans. elements are created by React.createElement(<h1>hello</h1>) + component is js function that returns jsx 
 
 // Q.lifting state up in react ? =======================================================
-// Ans. sharing common state to siblings
-// Q.why fragments are better then div =======================================================
+// Ans. sharing common state to siblings components
+
+// Q.why fragments are better then div container =======================================================
+// Ans. fragement dont add extra node in DOM Tree so improve performance + keeps jsx structure clean + + fragments are ideal for grouping elements
+
 // Q.why react use className over class =======================================================
+// Ans. becz class is reverve keyword in js
