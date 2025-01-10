@@ -49,65 +49,13 @@
 //////////////////////////////////////////////// Questions on React.js ///////////////////////////////////////////
 
 // Q. What is React.js  and it's history? ============================================================
-// Ans. facebook created it in 2011 + oper source + front end library + built SPA + created by jordan walke(facebook employee) + 
+// Ans. facebook created it in 2011 + oper source + front end library + built SPA + created by jordan walke(facebook employee) +
 
 // Q. What are the advantages of react? and disadvantages ============================================================
 // Ans.
 // => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
 // => disadvantages :- not major disadvantages
 
-// Q. What are Call, apply and bind methods? ============================================================
-
-// Ans. when we want to attach a function to different object for re-use then we use these methods.
-
-// Problem:-
-// function getFullName(firstName, lastName) {
-//   return `${firstName} ${lastName}`;
-// }
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-//   getFullName: getFullName(this.firstName, this.lastName),
-// };
-
-// console.log(student.getFullName); // here it will come undefined undefined so we need call apply bind methods + normal functions cannot be called in object for reuse
-
-// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional. + attached function called autometically
-// example : -
-
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-// };
-
-// let teacher = {
-//   firstName: "Anil",
-//   lastName: "Siddhu",
-// };
-
-// function getFullName() {
-//   return `${this.firstName} ${this.lastName}`;
-// }
-
-//console.log(getFullName.call(student)); // here getFullName function is attached with student's object.
-//console.log(getFullName.call(teacher)); // here getFullName function is attached with techer's object.
-
-// function chooseSubject(sub1,sub2){
-//     return [sub1,sub2]
-// }
-
-//console.log(chooseSubject.call(teacher,"maths","hindi")) // here cooseSubject function is attached with teacher object and 2 arguments are passed in chooseSubject(). if we want to send a lot of arguments then we use apply() method. call() takes any datatype of params.
-
-// => apply() :- similer to call() but takes arguments in array. it takes only array as params + function called autometically
-// example:-
-
-//console.log(chooseSubject.apply(teacher,["maths","hindi"]))
-
-// => bind() :- did not invokes immidiately + returns a function +  attach function in object but dont call it + it can called when ever required.
-//example:-
-//  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
-
-//  console.log(bindVariable());
 
 // Q. difference between function and class component? ============================================================
 // Ans.
@@ -303,18 +251,12 @@
 
 // export default CounterApp;
 
-// Q.diff between var let const ? ============================================================
-// Ans.
-// var : function scope + hoisted + allowed to redeclare in same scope and reassign values
-// let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
-// const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
+
 
 //  Q. Props vs state ============================================================
 //  Ans. Props are immutable and passed from parent component, while state is mutable and managed within the component + props are immutable, which means you cannot directly modify or set props within a child component. Props can only be set by the parent component when they pass them down to the child component.
 
-// Q.What are callback function ? Give disadvantages ============================================================
-// Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
-// => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
+
 
 // Q.When to use class component over functional component? ============================================================
 // Ans. if working on old project + using older libraries
@@ -334,67 +276,19 @@
 // example:-
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
-// Q. What are ES6 features ?? ==========================================================
-// Ans.
-// 1. block scoped variabels (let, const)
-// 2. Arrow function
-// 3. templete letrals
-// 4. Rest and spread operators
-// 5. array and object destructuring .
-// eg- const [a,b] = [1,2];
-// const {name,age} = {name:"John",age:25}
 
-// Q. difference between normal funciton and arrow funciton ? ====================================================
-// Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line function
 
-// Q. all built - in array functions in react==================================================
-// Ans. React dont have any built in methods. it takes form js.
-// 1. forEach() :- itrate over each element + dont return array + params - value,index,array
-// 2. map() :- itrate over each element + return array + params - value,index,array
-// 3. filter( ) :- returns array with filter value / const even = [1, 2, 3, 4].filter(num => num % 2 === 0);
-// 4. find() :- returns first element that satisfies the condition / const found = [1, 2, 3].find(num => num > 2); // 3
-// 5. findIndex() :- returns the index of first element that satisfies condition
-// 6. some() :- checks if at least one element satisfies the condition.
-// 7. every() :- checks if all elements satisfies the condition.
-// 8. push():-  to add element on last index of array.
-// 9. pop():- removes last element.
-// 10. unshift(value) :- add element on first index.
-// 11. shift ():- removes first element .
-// 12. splice() :- add or remove elements at specific index + returns arry containing removed elements + if no elements removed, return blank array + arr.splice(1,2) means remove 2 elements starting from 1 index + arr.splice(1,0,2,3) means add 2 and 3 at index 1 without removing anything + arr.splice(0) means remove all elements from array.
-// 13. concat() :- add two array.
-// 14. slice():- remove portion in array + returnes new array + params-start,end / const subArray = [1, 2, 3, 4].slice(1, 3); // [2, 3]
-// 15. reduce():- Reduces the array to a single value by applying a callback. / const sum = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
-// 16. reduceRight():- Similar to reduce but starts from the end of the array. / const reversed = [1, 2, 3].reduceRight((acc, num) => acc + num, ''); // '321'
-// 17. sort():- sorts array by converting elements in string. / const sorted = [3, 1, 2].sort((a, b) => a - b); // [1, 2, 3]
-// 18. reverse() : - reverse array.
-// 19. includes():- checks if array contains specific value.
-// 20. indexOf() :- to know the index of element. /const index = [1, 2, 3].indexOf(2); // 1
-// 21. lastIndexOf() :- returns last index of value. / const lastIndex = [1, 2, 3, 2].lastIndexOf(2); // 3
-// 22. join():- join all elemnts with secific separator. / const joined = [1, 2, 3].join('-'); // '1-2-3'
-// 23. Array.from('123') :- creates an array of [1,2,3] /const arr = Array.from('123'); // ['1', '2', '3']
-// 24. Array.of(1,2,3):- creates array of [1,2,3] / const arr = Array.of(1, 2, 3); // [1, 2, 3]
 
-// all object buit-in functions??
 
-// 1.Object.create():- Create an object with a specified prototype.
-// 2.Object.assign():- 	Shallow copy properties into a target object.
-// 3.Object.keys():- 	Get enumerable property names.
-// 4.object.values():- Get enumerable property values.
-// 5.object.entries():- 	Get key-value pairs as arrays.
-// 6.Object.getOwnPropertyNames():- Get all property names (including non-enumerable).
-// 7.Object.defineProperty():- 	Define or modify a property.
-// 8.object.freeze():- 	Freeze an object to make it immutable.
-// 9.object.seal():- 	Prevent adding/removing properties.
-// 10. object.is():- 	Compare values with improved edge cases.
+
 
 // Q. how would you add a Dynamic title on every page in React??=====================================================
 //Ans. useEffect(()=>{document.title = "Home - My Website";},[]) + we can also do it with react-router-dom 's useLocation
 
 //
-// Q. pure functions and impure functions in js and what are side effects in js. ======================================
-// Ans. if we have a component, when we pass 2 variable in a function whose value is static and not changing in whole component then those funtion's output will always return same because we pass static variables as a parameters. so it will called pure function. when we pass dynamic variable or state whos value is changing in compnent then each time output of a function will change so it will called impure function.
 
-// side effect :- side effect is called when function update variable or state's value in it.
+
+
 
 // Q. virtual DOM Vs Actual DOM ?  ================================================================
 // Virtual DOM is a lightweight copy of the actual DOM + when state changes in a component, react only update it in virtual dom + react dont update actual dom every time + when page re-renders , new updates are shown .
@@ -417,18 +311,16 @@
 // Q. what is uni directioanl data flow in react? ====================================================================
 // Ans. in uni-directional data flows from parent to child through props + child cannot modify props, it can be done only by callback + it works on one way data binding.
 
-// Q.Difference between promise and async await ?===========================================================================================
-// Ans. Promise : - it is a object + uses .then() and .catch()  + harder to readable + uses .catch() to hadle error
-// Async/await :- uses async and await keyword + easy to read + uses try-catch to handle error
 
-// Q. Throw keyword in js ?=============================================================================
-// Ans. throw stops the excution of current function and pass the error to the catch block of calling function + if we use try-catch block, throw will send error in catch function.
+
+
 
 // Q.What is anti pattern in react?=========================================================================================
 // Ans. means write code neglecting core principles as:- changing actual DOM directly + over use of state and props  + not using key in array's loop +
 
 // Q.how to handle cors error on front end?==============================================================================
 // Ans. ideally solve it in backend using "cors" library (app.use(cors({origin:"front end url"}))) + in front end add {"proxy":"backend url"} in package.json
+
 // Q.what we send in header to authentication?========================================================================
 // Ans. fetch('sdfsfds',{
 // method:GET,
@@ -447,17 +339,9 @@
 // Ans. statefull :- a component that has its own state and manages it internally.
 // stateless:- A component that does not maintain its own state and relies entirely on props for data.
 
-// Q.controlled and uncontrolled components?========================================================================
-// Ans.
-// controlled:- when input fields controlled by state
-// uncontrolled:- those who directly controlled by DOM + get input field value with getElementById +
 
-// Q.Explain about the Oops concepts.========================================================================
-// Ans. 4 priciple-
-// 1.Encapsulation:- building data and methods and restricting direact access to database + goal is data security and integrity.
-// 2. Abstraction:- hiding implimentation details and exposing only essential features + goal is to simplify complexicity
-// 3. inheritance:- reusing properties and behaviours of parent class + goal is code reuse and hierarchy.
-// 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
+
+
 
 // Q.Explain microfrontend approach in react?=========================================================
 // Ans. microfrontend approch means break application in small, manageble pieces + this approch inspired by microservices(where different parts of application developed, diployed, maintained sepreratly) + each component and feature is modularise and maintain by different teams like e-commerce.
@@ -496,8 +380,7 @@
 // Q.What is StrictMode in React ?===================================
 // Ans. strict mode is used to impliment validation + if we don's use priciple or not following rules of react then strict mode send error and warnings + strict mode works in development mode not in production mode + in react development many consoles comes 2 time beacuse of strict mode.
 
-// Q.what is use strict in js?===========================================
-// Ans. with this we cannot use variable without declaring + it maintains syntex validation in js + added in ES5 + it is implimented only on that function
+
 
 // Q.Explain the concept of lazy loading in React and how it can be implemented?
 // Ans. when application become heavy then it takes time to load so with use of lazy loading heavy component will load later and fast component will load first
@@ -534,7 +417,7 @@
 // Q.tree shaking .==================================
 // Ans. it is  technique in react which removes unused dependency, functions, code when bundules are made in build. if it is not happen then build will be heavy weight +  webpack module in react do this task automatically with ES6's import/export only + those libraries dont support import/export, they will not be removed( like moment library for date time)
 
-// Q. How to pass data between sibling components using React router?
+// Q. How to pass data between sibling components using React router? ==========================================
 // Ans. we so that with shared state using react router dom + where routing is doing , we create a state. then we send setSharedData to other component and use sharedData state in sibling component.
 // eg:-
 // import {Router,Routes,Route} from "react-router-dom";
@@ -566,29 +449,10 @@
 // Q.how can we change local server port in react =====================================================================
 // Ans. create .env and their declare PORT=3001 and restart.
 
-// Q.slice vs splice who modify orignal array?? =================================================================
-// Ans.
-// 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
-// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
-// Q. setTimeout vs setInterval
-// Ans. both used to shedule the excution of function
-// 1.setTimeout:- excutes the function when time is completed + we can also clear it by using clearTimeout();
-// eg:-
-// const timeoutId = setTimeout(() => {
-//   console.log("This won't be executed");
-// }, 2000);
 
-// clearTimeout(timeoutId); // Cancels the timeout
 
-// 2.setInterval:- excute the function repeted when time is over.
-// eg:-
-// const intervalId = setInterval(() => {
-//   console.log("This will console every 1 sec");
-// }, 1000);
 
-//   clearInterval(intervalId); // Cancel the intervel
-
-// Q.Debouncing in js =====================================================================
+// Q.Debouncing in js and react =====================================================================
 // Ans. when we use onchange function , it call multiple times when any key presses + debouncing delays the excution of a function for certain time but if in that time any event triggered then its delay time extends + good tech for searchBox's list recommendation
 // eg:-
 // import React, { useState } from "react";
@@ -597,11 +461,11 @@
 //   const [query, setQuery] = useState("");
 //   const [debouncedQuery, setDebouncedQuery] = useState("");
 
-//   const handleInputChange = (e) => { 
+//   const handleInputChange = (e) => {
 //     const value = e.target.value;
 //     setQuery(value);
 
-//     
+//
 //     clearTimeout(this.debounceTimeout); // Clear previous timer
 
 //     // Set a new timer
@@ -625,7 +489,7 @@
 
 // export default DebouncedSearch;
 
-// Q.Throttling ===========================================================================
+// Q.Throttling in js and react ===========================================================================
 // Ans. In throttling function will be called only once in a time  while how many times user clicked the button. it dont reset the time + main difference in them is that throttling dont reset time while debounding restet time on button click + throttling mainly work on scrolling. you want to show a popup on page scroll. of user scroll sudden up and down , then it will not work properly. so we use throttling.
 // eg:-
 // import React, { useState, useRef } from "react";
@@ -655,20 +519,19 @@
 
 // export default ThrottledScroll;
 
-// Q.polyfills in js ===========================================================================
+// Q.polyfills in react ===========================================================================
 // Ans.polyfills are commonly used to ensure compatibility with older browsers like Internet Explorer or older versions of Safari.
 
 // Q.what is portal in react ===================================================================================
 // Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
-// Q.API polling ? 
+// Q.API polling ? =========================================================================
 // Ans. API Polling is a technique where a client repeatedly makes requests to a server at regular intervals to check for updates or changes + used in live scroes, monitoring data that changes frequently.
 
-
-// Profiler
-// Q.element vs component ?
+// Profiler============================================
+// Q.element vs component ?=======================================================
 // Ans. elements are created by React.createElement(<h1>hello</h1>) + component is js function that returns jsx
 
-// Q.lifting state up in react ?
-// Ans. sharing common state to siblings 
-// why fragments are better then div
-// why react use className over class
+// Q.lifting state up in react ? =======================================================
+// Ans. sharing common state to siblings
+// Q.why fragments are better then div =======================================================
+// Q.why react use className over class =======================================================

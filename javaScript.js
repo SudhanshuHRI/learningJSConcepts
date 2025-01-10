@@ -53,10 +53,178 @@
 
 
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
+
+// Q. What are Call, apply and bind methods? ============================================================
+
+// Ans. when we want to attach a function to different object for re-use then we use these methods.
+
+// Problem:-
+// function getFullName(firstName, lastName) {
+//   return `${firstName} ${lastName}`;
+// }
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+//   getFullName: getFullName(this.firstName, this.lastName),
+// };
+
+// console.log(student.getFullName); // here it will come undefined undefined so we need call apply bind methods + normal functions cannot be called in object for reuse
+
+// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional. + attached function called autometically
+// example : -
+
+// let student = {
+//   firstName: "Sudhanshu",
+//   lastName: "Srivastava",
+// };
+
+// let teacher = {
+//   firstName: "Anil",
+//   lastName: "Siddhu",
+// };
+
+// function getFullName() {
+//   return `${this.firstName} ${this.lastName}`;
+// }
+
+//console.log(getFullName.call(student)); // here getFullName function is attached with student's object.
+//console.log(getFullName.call(teacher)); // here getFullName function is attached with techer's object.
+
+// function chooseSubject(sub1,sub2){
+//     return [sub1,sub2]
+// }
+
+//console.log(chooseSubject.call(teacher,"maths","hindi")) // here cooseSubject function is attached with teacher object and 2 arguments are passed in chooseSubject(). if we want to send a lot of arguments then we use apply() method. call() takes any datatype of params.
+
+// => apply() :- similer to call() but takes arguments in array. it takes only array as params + function called autometically
+// example:-
+
+//console.log(chooseSubject.apply(teacher,["maths","hindi"]))
+
+// => bind() :- did not invokes immidiately + returns a function +  attach function in object but dont call it + it can called when ever required.
+//example:-
+//  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
+
+//  console.log(bindVariable());
+
+
+// Q.diff between var let const ? ============================================================
+// Ans.
+// var : function scope + hoisted + allowed to redeclare in same scope and reassign values
+// let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
+// const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
+
+// Q.What are callback function ? Give disadvantages ============================================================
+// Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
+// => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
+
+// Q. What are ES6 features ?? ==========================================================
+// Ans.
+// 1. block scoped variabels (let, const)
+// 2. Arrow function
+// 3. templete letrals
+// 4. Rest and spread operators
+// 5. array and object destructuring .
+// eg- const [a,b] = [1,2];
+// const {name,age} = {name:"John",age:25}
+
+// Q. difference between normal funciton and arrow funciton ? ====================================================
+// Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line function
+
+// Q. all built - in array functions in react==================================================
+// Ans. React dont have any built in methods. it takes form js.
+// 1. forEach() :- itrate over each element + dont return array + params - value,index,array
+// 2. map() :- itrate over each element + return array + params - value,index,array
+// 3. filter( ) :- returns array with filter value / const even = [1, 2, 3, 4].filter(num => num % 2 === 0);
+// 4. find() :- returns first element that satisfies the condition / const found = [1, 2, 3].find(num => num > 2); // 3
+// 5. findIndex() :- returns the index of first element that satisfies condition
+// 6. some() :- checks if at least one element satisfies the condition.
+// 7. every() :- checks if all elements satisfies the condition.
+// 8. push():-  to add element on last index of array.
+// 9. pop():- removes last element.
+// 10. unshift(value) :- add element on first index.
+// 11. shift ():- removes first element .
+// 12. splice() :- add or remove elements at specific index + returns arry containing removed elements + if no elements removed, return blank array + arr.splice(1,2) means remove 2 elements starting from 1 index + arr.splice(1,0,2,3) means add 2 and 3 at index 1 without removing anything + arr.splice(0) means remove all elements from array.
+// 13. concat() :- add two array.
+// 14. slice():- remove portion in array + returnes new array + params-start,end / const subArray = [1, 2, 3, 4].slice(1, 3); // [2, 3]
+// 15. reduce():- Reduces the array to a single value by applying a callback. / const sum = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
+// 16. reduceRight():- Similar to reduce but starts from the end of the array. / const reversed = [1, 2, 3].reduceRight((acc, num) => acc + num, ''); // '321'
+// 17. sort():- sorts array by converting elements in string. / const sorted = [3, 1, 2].sort((a, b) => a - b); // [1, 2, 3]
+// 18. reverse() : - reverse array.
+// 19. includes():- checks if array contains specific value.
+// 20. indexOf() :- to know the index of element. /const index = [1, 2, 3].indexOf(2); // 1
+// 21. lastIndexOf() :- returns last index of value. / const lastIndex = [1, 2, 3, 2].lastIndexOf(2); // 3
+// 22. join():- join all elemnts with secific separator. / const joined = [1, 2, 3].join('-'); // '1-2-3'
+// 23. Array.from('123') :- creates an array of [1,2,3] /const arr = Array.from('123'); // ['1', '2', '3']
+// 24. Array.of(1,2,3):- creates array of [1,2,3] / const arr = Array.of(1, 2, 3); // [1, 2, 3]
+
+// Q.slice vs splice who modify orignal array?? =================================================================
+// Ans.
+// 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
+// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
+
+// Q.all object buit-in functions??
+
+// 1.Object.create():- Create an object with a specified prototype.
+// 2.Object.assign():- 	Shallow copy properties into a target object.
+// 3.Object.keys():- 	Get enumerable property names.
+// 4.object.values():- Get enumerable property values.
+// 5.object.entries():- 	Get key-value pairs as arrays.
+// 6.Object.getOwnPropertyNames():- Get all property names (including non-enumerable).
+// 7.Object.defineProperty():- 	Define or modify a property.
+// 8.object.freeze():- 	Freeze an object to make it immutable.
+// 9.object.seal():- 	Prevent adding/removing properties.
+// 10. object.is():- 	Compare values with improved edge cases.
+
+// Q. pure functions and impure functions in js and what are side effects in js. ======================================
+// Ans. if we have a component, when we pass 2 variable in a function whose value is static and not changing in whole component then those funtion's output will always return same because we pass static variables as a parameters. so it will called pure function. when we pass dynamic variable or state whos value is changing in compnent then each time output of a function will change so it will called impure function.
+// side effect :- side effect is called when function update variable or state's value in it.
+
+// Q.Difference between promise and async await ?===========================================================================================
+// Ans. Promise : - it is a object + uses .then() and .catch()  + harder to readable + uses .catch() to hadle error
+// Async/await :- uses async and await keyword + easy to read + uses try-catch to handle error
+
+// Q. throw keyword in js ?=============================================================================
+// Ans. throw stops the excution of current function and pass the error to the catch block of calling function + if we use try-catch block, throw will send error in catch function.
+
+// Q.controlled and uncontrolled components?========================================================================
+// Ans.
+// controlled:- when input fields controlled by state
+// uncontrolled:- those who directly controlled by DOM + get input field value with getElementById +
+
+// Q.Explain about the Oops concepts.========================================================================
+// Ans. 4 priciple-
+// 1.Encapsulation:- building data and methods and restricting direact access to database + goal is data security and integrity.
+// 2. Abstraction:- hiding implimentation details and exposing only essential features + goal is to simplify complexicity
+// 3. inheritance:- reusing properties and behaviours of parent class + goal is code reuse and hierarchy.
+// 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
+
+// Q.what is use strict in js?===========================================
+// Ans. with this we cannot use variable without declaring + it maintains syntex validation in js + added in ES5 + it is implimented only on that function
+
+// Q. setTimeout vs setInterval
+// Ans. both used to shedule the excution of function
+// 1.setTimeout:- excutes the function when time is completed + we can also clear it by using clearTimeout();
+// eg:-
+// const timeoutId = setTimeout(() => {
+//   console.log("This won't be executed");
+// }, 2000);
+
+// clearTimeout(timeoutId); // Cancels the timeout
+
+// 2.setInterval:- excute the function repeted when time is over.
+// eg:-
+// const intervalId = setInterval(() => {
+//   console.log("This will console every 1 sec");
+// }, 1000);
+
+//   clearInterval(intervalId); // Cancel the intervel
+
+
 // spread and rest operator
 // promise vs callback
 // event bubbling and event capturing
-// throttling vs debouncing
+// 
 // null vs undefined
 // all false values in js
 // setTimeout vs setInterval
@@ -68,7 +236,7 @@
 // what is mutation observer in js
 // Q.high order functions??
 // Ans. it is a function that accepts function as parameter and returns function. eg:-map(),filter(), reduce(),some() etc.
-// null vs undefined
+// 
 // Module, Factory, Observer, and Singleton
 // Memory Leaks
 
