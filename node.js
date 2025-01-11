@@ -41,9 +41,9 @@
 // three methods to avoid callback hell
 // evenyEmitter in node.js
 // url module in node.js
-// 1. What is Node.js?
-// 2. What is the difference between Node.js and JavaScript?
-// 3. Is Node.js single-threaded?
+//  How to make import export work on node.js ? which is better import export or require() ?
+// 
+// 
 // 4. What kind of API function is supported by Node.js?
 // 5. What is a module in Node.js?
 // 6. What is npm and its advantages?
