@@ -15,9 +15,12 @@
 // 6. add gitignone file in the project.
 // 7. add dependencies as required and add modules and other files as required.
 
-//. What is Node.js and it's history?
-// how node.js work
-//is node.js sigle threaded? yes, then how it handle concurrency
+//. Q.What is Node.js and it's history?
+// Ans. open source + runtime environment to run on server + built on js's v8 + asynchronours + single threaded  +  with event loop +  rich eco system like npm + cross plateform supported + created 2009  by Ryan Dahl 
+
+// Q. how node.js work? 
+// Ans. 
+// Q. is node.js sigle threaded? yes, then how it handle concurrency
 // what kind of api function is supported by node.js.
 // what is module in node.js
 // what is control flow in node.js
