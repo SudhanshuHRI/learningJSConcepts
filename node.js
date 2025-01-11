@@ -1,14 +1,23 @@
-//to make a project of Node.js follow the steps--------------------
+// 1. Interview Questions
+// 2. Practice Questions
+// 3. Puzzles
+
+////////////////////////////////////////////  interview questions  //////////////////////////////////////////////////////
+// Q. How to setup node project ??======================================
+
+// Ans. to make a project of Node.js follow the steps--------------------
 
 // 1. make a project folder.
 // 2. open in vs code
 // 3. make entry file with index.js
 // 4. install package.json with "npm init" in terminal
-// 5.install node modules with "npm install" in terminal
+// 5. install node modules with "npm install" in terminal
 // 6. add gitignone file in the project.
 // 7. add dependencies as required and add modules and other files as required.
 
-////////////////////////// Node.js Topic Puzzles //////////////////////////
+
+
+///////////////////////////////////////////////////  Puzzles /////////////////////////////////////////////////
 
 // Asynchronous Programming Patterns: Solve puzzles related to async/await, promises, and callback functions.
 // Event Loop and Concurrency: Predict how the event loop handles concurrency and multiple asynchronous operations.
