@@ -488,6 +488,35 @@
 //     </Profiler>
 //   );
 // }
+// Q. how to make layout in react??
+// Ans.Step1: first create a layout file.
+// Step 2 : write this code.
+// import react from "react";
+// import Header from "./header";
+// import Footer from "./footer";
+// import Main from "./main";
+// import Sidebar from "./sidebar";
+// import Navbar from "./navbar";
+
+// const Layout = ({ children }) => {
+//   return (
+   
+//       <div className="LayoutContainer">
+//         <Navbar />
+//         {/* <Header /> */}
+//         <div className="d-flex ">
+//           <Sidebar />
+//           <Main />
+//         </div>
+//         <Footer />
+//       </div>
+   
+//   );
+// };
+
+// export default Layout;
+
+// Step 3 :  inmport this component in app.js
 
 /////////////////////////////////////////////  Exersises  ///////////////////////////////////////////////////////
 // Implement counter such that it has 2 buttons to increment and decrement the values

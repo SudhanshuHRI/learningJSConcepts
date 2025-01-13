@@ -27,6 +27,25 @@
 // Q. difference between normal funciton and arrow funciton ? ====================================================
 // Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line arrow function
 
+// Q. What are premitive and non premetive data types in js ?
+// Ans.
+// 1. primitive data types :- these are immutible (cannot be changed) + their value is sotred directly in variable + string, number, boolean, undefined, null, symbol, BigInt, 
+// 2. Non-primitive data types :- also known as reference types + mutable(can be changed) + value stored as referece + object, array, function , Date, built-in objects and functions.
+
+// // eg:-
+// // Primitive
+// let a = 10;
+// let b = a;
+// b = 20;
+// console.log(a); // Output: 10 (original value is unaffected)
+
+// // Non-Primitive
+// let obj1 = { name: "Alice" };
+// let obj2 = obj1;
+// obj2.name = "Bob";
+// console.log(obj1.name); // Output: "Bob" (reference is affected)
+
+
 // Q. all built - in array functions in react==================================================
 // Ans. React dont have any built in methods. it takes form js.
 // 1. forEach(item,index,array) :- itrate over each element + dont return array + params - value,index,array
