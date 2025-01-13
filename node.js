@@ -21,9 +21,9 @@
 // Ans. Asynchronous node architecure have following component:-
 // 1. code : Place where code is written
 // 2. call Stack : first function register here + call stack have default function called main(). if we use calculation without any funciton , then it will go in main() + works on FILO +
-// 3. Node api :- functinos inherite from c, c++ will go here + like setTimeout() + first which task is completed, it will go to callback queue +
+// 3. Node API / Web API :- functinos inherite from c, c++ will go here + like setTimeout() + first which task is completed, it will go to callback queue +
 // 4.callback queue : it will get those funcition that have completed excution in node API +
-// 5.event loop : it pushee callback queue task to call stack.
+// 5.event loop : it pushes callback queue task to call stack.
 
 // Reference video:-https://www.youtube.com/watch?v=mGVFltBxLKU&t=619s
 
@@ -33,11 +33,9 @@
 // Q. How async tasks are handled in node.js ?
 //Ans. through callback, promises, async/await.
 
-//
-// What is the event loop in Node.js, and how does it work?
-// How does Node.js handle asynchronous operations?
-// What are the differences between synchronous and asynchronous operations in Node.js?
-// What is the purpose of the process.nextTick() method?
+
+// Q.What is the purpose of the process.nextTick() method?
+// Ans.
 // What is the use of the setImmediate() function in Node.js?
 // Explain the concept of callback hell and how can it be avoided in Node.js?
 // What is the difference between setTimeout() and setInterval() in Node.js?
