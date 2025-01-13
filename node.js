@@ -34,11 +34,45 @@
 //Ans. through callback, promises, async/await.
 
 
-// Q.What is the purpose of the process.nextTick() method?
+// Q.`What is the purpose of the process.nextTick() method?
+// Ans. it is used to shedule a callback funtion that excute immidiately after current operation completes + used to do high priority task + it will excute first in setTimeout()s 
+// eg:-
+// console.log("start")
+// setTimeout(() => {
+//     console.log("Timeout");
+//   }, 0);
+  
+//   process.nextTick(() => {
+//     console.log("NextTick");
+//   });
+  
+//   console.log("stop");
+  
+// Q. What is the use of the setImmediate() function in Node.js?
+// Ans. used same for process.nextTick() + setImmediate have preference over setTimeout()  but not the process.nextTick();
+// example:-
+// console.log("Start")
+// setTimeout(() => console.log("Timeout"),0);
+// setImmediate(() => console.log("Immediate"));
+// process.nextTick(() => console.log("Next Tick"));
+// console.log("end");
+
+// Q.Explain the concept of callback hell and how can it be avoided in Node.js?
+// Ans. setting nested callbacks in same function will create callback hell + to avoid it use named functions, use Promise, use Async/await
+// eg:-
+// fs.readFile('file1.txt', (err, data1) => {
+//     if (err) throw err;
+//     fs.readFile('file2.txt', (err, data2) => {
+//       if (err) throw err;
+//       fs.writeFile('output.txt', data1 + data2, (err) => {
+//         if (err) throw err;
+//         console.log('Files merged successfully');
+//       });
+//     });
+//   });
+  
+// Q.What is the difference between setTimeout() and setInterval() in Node.js?
 // Ans.
-// What is the use of the setImmediate() function in Node.js?
-// Explain the concept of callback hell and how can it be avoided in Node.js?
-// What is the difference between setTimeout() and setInterval() in Node.js?
 // How does Node.js manage memory? What is the role of the garbage collector?
 // What is the EventEmitter in Node.js, and how does it work?
 // What are streams in Node.js, and how do they improve performance?
