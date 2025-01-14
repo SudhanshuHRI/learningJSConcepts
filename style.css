@@ -1,5 +1,61 @@
-/* difference bw rem, em, */
-/* css vs css3 */
-/* box sizing in css */
-/* pseudo selector */
-/* what are selector and it's type */
+/* 1. InterView Questions */
+/* ////////////////////////////////////////////////////////// InterView Questions ///////////////////////////////// */
+
+/* What is CSS, and why is it used in web development?
+What are the different types of CSS (inline, internal, external)?
+What is the difference between id and class selectors in CSS?
+What is the syntax of a CSS rule?
+How do you include CSS in an HTML document?
+What is the difference between relative, absolute, fixed, and sticky positioning in CSS?
+What are pseudo-classes in CSS? Give examples.
+What are pseudo-elements in CSS? How do they differ from pseudo-classes?
+What is the difference between em and rem units in CSS?
+What is the difference between px, %, and vh/vw units?
+Selectors
+What are the different types of CSS selectors?
+How do child and descendant selectors differ?
+What is the difference between the > and + selectors in CSS?
+How do attribute selectors work in CSS? Provide examples.
+How do you select multiple elements in CSS?
+Box Model
+What is the CSS box model?
+What is the difference between content-box and border-box?
+How do margin, border, padding, and width work together in the box model?
+What is the difference between inline, block, and inline-block elements?
+How do you make an element's box model ignore its child elements' margins?
+Layout and Positioning
+What is the difference between relative and absolute positioning?
+How does the z-index property work?
+What is the difference between inline, block, and flex containers?
+How do you center an element vertically and horizontally in CSS?
+What is the purpose of the float property, and how is it used?
+Flexbox and Grid
+What is Flexbox, and why is it used in CSS?
+What is the difference between justify-content and align-items in Flexbox?
+What is the difference between Flexbox and CSS Grid?
+How do you create a responsive layout using CSS Grid?
+What are the differences between auto-fit and auto-fill in Grid layouts?
+Typography
+How do you specify custom fonts in CSS?
+What is the difference between relative, absolute, and fixed font sizes?
+How do you control text spacing using CSS?
+What is the difference between line-height and letter-spacing?
+What are the different font-family categories in CSS?
+Responsive Design
+What are media queries, and how are they used in CSS?
+How do you create a mobile-first design using CSS?
+What is the difference between max-width and min-width in media queries?
+How do you make images responsive using CSS?
+What is the viewport meta tag, and why is it important?
+Animations and Transitions
+What is the difference between CSS animations and transitions?
+How do you create a CSS animation using the @keyframes rule?
+What is the purpose of the transition property in CSS?
+How do you make an animation infinite in CSS?
+How does the animation-timing-function property work?
+Advanced CSS Questions
+What is the difference between CSS preprocessors like SASS and LESS?
+How do you use CSS variables (custom properties)?
+What is the clip-path property, and how is it used?
+What is the difference between opacity and visibility in CSS?
+How do you optimize CSS for better performance? */
