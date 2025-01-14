@@ -1,4 +1,4 @@
-// 1. Interview Questions
+// 1. Interview Questions + give example code where required.
 // 2. Practice Questions
 // 3. Puzzles
 
@@ -14,10 +14,10 @@
 // 6. add gitignone file in the project.
 // 7. add dependencies as required and add modules and other files as required.
 
-//. Q.What is Node.js and it's history?
+//. Q.What is Node.js and it's history?========================================================
 // Ans. open source + runtime environment to run on server + built on js's v8 + asynchronours + single threaded  +  with event loop +  rich eco system like npm + cross plateform supported + created 2009  by Ryan Dahl + writen in c, c++, javascript
 
-// Q. how node.js work?
+// Q. how node.js work?===============================================
 // Ans. Asynchronous node architecure have following component:-
 // 1. code : Place where code is written
 // 2. call Stack : first function register here + call stack have default function called main(). if we use calculation without any funciton , then it will go in main() + works on FILO +
@@ -27,13 +27,13 @@
 
 // Reference video:-https://www.youtube.com/watch?v=mGVFltBxLKU&t=619s
 
-// Q. what is non blocking I/O in node.js ?
+// Q. what is non blocking I/O in node.js ?=========================================================
 // Ans. node dont wait for tasks like database queries and file system to finish before moving on to the next operation.
 
-// Q. How async tasks are handled in node.js ?
+// Q. How async tasks are handled in node.js ?=================================================================
 //Ans. through callback, promises, async/await.
 
-// Q.`What is the purpose of the process.nextTick() method?
+// Q.`What is the purpose of the process.nextTick() method?========================================================
 // Ans. it is used to shedule a callback funtion that excute immidiately after current operation completes + used to do high priority task + it will excute first in setTimeout()s
 // eg:-
 // console.log("start")
@@ -47,7 +47,7 @@
 
 //   console.log("stop");
 
-// Q. What is the use of the setImmediate() function in Node.js?
+// Q. What is the use of the setImmediate() function in Node.js?=====================================================
 // Ans. used same for process.nextTick() + setImmediate have preference over setTimeout()  but not the process.nextTick();
 // example:-
 // console.log("Start")
@@ -56,7 +56,7 @@
 // process.nextTick(() => console.log("Next Tick"));
 // console.log("end");
 
-// Q.Explain the concept of callback hell and how can it be avoided in Node.js?
+// Q.Explain the concept of callback hell and how can it be avoided in Node.js?===============================================
 // Ans. setting nested callbacks in same function will create callback hell + to avoid it use named functions, use Promise, use Async/await
 // eg:-
 // fs.readFile('file1.txt', (err, data1) => {
@@ -70,19 +70,19 @@
 //     });
 //   });
 
-// Q.What is the difference between setTimeout() and setInterval() in Node.js?
+// Q.What is the difference between setTimeout() and setInterval() in Node.js?===============================================
 // Ans. setTimeout():- excute code after given seconds + const setTiomeoutID = setTimeout(()=>{}) + clearTimeout(setTimeoutID)
 // setInterval():- excute code repetedly after given seconds + const setIntervelID = setIntervel(()=>{}) + clearInterveal(setIntervelID)
 
-// Q.How does Node.js manage memory?
+// Q.How does Node.js manage memory?========================================================
 // Ans. node uses 2 type of memmory:-
 // 1.Stack memory: LIFO + faster + stores variable , function when called and arguments
 // 2.Heap memory : slower + stores objects and array
 
-// Q.What is the role of the garbage collector?
+// Q.What is the role of the garbage collector?========================================================
 // Ans. used for automatic memory management + when memory is about to fill , it is activated and removes unused variables and object from memory
 
-// Q. What is the EventEmitter in Node.js, and how does it work?
+// Q. What is the EventEmitter in Node.js, and how does it work?======================================================
 // Ans. core built-in module in node + event means trigger to excute something + it is used to keep track of events in node.js + in node we trigger a event when we hit api (in front end we fire or create event by pressing a button) + suppose in application we have 5 apis /home, /about, /form, /contact, /projects. we want to count how many times /about api is hit(or event created). So, for that we use event Emmiter.
 // eg:-
 
@@ -90,7 +90,7 @@
 // const event = new EventEmitter();
 // let count = 0;
 
-// // function for creating action
+// // function for tracking action
 // event.on("countAPI", () => {
 //   count = count + 1;
 //   console.log("total API hit:", count);
@@ -101,10 +101,114 @@
 //   event.emit("countAPI");
 // });
 
-// Q.What are streams in Node.js, and how do they improve performance?
+// Q.What are streams in Node.js, and how do they improve performance?======================================================
+// Ans. streams are objects to read or write data from source in real time + data send in chunks in it + effective for large files + consume memory of current chunk not whole file so saves memory, saves time becz at first chunk it starts working + mostly used in fs + streaming have 4 events: data,end,error,finish.
+
+// Q.How many types of streams? give example code.=======================================================================
 // Ans.
-// What is the difference between a readable stream and a writable stream in Node.js?
-// How does Node.js handle child processes, and when should you use them?
+// 1. readable Stream: used for reading
+// 2. Writeable Stream: used for writing
+// 3. Duplex Stream: used for writing and reading
+// 4. transform Stream: used where output is computed based of input
+
+// eg:-
+
+// 1. read stream:-
+// const fs = require('fs');
+
+// const readableStream = fs.createReadStream('input.txt', 'utf8');
+
+// readableStream.on('data', (chunk) => {
+//   console.log(`Received chunk: ${chunk}`);
+// });
+
+// readableStream.on('end', () => {
+//   console.log('No more data to read.');
+// });
+
+// readableStream.on('error', (err) => {
+//   console.error(`Error: ${err.message}`);
+// });
+
+// 2. Write Stream:-
+// const writableStream = fs.createWriteStream('output.txt');
+
+// writableStream.write('This is the first line.\n');
+// writableStream.write('This is the second line.\n');
+
+// // Signal that no more data will be written
+// writableStream.end();
+
+// // Listen to the 'finish' event to know when writing is done
+// writableStream.on('finish', () => {
+//   console.log('Finished writing to the file.');
+// });
+
+// // Handle errors
+// writableStream.on('error', (err) => {
+//   console.error(`Error: ${err.message}`);
+// });
+
+// 3. Duplex Stream:-
+// const net = require('net');
+
+// // Create a server using a duplex stream (socket)
+// const server = net.createServer((socket) => {
+//   console.log('Client connected.');
+
+//   // Read data from the client and send it back (echo)
+//   socket.on('data', (data) => {
+//     console.log(`Received: ${data}`);
+//     socket.write(`Echo: ${data}`);
+//   });
+
+//   // Handle client disconnection
+//   socket.on('end', () => {
+//     console.log('Client disconnected.');
+//   });
+
+//   // Handle errors
+//   socket.on('error', (err) => {
+//     console.error(`Error: ${err.message}`);
+//   });
+// });
+
+// // Start the server
+// server.listen(8080, () => {
+//   console.log('Server is running on port 8080.');
+// });
+
+// 4. tramform Stream:-
+// const { Transform } = require('stream');
+
+// // Create a transform stream that converts input to uppercase
+// const uppercaseTransform = new Transform({
+//   transform(chunk, encoding, callback) {
+//     const uppercased = chunk.toString().toUpperCase();
+//     callback(null, uppercased);
+//   },
+// });
+
+// // Pipe data through the transform stream
+// process.stdin.pipe(uppercaseTransform).pipe(process.stdout);
+
+// Q. ".pipe()" method in streams?==========================================================================
+// Ans. it allows to connect to readable stream  and write it as recieves data + it automatic manages backpressure
+// eg:-
+// const readableStream = fs.createReadStream('input.txt');
+// const writableStream = fs.createWriteStream('output.txt');
+
+// //Pipe the readable stream into the writable stream
+// readableStream.pipe(writableStream);
+
+// writableStream.on('finish', () => {
+//   console.log('File copied successfully.');
+// });
+
+
+// Q. How does Node.js handle child processes, and when should you use them?  ========================================================
+// Ans. child_process is built-in module + allows to create and manage child process + useful when need to excute system commands , run other program, perform expensice in parallel to avoid blocking event loop. 
+
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?
 // Explain the non-blocking I/O model in Node.js. How does it impact performance?
