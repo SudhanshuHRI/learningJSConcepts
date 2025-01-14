@@ -33,21 +33,20 @@
 // Q. How async tasks are handled in node.js ?
 //Ans. through callback, promises, async/await.
 
-
 // Q.`What is the purpose of the process.nextTick() method?
-// Ans. it is used to shedule a callback funtion that excute immidiately after current operation completes + used to do high priority task + it will excute first in setTimeout()s 
+// Ans. it is used to shedule a callback funtion that excute immidiately after current operation completes + used to do high priority task + it will excute first in setTimeout()s
 // eg:-
 // console.log("start")
 // setTimeout(() => {
 //     console.log("Timeout");
 //   }, 0);
-  
+
 //   process.nextTick(() => {
 //     console.log("NextTick");
 //   });
-  
+
 //   console.log("stop");
-  
+
 // Q. What is the use of the setImmediate() function in Node.js?
 // Ans. used same for process.nextTick() + setImmediate have preference over setTimeout()  but not the process.nextTick();
 // example:-
@@ -70,12 +69,40 @@
 //       });
 //     });
 //   });
-  
+
 // Q.What is the difference between setTimeout() and setInterval() in Node.js?
+// Ans. setTimeout():- excute code after given seconds + const setTiomeoutID = setTimeout(()=>{}) + clearTimeout(setTimeoutID)
+// setInterval():- excute code repetedly after given seconds + const setIntervelID = setIntervel(()=>{}) + clearInterveal(setIntervelID)
+
+// Q.How does Node.js manage memory?
+// Ans. node uses 2 type of memmory:-
+// 1.Stack memory: LIFO + faster + stores variable , function when called and arguments
+// 2.Heap memory : slower + stores objects and array
+
+// Q.What is the role of the garbage collector?
+// Ans. used for automatic memory management + when memory is about to fill , it is activated and removes unused variables and object from memory
+
+// Q. What is the EventEmitter in Node.js, and how does it work?
+// Ans. core built-in module in node + event means trigger to excute something + it is used to keep track of events in node.js + in node we trigger a event when we hit api (in front end we fire or create event by pressing a button) + suppose in application we have 5 apis /home, /about, /form, /contact, /projects. we want to count how many times /about api is hit(or event created). So, for that we use event Emmiter.
+// eg:-
+
+// const EventEmitter = require("events");
+// const event = new EventEmitter();
+// let count = 0;
+
+// // function for creating action
+// event.on("countAPI", () => {
+//   count = count + 1;
+//   console.log("total API hit:", count);
+// });
+
+// app.get("/about", (req, res) => {
+//   res.send("api hit");
+//   event.emit("countAPI");
+// });
+
+// Q.What are streams in Node.js, and how do they improve performance?
 // Ans.
-// How does Node.js manage memory? What is the role of the garbage collector?
-// What is the EventEmitter in Node.js, and how does it work?
-// What are streams in Node.js, and how do they improve performance?
 // What is the difference between a readable stream and a writable stream in Node.js?
 // How does Node.js handle child processes, and when should you use them?
 // What is the cluster module in Node.js, and how does it help in scaling applications?
@@ -116,7 +143,7 @@
 // What is the purpose of the Mocha framework in Node.js, and how do you use it for testing?
 // Explain the concept of Test-Driven Development (TDD) in the context of Node.js.
 // What are some best practices you follow when writing a Node.js application?
-//  How to make import export work on node.js ? which is better import export or require() ?
+// How to make import export work on node.js ? which is better import export or require() ?
 //
 //
 // 4. What kind of API function is supported by Node.js?
