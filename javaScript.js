@@ -6,44 +6,18 @@
 
 // Q.diff between var ,let ,const ? ============================================================
 
+// Q.What are callback function ? Give advantages and disadvantages ============================================================
 
-// Q.What are callback function ? Give disadvantages ============================================================
-// Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
-// => disadvantages : nested callback (also known as callback hell) is hard + defecult debugging
+
+// Q. What is callback hell or pyramid of doom? give example=================================================
 
 // Q. What are ES6 features ?? ==========================================================
-// Ans.
-// 1. block scoped variabels (let, const)
-// 2. Arrow function
-// 3. templete letrals
-// 4. Rest and spread operators
-// 5. array and object destructuring .
-// eg- const [a,b] = [1,2];
-// const {name,age} = {name:"John",age:25}
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
-// Ans. 'this' dont work in arrow function  +  arrow function dont have default "arguments" object so we have to use rest parameter in it +  it is not required to write "return" in single line arrow function
 
 // Q. What are premitive and non premetive data types in js ?
-// Ans.
-// 1. primitive data types :- these are immutible (cannot be changed) + their value is sotred directly in variable + string, number, boolean, undefined, null, symbol, BigInt, 
-// 2. Non-primitive data types :- also known as reference types + mutable(can be changed) + value stored as referece + object, array, function , Date, built-in objects and functions.
 
-// // eg:-
-// // Primitive
-// let a = 10;
-// let b = a;
-// b = 20;
-// console.log(a); // Output: 10 (original value is unaffected)
-
-// // Non-Primitive
-// let obj1 = { name: "Alice" };
-// let obj2 = obj1;
-// obj2.name = "Bob";
-// console.log(obj1.name); // Output: "Bob" (reference is affected)
-
-
-// Q. all built - in array functions in react==================================================
+// Q. all built - in array functions in react ? give all==================================================
 // Ans. React dont have any built in methods. it takes form js.
 // 1. forEach(item,index,array) :- itrate over each element + dont return array + params - value,index,array
 // 2. map(item,index,array) :- itrate over each element + return array + params - value,index,array
@@ -70,12 +44,12 @@
 // 23. Array.from('123') :- creates an array of [1,2,3] /const arr = Array.from('123'); // ['1', '2', '3']
 // 24. Array.of(1,2,3):- creates array of [1,2,3] / const arr = Array.of(1, 2, 3); // [1, 2, 3]
 
-// Q.slice vs splice who modify orignal array?? =================================================================
+// Q.slice vs splice who modify orignal array?? give example =================================================================
 // Ans.
 // 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
-// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
+// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b" 
 
-// Q.all object buit-in functions??========================================================================
+// Q.all object buit-in functions?? give example========================================================================
 
 // 1.Object.create():- Create an object with a specified prototype.
 // 2.Object.assign():- 	Shallow copy properties into a target object.
