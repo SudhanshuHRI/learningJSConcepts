@@ -5,10 +5,7 @@
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
 
 // Q.diff between var ,let ,const ? ============================================================
-// Ans.
-// var : function scope + hoisted + allowed to redeclare in same scope and reassign values
-// let : block scoped + hoisted but can't use it before declaration + can't redeclare in same scope but reassign value ;
-// const : block scoped + hoisted but cant use it before declaration + can't redeclare and can't reassign;
+
 
 // Q.What are callback function ? Give disadvantages ============================================================
 // Ans. functiion that passed as argument to another function + excuted when parent function excuted fully + used in asyncronous programming
