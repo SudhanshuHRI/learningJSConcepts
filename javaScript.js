@@ -49,14 +49,14 @@ console.log("arr before:",arr);
 
 const result = arr.shift(134)
 
-
 console.log("arr after:",arr);
 console.log("result:",result);
-// 12. splice(start,deleteCount,item1,item2,...) :- add or remove elements at specific index + returns arry containing removed elements + if no elements removed, return blank array + arr.splice(1,2) means remove 2 elements starting from 1 index + arr.splice(1,0,2,3) means add 2 and 3 at index 1 without removing anything + arr.splice(0) means remove all elements from array.
-// 13. concat(array) :- add two array.
-// 14. slice(start,end):- remove portion in array + returnes new array + params-start,end / const subArray = [1, 2, 3, 4].slice(1, 3); // [2, 3]
-// 15. reduce((accumulater,currentValue, currentIndex, array),0):- Reduces the array to a single value by applying a callback. / const sum = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
-// 16. reduceRight():- Similar to reduce but starts from the end of the array. / const reversed = [1, 2, 3].reduceRight((acc, num) => acc + num, ''); // '321'
+
+// 12. splice()
+// 13. concat()
+// 14. slice()
+// 15. reduce()
+// 16. reduceRight()
 // 17. sort():- sorts array by converting elements in string. / const sorted = [3, 1, 2].sort((a, b) => a - b); // [1, 2, 3]
 // 18. reverse() : - reverse array.
 // 19. includes():- checks if array contains specific value.
