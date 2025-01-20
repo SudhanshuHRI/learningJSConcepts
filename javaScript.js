@@ -8,15 +8,18 @@
 
 // Q.What are callback function ? Give advantages and disadvantages ============================================================
 
-
-// Q. What is callback hell or pyramid of doom? give example=================================================
+// Q. What is callback hell or pyramid of doom? give example =================================================
 
 // Q. What are ES6 features ?? ==========================================================
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
 
-// Q. What are premitive and non premetive data types in js ?
 
+
+// Q. What are premitive and non premetive data types in js ?=============================================
+
+
+// Q. what is Symbol() in js ?=========================================
 // Q. all built - in array functions in react ? give all==================================================
 // Ans. React dont have any built in methods. it takes form js.
 // 1. forEach(item,index,array) :- itrate over each element + dont return array + params - value,index,array
@@ -47,7 +50,7 @@
 // Q.slice vs splice who modify orignal array?? give example =================================================================
 // Ans.
 // 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
-// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b" 
+// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
 
 // Q.all object buit-in functions?? give example========================================================================
 
