@@ -14,25 +14,44 @@
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
 
-
-
 // Q. What are premitive and non premetive data types in js ?=============================================
 
-
 // Q. what is Symbol() in js ?=========================================
+
 // Q. all built - in array functions in react ? give all==================================================
 // Ans. React dont have any built in methods. it takes form js.
-// 1. forEach(item,index,array) :- itrate over each element + dont return array + params - value,index,array
-// 2. map(item,index,array) :- itrate over each element + return array + params - value,index,array
-// 3. filter(item,index, array ) :- returns array with filter value / const even = [1, 2, 3, 4].filter(num => num % 2 === 0);
-// 4. find(item, index,array) :- returns first element that satisfies the condition / const found = [1, 2, 3].find(num => num > 2); // 3
-// 5. findIndex(item,index,array) :- returns the index of first element that satisfies condition
-// 6. some(item,index,array) :- checks if at least one element satisfies the condition.
-// 7. every(item,index,array) :- checks if all elements satisfies the condition.
-// 8. push(element):-  to add element on last index of array.
-// 9. pop(nothing):- removes last element + return removed element + removes from orignal array. + no argument required, it will ignored.
-// 10. unshift(value) :- add element on first index. + returns array's lenth after adding
-// 11. shift (nothing):- removes first element .
+
+const arr = [1, 5, 4, 2, 3];
+
+// 1. forEach()
+
+// 2. map()
+
+// 3. filter()
+
+// 4. find()
+
+// 5. findIndex() 
+ 
+// 6. some()
+
+// 7. every()
+
+// 8. push()
+
+// 9. pop()
+
+// 10. unshift() 
+
+// 11. shift ()
+
+console.log("arr before:",arr);
+
+const result = arr.shift(134)
+
+
+console.log("arr after:",arr);
+console.log("result:",result);
 // 12. splice(start,deleteCount,item1,item2,...) :- add or remove elements at specific index + returns arry containing removed elements + if no elements removed, return blank array + arr.splice(1,2) means remove 2 elements starting from 1 index + arr.splice(1,0,2,3) means add 2 and 3 at index 1 without removing anything + arr.splice(0) means remove all elements from array.
 // 13. concat(array) :- add two array.
 // 14. slice(start,end):- remove portion in array + returnes new array + params-start,end / const subArray = [1, 2, 3, 4].slice(1, 3); // [2, 3]
