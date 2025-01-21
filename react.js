@@ -77,6 +77,7 @@
 
 // in postman  > headers > origin > http://www....... (it is not recommended)
 
+// Q. we have so many states declared in a component. How to avoid to  declare it multiple times ??
 // Q.What is reconcilation in ReactJs?===============================================================================
 // Ans. process of comparing the current virtual Dom to previous virtual Dom and do minimal update to make virtual dom to actual dom + it efficiently update the UI by minimizing DOM manupulations.
 
