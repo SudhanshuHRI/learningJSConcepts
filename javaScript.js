@@ -21,8 +21,6 @@
 // Q. all built - in array functions in react ? give all==================================================
 // Ans. React dont have any built in methods. it takes form js.
 
-const arr = [1, 5, 4, 2, 3];
-
 // 1. forEach()
 
 // 2. map()
@@ -31,8 +29,8 @@ const arr = [1, 5, 4, 2, 3];
 
 // 4. find()
 
-// 5. findIndex() 
- 
+// 5. findIndex()
+
 // 6. some()
 
 // 7. every()
@@ -41,30 +39,36 @@ const arr = [1, 5, 4, 2, 3];
 
 // 9. pop()
 
-// 10. unshift() 
+// 10. unshift()
 
 // 11. shift ()
 
 // 12. splice()
 
-console.log("arr before:",arr);
-const result = arr.splice(0,2);
-console.log("arr after:",arr);
-console.log("result :",result);
-
-
 // 13. concat()
+
 // 14. slice()
+
 // 15. reduce()
+
 // 16. reduceRight()
-// 17. sort():- sorts array by converting elements in string. / const sorted = [3, 1, 2].sort((a, b) => a - b); // [1, 2, 3]
-// 18. reverse() : - reverse array.
-// 19. includes():- checks if array contains specific value.
-// 20. indexOf() :- to know the index of element. /const index = [1, 2, 3].indexOf(2); // 1
-// 21. lastIndexOf() :- returns last index of value. / const lastIndex = [1, 2, 3, 2].lastIndexOf(2); // 3
-// 22. join():- join all elemnts with secific separator. / const joined = [1, 2, 3].join('-'); // '1-2-3'
-// 23. Array.from('123') :- creates an array of [1,2,3] /const arr = Array.from('123'); // ['1', '2', '3']
-// 24. Array.of(1,2,3):- creates array of [1,2,3] / const arr = Array.of(1, 2, 3); // [1, 2, 3]
+
+// 17. sort()
+
+// 18. reverse()
+
+const arr1 = ["a","b","c"]
+console.log("arr before:",arr1);
+const result = arr1.reverse();
+console.log("arr after:",arr1)
+console.log("result:",result)
+
+// 19. includes()
+// 20. indexOf()
+// 21. lastIndexOf() 
+// 22. join()
+// 23. Array.from('123')
+// 24. Array.of(1,2,3)
 
 // Q.slice vs splice who modify orignal array?? give example =================================================================
 // Ans.
