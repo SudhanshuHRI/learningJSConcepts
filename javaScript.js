@@ -47,6 +47,12 @@ const arr = [1, 5, 4, 2, 3];
 
 // 12. splice()
 
+console.log("arr before:",arr);
+const result = arr.splice(0,2);
+console.log("arr after:",arr);
+console.log("result :",result);
+
+
 // 13. concat()
 // 14. slice()
 // 15. reduce()
