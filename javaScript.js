@@ -57,11 +57,7 @@
 
 // 18. reverse()
 
-const arr1 = ["a","b","c"]
-console.log("arr before:",arr1);
-const result = arr1.reverse();
-console.log("arr after:",arr1)
-console.log("result:",result)
+
 
 // 19. includes()
 // 20. indexOf()
@@ -71,75 +67,52 @@ console.log("result:",result)
 // 24. Array.of(1,2,3)
 
 // Q.slice vs splice who modify orignal array?? give example =================================================================
-// Ans.
-// 1.slice():- dont modify orignal array + gives copy of portion of array + arguments- start,end + arr.slice(1,4)
-// 2.splice():- modify orignal array + add/remove/replace elements + arr.splice(1, 2, "a", "b"); // Removes 2 items starting from index 1 and adds "a" and "b"
+
+// const arr1 = [1,2,3,4,5,6,7,8,9,10];
+// console.log("arr before:",arr1);
+// const result = arr1.splice(arr1.length-1,1,100)
+// console.log("arr after:",arr1);
+// console.log("result:",result);
+
+
 
 // Q.all object buit-in functions?? give example========================================================================
 
-// 1.Object.create():- Create an object with a specified prototype.
-// 2.Object.assign():- 	Shallow copy properties into a target object.
-// 3.Object.keys():- 	Get enumerable property names.
-// 4.object.values():- Get enumerable property values.
-// 5.object.entries():- 	Get key-value pairs as arrays.
-// 6.Object.getOwnPropertyNames():- Get all property names (including non-enumerable).
-// 7.Object.defineProperty():- 	Define or modify a property.
-// 8.object.freeze():- 	Freeze an object to make it immutable.
-// 9.object.seal():- 	Prevent adding/removing properties.
-// 10. object.is():- 	Compare values with improved edge cases.
+// 1.Object.create()
+
+// 2.Object.assign()
+
+// 3.Object.keys()
+
+// 4.object.values()
+
+// 5.object.entries()
+
+// 6.Object.getOwnPropertyNames()
+
+// 7.Object.defineProperty()
+
+// 8.object.freeze()
+
+// 9.object.seal()
+
+// 10. object.is()
 
 // Q. What are Call, apply and bind methods? ============================================================
 
-// Ans. when we want to attach a function to different object for re-use then we use these methods.
-
 // Problem:-
-// function getFullName(firstName, lastName) {
-//   return `${firstName} ${lastName}`;
-// }
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-//   getFullName: getFullName(this.firstName, this.lastName),
-// };
+function greet() {
+  console.log(`Hello, ${this.name}`);
+}
 
-// console.log(student.getFullName); // here it will come undefined undefined so we need call apply bind methods + normal functions cannot be called in object for reuse
+const person = { name: "Alice" };
 
-// => call() :- it invokes immidiately + set "this" value to first argument + takes two arguments + second argument is optional. + attached function called autometically
-// example : -
+//greet(); // Output: Hello, undefined 
+console.log(person);
 
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-// };
+greet.call(person)
+console.log(person);
 
-// let teacher = {
-//   firstName: "Anil",
-//   lastName: "Siddhu",
-// };
-
-// function getFullName() {
-//   return `${this.firstName} ${this.lastName}`;
-// }
-
-//console.log(getFullName.call(student)); // here getFullName function is attached with student's object.
-//console.log(getFullName.call(teacher)); // here getFullName function is attached with techer's object.
-
-// function chooseSubject(sub1,sub2){
-//     return [sub1,sub2]
-// }
-
-//console.log(chooseSubject.call(teacher,"maths","hindi")) // here cooseSubject function is attached with teacher object and 2 arguments are passed in chooseSubject(). if we want to send a lot of arguments then we use apply() method. call() takes any datatype of params.
-
-// => apply() :- similer to call() but takes arguments in array. it takes only array as params + function called autometically
-// example:-
-
-//console.log(chooseSubject.apply(teacher,["maths","hindi"]))
-
-// => bind() :- did not invokes immidiately + returns a function +  attach function in object but dont call it + it can called when ever required.
-//example:-
-//  let bindVariable = getFullName.bind(teacher) // here getFullName function in bind with teacher object but dont call it by self.
-
-//  console.log(bindVariable());
 
 // Q. object.seal vs object.freeze ==============================================================
 // Ans.
