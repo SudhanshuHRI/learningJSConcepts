@@ -108,27 +108,16 @@
 // Q. object.seal vs object.freeze ==============================================================
 
 // Q. pure functions and impure functions in js ? ==============================================
+
 // Q. what are side effects in js ? ======================================
 
+// Q.Difference between promise and async await?===========================================================================================
 
-// Q.Difference between promise and async await ?===========================================================================================
-// Ans. Promise : - it is a object + uses .then() and .catch()  + harder to readable + uses .catch() to hadle error
-// Async/await :- uses async and await keyword + easy to read + uses try-catch to handle error
-
-// Q. throw keyword in js ?=============================================================================
-// Ans. throw stops the excution of current function and pass the error to the catch block of calling function + if we use try-catch block, throw will send error in catch function.
+// Q. "throw" keyword in js ?=============================================================================
 
 // Q.controlled and uncontrolled components?========================================================================
-// Ans.
-// controlled:- when input fields controlled by state
-// uncontrolled:- those who directly controlled by DOM + get input field value with getElementById +
 
-// Q.Explain about the Oops concepts.========================================================================
-// Ans. 4 priciple-
-// 1.Encapsulation:- building data and methods and restricting direact access to database + goal is data security and integrity.
-// 2. Abstraction:- hiding implimentation details and exposing only essential features + goal is to simplify complexicity
-// 3. inheritance:- reusing properties and behaviours of parent class + goal is code reuse and hierarchy.
-// 4. polimorphism:- one function have multiple features + goal is flexibility and reuse.
+// Q.Explain about the Oops concepts 4 principle.========================================================================
 
 // Q.what is use strict in js?===========================================
 // Ans. with this we cannot use variable without declaring + it maintains syntex validation in js + added in ES5 + it is implimented only on that function
