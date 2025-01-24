@@ -119,26 +119,23 @@
 
 // Q.Explain about the Oops concepts 4 principle.========================================================================
 
-// Q.what is use strict in js?===========================================
-// Ans. with this we cannot use variable without declaring + it maintains syntex validation in js + added in ES5 + it is implimented only on that function
+// Q.what is use strict in js? ===========================================
 
 // Q. setTimeout vs setInterval ============================================================
-// Ans. both used to shedule the excution of function
-// 1.setTimeout:- excutes the function when time is completed + we can also clear it by using clearTimeout();
-// eg:-
-// const timeoutId = setTimeout(() => {
-//   console.log("This won't be executed");
-// }, 2000);
 
-// clearTimeout(timeoutId); // Cancels the timeout
+const value = 0; // Value is non-zero, so the timeout will not be cleared.
 
-// 2.setInterval:- excute the function repeted when time is over.
-// eg:-
-// const intervalId = setInterval(() => {
-//   console.log("This will console every 1 sec");
-// }, 1000);
+const setTimeoutId = setTimeout(() => {
+  console.log("setTimeout executed");
+}, 5000);
 
-//   clearInterval(intervalId); // Cancel the intervel
+if (value != 0) {
+  console.log("Timeout will not be cleared.");
+} else {
+  console.log("Timeout will be cleared");
+  clearTimeout(setTimeoutId); // This will clear the timeout
+}
+
 
 // Q.spread and rest operator ?=====================================================================
 // Ans.
