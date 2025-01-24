@@ -97,48 +97,19 @@
 // Q. What are Call, apply and bind methods? ============================================================
 
 // Problem:-
-function greet(greeting,city) {
-  console.log(`${greeting}, I am ${this.name}. I am from ${city}`);
-}
+// function getFullName(greet) {
+//  console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);
+// }
 
-const person1 = { name: "Alice" };
-const person2 = { name: "Bob" };
+// const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
 
-//greet(); // Output: Hello, undefined
-
-greet.call(person2,"Hi","Hardoi");
+// getFullName("Hello") // this will give undefined
 
 // Q. object.seal vs object.freeze ==============================================================
-// Ans.
-// 1. Object.seal():- prevents new properties to added or existing property to remove in Object + allowes modification of existing properties
-// eg:-
-// const obj = {
-//   name: 'Alice',
-//   age: 30
-// };
 
-// Object.seal(obj);
+// Q. pure functions and impure functions in js ? ==============================================
+// Q. what are side effects in js ? ======================================
 
-// obj.age = 35;  // Allowed (value modification)
-// obj.city = 'New York';  // Not allowed (adding new properties)
-// delete obj.name;  // Not allowed (deleting properties)
-
-// 2. Object.freeze() :- prevent new properties + prevent remove properties + prevent modification of existing properties
-// eg:-
-// const obj = {
-//   name: 'Alice',
-//   age: 30
-// };
-
-// Object.freeze(obj);
-
-// obj.age = 35;  // Not allowed (value modification)
-// obj.city = 'New York';  // Not allowed (adding new properties)
-// delete obj.name;  // Not allowed (deleting properties)
-
-// Q. pure functions and impure functions in js and what are side effects in js. ======================================
-// Ans. if we have a component, when we pass 2 variable in a function whose value is static and not changing in whole component then those funtion's output will always return same because we pass static variables as a parameters. so it will called pure function. when we pass dynamic variable or state whos value is changing in compnent then each time output of a function will change so it will called impure function.
-// side effect :- side effect is called when function update variable or state's value in it.
 
 // Q.Difference between promise and async await ?===========================================================================================
 // Ans. Promise : - it is a object + uses .then() and .catch()  + harder to readable + uses .catch() to hadle error
