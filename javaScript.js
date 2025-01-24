@@ -57,11 +57,9 @@
 
 // 18. reverse()
 
-
-
 // 19. includes()
 // 20. indexOf()
-// 21. lastIndexOf() 
+// 21. lastIndexOf()
 // 22. join()
 // 23. Array.from('123')
 // 24. Array.of(1,2,3)
@@ -73,8 +71,6 @@
 // const result = arr1.splice(arr1.length-1,1,100)
 // console.log("arr after:",arr1);
 // console.log("result:",result);
-
-
 
 // Q.all object buit-in functions?? give example========================================================================
 
@@ -107,12 +103,10 @@ function greet() {
 
 const person = { name: "Alice" };
 
-//greet(); // Output: Hello, undefined 
+//greet(); // Output: Hello, undefined
 console.log(person);
 
-greet.call(person)
-console.log(person);
-
+greet.call(person);
 
 // Q. object.seal vs object.freeze ==============================================================
 // Ans.
