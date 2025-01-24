@@ -97,16 +97,16 @@
 // Q. What are Call, apply and bind methods? ============================================================
 
 // Problem:-
-function greet() {
-  console.log(`Hello, ${this.name}`);
+function greet(greeting,city) {
+  console.log(`${greeting}, I am ${this.name}. I am from ${city}`);
 }
 
-const person = { name: "Alice" };
+const person1 = { name: "Alice" };
+const person2 = { name: "Bob" };
 
 //greet(); // Output: Hello, undefined
-console.log(person);
 
-greet.call(person);
+greet.call(person2,"Hi","Hardoi");
 
 // Q. object.seal vs object.freeze ==============================================================
 // Ans.
