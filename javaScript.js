@@ -123,36 +123,11 @@
 
 // Q. setTimeout vs setInterval ============================================================
 
-const value = 0; // Value is non-zero, so the timeout will not be cleared.
-
-const setTimeoutId = setTimeout(() => {
-  console.log("setTimeout executed");
-}, 5000);
-
-if (value != 0) {
-  console.log("Timeout will not be cleared.");
-} else {
-  console.log("Timeout will be cleared");
-  clearTimeout(setTimeoutId); // This will clear the timeout
-}
-
-
-// Q.spread and rest operator ?=====================================================================
-// Ans.
-// 1. Spread operator:- used to expand array or object elements to individuls. + used to copy arrys (const arr2 = [...arr1]) + merge arrays (const merged = [...arr1, ...arr2]) + copy objects (obj2 = { ...obj1 }) + merge objects (const merged = { ...obj1, ...obj2 })
-
-// 2. Rest Operator:- used to collect multiple elements into single array or object + used in function Parameter( function Sum(...numbers){}) + destructure arrays (const [first, ...rest] = [1, 2, 3, 4]) + destructure Objects (const { a, ...others } = { a: 1, b: 2, c: 3 })
+// Q.spread and rest operator ? =====================================================================
 
 // Q.event bubbling and event capturing .how to stop event prapagation in js ?=================================================
-// Ans. event propogation :- flow of event in DOM when event is triggered.
-// 1.event bubbling : works from child to parent element + mostly used in gaming website + event.stopPropagation() function is used stop bubbling
-// 2.event capturing : works form parent to child + onClickCapture={handleParentClick} used to stop event capturing.
 
 // Q. null vs undefined====================================================================
-// Ans. null :- absance of value + it's typeof is Object.
-// undefined:- value not assigned but can be assign later + its typeof is "undefined"
-// null==undefined // true
-// null===undefined//false
 
 // Q. all false values in js?====================================================
 // Ans. 0 / -0 / "" / null / undefined / NaN /
@@ -161,56 +136,16 @@ if (value != 0) {
 // Ans. non-zero numbers / non-empty strings / {} / [] / any symbol / all functions(buit-in and user defined) /
 
 // Q.json.stringify vs parse ==================================================================
-// Ans.Stringify():- convert object or value to JSON String.
-// parse():- convert JSON String to object or value.
 
 // Q.what is dead zone in js ? ========================================================
-// Ans. part of code where variable is declared (with let and const) but not initialized + in this zone accesing vaiable results ReferenceError.
-// ex:-
-// console.log(myConst); // ReferenceError: Cannot access 'myConst' before initialization
-// const myConst = 10;
+
 
 // Q.what is mutation observer in js? =====================================================================
-// Ans. changes and updation happening in html element can be detected by mutation observer + also works on full component to observe what user is doing with full page and component +
-// eg:-
-// // // Create a MutationObserver instance
-// const observer = new MutationObserver(callback);
-
-// // Configuration options
-// const config = {
-//   childList: true, // Observe direct child node additions/removals
-//   attributes: true, // Observe attribute changes
-//   subtree: true, // Observe all descendants, not just the direct children
-//   characterData: true, // Observe changes to text content
-// };
-
-// // Start observing an element for mutations
-// observer.observe(targetNode, config); // targetNode== id of that element
-
-// // Stop observing mutations
-// observer.disconnect();
 
 // Q.high order functions?? ================================================================
-// Ans. it is a function that accepts function as parameter and returns function. eg:-map(),filter(), reduce(),some() etc.
-//
+
 
 // Q.Private property and private fucntion in js ? ====================================================
-// Ans. introduced in ECMA 2022 + means class's property that cannot be access directly + by adding # in front of property it become private property +  private property cannot access outside it's class + object dont have private property
-// eg:-
-// class BankDetails{
-//   #name="Sudhanshu";
-//   #pin="1234567";
-//   getName(){
-//     return this.name
-//   }
-//   getPin(){
-//     return this.pin
-//   }
-// }
-
-// const details = new BankDetails();
-// console.log(details.pin)
-// console.log(details.name)
 
 // Q. Explain the working of JavaScript ? =============================================================================
 // Ans.
