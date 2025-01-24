@@ -137,16 +137,11 @@
 
 // Q.json.stringify vs parse ==================================================================
 
-
 // Q.what is dead zone in js ? ========================================================
-
 
 // Q.what is mutation observer in js? =====================================================================
 
-
-
 // Q.high order functions ?? ================================================================
-
 
 // Q.Private property and private fucntion in js ? ====================================================
 
@@ -193,6 +188,7 @@
 //                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
 
 // Q. What is Laxical Scope vs closures ?===========================================================================
+
 // Laxical Scope => when inner function can access outer function's variable. eg-
 
 // function hello(){
@@ -223,6 +219,9 @@
 
 // Q. What are promises in js ?======================================================================
 // Ans.
+
+
+
 // => it is a object which returns a value which can be recived in future. Promise means task will ither solve or reject.
 // => JS is single threaded so it dont wait for function to excute fully when it takes time to excute. if it takes time, js start excuting next code.
 // => fetch() always returns 2 Promieses. so we use 2 times .then and await. it's called "Promise chaining". it can be more then 2 .
