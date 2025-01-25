@@ -122,7 +122,7 @@
 // Q.What is StrictMode in React ?===================================
 // Ans. strict mode is used to impliment validation + if we don's use priciple or not following rules of react then strict mode send error and warnings + strict mode works in development mode not in production mode + in react development many consoles comes 2 time beacuse of strict mode.
 
-// Q.Explain the concept of lazy loading in React and how it can be implemented?
+// Q.Explain the concept of lazy loading in React and how it can be implemented? ==============================================
 // Ans. when application become heavy then it takes time to load so with use of lazy loading heavy component will load later and fast component will load first
 // eg:-
 // import React, { Suspense, lazy } from "react";
