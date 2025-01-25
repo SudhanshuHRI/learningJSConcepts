@@ -9,6 +9,7 @@
 // Q.What is Incremental Static Regeneration (ISR), and how does it work in Next.js? =========================================
 // Q.What is the purpose of the next/head component, and how do you use it? =========================================
 // Q.How can you configure custom Webpack in Next.js? =========================================
+
 // Q.What is the useRouter hook in Next.js, and when would you use it? =========================================
 // Q.Can you explain the concept of dynamic routing in Next.js? =========================================
 // Q.How would you implement API routes in Next.js? =========================================
