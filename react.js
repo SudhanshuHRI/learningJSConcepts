@@ -216,7 +216,7 @@
 //     return <button onClick={handleClick}>Send Data to Parent</button>;
 //   }
 
-// Q.Explain all hooks in React.js. why react hooks are use full?============================================================
+// Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
 // => UseState.
 // => useEffect.
