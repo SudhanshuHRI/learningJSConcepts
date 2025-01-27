@@ -220,8 +220,6 @@
 // Q. What are promises in js ? ======================================================================
 // Ans.
 
-
-
 // => it is a object which returns a value which can be recived in future. Promise means task will ither solve or reject.
 // => JS is single threaded so it dont wait for function to excute fully when it takes time to excute. if it takes time, js start excuting next code.
 // => fetch() always returns 2 Promieses. so we use 2 times .then and await. it's called "Promise chaining". it can be more then 2 .
