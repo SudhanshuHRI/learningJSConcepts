@@ -529,7 +529,7 @@
 //     console.log(user[item]) // for values
 // }
 
-// Q. Describe some string built-in methods with examples?===================================================================
+// Q. Guess the output of the following ? ===================================================================
 // Ans.
 // let data = "Hello, How are you?"
 
@@ -548,7 +548,7 @@
 //console.log(data.split('').reverse().join('')) // reverse string
 //console.log(data.trim()) // remove extra space
 
-// Q. guess the output of the following ?
+// Q. guess the output of the following ?==================================================================================
 // Ans.
 // console.log(1 + "2" + "2"); // it will give 122
 // console.log(1 + +"2" + "2"); // it will take it as (1 + (+"2") + "2") // it will give 32
