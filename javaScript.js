@@ -106,7 +106,28 @@
 // 23. Array.from('123')
 // 24. Array.of(1,2,3)
 
+// Q. why 2 similer objects comparing returns false ? =========================================
 // Q.slice vs splice who modify orignal array?? give example =================================================================
+// Q. what is IIFE ? why it is usefull?====================================
+// Q. Why are functions called first class objects ? ======================================
+// Q. "Array.prototype.map" ?? ========================================
+// Q. how to create a object without a prototype ? ===============================
+// Q. how to destruncture object ?? ========================
+// Q. how to destructure array ? ===================
+// Q. What are wrapper Objects ? ========================
+// Q. implicit vs explicit coercion ? =================================
+// Q. How to check value is NaN ? ================================
+// Q. How to check a number is even or odd without using modular operator ? ============================
+// Q. How to check certain property exists in object ? =============================================
+// Q. "in " vs "hasOwnProperty" ? =================================
+// Q. Function expression and function declaration ? =====================================
+// Q. How to check if value is null ?  why typeof null == object ? ===============================
+// Q. What is "new" keyword do ? ===============================
+// Q. concat 2 array using spread operator ? =======================================
+// Q. merge 2 objects using spread operator ? =======================================
+// Q. merge 2 strings using spread operator ? =======================================
+
+// Q.  What is AJAX ? =======================================
 
 // Q.all object buit-in functions?? give examples ========================================================================
 
