@@ -102,6 +102,7 @@
 
 // Q. how to make layout in react?? ==============================================================
 
+// Q. how to update array and object which is in state ? ========================================
 
 
 // Q. How does React’s reconciliation algorithm work? ============================================================
