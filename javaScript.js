@@ -497,40 +497,16 @@
 // Q. how to know in js if function is called by use click or by any script? =======================================
 // Ans. button me onclick me jo function call hota hai use event object pass hota hai. to if event.isTrusted==true then user clicked and if false then script clicked.
 
-// Q. Wha is object ? tell me some concepts of it ? ==================================
-// Ans.
-// =>  in js object is collection of related data or functionallity.
-// => if we declare object in const, we can change their property but cannot reassign that object.
-// => to delete any property or function from object- delete user.name;
-// =>if we want to access or assign a object's property who contains space then :- user['pin code'] = 241001;
-
-// let key = "State";
-// let city = "hardoi"
-
-// const user = {
-//     name:"peter",
-//     ['pin code']: 241001, // if contains space;
-//     [key]: "Haryana", // if key is dynamic;
-//     city // these are called short hand properties
-// }
-// console.log(user)
+// Q. Wha is object ? give advantages and disadvantages ==================================
 
 // Q. How to loop a object ?? =========================================================
-// Ans.
-// const user = {
-//   name: "peter",
-//   ["pin code"]: 241001,
-//   state: "Haryana",
-//   city:"faridabad"
-// };
-
-// for (item in user){
-//     console.log(item) // for keys
-//     console.log(user[item]) // for values
-// }
+// Q. In object how you can add "pin code" key with space ? ==========================
+// Q. In object how you can add key dynamically ? ==============================
+// Q.  In object if we decalre it as const can we reassign it or add only properties ? ======================================
+// Q. how to delete a key in object ? ==============================
 
 // Q. Guess the output of the following ? ===================================================================
-// Ans.
+
 // let data = "Hello, How are you?"
 
 // console.log(data.split())
@@ -541,61 +517,61 @@
 // console.log(data.replace('H','_'))
 // console.log(data.replace(/H/g,'_'))
 
-// console.log(data.substring(1,data.length)) // remove first character
-// console.log(data.substring(0,data.length-1)) // remove last character
-// console.log(data.split('o')[0]) // remove string before specific character
-// console.log(data.split('o')[1]) // remove string after specific character
-//console.log(data.split('').reverse().join('')) // reverse string
-//console.log(data.trim()) // remove extra space
+// console.log(data.substring(1,data.length))
+// console.log(data.substring(0,data.length-1))
+// console.log(data.split('o')[0])
+// console.log(data.split('o')[1])
+//console.log(data.split('').reverse().join(''))
+//console.log(data.trim())
 
 // Q. guess the output of the following ?==================================================================================
 // Ans.
-// console.log(1 + "2" + "2"); // it will give 122
-// console.log(1 + +"2" + "2"); // it will take it as (1 + (+"2") + "2") // it will give 32
-// console.log(1 + +"2" + +"2"); // it will give 5
-// console.log(1 + -"2" + "2"); // it will give -12
-// console.log("A" - "B" + "2"); // NaN2
-// console.log("A" - "B" + 2); // NaN
-// console.log(typeof NaN); // it will consider as number
+// console.log(1 + "2" + "2");
+// console.log(1 + +"2" + "2");
+// console.log(1 + +"2" + +"2");
+// console.log(1 + -"2" + "2");
+// console.log("A" - "B" + "2");
+// console.log("A" - "B" + 2);
+// console.log(typeof NaN);
 // console.log(0==false)
 // console.log(''==false)
 // console.log(0==false)
-// console.log(null <=0) // true
-// console.log(null>=0) //true when comparison operator is used the null treated as zero.
-// console.log(NaN==NaN) // false
-// console.log( true && 'hello') // hello becz && returns the first false value. if no of those are false then last value will considered.
-// console.log(Array(3)==",,") // true
-// console.log(!!10+20) // 21 because (!! true + 20)
-// console.log(typeof typeof 1) // string  because typeof 1 is "number" then it is string.
-//console.log([..."Sudhanshu"]) // it will break string in array.
-// console.log(!!undefined); // false becz null and undefined both are consider as false value.
-// console.log(!!null); //false
-// console.log(!!"a"); // true
-// console.log(!!""); // false because empty string consider as false but proper string consider as true;
-// console.log(!!-2); // true but if we use zero it will consider as false. negative value will also consider as true.
-// console.log(!!0); // false
-// console.log(!!2); // true
-//console.log(typeof 3 + 4 + "5"); // number45
-// console.log(false || "Hello"); // ?
-// console.log(true && "World"); // ?
-// console.log(null || undefined); // ?
-// console.log("" && 0); // ?
-// console.log(0 || (1 && 2)); // ?
-// console.log("5" - 2); // ?
-// console.log("5" + 2); // ?
-// console.log("5" * "2"); // ?
-// console.log(true + false); // ?
-// console.log("5" - true); // ?
-// console.log(1 === "1"); // ?
-// console.log(0 === false); // ?
-// console.log(null === undefined); // ?
-// console.log([] === []); // ?
-// console.log({} === {}); // ?
-// console.log(1 == "1"); // ?
-// console.log(0 == false); // ?
-// console.log(null == undefined); // ?
-// console.log([] == false); // ?
-// console.log([] == ![]); // ?
+// console.log(null <=0)
+// console.log(null>=0)
+// console.log(NaN==NaN)
+// console.log( true && 'hello')
+// console.log(Array(3)==",,")
+// console.log(!!10+20)
+// console.log(typeof typeof 1)
+//console.log([..."Sudhanshu"])
+// console.log(!!undefined);
+// console.log(!!null);
+// console.log(!!"a");
+// console.log(!!"");
+// console.log(!!-2);
+// console.log(!!0);
+// console.log(!!2);
+//console.log(typeof 3 + 4 + "5");
+// console.log(false || "Hello");
+// console.log(true && "World");
+// console.log(null || undefined);
+// console.log("" && 0);
+// console.log(0 || (1 && 2));
+// console.log("5" - 2);
+// console.log("5" + 2);
+// console.log("5" * "2");
+// console.log(true + false);
+// console.log("5" - true);
+// console.log(1 === "1");
+// console.log(0 === false);
+// console.log(null === undefined);
+// console.log([] === []);
+// console.log({} === {});
+// console.log(1 == "1");
+// console.log(0 == false);
+// console.log(null == undefined);
+// console.log([] == false);
+// console.log([] == ![]);
 
 ///////////////////////////////////////////////////// Practice Questions for DSA ///////////////////////////////////////////
 
