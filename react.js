@@ -10,13 +10,11 @@
 
 // Q.why fragments are better then div container =======================================================
 
-
 // Q.why react use className over class =======================================================
 
 // Q. What is React.js  and it's history? ============================================================
 
 // Q. What are the advantages of react? and disadvantages ============================================================
-
 
 // Q. difference between function and class component? ============================================================
 
