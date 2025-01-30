@@ -58,261 +58,101 @@
 
 // Q.how to update array or object that is in state in React??===========================================
 
-
 // Q.What is StrictMode in React ?===================================
-// Ans. strict mode is used to impliment validation + if we don's use priciple or not following rules of react then strict mode send error and warnings + strict mode works in development mode not in production mode + in react development many consoles comes 2 time beacuse of strict mode.
 
 // Q.Explain the concept of lazy loading in React and how it can be implemented? ==============================================
-// Ans. when application become heavy then it takes time to load so with use of lazy loading heavy component will load later and fast component will load first
-// eg:-
-// import React, { Suspense, lazy } from "react";
-// import FirstFastComp from "./";
-// const FirstHeavyComponent = lazy(() => import("./firstHeavyComp"));
-// const SecondHeavyComponent = lazy(() => import("./secondHeavyComp"));
-
-// function App() {
-//   return (
-//     <div>
-//       <FirstFastComp />
-//       <Suspense fallback = {<div>First Lazy component is loading. Please Wait.......</div>}>
-//         <FirstHeavyComponent />
-//       </Suspense>
-//       <Suspense fallback = {<div>Second Lazy component is loading. Please Wait.......</div>}>
-//         <SecondHeavyComponent />
-//       </Suspense>
-//     </div>
-//   );
-// }
 
 // Q. Describe static site generation (SSG) in the context of React.============================
-// Ans. we can use SSG in react with help of Next.js + server side rendering is also called pre-rendering + server side rendering have 2 types.
-// 1.Server side rendering (SSR):- when we request a page , each time js is converted to html on server side and server send it to client.
-// 2.Static site generation (SSG):- when we make build, at that time js is converted to html and on every request that html comes to client
-
-// ex- we fetch user list and each user details when we get dynamically , each time request goes to server and makes SSR. so we can use SSG to make html of each page on build time. it will speed up . to make SSG we use generateStaticParams() funciton in next.js.
 
 // Q.How do you handle internationalization (i18n) in React applications?===================================
-// Ans. develop react app to support multiple languages like hindi, chineese, korien etc. we have libraries for that.
 
 // Q.tree shaking .==================================
-// Ans. it is  technique in react which removes unused dependency, functions, code when bundules are made in build. if it is not happen then build will be heavy weight +  webpack module in react do this task automatically with ES6's import/export only + those libraries dont support import/export, they will not be removed( like moment library for date time)
 
 // Q. How to pass data between sibling components using React router? ==========================================
-// Ans. we so that with shared state using react router dom + where routing is doing , we create a state. then we send setSharedData to other component and use sharedData state in sibling component.
-// eg:-
-// import {Router,Routes,Route} from "react-router-dom";
-
-// function App(){
-//   const [sharedData,setSharedData] = useState('')
-//   return<>
-//   <Routes>
-//     <Route path ="/sibling1" setSharedData= {setSharedData}/>
-//     <Route path = "/sibling2" sharedData={sharedData}/>
-//   </Routes>
-//   </>
-// }
 
 // Q.react 19 and its fearures?====================================================================================
-// Ans. released on 25 april 2024 +
-// 1.Actions :-use asynchronous functions withe pending states, forms, errors.
-// 2. hooks:- useTransition , useOptimistic, useActionState, useFormStatus
-// 3."use" function
 
 // Q.export default vs export ? ============================================================================
-// Ans.
-// 1. export(named exports) :- this allows to export multiple values/ function from file + when importing give specific name.  import {sum,multiply} from "./utils"
-// 2. export defalut (defalut export) :- one file can export only one + when importing you dont need to give specific name. ex:- you export Greet then you can import it as GreetFunction.
 
 // Q.what is webpack in react ? ==============================================================================
-// Ans. webpack is module bundler to compile js files with their dependencies and create single bundle + march 2012 release date + mainly used to make build + minify js and css + webpack also set entry file . we can change intry file with webpach configration +
 
 // Q.how can we change local server port in react =====================================================================
-// Ans. create .env and their declare PORT=3001 and restart.
 
 // Q. How are data passed from children to parents in react component? ============================================================
-// Ans. through call back function.
-// example:-
-// function Parent() {
-//     const [message, setMessage] = useState('');
 
-//     const handleDataFromChild = (data) => {
-//       setMessage(data);
-//     };
+// Q. how to implement context api? give code. ============================================================
 
-//     return (
-//       <div>
-//         <h1>Message from Child: {message}</h1>
-//         <Child sendDataToParent={handleDataFromChild} />
-//       </div>
-//     );
-//   }
+// Q.What are lifecycle methods of component in react? How we can achieve same in functional components? ========================================
 
-//   // Child Component
-//   function Child({ sendDataToParent }) {
-//     const handleClick = () => {
-//       sendDataToParent('Hello from Child!');
-//     };
+// Q. how to make custom hooks ? ============================================================
 
-//     return <button onClick={handleClick}>Send Data to Parent</button>;
-//   }
+//  Q. Props vs state ============================================================
+
+// Q.Debouncing in js and react =====================================================================
+
+// Q.Throttling in js and react ===========================================================================
+
+// Q.polyfills in react ===========================================================================
+
+// Q.what is portal in react ===================================================================================
+
+// Q.API polling ? =========================================================================
+
+// Q. React Profiler ============================================
+
+// Q. how to make layout in react?? ==============================================================
+
+
+
+// Q. How does React’s reconciliation algorithm work? ============================================================
+// Q.What is React Fiber, and how does it improve React’s performance? ============================================================
+// Q.Explain the concept of priority scheduling in React Fiber. ============================================================
+
+// Q.What is Concurrent Mode in React, and how does it improve UI responsiveness? ============================================================
+// Q.How does useTransition work in React? ============================================================
+// Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
+
+// Q.What are React’s rendering phases? ============================================================
+// Q.How does memoization (React.memo, useMemo, useCallback) optimize performance? ============================================================
+// Q.How does React’s batching mechanism work in React 18? ============================================================
+
+// Q.What are the key differences between SSR, SSG, ISR, and CSR? ============================================================
+// Q.How does React Server Components (RSC) improve performance? ============================================================
+// Q.Explain the working of Next.js middleware and how it affects rendering. ============================================================
+
+// Q.How does the React Context API compare to Redux? ============================================================
+// Q.What is the difference between Redux Thunk and Redux Saga? ============================================================
+// Q.What are the pros and cons of Recoil, Zustand, and Jotai compared to Redux? ============================================================
+
+// Q.How does React’s hooks dependency array work in useEffect? ============================================================
+// Q.What are the best practices to prevent stale closures in hooks? ============================================================
+// Q.What is useDeferredValue, and how does it differ from useMemo? ============================================================
+
+// Q.How does React.lazy and Suspense help in code splitting? ============================================================
+// Q.What are the challenges of server-side rendering with lazy-loaded components? ============================================================
+// Q.How does dynamic imports work in Next.js? ============================================================
+
+// Q.When should you use a custom hook vs. a HOC? ============================================================
+// Q.How do you share logic between components efficiently in React? ============================================================
+// Q.What are the best practices when designing custom hooks? ============================================================
+
+// Q.How does React’s event delegation work? ============================================================
+// Q.What is event pooling, and why was it removed in React 17? ============================================================
+// Q.How do you prevent unnecessary re-renders in event handlers? ============================================================
+
+// Q.How does React hydrate the UI in SSR applications? ============================================================
+// Q.What is React’s Offscreen Rendering, and how does it work? ============================================================
+// Q.Explain React’s Virtual DOM diffing algorithm in detail. ============================================================
 
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
 // => UseState.
 // => useEffect.
-// => useCallback : given downwords.
-// => useMemo :- given downwords.
-// => useContext :- allows you to access data from a React Context api
-// => useReducer :- when a lot of useState are used, then we use useReducer
-// example:-
-// import {useReducer} from react;
-
-// const reducer = (state,action)=>{
-//     console.log(state,action)
-//     if(action.type == "INCREMENT"){
-//         return state +1;
-//     }else if(action.type = "DECREMENT"){
-//         return state -1;
-//     }
-
-// }
-// const initialState = 0;
-// const [state, dispach] = useReducer(reducer, initialState);
-
-{
-  /* <button onclick={()=> dispatch({type:"INCREMENT"})}>Increment</button>
-<button onclick={()=> dispatch({type:"DECREMENT"})}>Decrement</button> */
-}
-
-// => useRef :- used when we want to manipulate DOM directly through React
-// example-
-// import { useRef } from "react";
-// function App() {
-//   let inputRef = useRef(null); // here null is default value.
-
-//   function handleRef() {
-//     console.log("hello");
-//     inputRef.current.value = "1000";
-//     inputRef.current.focus();
-//     inputRef.current.style.color = "red";
-//     inputRef.current.style.display = "none";
-//   }
-
-//   return (
-//     <>
-//       <input type="text" ref={inputRef} />
-//       <button onclick={handleRef}>Click</button>
-//     </>
-//   );
-// }
-
-// here input field is usedd to manipulate DOM. ref attribute given to  input to identify.
-
-// Q. how to implement context api? give code. ============================================================
-// Ans.
-// // step 1 : Creating a context
-// import { createContext, useContext } from "react";
-
-// const ThemeContext = createContext();
-
-// // Step 2 : context Provider
-
-// function Provider({ children }) {
-//   const [theme, setTheme] = useState("light");
-
-//   return (
-//     <ThemeContext.Provider value={{ theme, setTheme }}>
-//       {children}
-//     </ThemeContext.Provider>
-//   );
-// }
-
-// // Step 3 : consume the context
-// function Consumer() {
-//   const { theme, setTheme } = useContext(ThemeContext);
-
-//   return (
-//     <button onclick={setTheme(theme === "light" ? "dark" : "light")}>
-//       click
-//     </button>
-//   );
-// }
-
-// // Step 4 : use Provider in App
-
-// function App() {
-//   return (
-//     <Provider>
-//       <ThemeToggler />
-//     </Provider>
-//   );
-// }
-
-// Q.What are lifecycle methods of component in react? How we can achieve same in functional components? ========================================
-// Ans.
-// =>In class component  lifecycle methods are :mounting/componentDidMount()(birth of a component or can say display:block ), updating/componentDidUpdate()(updated yourself with state or props), unmounting/componentWillUnmount()(expire a component or display:none).
-// => In function Component same behaviour can achive with useEffect.
-// example:-
-// import React, { useEffect } from "react";
-
-// function Component() {
-
-//   const [count, setCount] = useState(0);
-
-//   useEffect(() => {
-//     console.log("Component mounted");
-
-//     return () => {
-//       console.log("Component unmounted");
-//     };
-//   }, []); // Empty dependency array ensures this runs once
-
-//   useEffect(() => {
-//     console.log(`Count updated to: ${count}`);
-//   }, [count]); // Runs when `count` changes
-
-//   return <h1>Hello, World!</h1>;
-// }
-
-// Q. how to make custom hooks ? ============================================================
-// Ans.
-// => step 1 : Create useCustomHook.js
-// import { useState } from 'react';
-
-// function useCounter(initialValue = 0) {
-//   const [count, setCount] = useState(initialValue);
-
-//   const increment = () => setCount((prev) => prev + 1);
-//   const decrement = () => setCount((prev) => prev - 1);
-//   const reset = () => setCount(initialValue);
-
-//   return { count, increment, decrement, reset };
-// }
-
-// export default useCounter;
-
-// => step 2 : use of hook
-
-// import React from 'react';
-// import useCounter from './useCounter';
-
-// function CounterApp() {
-//   const { count, increment, decrement, reset } = useCounter(5);
-
-//   return (
-//     <div>
-//       <h1>Count: {count}</h1>
-//       <button onClick={increment}>Increment</button>
-//       <button onClick={decrement}>Decrement</button>
-//       <button onClick={reset}>Reset</button>
-//     </div>
-//   );
-// }
-
-// export default CounterApp;
-
-//  Q. Props vs state ============================================================
-//  Ans. Props are immutable and passed from parent component, while state is mutable and managed within the component + props are immutable, which means you cannot directly modify or set props within a child component. Props can only be set by the parent component when they pass them down to the child component.
+// => useCallback
+// => useMemo 
+// => useContext 
+// => useReducer 
+// => useRef 
 
 //  Q. difference between useCallback, useMemo, React.memo? ============================================================
 // Ans.
@@ -329,135 +169,7 @@
 // example:-
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
-// Q.Debouncing in js and react =====================================================================
-// Ans. when we use onchange function , it call multiple times when any key presses + debouncing delays the excution of a function for certain time but if in that time any event triggered then its delay time extends + good tech for searchBox's list recommendation
-// eg:-
-// import React, { useState } from "react";
 
-// const DebouncedSearch = () => {
-//   const [query, setQuery] = useState("");
-//   const [debouncedQuery, setDebouncedQuery] = useState("");
-
-//   const handleInputChange = (e) => {
-//     const value = e.target.value;
-//     setQuery(value);
-
-//
-//     clearTimeout(this.debounceTimeout); // Clear previous timer
-
-//     // Set a new timer
-//     this.debounceTimeout = setTimeout(() => {
-//       setDebouncedQuery(value); // Simulate API call or state update
-//     }, 500); // Delay of 500ms
-//   };
-
-//   return (
-//     <div>
-//       <input
-//         type="text"
-//         placeholder="Search..."
-//         value={query}
-//         onChange={handleInputChange}
-//       />
-//       <p>Debounced Value: {debouncedQuery}</p>
-//     </div>
-//   );
-// };
-
-// export default DebouncedSearch;
-
-// Q.Throttling in js and react ===========================================================================
-// Ans. In throttling function will be called only once in a time  while how many times user clicked the button. it dont reset the time + main difference in them is that throttling dont reset time while debounding restet time on button click + throttling mainly work on scrolling. you want to show a popup on page scroll. of user scroll sudden up and down , then it will not work properly. so we use throttling.
-// eg:-
-// import React, { useState, useRef } from "react";
-
-// const ThrottledScroll = () => {
-//   const [scrollPosition, setScrollPosition] = useState(0);
-//   const throttleTimeout = useRef(null);
-
-//   const handleScroll = () => {
-//     if (throttleTimeout.current) return; // If there's an active timer, skip execution
-
-//     throttleTimeout.current = setTimeout(() => {
-//       setScrollPosition(window.scrollY); // Update scroll position
-//       throttleTimeout.current = null; // Clear the timer
-//     }, 500); // Throttle interval of 500ms
-//   };
-
-//   React.useEffect(() => {
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
-
-//   return <div>Scroll Position: {scrollPosition}</div>;
-// };
-
-// export default ThrottledScroll;
-
-// Q.polyfills in react ===========================================================================
-// Ans.polyfills are commonly used to ensure compatibility with older browsers like Internet Explorer or older versions of Safari.
-
-// Q.what is portal in react ===================================================================================
-// Ans. Normally, React components are rendered as children of their parent components in the DOM hierarchy. However, using a portal, you can render a child component into a separate DOM node outside of this hierarchy.
-
-// Q.API polling ? =========================================================================
-// Ans. API Polling is a technique where a client repeatedly makes requests to a server at regular intervals to check for updates or changes + used in live scroes, monitoring data that changes frequently.
-
-//  Q. React Profiler ============================================
-// Ans. it is a tool to measure and analyse the performance of react components in application + capture render timings, identifies wasted renders etc.
-// eg:-
-// import React, { Profiler } from "react";
-
-// function App() {
-//   const onRenderCallback = (
-//     id, // The "id" of the Profiler tree that has just committed
-//     phase, // "mount" or "update"
-//     actualDuration, // Time spent rendering the committed update
-//     baseDuration, // Estimated time to render without memoization
-//     startTime, // When React began rendering this update
-//     commitTime, // When React committed this update
-//     interactions // Set of interactions triggered during this update
-//   ) => {
-//     console.log({ id, phase, actualDuration });
-//   };
-
-//   return (
-//     <Profiler id="App" onRender={onRenderCallback}>
-//       <MyComponent />
-//     </Profiler>
-//   );
-// }
-// Q. how to make layout in react??
-// Ans.Step1: first create a layout file.
-// Step 2 : write this code.
-// import react from "react";
-// import Header from "./header";
-// import Footer from "./footer";
-// import Main from "./main";
-// import Sidebar from "./sidebar";
-// import Navbar from "./navbar";
-
-// const Layout = ({ children }) => {
-//   return (
-   
-//       <div className="LayoutContainer">
-//         <Navbar />
-//         {/* <Header /> */}
-//         <div className="d-flex ">
-//           <Sidebar />
-//           <Main />
-//         </div>
-//         <Footer />
-//       </div>
-   
-//   );
-// };
-
-// export default Layout;
-
-// Step 3 :  inmport this component in app.js
 
 /////////////////////////////////////////////  Exersises  ///////////////////////////////////////////////////////
 // Implement counter such that it has 2 buttons to increment and decrement the values
