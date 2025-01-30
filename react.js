@@ -5,119 +5,59 @@
 //////////////////////////////////////////////// Interview Questions ///////////////////////////////////////////
 
 // Q.element vs component ?=======================================================
-// Ans. elements are created by React.createElement(<h1>hello</h1>) + component is js function that returns jsx
 
-// Q.lifting state up in react ? =======================================================
-// Ans. sharing common state to siblings components
+// Q. how lifting state up in react ? =======================================================
 
 // Q.why fragments are better then div container =======================================================
-// Ans. fragement dont add extra node in DOM Tree so improve performance + keeps jsx structure clean + + fragments are ideal for grouping elements
+
 
 // Q.why react use className over class =======================================================
-// Ans. becz class is reverve keyword in js
 
 // Q. What is React.js  and it's history? ============================================================
-// Ans. facebook created it in 2011 + oper source + front end library + built SPA + created by jordan walke(facebook employee) +
 
 // Q. What are the advantages of react? and disadvantages ============================================================
-// Ans.
-// => advantages :- uses virtual DOM + component based architecture (so reusable components) + Unidirectional data flow  (data in application flows in single direction )+ JSX + SEO friendly with Next.js
-// => disadvantages :- not major disadvantages
+
 
 // Q. difference between function and class component? ============================================================
-// Ans.
-// => function based components :- uses simple js funciton to define component + no render () method needed to return jsx + uses useState hook to manage state + uses useEffect hook to handle side effects and lifecycle behaviours .
-
-// => class based components:- uses ES6's class syntax to define component + require render () to return jsx + uses "this.state" and "setState"  to manage state + uses dedicated life cycle method like componentDidMount(),componentDidUpdate(), componentWillUnmount().
 
 // Q.What are higher-order components? ============================================================
-// Ans. Mostly used in class based components + HOC is a function who takes component as a parameter and returns a new component
 
 // Q. what is typescript and how it's different. ============================================================
-// Ans. developed by microsoft + define datatype of variable + typing error caught instant + JS is dynamic typed and ts is static typed
 
 // Q. how would you add a Dynamic title on every page in React??=====================================================
-//Ans. useEffect(()=>{document.title = "Home - My Website";},[]) + we can also do it with react-router-dom 's useLocation
 
 // Q. virtual DOM Vs Actual DOM ?  ================================================================
-// Virtual DOM is a lightweight copy of the actual DOM + when state changes in a component, react only update it in virtual dom + react dont update actual dom every time + when page re-renders , new updates are shown .
 
 // Q.What is  currying in react?====================================================
-// Ans. in curring one funciton with multiple arguments is break in multiple funciton with single arguments + benifits:- reusability of functions + improve code readability etc.
-// eg:-
-// function Sum(a) {
-//   return function (b) {
-//     return function (c) {
-//       return a + b + c;
-//     };
-//   };
-// }
-// console.log(Sum(1)(2)(3))
 
 // Q.What is Data binding in react js? ==================================================================
-// Ans. 2 type of data binding:- one way and 2 way + in one way data binding data goes from parent to child component + in two way data binding data flows from both direction + in react one way data binding is commonly used.
 
 // Q. what is uni directioanl data flow in react? ====================================================================
-// Ans. in uni-directional data flows from parent to child through props + child cannot modify props, it can be done only by callback + it works on one way data binding.
 
 // Q.What is anti pattern in react?=========================================================================================
-// Ans. means write code neglecting core principles as:- changing actual DOM directly + over use of state and props  + not using key in array's loop +
 
 // Q.how to handle cors error on front end?==============================================================================
-// Ans. ideally solve it in backend using "cors" library (app.use(cors({origin:"front end url"}))) + in front end add {"proxy":"backend url"} in package.json
 
 // Q.what we send in header to authentication?========================================================================
-// Ans. fetch('sdfsfds',{
-// method:GET,
-// headers:{
-//   "Authorization": `Bearern ${yourToken}`,
-//   'content-Type':"application/json"
-// }
-// })
 
-// in postman  > headers > origin > http://www....... (it is not recommended)
+// Q. we have so many states declared in a component. How to avoid to  declare it multiple times ?? ======================
 
-// Q. we have so many states declared in a component. How to avoid to  declare it multiple times ??
 // Q.What is reconcilation in ReactJs?===============================================================================
-// Ans. process of comparing the current virtual Dom to previous virtual Dom and do minimal update to make virtual dom to actual dom + it efficiently update the UI by minimizing DOM manupulations.
 
 // Q.statefull vs stateless ?===========================================================
-// Ans. statefull :- a component that has its own state and manages it internally.
-// stateless:- A component that does not maintain its own state and relies entirely on props for data.
 
 // Q.Explain microfrontend approach in react?=========================================================
-// Ans. microfrontend approch means break application in small, manageble pieces + this approch inspired by microservices(where different parts of application developed, diployed, maintained sepreratly) + each component and feature is modularise and maintain by different teams like e-commerce.
 
 // Q. What is CI/CD pipeline ? ===========================================================
-// Ans. continous integratino and continous deployemnt
-// CI (Continous Integration) :- Developers integrate their code changes into a shared repository multiple times a day. Automated tests and builds are triggered to verify the changes.
-// CD (Continous Deployment) :- automatically deploying every successful build to a production or staging environment without manual approval.
-
-// example:-
-// step1. developer pushes changes to github repo
-// step2.github action triggers
-// step3. if ci pipeline passes, app is build and passes to production environment autoamtically;
 
 // Q.What is the difference between useref and createRef in React ?==============================
-// Ans. useRef used in functional comp and createRef used in class component
 
 // Q.Explain why and how to update state of components using callback? =========================================
-// Ans. setCount((prevCount) => prevCount + 1);
 
 // Q. Does React useState Hook update immediately ? ==============================================
-// Ans. No it dont update immidiately + state updates are ayncronous so when we update state, it updates on next re-render of component + if we want to make update immidiately then put code in useEffect and give dependency that state.
 
 // Q.how to update array or object that is in state in React??===========================================
-// Ans.
-// update array:
-// const addItem = () => {
-//   setItems([...items, 4]); // Create a new array and add an item
-// };
 
-// updating object:
-// const updateName = () => {
-//   setUser({ ...user, name: "Jane" }); // Update the 'name' property
-// };
 
 // Q.What is StrictMode in React ?===================================
 // Ans. strict mode is used to impliment validation + if we don's use priciple or not following rules of react then strict mode send error and warnings + strict mode works in development mode not in production mode + in react development many consoles comes 2 time beacuse of strict mode.
