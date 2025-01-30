@@ -4,6 +4,48 @@
 
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
 
+// Q. Explain the working of JavaScript ? =============================================================================
+// Ans.
+// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
+// => Memeory Heap :- where variable are saved. browser's memeory
+// => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
+//=> js is single threaded. means it has single call stack so it can do only one task in one time.
+// => js is single threaded and syncronous by default but it has built in features to handl async operations like callback, Promises, async/await, Event loop.
+//=>syncronise example:-
+// console.log("start")
+// console.log("end")
+
+// => async example:-
+
+// console.log("start");
+// setTimeout(() => console.log("async operation"), 2000);
+// console.log("end");
+
+// => js use event loop and task que to manage asyncronous operation without blocking main thread. it helps in fetching api and file reading
+// => in call stack which task is on top it will excute first.
+
+//*code                                //*WebAPI
+// *task Que/callback que
+//*call stack                  //*event loop
+
+// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤:
+// - This is where JavaScript runs your code one step at a time.
+
+// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬:
+// - Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
+
+// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞:
+// - Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
+
+// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩:
+// - The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
+
+// ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
+
+// reference links :- 1. https://www.jsv9000.app
+//                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
+//                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
+
 // Q.diff between var ,let ,const ? ============================================================
 
 // Q.What are callback function ? Give advantages and disadvantages ============================================================
@@ -66,13 +108,7 @@
 
 // Q.slice vs splice who modify orignal array?? give example =================================================================
 
-// const arr1 = [1,2,3,4,5,6,7,8,9,10];
-// console.log("arr before:",arr1);
-// const result = arr1.splice(arr1.length-1,1,100)
-// console.log("arr after:",arr1);
-// console.log("result:",result);
-
-// Q.all object buit-in functions?? give example========================================================================
+// Q.all object buit-in functions?? give examples ========================================================================
 
 // 1.Object.create()
 
@@ -130,10 +166,8 @@
 // Q. null vs undefined ====================================================================
 
 // Q. all false values in js?====================================================
-// Ans. 0 / -0 / "" / null / undefined / NaN /
 
 // Q. all true values in js? ==========================================
-// Ans. non-zero numbers / non-empty strings / {} / [] / any symbol / all functions(buit-in and user defined) /
 
 // Q.json.stringify vs parse ==================================================================
 
@@ -145,357 +179,37 @@
 
 // Q.Private property and private fucntion in js ? ====================================================
 
-// Q. Explain the working of JavaScript ? =============================================================================
-// Ans.
-// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
-// => Memeory Heap :- where variable are saved. browser's memeory
-// => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
-//=> js is single threaded. means it has single call stack so it can do only one task in one time.
-// => js is single threaded and syncronous by default but it has built in features to handl async operations like callback, Promises, async/await, Event loop.
-//=>syncronise example:-
-// console.log("start")
-// console.log("end")
+// Q. What is Laxical Scope vs closures ? give code===========================================================================
 
-// => async example:-
-
-// console.log("start");
-// setTimeout(() => console.log("async operation"), 2000);
-// console.log("end");
-
-// => js use event loop and task que to manage asyncronous operation without blocking main thread. it helps in fetching api and file reading
-// => in call stack which task is on top it will excute first.
-
-//*code                                //*WebAPI
-// *task Que/callback que
-//*call stack                  //*event loop
-
-// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤:
-// - This is where JavaScript runs your code one step at a time.
-
-// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬:
-// - Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
-
-// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞:
-// - Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
-
-// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩:
-// - The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
-
-// ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
-
-// reference links :- 1. https://www.jsv9000.app
-//                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
-//                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
-
-// Q. What is Laxical Scope vs closures ?===========================================================================
-
-// Laxical Scope => when inner function can access outer function's variable. eg-
-
-// function hello(){
-//     var a = 10;
-
-//     function innerFunction (){
-//         return a;
-//     }
-
-//     return innerFunction();
-// }
-
-// console.log(hello())
-
-// Clousers => it is a inner function who remembers outer function's variables while outer function is excuted fully.eg-
-
-// function hello() {
-//   var a = 10;
-//   function innerFunction() {
-//     return a;
-//   }
-//   return innerFunction;
-// }
-
-// var inner = hello();
-
-// console.log(inner());//10
-
-// Q. What are promises in js ? ======================================================================
-// Ans.
-
-// => it is a object which returns a value which can be recived in future. Promise means task will ither solve or reject.
-// => JS is single threaded so it dont wait for function to excute fully when it takes time to excute. if it takes time, js start excuting next code.
-// => fetch() always returns 2 Promieses. so we use 2 times .then and await. it's called "Promise chaining". it can be more then 2 .
-// => then() function takes a call back. it is excuted when Promise is completed(resolve or reject)
-//=> catch() function is used to check the error or Promise rejected.
-//=>finally function is used whether Promise resolve or reject, this function will excute 100%.
-
-// let data = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     resolve("Promise resolved");
-//     //reject("Promiese rejected");
-//     // here if we use both so first will excute and second will not.
-//   }, 2000);
-// });
-
-// data
-//   .then((item1) => {
-//     console.log("item1", item1);
-//     return item1;
-//   })
-//   .then((item2) => {
-//     console.log("item2", item2);
-//   })
-//   .catch((error) => {
-//     console.log("error is:", error);
-//   })
-//   .finally(() => {
-//     console.log("finally statement excuted");
-//   });
+// Q. What are promises in js ? async/await vs promises ======================================================================
 
 // Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
 
-//=> Promiese.all :- used when multiple promises is used + when all Promise completed then it will give response + if any reject it will response reject + it will not tell other promises solved or rejected  + it takes array and console's array + eg-
+// Q. What are Prototypes in JS  ? why we use them in js ? How we can use Prototype functionallity without useing prototype and what will be the difference ? =====================================================================
 
-// let data = Promise.all([
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2 sec promise resolved");
-//     }, 2000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3 sec promise resolved");
-//     }, 3000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("4 sec promise resolved");
-//     }, 4000);
-//   }),
-// ]);
+// Q. I want when a object/string is declared, a defalut variable or function is already present there . How can i do that using prototype ?
 
-// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
+// Q. What is  Deep copy and shallow copy  of object ? give code ===================================================
 
-// => Promise.allSettled :- it responds which promise is resolved and which is rejected + it consoles array of objects + it responds when all promise completed. eg-
-
-// let data = Promise.allSettled([
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2 sec promise resolved");
-//     }, 2000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3 sec promise resolved");
-//     }, 3000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       reject("4 sec promise rejected");
-//     }, 4000);
-//   }),
-// ]);
-
-// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
-
-//=> Promise.race : -  which promise first resolves or rejected, it returnes that. eg-
-
-// let data = Promise.race([
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("2 sec promise resolved");
-//     }, 2000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("3 sec promise resolved");
-//     }, 3000);
-//   }),
-//   new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       reject("4 sec promise rejected");
-//     }, 4000);
-//   }),
-// ]);
-
-// data.then((item1)=>{return item1}).then((item2)=>{console.log("item2",item2)})
-
-// Q. What are Prototypes in JS  ? =====================================================================
-
-// => prototypes are concepts in which object inherit features from one another + before Ecma script , prototypes are used
-// => eg-
-
-// let student = {
-//     firstName:"Sudhanshu",
-//     lastName:"Srivastava",
-//     getFullName: function (){
-//         return this.firstName +" " + this.lastName
-//     }
-// }
-
-// let teacher  = {
-//     firstName:"Anil",
-//     lastName:"Sidhu",
-//     getFullName:function(){
-//         return this.firstName + " " + this.lastName
-//     }
-// }
-
-// => here getFullName is used in both objects. So, we use prototype. eg-;
-
-// let person = {
-//   getFullName: function () {
-//     return this.firstName + " " + this.lastName;
-//   },
-// };
-
-// let student = {
-//   firstName: "Sudhanshu",
-//   lastName: "Srivastava",
-// };
-// let teacher = {
-//   firstName: "Anil",
-//   lastName: "Sidhau",
-// };
-
-// student.__proto__ = person;
-// teacher.__proto__ = person;
-
-// console.log(student.getFullName());
-// console.log(teacher.getFullName());
-
-//=> if you want to do same without prototype then :-
-
-// let person = {
-//     getFullName: function () {
-//       return this.firstName + " " + this.lastName;
-//     },
-//   };
-
-//   let student = {
-//     firstName: "Sudhanshu",
-//     lastName: "Srivastava",
-//     getFullName:person.getFullName
-//   };
-//   let teacher = {
-//     firstName: "Anil",
-//     lastName: "Sidhau",
-//     getFullName:person.getFullName
-//   };
-
-//   console.log(student.getFullName());
-//   console.log(teacher.getFullName());
-
-// =>  here we dont use prototype. but if we use prototype, property will load when required while without it is default loaded.
-
-// => if you want that in all object used in project a variable or function is stored by default then :-
-// Object.prototype.defaultData = "This is default data";
-// var a = {};
-// console.log(a.defaultData);
-
-//=> Same for string:-
-// String.prototype.defaultData = "This is string default data"
-// var a = "this is a string"
-// console.log(a.defaultData)
-
-// Q. What is  Deep copy and shallow copy  of object ? ===================================================
-
-// let obj ={
-//     name:"Peter"
-// }
-
-// let user = obj;
-
-// user.name = "Bruce"
-// console.log(obj) //Bruce beacuse when we copy object it copy only referenct not value so obj's value is changed. variable copy only value
-
-// =>  to solve refrence issue we use shallow copy and deep copy.
-
-// => Shallow copy : - it works only on first level of object. it copy object values of first level.  eg:-
-
-// let obj = {
-//   name: "Peter",
-// };
-
-// let user = Object.assign({}, obj);
-// user.name = "Bruce";
-// console.log(obj);
-
-// => Deep copy:- to copy all levels of object values, we use Deep copy . also deep copy dont work with data and functions. eg:-
-//     let obj = {
-//         name:"Peter",
-//         address:{
-//             city:"Faridabad",
-//             state:"Haryana",
-//             country:"India"
-//         }
-//     }
-
-// let user = JSON.parse(JSON.stringify(obj))
-// user.address.city = "Gurgaon";
-// console.log(obj)
-// console.log(user)
-
-// Q. What are Generator functions in Js ?? =====================================================================
-
-// => These are functions whoes excution we can control. we can pause and resume their excution. eg -
-// function* simpleGenerator (){
-//     console.log("function activated");
-//     console.log("step 1 start")
-//     yield "Reached at step 1";
-//     console.log("step 2 start");
-//     yield "Reached at step 2";
-//     console.log("step3 start")
-//     yield 'Reached at step 3'
-//     console.log("function deactivated")
-// }
-
-// let simpleGen = simpleGenerator();
-
-// console.log(simpleGen.next())
-// console.log(simpleGen.next())
-// console.log(simpleGen.next())
-// console.log(simpleGen.next())
-
-// => we have to call the function each time to count steps. also value written in front of yield with be console in object. when all steps completed  it will console "{value:undefined, done:true}"
+// Q. What are Generator functions in Js ?? give code =====================================================================
 
 // Q. What is Quama Operator in js ===========================================================
 
-// let x = 10;
-// let y = 20;
-
-// x = ((y += 20), y);
-// console.log(x) // here first argument (y = y+20) is calculated and stored in y and second argument y is printed.
-
-// => in quama operator first argument is calculated and second argument will be print . it is important to store first argument calculation result in a variable.
-
-// Q. Optinal chiaing operator in js?========================================================
-// Ans. optional chaining operator (?.) is used to avoid errors while accessing object's properties.
+// Q. Optinal chining operator in js?========================================================
 
 // Q. Nullish operator in js??=============================================================
-// Ans. Nullish coalescing operaotr (??) is Ecma script feature. eg -  const result = value ?? defaultValue; //here if value is null or undefined, it will take dafault value.
+
+// Q.  e.preventDefault() vs e.stopPropagation() ? ==================================
 
 // Q. What is matchAll() function in js ? ==========================================================
-// Ans. matchAll() is Ecma script feature. powerful way to find all maches in string. eg-
-// const str = "The rain in Spain stays mainly in the plain.";
-// const regex = /in/g;
 
-// const matches = str.matchAll(regex);
-
-// for (const match of matches) {
-//   console.log(match);
-// }
 // Q. What is str.at() in js ?==============================================
-// Ans. str.at() method is used to find index of specific charactor. eg-
-// let str = "hello world"
-// console.log(str.at(6))
 
 // Q. map vs foreach function ?==========================================
-// Ans. map function returns new array and foreach function dont return anything.
 
 // Q.What is navigator in js ? ============================================
-// Ans. navigator object is used to get information about browser in js
 
-// Q. how to know in js if function is called by use click or by any script? =======================================
-// Ans. button me onclick me jo function call hota hai use event object pass hota hai. to if event.isTrusted==true then user clicked and if false then script clicked.
+// Q. how to know in js if function is called by use click or by any script ?=======================================
 
 // Q. Wha is object ? give advantages and disadvantages ==================================
 
