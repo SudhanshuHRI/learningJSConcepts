@@ -32,15 +32,15 @@
 
 // Q. what is uni directioanl data flow in react? ====================================================================
 
-// Q.What is anti pattern in react?=========================================================================================
+// Q.What is anti pattern in react? =========================================================================================
 
 // Q.how to handle cors error on front end?==============================================================================
 
-// Q.what we send in header to authentication?========================================================================
+// Q.what we send in header to authentication? ========================================================================
 
-// Q. we have so many states declared in a component. How to avoid to  declare it multiple times ?? ======================
+// Q. we have so many states declared in a component. How to avoid to declare it multiple times ?? ======================
 
-// Q.What is reconcilation in ReactJs?===============================================================================
+// Q.What is reconcilation in ReactJs? ===============================================================================
 
 // Q.statefull vs stateless ?===========================================================
 
@@ -48,7 +48,7 @@
 
 // Q. What is CI/CD pipeline ? ===========================================================
 
-// Q.What is the difference between useref and createRef in React ?==============================
+// Q.What is the difference between useref and createRef in React ? ==============================
 
 // Q.Explain why and how to update state of components using callback? =========================================
 
@@ -90,7 +90,7 @@
 
 // Q.Throttling in js and react ===========================================================================
 
-// Q.polyfills in react ===========================================================================
+// Q. polyfills in react ===========================================================================
 
 // Q.what is portal in react ===================================================================================
 
@@ -101,6 +101,8 @@
 // Q. how to make layout in react?? ==============================================================
 
 // Q. how to update array and object which is in state ? ========================================
+
+
 
 
 // Q. How does React’s reconciliation algorithm work? ============================================================
