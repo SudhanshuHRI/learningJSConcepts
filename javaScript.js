@@ -56,9 +56,9 @@
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
 
-// Q. What are premitive and non premetive data types in js ?=============================================
+// Q. What are premitive and non premetive data types in js ? =============================================
 
-// Q. what is Symbol() in js ?=========================================
+// Q. what is Symbol() in js ? =========================================
 
 // Q. all built - in array functions in react ? give all==================================================
 // Ans. React dont have any built in methods. it takes form js.
@@ -169,7 +169,7 @@
 
 // Q. what are side effects in js ? ======================================
 
-// Q.Difference between promise and async await?===========================================================================================
+// Q.Difference between promise and async await? ===========================================================================================
 
 // Q. "throw" keyword in js ?=============================================================================
 
