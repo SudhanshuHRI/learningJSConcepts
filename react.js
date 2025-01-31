@@ -4,7 +4,7 @@
 
 //////////////////////////////////////////////// Interview Questions ///////////////////////////////////////////
 
-// Q.element vs component ?=======================================================
+// Q.element vs component ? =======================================================
 
 // Q. how lifting state up in react ? =======================================================
 
@@ -64,7 +64,7 @@
 
 // Q.How do you handle internationalization (i18n) in React applications?===================================
 
-// Q.tree shaking .==================================
+// Q.tree shaking. ==================================
 
 // Q. How to pass data between sibling components using React router? ==========================================
 
