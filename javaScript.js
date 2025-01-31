@@ -97,6 +97,7 @@
 
 // 17. sort()
 
+
 // 18. reverse()
 
 // 19. includes()
@@ -109,11 +110,14 @@
 // Q. why 2 similer objects comparing returns false ? =========================================
 
 // Q.slice vs splice who modify orignal array?? give example =================================================================
-// Q. what is IIFE ? why it is usefull?====================================
+
+// Q. what is IIFE ? why it is usefull? ====================================
 // Q. Why are functions called first class objects ? ======================================
 // Q. "Array.prototype.map" ?? ========================================
 // Q. how to create a object without a prototype ? ===============================
 // Q. how to destruncture object ?? ========================
+
+
 // Q. how to destructure array ? ===================
 // Q. What are wrapper Objects ? ========================
 // Q. implicit vs explicit coercion ? =================================
@@ -155,13 +159,14 @@
 // Q. What are Call, apply and bind methods? ============================================================
 
 // Problem:-
-// function getFullName(greet) {
-//  console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);
-// }
+function getFullName(greet) {
+ console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);
+}
 
-// const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
+const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
 
-// getFullName("Hello") // this will give undefined
+//getFullName("Hello") // this will give undefined
+
 
 // Q. object.seal vs object.freeze ==============================================================
 
@@ -171,7 +176,7 @@
 
 // Q.Difference between promise and async await? ===========================================================================================
 
-// Q. "throw" keyword in js ?=============================================================================
+// Q. "throw" keyword in js ? =============================================================================
 
 // Q.controlled and uncontrolled components?========================================================================
 
@@ -201,7 +206,7 @@
 
 // Q.Private property and private fucntion in js ? ====================================================
 
-// Q. What is Laxical Scope vs closures ? give code===========================================================================
+// Q. What is Laxical Scope vs closures ? give code ===========================================================================
 
 // Q. What are promises in js ? async/await vs promises ======================================================================
 
@@ -236,6 +241,7 @@
 // Q. Wha is object ? give advantages and disadvantages ==================================
 
 // Q. How to loop a object ?? =========================================================
+
 // Q. In object how you can add "pin code" key with space ? ==========================
 // Q. In object how you can add key dynamically ? ==============================
 // Q.  In object if we decalre it as const can we reassign it or add only properties ? ======================================
@@ -243,7 +249,7 @@
 
 // Q. Guess the output of the following ? ===================================================================
 
-// let data = "Hello, How are you?"
+ let data = "    Hello, How are you?    "
 
 // console.log(data.split())
 // console.log(data.split(''))
@@ -257,8 +263,8 @@
 // console.log(data.substring(0,data.length-1))
 // console.log(data.split('o')[0])
 // console.log(data.split('o')[1])
-//console.log(data.split('').reverse().join(''))
-//console.log(data.trim())
+// console.log(data.split('').reverse().join(''))
+// console.log(data.trim())
 
 // Q. guess the output of the following ?==================================================================================
 // Ans.
@@ -271,7 +277,7 @@
 // console.log(typeof NaN);
 // console.log(0==false)
 // console.log(''==false)
-// console.log(0==false)
+// console.log(-0===false)
 // console.log(null <=0)
 // console.log(null>=0)
 // console.log(NaN==NaN)
@@ -279,7 +285,7 @@
 // console.log(Array(3)==",,")
 // console.log(!!10+20)
 // console.log(typeof typeof 1)
-//console.log([..."Sudhanshu"])
+// console.log([..."Sudhanshu"])
 // console.log(!!undefined);
 // console.log(!!null);
 // console.log(!!"a");
