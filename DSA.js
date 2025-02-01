@@ -1,14 +1,8 @@
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
-const data = [23, 43, 26, 76, 58, 45, 0, 1, 48];
+const NumberData = [23, 43, 26, 76, 58, 45, 0, 1, 48, 100];
+const StringData = ["One","two","three","four","five"];
 // Q.Find the largest and smallest element in an array.
-
-let largest;
-let smallest;
-
-for (let i = 0; i < data.length; i++) {
-  console.log(data[i]);
-}
 
 // Q.Find the second largest and second smallest elements in an array.
 // Q.Rotate an array by k positions.
