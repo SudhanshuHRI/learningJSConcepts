@@ -1,8 +1,15 @@
-
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
-const data = [23,43,26,76,58,45,0,1,48]
+const data = [23, 43, 26, 76, 58, 45, 0, 1, 48];
 // Q.Find the largest and smallest element in an array.
+
+let largest;
+let smallest;
+
+for (let i = 0; i < data.length; i++) {
+  console.log(data[i]);
+}
+
 // Q.Find the second largest and second smallest elements in an array.
 // Q.Rotate an array by k positions.
 // Q.Find the majority element in an array (appears more than n/2 times).
@@ -111,7 +118,6 @@ const data = [23,43,26,76,58,45,0,1,48]
 // Q.Check if two numbers have opposite signs.
 // Q.Find the position of the rightmost set bit in a number.
 // Q.Solve the Subset XOR problem.
-
 
 // Q.Write a function to find the length of the longest substring without repeating characters.
 // Example:
