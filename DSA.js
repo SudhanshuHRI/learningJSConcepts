@@ -1,10 +1,16 @@
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
-const NumberData = [23, 43, 26, 76, 58, 45, 0, 1, 48, 100];
-const StringData = ["One","two","three","four","five"];
-// Q.Find the largest and smallest element in an array.
+const NumberData = [23, 43, 26, 76, 58];
+const StringData = ["One", "Two", "Three", "Four", "Five"];
 
+// Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
+
+for (item in NumberData) {
+  console.log(NumberData[item]);
+}
+
+
 // Q.Rotate an array by k positions.
 // Q.Find the majority element in an array (appears more than n/2 times).
 // Q.Find the missing number in a given array of size n with elements from 1 to n.
