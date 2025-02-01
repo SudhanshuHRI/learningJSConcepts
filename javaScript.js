@@ -159,11 +159,11 @@
 // Q. What are Call, apply and bind methods? ============================================================
 
 // Problem:-
-function getFullName(greet) {
- console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);
-}
+// function getFullName(greet) {
+//  console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);
+// }
 
-const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
+// const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
 
 //getFullName("Hello") // this will give undefined
 
@@ -249,7 +249,7 @@ const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
 
 // Q. Guess the output of the following ? ===================================================================
 
- let data = "    Hello, How are you?    "
+//  let data = "    Hello, How are you?    "
 
 // console.log(data.split())
 // console.log(data.split(''))

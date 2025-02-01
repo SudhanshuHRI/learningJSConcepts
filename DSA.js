@@ -109,3 +109,11 @@
 // Check if two numbers have opposite signs.
 // Find the position of the rightmost set bit in a number.
 // Solve the Subset XOR problem.
+
+
+// Write a function to find the length of the longest substring without repeating characters.
+// Example:
+// Input: "abcabcbb"
+// Output: 3 (substring is "abc")
+// Input: "bbbbb"
+// Output: 1 (substring is "b")
