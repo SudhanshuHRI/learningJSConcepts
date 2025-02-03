@@ -1,16 +1,23 @@
+///////////////////////////////////////////////////////////////  Theory  ///////////////////////////////////////////////////
+
+// 1. Array Traversing = to check each element in array
+// 2. Array Accessing = to get a specific element from array
+
+
+
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 const NumberData = [23, 43, 26, 76, 58];
 const StringData = ["One", "Two", "Three", "Four", "Five"];
 
+// Q. How to add a element in array in different positions.
+
+
+
+
+
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
-
-for (item in NumberData) {
-  console.log(NumberData[item]); 
-}
-
-
 // Q.Rotate an array by k positions.
 // Q.Find the majority element in an array (appears more than n/2 times).
 // Q.Find the missing number in a given array of size n with elements from 1 to n.
@@ -41,7 +48,7 @@ for (item in NumberData) {
 // Q.Find the intersection point of two linked lists.
 // Q.Check if a linked list is a palindrome.
 // Q.Rotate a linked list by k nodes.
-// Q.Stacks and Queues
+
 // Q.Implement a stack using arrays.
 // Q.Implement a queue using stacks.
 // Q.Find the next greater element for every element in an array.
