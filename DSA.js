@@ -7,7 +7,7 @@ const StringData = ["One", "Two", "Three", "Four", "Five"];
 // Q.Find the second largest and second smallest elements in an array.
 
 for (item in NumberData) {
-  console.log(NumberData[item]);
+  console.log(NumberData[item]); 
 }
 
 
@@ -34,7 +34,7 @@ for (item in NumberData) {
 // Q.Reverse a linked list.
 // Q.Detect and remove a cycle in a linked list.
 // Q.Find the middle element of a linked list.
-// Q.Merge two sorted linked lists.
+// Q.Merge two sorted linked lists. 
 // Q.Remove duplicates from a sorted linked list.
 // Q.Add two numbers represented as linked lists.
 // Q.Flatten a multilevel linked list.
@@ -85,7 +85,7 @@ for (item in NumberData) {
 // Q.Print all paths from the top-left to the bottom-right of a matrix.
 // Q.Find the Kth permutation of a sequence.
 // Q.Implement the word search problem.
-// Q.Dynamic Programming
+
 // Q.Find the nth Fibonacci number using dynamic programming.
 // Q.Solve the Longest Common Subsequence (LCS) problem.
 // Q.Solve the Longest Increasing Subsequence (LIS) problem.
@@ -96,7 +96,7 @@ for (item in NumberData) {
 // Q.Solve the Partition Equal Subset Sum problem.
 // Q.Find the maximum profit in a stock trading problem (at most 2 transactions).
 // Q.Solve the Edit Distance problem between two strings.
-// Q.Sorting and Searching
+
 // Q.Implement the Merge Sort algorithm.
 // Q.Implement the Quick Sort algorithm.
 // Q.Perform Binary Search on a sorted array.
