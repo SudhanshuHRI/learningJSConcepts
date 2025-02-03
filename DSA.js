@@ -3,18 +3,26 @@
 // 1. Array Traversing = to check each element in array
 // 2. Array Accessing = to get a specific element from array
 
-
-
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 const NumberData = [23, 43, 26, 76, 58];
 const StringData = ["One", "Two", "Three", "Four", "Five"];
 
-// Q. How to add a element in array in different positions.
+// Q. How to add a element in array on different positions.
+// Logic = 
+// Q. How to delete a element from array.
 
+let deleteElement = 26;
 
+for (let i = 0; i < NumberData.length; i++) {
+  if (NumberData[i] == deleteElement) {
+    for (let j = i; j <= NumberData.length - 1; j++) {
+      NumberData[i] = NumberData[j + 1];
+    }
+  }
+}
 
-
+console.log(NumberData);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
@@ -41,7 +49,7 @@ const StringData = ["One", "Two", "Three", "Four", "Five"];
 // Q.Reverse a linked list.
 // Q.Detect and remove a cycle in a linked list.
 // Q.Find the middle element of a linked list.
-// Q.Merge two sorted linked lists. 
+// Q.Merge two sorted linked lists.
 // Q.Remove duplicates from a sorted linked list.
 // Q.Add two numbers represented as linked lists.
 // Q.Flatten a multilevel linked list.
