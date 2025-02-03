@@ -16,13 +16,6 @@ const StringData = ["One", "Two", "Three", "Four", "Five"];
 let deleteElement = 26;
 
 
-const getDataSortedArray = () =>{
-let value = "This is a value"
-let value2= "This is value 2"
-}
-
-getDataSortedArray()
-
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
