@@ -5,18 +5,26 @@
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
-const NumberData = [23, 43, 26, 76, 58];
-const StringData = ["One", "Two", "Three", "Four", "Five"];
+const data1 = [23, 43, 26, 76, 58, 85];
+const data2 = ["One", "Two", "Three", "Four", "Five"];
 
 // Q. How to add a element in array on different positions ? // move elements to the next index
 // Q. How to delete a element from array ? // move elemnts to previous index
-// Q. How to search a element in array ? 
+// Q. How to search a element in array ?
+// Q. How to merge 2 arrays using 3rd array ?
+// Q. How to merge 2 arrays using while loop ?
 
-console.log(NumberData);
+const data3 = [];
 
+for (let i = 0; i < data1.length; i++) {
+  data3[i] = data1[i];
+}
 
+for (let i = 0; i < data2.length; i++) {
+    data3[i+data1.length] = data2[i] 
+}
 
-console.log(NumberData);
+console.log(data3);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
