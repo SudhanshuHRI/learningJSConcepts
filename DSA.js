@@ -8,17 +8,15 @@
 const NumberData = [23, 43, 26, 76, 58];
 const StringData = ["One", "Two", "Three", "Four", "Five"];
 
-// Q. How to add a element in array on different positions ?
-// Logic = shift elements and put element on desired index.
+// Q. How to add a element in array on different positions ? // move elements to the next index
+// Q. How to delete a element from array ? // move elemnts to previous index
+// Q. How to search a element in array ? 
 
-// Q. How to delete a element from array.
-
-let deleteElement = 26;
-
+console.log(NumberData);
 
 
 
-
+console.log(NumberData);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
