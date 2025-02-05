@@ -2,6 +2,8 @@
 
 // 1. Array Traversing = to check each element in array
 // 2. Array Accessing = to get a specific element from array
+// 3. Algorithm = steps to do any task in program.
+// 4. 
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
@@ -14,26 +16,6 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop ?
 
-const data3 = [1, 2, 3, 4, 5, 6];
-const data4 = [7, 8, 9, 10];
-
-const data5 = [];
-
-let i = 0;
-let j = 0;
-
-while (i < data3.length || j < data4.length) {
-  data5[i] = data3[i];
-  data5[data3.length + j] = data4[j];
-  j++;
-  i++;
-  if(data5.length != data3.length+data4.length){
-    data5.length = data3.length+data4.length
-  }
-}
-
-
-console.log(data5);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
