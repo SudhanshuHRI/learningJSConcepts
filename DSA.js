@@ -12,7 +12,7 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to delete a element from array ? // move elemnts to previous index
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
-// Q. How to merge 2 arrays using while loop ?
+// Q. How to merge 2 arrays using single while loop ?
 
 const data3 = [1, 2, 3, 4, 5, 6];
 const data4 = [7, 8, 9, 10];
@@ -27,6 +27,9 @@ while (i < data3.length || j < data4.length) {
   data5[data3.length + j] = data4[j];
   j++;
   i++;
+  if(data5.length != data3.length+data4.length){
+    data5.length = data3.length+data4.length
+  }
 }
 
 
