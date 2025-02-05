@@ -14,8 +14,8 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using while loop ?
 
-const data3 = [];
-
+const data3 = [1, 2, 3, 4, 5, 6];
+const data4 = [7, 8, 9, 10];
 
 console.log(data3);
 
