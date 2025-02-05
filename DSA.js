@@ -14,7 +14,7 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to delete a element from array ? // move elemnts to previous index
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
-// Q. How to merge 2 arrays using single while loop ?
+// Q. How to merge 2 arrays using single while loop and 3rd array ?
 
 
 // Q.Find the largest and smallest element in an array.
