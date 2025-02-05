@@ -17,7 +17,10 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 const data3 = [1, 2, 3, 4, 5, 6];
 const data4 = [7, 8, 9, 10];
 
-console.log(data3);
+const data5 = [];
+
+const i = 0;
+const j = 0;
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
