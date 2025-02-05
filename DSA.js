@@ -19,8 +19,18 @@ const data4 = [7, 8, 9, 10];
 
 const data5 = [];
 
-const i = 0;
-const j = 0;
+let i = 0;
+let j = 0;
+
+while (i < data3.length || j < data4.length) {
+  data5[i] = data3[i];
+  data5[data3.length + j] = data4[j];
+  j++;
+  i++;
+}
+
+
+console.log(data5);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
