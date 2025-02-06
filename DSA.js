@@ -3,7 +3,8 @@
 // 1. Array Traversing = to check each element in array
 // 2. Array Accessing = to get a specific element from array
 // 3. Algorithm = steps to do any task in program.
-// 4. 
+// 4. Algorithm complexity = 
+// 5.
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
@@ -15,7 +16,6 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
-
 
 
 // Q.Find the largest and smallest element in an array.
