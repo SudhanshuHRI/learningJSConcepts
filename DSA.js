@@ -1,10 +1,13 @@
 ///////////////////////////////////////////////////////////////  Theory  ///////////////////////////////////////////////////
 
-// 1. Array Traversing = to check each element in array
-// 2. Array Accessing = to get a specific element from array
-// 3. Algorithm = steps to do any task in program.
-// 4. Algorithm complexity = 
-// 5.
+// * Array Traversing = to check each element in array
+// * Array Accessing = to get a specific element from array
+// * Algorithm = steps to do any task in program.
+// * Algorithm complexity = 1.time complexity, 2. space complexity
+// 1. Time complexity = it is calculated by counting the number of steps to finish the execution. if a program have 50 lines of code then time complexity will be 50 but if we have loop who excutes 100 times in 50 lines then time complexity will be 150.
+// 2.Space complexity = space required to excute the program + space complexity = Auxilary space / supportive space + input size / variable space. if a program needs 1 MB to excute program, then Space complexity will be 1 MB.
+// * To do a task there is multiple algorithm / multiple ways.
+// * Big-O-Notation = it is a unit to denote complexity. eg- weight's Big-O-Notation is "kg"
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
@@ -16,7 +19,6 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
-
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
