@@ -9,10 +9,14 @@
 // * To do a task there is multiple algorithm / multiple ways.
 // * Big-O-Notation = it is a unit to denote complexity. eg- weight's Big-O-Notation is "kg"
 // * which algorithm we have to choose, it depends on data size. choosing wrong algorithm will increase complexity. That is why we have multiple algirithm to do single task.
-// * Asymptotic analysis = tells which algorithm is best for doing that single task. In Asymptotic analysis we use different notations to find the best algorithm . time and space complexity is also calculated in asymptotic analysis. also in time and space complexity, time complexity is important to measure because using large running loops will increase time complexity. eg- if we have array of 100 elements and we have to search element then linear search algorithm is best but if we have 1000000 elements the binary search will be best for searching. 
-// * Asymptotic Notation = 
+// * Asymptotic analysis = tells which algorithm is best for doing that single task. In Asymptotic analysis we use different notations to find the best algorithm . time and space complexity is also calculated in asymptotic analysis. also in time and space complexity, time complexity is important to measure because using large running loops will increase time complexity. eg- if we have array of 100 elements and we have to search element then linear search algorithm is best but if we have 1000000 elements the binary search will be best for searching.
+// * Asymptotic Notation = we have 3 notations. big-O-notation, omega notation, theta notation.
 // * Time complexity directly depends on input. eg- if we use nested loops , and we have 6 elements array then loop will run 6*6=36 times. so time complexity depends upon inputs.
 // * input is chuncks of data where algorithm is going to implement. eg- [1,2,3,4,5] in this it's elements are chunks and each element is called input.
+// f(N) = 5N*5N + 6N + 12. This formula is used to find time complexity where nested loops are used. here N = no of elements in Array.
+// f(N) = 6N + 12. This formula is used to find time complexity with no nested loops. here N = no of elements in Array.
+
+// *Sort = loop will always run (arraylength * arraylength) times to sort an array.
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
@@ -24,6 +28,7 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
+//Q. Short a array using bubble short.
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
