@@ -16,7 +16,8 @@
 // f(N) = 5N*5N + 6N + 12. This formula is used to find time complexity where nested loops are used. here N = no of elements in Array.
 // f(N) = 6N + 12. This formula is used to find time complexity with no nested loops. here N = no of elements in Array.
 
-// *Sort = loop will always run (arraylength * arraylength) times to sort an array.
+///////////////////////////////////////////////////////////  Sorting  //////////////////////////////////////////////////////////////////////
+// * loop will always run (arraylength * arraylength) times maximum to sort an array. if we have some elements that are sorted already, then no of excution will decrease.
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
@@ -28,7 +29,7 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
-//Q. Short a array using bubble short.
+// Q. Short a array .
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
