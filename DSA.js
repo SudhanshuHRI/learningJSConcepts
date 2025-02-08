@@ -29,7 +29,16 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
-// Q. Short a array .
+// Q. Short a array.
+
+for(i=0;i<data1.length;i++){
+    for(j=0;j<data1.length;j++){
+        console.log(j);
+        
+    }
+}
+
+const variabel = "the thing is to be the first with all of the things and off the temple . "
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
