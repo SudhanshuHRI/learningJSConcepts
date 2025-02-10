@@ -17,8 +17,10 @@
 // f(N) = 6N + 12. This formula is used to find time complexity with no nested loops. here N = no of elements in Array.
 
 ///////////////////////////////////////////////////////////  Sorting  //////////////////////////////////////////////////////////////////////
-// * loop will always run (arraylength * arraylength) times maximum to sort an array. if we have some elements that are sorted already, then no of excution will decrease.
+// * loop will always excute (arraylength * arraylength) times maximum to sort an array. if we have some elements that are sorted already, then no of excution will decrease.
 
+///////////////////////////////////////////////////////////////// Recurtion  ///////////////////////////////////////////////////////////////
+// * recurtion = a function that calls itself.
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 const data1 = [23, 43, 26, 76, 58, 85];
@@ -29,15 +31,19 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
-// Q. Short a array.
+// Q. Short a array .
 
-for(i=0;i<data1.length;i++){
-    for(j=0;j<data1.length;j++){
-        console.log(j);
-        
+for (i = 0; i < data1.length; i++) {
+  for (j = 0; j < data1.length; j++) {
+    if (data1[j] > data1[j + 1]) {
+      let temp = data1[j];
+      data1[j] = data1[j + 1];
+      data1[j + 1] = temp;
     }
+  }
 }
 
+console.log(data1);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
