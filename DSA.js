@@ -38,7 +38,6 @@ for(i=0;i<data1.length;i++){
     }
 }
 
-const variabel = "the thing is to be the first with all of the things and off the temple .with the things and all of the things but the thing with all of the things  "
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
