@@ -20,7 +20,11 @@
 // * loop will always excute (arraylength * arraylength) times maximum to sort an array. if we have some elements that are sorted already, then no of excution will decrease.
 
 ///////////////////////////////////////////////////////////////// Recurtion  ///////////////////////////////////////////////////////////////
-// * recurtion = a function that calls itself.
+// * recurtion = a function that calls itself + it have 2 types-
+// 1.direct/basice recurtion = it is default recurion
+// 2. indirect recurtion = 2 functions that calls themselfs and stops on a perticular conditions.
+
+// *
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 const data1 = [23, 43, 26, 76, 58, 85];
@@ -31,19 +35,30 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to search a element in array ?
 // Q. How to merge 2 arrays using 3rd array ?
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
-// Q. Short a array .
+// Q. Short a array.
+// Q. find a factorial of 5 using recursion.
 
-for (i = 0; i < data1.length; i++) {
-  for (j = 0; j < data1.length; j++) {
-    if (data1[j] > data1[j + 1]) {
-      let temp = data1[j];
-      data1[j] = data1[j + 1];
-      data1[j + 1] = temp;
-    }
+let totoalMoney = 100;
+let totalApple = 0;
+const buyApple = (totoalMoney) => {
+ 
+  if (totoalMoney > 0) {
+    totalApple = totalApple + 1;
+    totoalMoney = totoalMoney - 10;
+    console.log(`i have buy totoal ${totalApple} apply`);
+    buyMore(totoalMoney)
   }
-}
+};
 
-console.log(data1);
+const buyMore = (totoalMoney) => {
+    if(totoalMoney>0){
+        console.log(`You have ${totoalMoney} rs. So you can buy more `);
+        buyApple(totoalMoney)
+        
+    }
+};
+
+buyApple(totoalMoney);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
