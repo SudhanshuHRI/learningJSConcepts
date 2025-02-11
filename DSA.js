@@ -38,8 +38,6 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. Short a array.
 // Q. find a factorial of 5 using recursion.
 
-
-
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
 // Q.Rotate an array by k positions.
