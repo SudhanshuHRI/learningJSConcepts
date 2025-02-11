@@ -38,27 +38,7 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. Short a array.
 // Q. find a factorial of 5 using recursion.
 
-let totoalMoney = 100;
-let totalApple = 0;
-const buyApple = (totoalMoney) => {
- 
-  if (totoalMoney > 0) {
-    totalApple = totalApple + 1;
-    totoalMoney = totoalMoney - 10;
-    console.log(`i have buy totoal ${totalApple} apply`);
-    buyMore(totoalMoney)
-  }
-};
 
-const buyMore = (totoalMoney) => {
-    if(totoalMoney>0){
-        console.log(`You have ${totoalMoney} rs. So you can buy more `);
-        buyApple(totoalMoney)
-        
-    }
-};
-
-buyApple(totoalMoney);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
