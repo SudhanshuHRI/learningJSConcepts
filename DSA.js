@@ -41,6 +41,14 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 
 const test = ()=>{
     let temp = 0;
+    let arrayLength = data1.length;
+    let arrayIndex = arrayLength-1;
+    console.log(arrayLength);
+    const data = "the thing with the help of the things withethed thesl with the thinge and of the circular with the things and the items and with the things with all of the thing and of the things with and the tircualr thing and the circuit with the. you have 365 days and withe the thing and of all the circular thing and of the thingwith the certiain with all of the things with all of the circular and the thing with of all of the thing and witha all of . theh things and of the circular. with athne theings and the scurrcular withe the thing and of the circular tna the thing of the circular and the thing and of the circular and the things and of the thing and the things with all of the things and of teh circular and the things of the circular and of the thiinsg and of the curcular and of the thing and of the thing with all of the circular and of the circular and of the things and of the circular and of the thing and with all of the thing and of the tthe thing and of the circular and of the circular mil agei to the thing and of the circular then then . then of the thing with all of the thing and of the circular and and with the thing of the circular and the";
+    
+
+
+
 }
 
 test();
