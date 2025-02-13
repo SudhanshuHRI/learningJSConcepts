@@ -37,6 +37,15 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. How to merge 2 arrays using single while loop and 3rd array ?
 // Q. Short a array.
 // Q. find a factorial of 5 using recursion.
+// Q. Reverse array using recursion.
+
+const test = ()=>{
+    let temp = 0;
+}
+
+test();
+
+
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
