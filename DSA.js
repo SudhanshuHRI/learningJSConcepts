@@ -44,7 +44,26 @@ const test = ()=>{
     let arrayLength = data1.length;
     let arrayIndex = arrayLength-1;
     console.log(arrayLength);
-    const data = "the thing with the help of the things withethed thesl with the thinge and of the circular with the things and the items and with the things with all of the thing and of the things with and the tircualr thing and the circuit with the. you have 365 days and withe the thing and of all the circular thing and of the thingwith the certiain with all of the things with all of the circular and the thing with of all of the thing and witha all of . theh things and of the circular. with athne theings and the scurrcular withe the thing and of the circular tna the thing of the circular and the thing and of the circular and the things and of the thing and the things with all of the things and of teh circular and the things of the circular and of the thiinsg and of the curcular and of the thing and of the thing with all of the circular and of the circular and of the things and of the circular and of the thing and with all of the thing and of the tthe thing and of the circular and of the circular mil agei to the thing and of the circular then then . then of the thing with all of the thing and of the circular and and with the thing of the circular and the";
+    const data = [{
+        name:"name1",
+        age:"age1",
+        city:"city1"
+    },{
+        name:"Sudhanshu",
+        age:29,
+        city:"Lucknow"
+    },{
+        name:"Sudhanshu",
+        age:29,
+        city:"Lucknow"
+    },{
+        name:"Sudhanshu",
+        age:29,
+        city:"Lucknow"
+    },
+]
+
+const data2 = "the brown fox is added to the thing with all of the things and of the circular thing and of the thing and of the curcular and with the all of the thing the thing with all of the thing and of the thing with tha=e all of the thing and of the then akdn fkd a;d adskthja the theng snand the with all of the theing with all of the thignthe=q=eiths 3 ft dthe thing with all of the thig=nsdjf thenadks the alting the maiteh ald tha whins theh the thing with of the callse dtho the thing with of the thing with  with all of the things happen to the circular thing and fo the . to the thing of with the thing with all of the thing with all of the with then thing of the all of the thing with the of to circular with all of the thing and of the circular with the thing and fo the curthe circular with all of the thing of the cucualr and of the thimes with the thing of the with to the thing of the thing and of the circular with of the thing and of the circular with the thing of the circular with the with all of the thing and of the circular with the thing of the thing and of the curcular thing with the thing with all of the thing with all of the thing tourtlel with all of the thing all of the circular tand of the thing and of the curcular with all of the thing and of the circular and of the thing and of the with all of the thing and the thing and the circualr thting with the thing of the ciurulart andof the thing and of the thing and of the ciruclar and of the thing and of the thenign ando of the circular and of the thing and of ";
     
 
 
