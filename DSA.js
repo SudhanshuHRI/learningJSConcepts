@@ -40,34 +40,7 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. Reverse array using recursion.
 
 const test = ()=>{
-    let temp = 0;
-    let arrayLength = data1.length;
-    let arrayIndex = arrayLength-1;
-    console.log(arrayLength);
-    const data = [{
-        name:"name1",
-        age:"age1",
-        city:"city1"
-    },{
-        name:"Sudhanshu",
-        age:29,
-        city:"Lucknow"
-    },{
-        name:"Sudhanshu",
-        age:29,
-        city:"Lucknow"
-    },{
-        name:"Sudhanshu",
-        age:29,
-        city:"Lucknow"
-    },
-]
-
-const data2 = "";
-    
-
-
-
+ 
 }
 
 test();
