@@ -1,5 +1,9 @@
 ///////////////////////////////////////////////////////////////  Theory  ///////////////////////////////////////////////////
 
+// * 2 type of data staructure :-
+// 1.linear data structure = array, stack, queue
+// 2.Non-linear data staructures= tree, graph
+
 // * Array Traversing = to check each element in array
 // * Array Accessing = to get a specific element from array
 // * Algorithm = steps to do any task in program.
@@ -24,11 +28,29 @@
 // 1.direct/basice recurtion = it is default recurion
 // 2. indirect recurtion = 2 functions that calls themselfs and stops on a perticular conditions.
 
-// *
+//////////////////////////////////////////////////////////////// Stack ///////////////////////////////////////////////////////////////
+// * In stack data structure, elements are added / removed / updated from a single end + in array we do same where we want like adding element in first or last or in middle of array but in stack we can do it with single direction.
+// * It works on Last in first out (LIFO) . means last item added to stack is the first one to be removed.
+// * we decalre maximum value of stack. eg- we have to declare stack will be of 10 element so only 10 elements will be enter.
+//* key operations in stack = push, pop , peek(view the top elememt) , isEmpty(checks if stack is empty)
+//* Stack is used when you need to maintain history of operations. Stack is used in browser history naivgation, undo functionallity etc
+//* Stack is not required if you want to access random elements
+// * eg-
+let data = [];
+let currentSize = data.length;
+let maxValue = 5;
+
+function PushData(){
+   
+}
+
+PushData()
+console.log(data);
+
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
-const data1 = [23, 43, 26, 76, 58, 85];
-const data2 = ["One", "Two", "Three", "Four", "Five"];
+// const data1 = [23, 43, 26, 76, 58, 85];
+// const data2 = ["One", "Two", "Three", "Four", "Five"];
 
 // Q. How to add a element in array on different positions ? // move elements to the next index
 // Q. How to delete a element from array ? // move elemnts to previous index
@@ -38,20 +60,6 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. Short a array.
 // Q. find a factorial of 5 using recursion.
 // Q. Reverse array using recursion.
-
-const test = (orignalArray, start, end) => {
- 
-
-  if (end >= start) {
-    let temp = orignalArray[start];
-    orignalArray[start] = orignalArray[end];
-    orignalArray[end] = temp;
-    console.log(orignalArray);
-    test(orignalArray, start + 1, end - 1);
-  }
-};
-
-test(data1, 0, data1.length - 1);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
