@@ -39,13 +39,19 @@ const data2 = ["One", "Two", "Three", "Four", "Five"];
 // Q. find a factorial of 5 using recursion.
 // Q. Reverse array using recursion.
 
-const test = ()=>{
+const test = (orignalArray, start, end) => {
  
-}
 
-test();
+  if (end >= start) {
+    let temp = orignalArray[start];
+    orignalArray[start] = orignalArray[end];
+    orignalArray[end] = temp;
+    console.log(orignalArray);
+    test(orignalArray, start + 1, end - 1);
+  }
+};
 
-
+test(data1, 0, data1.length - 1);
 
 // Q.Find the largest and smallest element in an array.
 // Q.Find the second largest and second smallest elements in an array.
