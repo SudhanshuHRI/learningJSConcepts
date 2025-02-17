@@ -48,14 +48,14 @@ for (let i = 0; i < data.length; i++) {
 
 console.log("strArray", strArray);
 
-for (let i = 0; i < strArray.length; i++) {
-  let arrayLength = strArray.length;
-
-  console.log(arrayLength);
+function pop(){
+  for (let i = 0; i < strArray.length; i++) {
+    let arrayLength = strArray.length;
   
-
-  
+  }
 }
+
+
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
