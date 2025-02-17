@@ -29,6 +29,7 @@
 // 2. indirect recurtion = 2 functions that calls themselfs and stops on a perticular conditions.
 
 //////////////////////////////////////////////////////////////// Stack ///////////////////////////////////////////////////////////////
+
 // * In stack data structure, elements are added / removed / updated from a single end + in array we do same where we want like adding element in first or last or in middle of array but in stack we can do it with single end.
 // * It works on Last in first out (LIFO) . means last item added to stack is the first one to be removed.
 // * we decalre maximum value of stack. eg- we have to declare stack will be of 10 element so only 10 elements will be enter.
@@ -36,7 +37,25 @@
 //* Stack is used when you need to maintain history of operations. Stack is used in browser history naivgation, undo functionallity etc
 //* Stack is not required if you want to access random elements
 
+let stack = [];
+let strArray = [];
+let reverseArray = [];
+let data = "Hello World";
 
+for (let i = 0; i < data.length; i++) {
+  strArray[i] = data[i];
+}
+
+console.log("strArray", strArray);
+
+for (let i = 0; i < strArray.length; i++) {
+  let arrayLength = strArray.length;
+
+  console.log(arrayLength);
+  
+
+  
+}
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
