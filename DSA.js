@@ -29,23 +29,12 @@
 // 2. indirect recurtion = 2 functions that calls themselfs and stops on a perticular conditions.
 
 //////////////////////////////////////////////////////////////// Stack ///////////////////////////////////////////////////////////////
-// * In stack data structure, elements are added / removed / updated from a single end + in array we do same where we want like adding element in first or last or in middle of array but in stack we can do it with single direction.
+// * In stack data structure, elements are added / removed / updated from a single end + in array we do same where we want like adding element in first or last or in middle of array but in stack we can do it with single end.
 // * It works on Last in first out (LIFO) . means last item added to stack is the first one to be removed.
 // * we decalre maximum value of stack. eg- we have to declare stack will be of 10 element so only 10 elements will be enter.
 //* key operations in stack = push, pop , peek(view the top elememt) , isEmpty(checks if stack is empty)
 //* Stack is used when you need to maintain history of operations. Stack is used in browser history naivgation, undo functionallity etc
 //* Stack is not required if you want to access random elements
-// * eg-
-let data = [];
-let currentSize = data.length;
-let maxValue = 5;
-
-function PushData(){
-   
-}
-
-PushData()
-console.log(data);
 
 
 
