@@ -51,10 +51,39 @@ const push = (val) => {
   }
 };
 
-const pop = () => {};
+const pop = () => {
+  if (stack.length == 0) {
+    alert(`Stack is already empty!!`);
+  } else {
+    let removedValue = stack[stack.length - 1];
+    stack.length = stack.length - 1;
+    return removedValue;
+  }
+};
 
-console.log(stack);
+for (let i = 0; i < data.length; i++) {
+  if (i == data.length - 1) {
+    alert("Stack is full");
+  } else {
+    stack[i] = data[i];
+  }
+}
 
+console.log("Stack before reverse",stack)
+
+let temp = [];
+for (let i = 0; i < stack.length; i++) {
+  temp[i] = stack[i];
+}
+stack.length = 0;
+
+let j = 0;
+for (let i = temp.length - 1; i >= 0; i--) {
+  stack[j] = temp[i];
+  j++;
+}
+
+console.log("final value in stack:", stack);
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 // const data1 = [23, 43, 26, 76, 58, 85];
