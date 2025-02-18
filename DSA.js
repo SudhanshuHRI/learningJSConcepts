@@ -38,12 +38,22 @@
 //* Stack is not required if you want to access random elements
 
 let stack = [];
+let currentSize = stack.length;
+let maxSize = 10;
 let data = "Hello World";
 
-const push = ()=>{}
-const pop = ()=>{}
+const push = (val) => {
+  if (currentSize == maxSize) {
+    alert(`Stack is full. Cannot add ${val}`);
+  } else {
+    stack[currentSize] = val;
+    currentSize += 1;
+  }
+};
 
+const pop = () => {};
 
+console.log(stack);
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
