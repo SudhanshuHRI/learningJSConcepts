@@ -48,12 +48,10 @@ for (let i = 0; i < data.length; i++) {
 
 console.log("strArray", strArray);
 
-function pop(){
-  for (let i = 0; i < strArray.length; i++) {
-    let arrayLength = strArray.length;
-  
-  }
-}
+
+
+
+
 
 
 
