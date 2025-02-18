@@ -38,20 +38,10 @@
 //* Stack is not required if you want to access random elements
 
 let stack = [];
-let strArray = [];
-let reverseArray = [];
 let data = "Hello World";
 
-for (let i = 0; i < data.length; i++) {
-  strArray[i] = data[i];
-}
-
-console.log("strArray", strArray);
-
-
-
-
-
+const push = ()=>{}
+const pop = ()=>{}
 
 
 
