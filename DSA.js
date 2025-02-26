@@ -87,6 +87,10 @@ for (let i = temp.length - 1; i >= 0; i--) {
 console.log("final value in stack:", stack);
 
 /////////////////////////////////////////////  Queue  ////////////////////////////////////////////////////////////////
+
+// * it is a lienear data structure + queue have 2 points front and rear.
+// * elements add from front point and remove from rear point + it works on FIFO concept.
+// * 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 // const data1 = [23, 43, 26, 76, 58, 85];

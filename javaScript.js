@@ -118,7 +118,6 @@
 // Q. how to create a object without a prototype ? ===============================
 // Q. how to destructure object ?? ========================
 
-
 // Q. how to destructure array ? ===================
 // Q. What are wrapper Objects ? ========================
 // Q. implicit vs explicit coercion ? =================================
