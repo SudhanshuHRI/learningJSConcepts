@@ -178,7 +178,7 @@
 
 // Q. "throw" keyword in js ? =============================================================================
 
-// Q.controlled and uncontrolled components?========================================================================
+// Q.controlled and uncontrolled components? ========================================================================
 
 // Q.Explain about the Oops concepts 4 principle.========================================================================
 
@@ -238,7 +238,7 @@
 
 // Q. how to know in js if function is called by use click or by any script ?=======================================
 
-// Q. Wha is object ? give advantages and disadvantages ==================================
+// Q. What is object ? give advantages and disadvantages ==================================
 
 // Q. How to loop a object ?? =========================================================
 
@@ -249,7 +249,7 @@
 
 // Q. Guess the output of the following ? ===================================================================
 
-//  let data = "    Hello, How are you?    "
+ let data = "    Hello, How are you?    "
 
 // console.log(data.split())
 // console.log(data.split(''))

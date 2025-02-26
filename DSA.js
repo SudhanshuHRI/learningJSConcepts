@@ -37,54 +37,54 @@
 //* Stack is used when you need to maintain history of operations. Stack is used in browser history naivgation, undo functionallity etc
 //* Stack is not required if you want to access random elements
 
-let stack = [];
-let currentSize = stack.length;
-let maxSize = 10;
-let data = "Hello World";
+// let stack = [];
+// let currentSize = stack.length;
+// let maxSize = 10;
+// let data = "Hello World";
 
-const push = (val) => {
-  if (currentSize == maxSize) {
-    alert(`Stack is full. Cannot add ${val}`);
-  } else {
-    stack[currentSize] = val;
-    currentSize += 1;
-  }
-};
+// const push = (val) => {
+//   if (currentSize == maxSize) {
+//     alert(`Stack is full. Cannot add ${val}`);
+//   } else {
+//     stack[currentSize] = val;
+//     currentSize += 1;
+//   }
+// };
 
-const pop = () => {
-  if (stack.length == 0) {
-    alert(`Stack is already empty!!`);
-  } else {
-    let removedValue = stack[stack.length - 1];
-    stack.length = stack.length - 1;
-    return removedValue;
-  }
-};
+// const pop = () => {
+//   if (stack.length == 0) {
+//     alert(`Stack is already empty!!`);
+//   } else {
+//     let removedValue = stack[stack.length - 1];
+//     stack.length = stack.length - 1;
+//     return removedValue;
+//   }
+// };
 
-for (let i = 0; i < data.length; i++) {
-  if (i == data.length - 1) {
-    alert("Stack is full");
-  } else {
-    stack[i] = data[i];
-  }
-}
+// for (let i = 0; i < data.length; i++) {
+//   if (i == data.length - 1) {
+//     alert("Stack is full");
+//   } else {
+//     stack[i] = data[i];
+//   }
+// }
 
-console.log("Stack before reverse",stack)
+// console.log("Stack before reverse",stack)
 
-let temp = [];
-for (let i = 0; i < stack.length; i++) {
-  temp[i] = stack[i];
-}
+// let temp = [];
+// for (let i = 0; i < stack.length; i++) {
+//   temp[i] = stack[i];
+// }
 
-stack.length = 0;
+// stack.length = 0;
 
-let j = 0;
-for (let i = temp.length - 1; i >= 0; i--) {
-  stack[j] = temp[i];
-  j++;
-}
+// let j = 0;
+// for (let i = temp.length - 1; i >= 0; i--) {
+//   stack[j] = temp[i];
+//   j++;
+// }
 
-console.log("final value in stack:", stack);
+// console.log("final value in stack:", stack);
 
 /////////////////////////////////////////////  Queue  ////////////////////////////////////////////////////////////////
 
