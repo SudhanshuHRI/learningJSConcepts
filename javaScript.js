@@ -108,9 +108,6 @@
 // 24. Array.of(1,2,3)
 
 
-
-
-
 // Q. why 2 similer objects comparing returns false ? =========================================
 
 // Q.slice vs splice who modify orignal array?? give example =================================================================
@@ -119,7 +116,7 @@
 // Q. Why are functions called first class objects ? ======================================
 // Q. "Array.prototype.map" ?? ========================================
 // Q. how to create a object without a prototype ? ===============================
-// Q. how to destruncture object ?? ========================
+// Q. how to destructure object ?? ========================
 
 
 // Q. how to destructure array ? ===================
