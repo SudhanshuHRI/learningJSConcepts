@@ -90,7 +90,7 @@ console.log("final value in stack:", stack);
 
 // * it is a lienear data structure + queue have 2 points front and rear.
 // * elements add from front point and remove from rear point + it works on FIFO concept.
-// * 
+// * we can perform different operation on Queue: 1- En-queue(add element)
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 // const data1 = [23, 43, 26, 76, 58, 85];
