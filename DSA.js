@@ -55,18 +55,17 @@ function Enque(value) {
 function Dqueue() {
   let removed = queue[0];
 
-  for (let i = 0; i <= queue.length; i++) {
-    if (i != queue.length) {
-      queue[i] = queue[i + 1];
-    } else {
-      queue.length = queueSize - 1;
-    }
+  for (let i = 0; i < queue.length; i++) {
+    queue[i] = queue[i + 1];
   }
+  queue.length = queue.length - 1;
 
+  alert(queue);
   console.log("removed item is:", removed);
 }
 function Display() {
   console.log("Current queue is:", queue);
+  
 }
 
 Enque(10);
