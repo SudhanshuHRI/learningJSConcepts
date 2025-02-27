@@ -42,7 +42,7 @@
 
 // Q.What is reconcilation in ReactJs? ===============================================================================
 
-// Q.statefull vs stateless ?===========================================================
+// Q.statefull vs stateless ? ===========================================================
 
 // Q.Explain microfrontend approach in react?=========================================================
 
@@ -54,7 +54,7 @@
 
 // Q. Does React useState Hook update immediately ? ==============================================
 
-// Q.how to update array or object that is in state in React??===========================================
+// Q.how to update array and object that is in state in React?? ===========================================
 
 // Q.What is StrictMode in React ?===================================
 
@@ -64,7 +64,7 @@
 
 // Q.How do you handle internationalization (i18n) in React applications?===================================
 
-// Q.tree shaking. ==================================
+// Q. tree shaking. ==================================
 
 // Q. How to pass data between sibling components using React router? ==========================================
 
@@ -152,7 +152,7 @@
 // => useCallback
 // => useMemo 
 // => useContext 
-// => useReducer 
+// => useReducer
 // => useRef 
 
 //  Q. difference between useCallback, useMemo, React.memo? ============================================================

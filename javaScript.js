@@ -249,7 +249,7 @@
 
 // Q. Guess the output of the following ? ===================================================================
 
- let data = "    Hello, How are you?    "
+//  let data = "    Hello, How are you?    "
 
 // console.log(data.split())
 // console.log(data.split(''))
