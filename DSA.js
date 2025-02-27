@@ -37,60 +37,55 @@
 //* Stack is used when you need to maintain history of operations. Stack is used in browser history naivgation, undo functionallity etc
 //* Stack is not required if you want to access random elements
 
-// let stack = [];
-// let currentSize = stack.length;
-// let maxSize = 10;
-// let data = "Hello World";
-
-// const push = (val) => {
-//   if (currentSize == maxSize) {
-//     alert(`Stack is full. Cannot add ${val}`);
-//   } else {
-//     stack[currentSize] = val;
-//     currentSize += 1;
-//   }
-// };
-
-// const pop = () => {
-//   if (stack.length == 0) {
-//     alert(`Stack is already empty!!`);
-//   } else {
-//     let removedValue = stack[stack.length - 1];
-//     stack.length = stack.length - 1;
-//     return removedValue;
-//   }
-// };
-
-// for (let i = 0; i < data.length; i++) {
-//   if (i == data.length - 1) {
-//     alert("Stack is full");
-//   } else {
-//     stack[i] = data[i];
-//   }
-// }
-
-// console.log("Stack before reverse",stack)
-
-// let temp = [];
-// for (let i = 0; i < stack.length; i++) {
-//   temp[i] = stack[i];
-// }
-
-// stack.length = 0;
-
-// let j = 0;
-// for (let i = temp.length - 1; i >= 0; i--) {
-//   stack[j] = temp[i];
-//   j++;
-// }
-
-// console.log("final value in stack:", stack);
-
 /////////////////////////////////////////////  Queue  ////////////////////////////////////////////////////////////////
 
 // * it is a lienear data structure + queue have 2 points front and rear.
 // * elements add from front point and remove from rear point + it works on FIFO concept.
-// * we can perform different operation on Queue: 1- En-queue(add element)
+// * we can perform different operation on Queue: 1- En-queue(add element in front) 2- de-queue(remove element from end)
+
+let queue = [];
+let queueSize = queue.length;
+let maxSize = 5;
+
+function Enque(value) {
+  queue[queueSize] = value;
+  queueSize++;
+}
+
+function Dqueue() {
+  let removed = queue[0];
+
+  for (let i = 0; i <= queue.length; i++) {
+    if (i != queue.length) {
+      queue[i] = queue[i + 1];
+    } else {
+      queue.length = queueSize - 1;
+    }
+  }
+
+  console.log("removed item is:", removed);
+}
+function Display() {
+  console.log("Current queue is:", queue);
+}
+
+Enque(10);
+Enque(20);
+Enque(30);
+Enque(40);
+Enque(50);
+
+Display();
+Dqueue();
+Display();
+Dqueue();
+Display();
+Dqueue();
+Display();
+Dqueue();
+Display();
+Dqueue();
+Display();
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 // const data1 = [23, 43, 26, 76, 58, 85];
