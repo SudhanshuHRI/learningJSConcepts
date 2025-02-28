@@ -49,24 +49,30 @@ let queueSize = queue.length;
 let maxSize = 5;
 
 function Enque(value) {
-  queue[queueSize] = value;
-  queueSize++;
+  if (queueSize == maxSize) {
+    alert("Queue is full");
+  } else {
+    queue[queueSize] = value;
+    queueSize++;
+  }
 }
 
 function Dqueue() {
-  let removed = queue[0];
+  if (queueSize >= 0) {
+    let removed = queue[0];
 
-  for (let i = 0; i < queue.length; i++) {
-    queue[i] = queue[i + 1];
+    for (let i = 0; i < queue.length; i++) {
+      queue[i] = queue[i + 1];
+    }
+    queue.length = queue.length - 1;
+
+    console.log("removed item is:", removed);
+  } else {
+    alert("Queue is already empty");
   }
-  queue.length = queue.length - 1;
-
-
-  console.log("removed item is:", removed);
 }
 function Display() {
   console.log("Current queue is:", queue);
-  
 }
 
 Enque(10);
@@ -76,16 +82,24 @@ Enque(40);
 Enque(50);
 
 Display();
+
 Dqueue();
-Display();
 Dqueue();
-Display();
 Dqueue();
-Display();
 Dqueue();
-Display();
 Dqueue();
-Display();
+Dqueue();
+
+// Dqueue();
+// Display();
+// Dqueue();
+// Display();
+// Dqueue();
+// Display();
+// Dqueue();
+// Display();
+// Dqueue();
+// Display();
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 // const data1 = [23, 43, 26, 76, 58, 85];
