@@ -48,12 +48,16 @@
 let queue = [];
 let queueSize = queue.length;
 let maxSize = 5;
+let frontIndex = -1; // indicates that queue is empty. it helps condition checking easily
+let rearIndex = -1;
 
 //[1,2,3,4,5]
 //[null,2,3,4,5]
 //[111,2,3,4,5]
 //[111,null,3,4,5]
 //[111,222,3,4,5]
+
+
 
 
 
