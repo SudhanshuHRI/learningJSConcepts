@@ -42,7 +42,8 @@
 // * it is a lienear data structure + queue have 2 points front and rear.
 // * elements add from front point and remove from rear point + it works on FIFO concept.
 // * we can perform different operation on Queue: En-queue(add element in front), de-queue(remove element from end), isEmpty(check if queue is empty), isFull(check if queue is full), peek(get first element without removing it)
-// * "front" means oldest element in queue and "rear" means latest element in queue
+// * "front" means oldest element in queue and "rear" means latest element in queue.
+// * Circular Queue :- the rear connects back to front to optimize space by using empty slots + in simple queue when front is removed , front space is cleared and it cannot be filled becz in queue we insert element from rear. so for this we use circular queue to reuse that space. 
 
 let queue = [];
 let queueSize = queue.length;
@@ -56,15 +57,15 @@ function Enque(value) {
     queueSize++;
   }
 }
-
 function Dqueue() {
-  if (queueSize >= 0) {
+  if (queueSize > 0) {
     let removed = queue[0];
 
     for (let i = 0; i < queue.length; i++) {
       queue[i] = queue[i + 1];
     }
     queue.length = queue.length - 1;
+    queueSize--;
 
     console.log("removed item is:", removed);
   } else {
@@ -81,25 +82,11 @@ Enque(30);
 Enque(40);
 Enque(50);
 
+
+
+
 Display();
 
-Dqueue();
-Dqueue();
-Dqueue();
-Dqueue();
-Dqueue();
-Dqueue();
-
-// Dqueue();
-// Display();
-// Dqueue();
-// Display();
-// Dqueue();
-// Display();
-// Dqueue();
-// Display();
-// Dqueue();
-// Display();
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 
 // const data1 = [23, 43, 26, 76, 58, 85];
