@@ -41,7 +41,8 @@
 
 // * it is a lienear data structure + queue have 2 points front and rear.
 // * elements add from front point and remove from rear point + it works on FIFO concept.
-// * we can perform different operation on Queue: 1- En-queue(add element in front) 2- de-queue(remove element from end)
+// * we can perform different operation on Queue: En-queue(add element in front), de-queue(remove element from end), isEmpty(check if queue is empty), isFull(check if queue is full), peek(get first element without removing it)
+// * "front" means oldest element in queue and "rear" means latest element in queue
 
 let queue = [];
 let queueSize = queue.length;
@@ -60,7 +61,7 @@ function Dqueue() {
   }
   queue.length = queue.length - 1;
 
-  alert(queue);
+
   console.log("removed item is:", removed);
 }
 function Display() {
