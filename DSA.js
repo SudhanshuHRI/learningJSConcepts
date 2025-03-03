@@ -45,17 +45,16 @@
 // * "front" means oldest element in queue and "rear" means latest element in queue.
 // * Circular Queue :- the rear connects back to front to optimize space by using empty slots + in simple queue when front is removed , front space is cleared and it cannot be filled becz in queue we insert element from rear. so for this we use circular queue to reuse that space + in circular queue suppose if we have circular queue [1,2,3,4,5]. here front is 1 and rear is 5. if we want to remove a element, only 1 can be removed becz of FIFO. so 1 will be removed and space will be null like [null,2,3,4,5]. Now we want to add element 111 so it will be place on null like [111,2,3,4,5]. Now fornt will be 2 and rear will be 111. Now, if we want to remove one more element then only 2 can be removed and it will be like [111,null,3,4,5]. Now, if we want to add 222 then it will become [111,222,3,4,5]. Now front will be 3 and rear will be 222.
 
-let queue = [];
-let queueSize = queue.length;
-let maxSize = 5;
-let frontIndex = -1; // indicates that queue is empty. it helps condition checking easily
-let rearIndex = -1;
 
 //[1,2,3,4,5]
 //[null,2,3,4,5]
 //[111,2,3,4,5]
 //[111,null,3,4,5]
 //[111,222,3,4,5]
+
+
+///////////////////////////////////////////////////  Linear search  //////////////////////////////////////////////////
+
 
 
 
