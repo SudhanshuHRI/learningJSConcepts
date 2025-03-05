@@ -1,6 +1,6 @@
 // 1. Array
 // 2. Linked list
-// 3. Stack 
+// 3. Stack
 // 4. Queue
 // 5. Tree
 // 6. Heap
@@ -8,7 +8,6 @@
 // 8. Hashing
 
 ///////////////////////////////////////////////////////////////  Theory  ///////////////////////////////////////////////////
-
 
 // * 2 type of data staructure :-
 // 1.linear data structure = array, stack, queue
@@ -74,30 +73,27 @@
 // eg:- we have a array [1,2,3,4,5,6,7,8] and we want to find 6. Then it breaks the array in [1,2,3] and [5,6,7,8] and make 4 as middle point. + then compare middle point with 6. if 6 is greater than 4 then it will search in 2nd array first. if element not found in 2nd array then it will search in first array and if the middle point and searching point is same the it will return the result and stop searching further + Now, it will again break [5,6,7,8] into [5] and [7,8] and 6 as a middle point and give the result that 6 is answer.
 
 let data = [5, 9, 13, 17];
-let find = 17;
+let find = 13;
 let start = 0;
 let end = data.length - 1;
 let position = undefined;
 
-
 while (start <= end) {
-  let mid = Math.floor((start + end) / 2);  //1
+  let mid = Math.floor((start + end) / 2); 
   
-
-
-
   if (data[mid] == find) {
     position = mid;
     break;
-  }else if(mid < find){
-    mid = mid+1;
-  }else if(mid>find){
-    mid = mid-1
+  } else if (data[mid] < find) {
+    start = mid +1
+  } else  {
+    end = mid-1
   }
-  console.log(position);
-  
-  
+
+ 
 }
+
+console.log(position);
 
 ///////////////////////////////////////////////////////////////////////  InterView Questions  //////////////////////////////////////////////////
 

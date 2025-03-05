@@ -75,7 +75,9 @@
 // How do you mock a MongoDB database for unit testing in Node.js?
 // What is the purpose of the mongoose library, and how do you use it?
 // How do you integrate MongoDB with an Express.js application?
+
 ///////////////////////////////////////////////////////// Puzzles ////////////////////////////////////////////////////////
+
 // Basic CRUD Operations Puzzle: Perform basic CRUD operations and solve related challenges.
 // Aggregation Framework Puzzle: Use the aggregation framework to process and analyze data.
 // Sharding and Replica Set Puzzles: Set up MongoDB's sharding and replica sets, ensuring horizontal scalability.
