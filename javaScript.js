@@ -3,16 +3,6 @@
 // 3.  Puzzles
 
 
-
-
-
-var firstName = "Sudhanshu";
-var lastName = "Srivastava";
-
-function AppendName(){
-  console.log(firstName,lastName)
-}
-AppendName()
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
 
 // Q. Explain the working of JavaScript ? =============================================================================
