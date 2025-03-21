@@ -17,16 +17,16 @@
 // how node.js work?
 // what is non blocking I/O in node.js ?
 // How async tasks are handled in node.js ?
-// `What is the purpose of the process.nextTick() method?
+// What is the purpose of the process.nextTick() method?
 // What is the use of the setImmediate() function in Node.js?
 // Explain the concept of callback hell and how can it be avoided in Node.js?
 // What is the difference between setTimeout() and setInterval() in Node.js?
-// Q.How does Node.js manage memory?
+// How does Node.js manage memory?
 // What is the role of the garbage collector?
 // What is the EventEmitter in Node.js, and how does it work?
 // What are streams in Node.js, and how do they improve performance?
 // How many types of streams? give example code.
-// ".pipe()" method in streams?
+// pipe() method in streams?
 // How does Node.js handle child processes, and when should you use them?
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?
@@ -67,74 +67,70 @@
 // Explain the concept of Test-Driven Development (TDD) in the context of Node.js.
 // What are some best practices you follow when writing a Node.js application?
 // How to make import export work on node.js ? which is better import export or require() ?
-//
-//
-// 4. What kind of API function is supported by Node.js?
-// 5. What is a module in Node.js?
-// 6. What is npm and its advantages?
-// 7. What is middleware?
-// 8. How does Node.js handle concurrency despite being single-threaded?
-// 9. What is the control flow in Node.js?
-// 10. What do you mean by the event loop in Node.js?
-// 11. What are the main disadvantages of Node.js?
-// 12. What is REPL in Node.js?
-// 13. How to import a module in Node.js?
-// 14. What is the difference between Node.js and AJAX?
-// 15. What is package.json in Node.js?
-// 16. What is the most popular Node.js framework used these days?
-// 17. What are promises in Node.js?
-// 18. What is event-driven programming in Node.js?
-// 19. What is buffer in Node.js?
-// 20. What are streams in Node.js?
-// 21. Explain crypto module in Node.js.
-// 22. What is callback hell?
-// 23. Explain the use of the timers module in Node.js.
-// 24. What is the difference between setImmediate() and process.nextTick() methods?
-// 25. What is the difference between setTimeout() and setImmediate() methods?
-// 26. What is the difference between spawn() and fork() methods?
-// 27. Explain the use of the passport module in Node.js.
-// 28. What is a fork in Node.js?
-// 29. What are the three methods to avoid callback hell?
-// 30. What is body-parser in Node.js?
-// 31. What is CORS in Node.js?
-// 32. Explain the tls module in Node.js.
-// 33. What is a cluster in Node.js?
-// 34. How to manage sessions in Node.js?
-// 35. Explain the types of streams in Node.js.
-// 36. How can we implement authentication and authorization in Node.js?
-// 37. Explain the packages used for file uploading in Node.js.
-// 38. How to handle database connections in Node.js?
-// 39. How to read command line arguments in Node.js?
-// 40. What are child processes in Node.js?
-
-// Q1. 2. What are the main modules of Node.js? Explain in detail.
-// Q2. what is middleware ?
-// Q.what is JWT ?
-// Q.Difference between POST, PUT and GET ?
-// Q. Difference between RDBMS and No-sql DBMS ?
-// Q4. How do you deploy your Nodejs application?
-// Q6. Do you follow agile or any other SDLC model?
-// Q7. what is the difference between cluster and thread ?
-// Q8. What are streams and its type, write a code using the any of the stream.
-// Q10. What is collection framework
-// Q11. If you have large csv data how would you process it.
-// Q12. What is error first callback function?
-// Q16. When did you used and where did you used redis cache
-// Q17. How does Nodejs differentiate and handle synchronous and asynchronous task
-// Q20. What is encapsulation
-// Q23. How can a linked list be created without utilizing arrays?
-// Q28. Difference between public, private, protected access modifiers.
-// Q29. How to make Nodejs handle multiple thread
-// Q32. What's swagger and how to add authentication in swagger
-// Q42. What is OAuth and how you implement it?
-// Q48. Fork vs spawn and when you used this
-// Q49. How to implement caching using rabitmq
-// Q60. what is the role of libuv ?
-// Q69. how to scale app for more users
-// Q78. What is cyclic dependency in. Node js
-// Q79. What is Pharmacovilance
-// Q96. Explain about Microservices Architecture
-
+// What kind of API function is supported by Node.js?
+// What is a module in Node.js?
+// What is npm and its advantages?
+// What is middleware?
+// How does Node.js handle concurrency despite being single-threaded?
+// What is the control flow in Node.js?
+// What do you mean by the event loop in Node.js?
+// What are the main disadvantages of Node.js?
+// What is REPL in Node.js?
+// How to import a module in Node.js?
+// What is the difference between Node.js and AJAX?
+// What is package.json in Node.js?
+// What is the most popular Node.js framework used these days?
+// What are promises in Node.js?
+// What is event-driven programming in Node.js?
+// What is buffer in Node.js?
+// What are streams in Node.js?
+// Explain crypto module in Node.js.
+// What is callback hell?
+// Explain the use of the timers module in Node.js.
+// What is the difference between setImmediate() and process.nextTick() methods?
+// What is the difference between setTimeout() and setImmediate() methods?
+// What is the difference between spawn() and fork() methods?
+// Explain the use of the passport module in Node.js.
+// What is a fork in Node.js?
+// What are the three methods to avoid callback hell?
+// What is body-parser in Node.js?
+// What is CORS in Node.js?
+// Explain the tls module in Node.js.
+// What is a cluster in Node.js?
+// How to manage sessions in Node.js?
+// Explain the types of streams in Node.js.
+// How can we implement authentication and authorization in Node.js?
+// Explain the packages used for file uploading in Node.js.
+// How to handle database connections in Node.js?
+// How to read command line arguments in Node.js?
+// What are child processes in Node.js?
+// What are the main modules of Node.js? Explain in detail.
+// what is middleware ?
+// what is JWT ?
+// Difference between POST, PUT and GET ?
+// Difference between RDBMS and No-sql DBMS ?
+// How do you deploy your Nodejs application?
+// Do you follow agile or any other SDLC model?
+// what is the difference between cluster and thread ?
+// What are streams and its type, write a code using the any of the stream.
+// What is collection framework
+// If you have large csv data how would you process it.
+// What is error first callback function?
+// When did you used and where did you used redis cache
+// How does Nodejs differentiate and handle synchronous and asynchronous task
+// What is encapsulation
+// How can a linked list be created without utilizing arrays?
+// Difference between public, private, protected access modifiers.
+// How to make Nodejs handle multiple thread
+// What's swagger and how to add authentication in swagger
+// What is OAuth and how you implement it?
+// Fork vs spawn and when you used this
+// How to implement caching using rabitmq
+// what is the role of libuv ?
+// how to scale app for more users
+// What is cyclic dependency in. Node js
+// What is Pharmacovilance
+// Explain about Microservices Architecture
 // What tools can be used to assure consistent code style?
 // What is a first class function in Javascript?
 // How do you manage packages in your node.js project?
