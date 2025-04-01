@@ -17,8 +17,8 @@
 // how node.js work?
 // what is non blocking I/O in node.js ?
 // How async tasks are handled in node.js ?
-// What is the purpose of the process.nextTick() method?
-// What is the use of the setImmediate() function in Node.js?
+// What is the purpose of the process.nextTick() method? 
+// What is the use of the setImmediate() function in Node.js?    <=====================
 // Explain the concept of callback hell and how can it be avoided in Node.js?
 // What is the difference between setTimeout() and setInterval() in Node.js?
 // How does Node.js manage memory?
@@ -29,7 +29,7 @@
 // pipe() method in streams?
 // How does Node.js handle child processes, and when should you use them?
 // What is the cluster module in Node.js, and how does it help in scaling applications?
-// How would you manage concurrency and parallelism in a Node.js application?
+// How would you manage concurrency and parallelism in a Node.js application?f
 // Explain the non-blocking I/O model in Node.js. How does it impact performance?
 // What are worker threads in Node.js, and how are they used?
 // What are the advantages of using the async/await syntax over callbacks and promises?
