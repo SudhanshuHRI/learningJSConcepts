@@ -16,18 +16,18 @@
 // What is Node.js and it's history?
 // how node.js work?
 // what is non blocking I/O in node.js ?
-// How async tasks are handled in node.js ?
-// What is the purpose of the process.nextTick() method? 
+// Explain the concept of Event loop in node.js.
+// What is process.nextTick() method? 
 // What is the use of the setImmediate() function in Node.js?    
 // Explain the concept of callback hell and how can it be avoided in Node.js?
-// What is the difference between setTimeout() and setInterval() in Node.js?
+// What is the difference between setTimeout() and setInterval()in Node.js?
 // How does Node.js manage memory?
 // What is the role of the garbage collector? 
 // What is the EventEmitter in Node.js, and how does it work?
 // What are streams in Node.js, and how do they improve performance?
 // How many types of streams? give example code.
 // pipe() method in streams?
-// How does Node.js handle child processes, and when should you use them? <=====================
+// How does Node.js handle child processes module, and when should you use them? <=====================
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?f
 // Explain the non-blocking I/O model in Node.js. How does it impact performance?
@@ -83,9 +83,7 @@
 // What are promises in Node.js?
 // What is event-driven programming in Node.js?
 // What is buffer in Node.js?
-// What are streams in Node.js?
 // Explain crypto module in Node.js.
-// What is callback hell?
 // Explain the use of the timers module in Node.js.
 // What is the difference between setImmediate() and process.nextTick() methods?
 // What is the difference between setTimeout() and setImmediate() methods?
@@ -158,14 +156,15 @@
 // Differentiate between process.nextTick() and setImmediate()?
 // If Node.js is single threaded then how does it handle concurrency?
 // What is an event-loop in Node JS?
-// What do you understand by callback hell?
-// What is an Event Emitter in Node.js?
-// Enhancing Node.js performance through clustering.
 // What is a thread pool and which library handles it in Node.js
 // What is WASI and why is it being introduced?
 // How are worker threads different from clusters?
 // How to measure the duration of async operations?
 // How to measure the performance of async operations?
+// cache vs cookies ??
+// explain these modules => zlib, stream, query string, url, os, fs, util, http
+// How do you install, update, and delete a dependency?
+// How do you create a simple server in Node.js that returns Hello World?
 
 ////////////////////////////////////////////////////////  Practice ////////////////////////////////////////
 
