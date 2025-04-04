@@ -31,7 +31,7 @@
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?
 // Explain the non-blocking I/O model in Node.js. How does it impact performance?
-// What are worker threads in Node.js, and how are they used?
+// What are worker threads in Node.js, and how are they used ?
 // What are the advantages of using the async/await syntax over callbacks and promises?
 // How do you handle errors in asynchronous code in Node.js?
 // What are Promises in Node.js, and how do they differ from callbacks?
