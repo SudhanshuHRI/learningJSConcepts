@@ -14,13 +14,12 @@
 // 7. add dependencies as required and add modules and other files as required.
 
 // What is Node.js and it's history?
-// how node.js work?
+// how node.js work ?
 // what is non blocking I/O in node.js ?
-// Explain the concept of Event loop in node.js.
-// What is process.nextTick() method? 
-// What is the use of the setImmediate() function in Node.js?    
+// Event loop in node.js.
+// process.nextTick() vs setImmidiate()? 
+// setTimeout() vs setIntervel()?  <=====================
 // Explain the concept of callback hell and how can it be avoided in Node.js?
-// What is the difference between setTimeout() and setInterval()in Node.js?
 // How does Node.js manage memory?
 // What is the role of the garbage collector? 
 // What is the EventEmitter in Node.js, and how does it work?
@@ -30,7 +29,7 @@
 // How does Node.js handle child processes module, and when should you use them?
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?
-// Explain the non-blocking I/O model in Node.js. How does it impact performance?  <=====================
+// Explain the non-blocking I/O model in Node.js. How does it impact performance? 
 // What are worker threads in Node.js, and how are they used ?
 // What are the advantages of using the async/await syntax over callbacks and promises?
 // How do you handle errors in asynchronous code in Node.js?
@@ -153,9 +152,7 @@
 // What is node.js streams?
 // How can we use async await in node.js?
 // How does Node.js overcome the problem of blocking of I/O operations?
-// Differentiate between process.nextTick() and setImmediate()?
 // If Node.js is single threaded then how does it handle concurrency?
-// What is an event-loop in Node JS?
 // What is a thread pool and which library handles it in Node.js
 // What is WASI and why is it being introduced?
 // How are worker threads different from clusters?
@@ -168,7 +165,7 @@
 
 ////////////////////////////////////////////////////////  Practice ////////////////////////////////////////
 
-//Design db of payment gateway interface, cart functionality, amazon delivery service
+// Design db of payment gateway interface, cart functionality, amazon delivery service
 // Q62. Write a parenthesis validation program in JavaScript
 
 ///////////////////////////////////////////////////  Puzzles /////////////////////////////////////////////////
