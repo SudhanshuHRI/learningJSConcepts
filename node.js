@@ -22,8 +22,8 @@
 // Explain the concept of callback hell and how can it be avoided in Node.js? 
 // How does Node.js manage memory? 
 // What is the role of the garbage collector?
-// What is the EventEmitter in Node.js, and how does it work?  <=====================
-// What are streams in Node.js, and how do they improve performance?
+// What is the EventEmitter in Node.js, and how does it work?  
+// What are streams in Node.js, and how do they improve performance? <=====================
 // How many types of streams? give example code.
 // pipe() method in streams?
 // How does Node.js handle child processes module, and when should you use them?
