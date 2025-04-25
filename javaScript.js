@@ -49,9 +49,9 @@
 //                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
 //                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
 
-// Q.diff between var , let ,const ? ============================================================
+// Q. diff between var , let ,const ? ============================================================
 
-// Q.What are callback function ? Give advantages and disadvantages ============================================================
+// Q. What are callback function ? Give advantages and disadvantages ============================================================
 
 // Q. What is callback hell or pyramid of doom? give example =================================================
 

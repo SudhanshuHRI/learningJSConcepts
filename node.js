@@ -26,10 +26,10 @@
 // What are streams in Node.js, and how do they improve performance? 
 // How many types of streams? give example code.
 // pipe() method in streams?
-// How does Node.js handle child processes module, and when should you use them? <=====================
+// How does Node.js handle child processes module, and when should you use them? 
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?
-// Explain the non-blocking I/O model in Node.js. How does it impact performance? 
+// Explain the non-blocking I/O model in Node.js. How does it impact performance? <=====================
 // What are worker threads in Node.js, and how are they used ?
 // What are the advantages of using the async/await syntax over callbacks and promises?
 // How do you handle errors in asynchronous code in Node.js?
@@ -162,6 +162,224 @@
 // explain these modules => zlib, stream, query string, url, os, fs, util, http
 // How do you install, update, and delete a dependency?
 // How do you create a simple server in Node.js that returns Hello World?
+
+// Explain the Node.js event loop in detail.
+
+// What are microtasks and macrotasks in Node.js?
+
+// How does the call stack differ from the event loop queue?
+
+// What is the difference between process.nextTick() and setImmediate()?
+
+// How does Node.js handle blocking code?
+
+// What is the role of the libuv library?
+
+// Explain how timers work in Node.js.
+
+// What happens if you block the event loop?
+
+// How can you monitor and debug event loop lag?
+
+// Explain process.hrtime() and its usage.
+
+// 🧵 2. Concurrency & Parallelism
+// Difference between cluster module and child_process.
+
+// How do worker threads differ from cluster?
+
+// How do you manage shared memory between threads?
+
+// What are Atomics in Node.js?
+
+// How do you use MessageChannel and TransferList?
+
+// 🔩 3. Streams & Buffers
+// What are the types of streams in Node.js?
+
+// How does backpressure work in streams?
+
+// Difference between fs.createReadStream() and reading entire file at once.
+
+// How do you pipe streams together?
+
+// What is a Duplex stream?
+
+// 📡 4. Networking & HTTP
+// How does the HTTP module work in Node.js?
+
+// How would you build an HTTPS server?
+
+// Explain how Node handles connection pooling.
+
+// How to handle socket hang-up errors?
+
+// What’s the difference between keep-alive and upgrade headers?
+
+// 💬 5. WebSockets & Real-time
+// How do you implement WebSockets in Node.js?
+
+// What is the role of the ws module?
+
+// Difference between polling and WebSockets.
+
+// How does Socket.IO differ from native WebSockets?
+
+// How do you handle authentication in real-time apps?
+
+// 📦 6. Modules & Imports
+// Difference between CommonJS and ES Modules in Node.js.
+
+// How does Node.js resolve module paths?
+
+// What is a cyclic dependency, and how does Node handle it?
+
+// How to create custom native addons?
+
+// How do you cache modules in Node.js?
+
+// 🗃️ 7. File System & OS
+// Difference between fs.readFile and fs.promises.readFile.
+
+// How to watch for file changes?
+
+// What is the purpose of fs.fsync()?
+
+// How do you handle large file uploads/downloads?
+
+// How does Node interact with the underlying OS?
+
+// 🔐 8. Security
+// How to protect against injection attacks?
+
+// What is the purpose of Helmet.js?
+
+// How to securely store API keys and secrets?
+
+// How does Node handle TLS/SSL?
+
+// How to prevent DOS attacks in Node.js?
+
+// 🔁 9. Asynchronous Programming
+// Difference between callbacks, promises, and async/await.
+
+// How to handle multiple promises concurrently?
+
+// What is the Promise.race() method?
+
+// How to retry a failed async operation?
+
+// What are async generators?
+
+// 🧪 10. Testing & Debugging
+// How do you test asynchronous code in Node.js?
+
+// What are the best practices for unit testing?
+
+// Difference between mocha, jest, and ava.
+
+// How do you mock dependencies in tests?
+
+// How do you debug memory leaks?
+
+// 🚦 11. Error Handling
+// Difference between operational and programmer errors.
+
+// How do you catch async/await errors?
+
+// What is unhandledRejection and how do you handle it?
+
+// How does Node.js handle synchronous exceptions?
+
+// Explain try/catch vs. .catch() for promises.
+
+// 🔄 12. Process Management
+// Difference between process.exit() and uncaughtException.
+
+// How to handle graceful shutdown in Node?
+
+// How to fork processes in Node?
+
+// Explain child_process.exec() vs spawn().
+
+// What is a zombie process?
+
+// 🚀 13. Performance & Optimization
+// How do you measure Node.js performance?
+
+// What are memory leaks and how to find them?
+
+// How to use clinic.js or node --inspect?
+
+// How do you improve startup time in Node?
+
+// How do you handle CPU-intensive tasks?
+
+// 🧰 14. Tools & Ecosystem
+// Difference between npm and yarn.
+
+// What is nvm and why use it?
+
+// How does Webpack help in Node.js development?
+
+// How to use PM2 for process management?
+
+// What are monorepos and how do tools like Lerna help?
+
+// 🏗️ 15. Architecture & Design
+// What is a microservice architecture in Node.js?
+
+// How do you handle inter-service communication?
+
+// Explain the 12-Factor App methodology.
+
+// How to use message queues with Node.js?
+
+// What is an event-driven architecture?
+
+// 🌐 16. API & Express.js
+// How to handle rate limiting in Express?
+
+// How do middlewares work?
+
+// Difference between global and route-specific middleware.
+
+// How to structure a scalable Express app?
+
+// How to handle file uploads securely?
+
+// 🧱 17. Data Handling
+// How to handle JSON streaming?
+
+// How to prevent JSON overflows?
+
+// What is schema validation and how to implement it?
+
+// Difference between ORM and query builders.
+
+// How to sanitize user input in APIs?
+
+// 🛢️ 18. Database Integration
+// How to handle database pooling in Node.js?
+
+// What is optimistic concurrency control?
+
+// Difference between MongoDB and PostgreSQL integration in Node.
+
+// How to perform transactions in Node.js?
+
+// How to prevent N+1 query problems?
+
+// 📈 19. Logging & Monitoring
+// How to implement logging in production apps?
+
+// How to use winston or pino for logging?
+
+// How to monitor Node.js applications with tools like New Relic, Datadog, or Elastic?
+
+// How to enable application profiling in Node.js?
+
+// How to create and monitor health checks in Node.js?
 
 ////////////////////////////////////////////////////////  Practice ////////////////////////////////////////
 
