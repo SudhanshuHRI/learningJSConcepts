@@ -72,7 +72,6 @@
 // What is middleware?
 // How does Node.js handle concurrency despite being single-threaded?
 // What is the control flow in Node.js?
-// What do you mean by the event loop in Node.js?
 // What are the main disadvantages of Node.js?
 // What is REPL in Node.js?
 // How to import a module in Node.js?
