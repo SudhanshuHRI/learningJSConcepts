@@ -1,8 +1,12 @@
 ///////////////////////////////////////////  Notes //////////////////////////////////////////
 
-// * sql is not case sensitive.
-// * TO CREATE A DATABASE : CREATE DATABASE <database_name>; 
-// * to delete a database : DROP DATABASE <database_name>;
+// sql is not case sensitive.
+// to create a database : CREATE DATABASE <database_name>; 
+// to delete a database : DROP DATABASE <database_name>;
+// to select a database : USE <database_name>;
+// to create a table : CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);  // contraints are optional //eg: create table dummmy (id int primary key, name varchar(50) not null);
+// to delete a table : DROP TABLE <table_name>;
+
 
 
 
