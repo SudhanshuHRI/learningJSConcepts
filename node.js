@@ -380,6 +380,60 @@
 
 // How to create and monitor health checks in Node.js?
 
+// 1. What is Node.js? Where can you use it?
+// 2. Why use Node.js?
+// 3. How does Node.js work?
+// 4. Why is Node.js single-threaded?
+// 5. If Node.js is single-threaded, then how does it handle concurrency?
+// 6. Explain callback in Node.js.
+// 7. What are the advantages of using promises instead of callbacks?
+// 8. How would you define the term I/O?
+// 9. How is Node.js most frequently used?
+// 10. Explain the difference between frontend and backend development.
+// 11. What is NPM?
+// 12. What are the modules in Node.js?
+// 13. What is the purpose of the module `.exports`?
+// 14. Why is Node.js preferred over other backend technologies like Java and PHP?
+// 15. What is the difference between Angular and Node.js?
+// 16. Which database is more popularly used with Node.js?
+// 17. What are some of the most commonly used libraries in Node.js?
+// 18. What are the pros and cons of Node.js?
+// 19. What is the command used to import external libraries?
+// 20. What does event-driven programming mean?
+// 21. What is an Event Loop in Node.js?
+// 22. Differentiate between `process.nextTick()` and `setImmediate()`.
+// 23. What is an EventEmitter in Node.js?
+// 24. What are the two types of API functions in Node.js?
+// 25. What is the `package.json` file?
+// 26. How would you use a URL module in Node.js?
+// 27. What is the Express.js package?
+// 28. How do you create a simple Express.js application?
+// 29. What are streams in Node.js?
+// 30. How do you install, update, and delete a dependency?
+// 31. How do you create a simple server in Node.js that returns "Hello World"?
+// 32. Explain asynchronous and non-blocking APIs in Node.js.
+// 33. How do we implement async in Node.js?
+// 34. What is a callback function in Node.js?
+// 35. What is REPL in Node.js?
+// 36. What is the control flow function?
+// 37. How does control flow manage the function calls?
+// 38. What is the difference between `fork()` and `spawn()` methods in Node.js?
+// 39. What is the buffer class in Node.js?
+// 40. What is piping in Node.js?
+// 41. What are some of the flags used in read/write operations in files?
+// 42. How do you open a file in Node.js?
+// 43. What is callback hell?
+// 44. What is a reactor pattern in Node.js?
+// 45. What is a test pyramid in Node.js?
+// 46. For Node.js, why does Google use the V8 engine?
+// 47. Describe Node.js exit codes.
+// 48. Explain the concept of middleware in Node.js.
+// 49. What are the different types of HTTP requests?
+// 50. How would you connect a MongoDB database to Node.js?
+// 51. What is the purpose of NODE_ENV?
+// 52. List the various Node.js timing features.
+// 53. What is WASI, and why is it being introduced?
+
 ////////////////////////////////////////////////////////  Practice ////////////////////////////////////////
 
 // Design db of payment gateway interface, cart functionality, amazon delivery service
