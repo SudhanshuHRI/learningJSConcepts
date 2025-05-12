@@ -1,11 +1,38 @@
 ///////////////////////////////////////////  Notes //////////////////////////////////////////
 
 // sql is not case sensitive.
-// to create a database : CREATE DATABASE <database_name>; 
-// to delete a database : DROP DATABASE <database_name>;
-// to select a database : USE <database_name>;
-// to create a table : CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);  // contraints are optional //eg: create table dummmy (id int primary key, name varchar(50) not null);
-// to delete a table : DROP TABLE <table_name>;
+// create database ==> CREATE DATABASE <database_name>; || CREATE DATABASE IF NOT EXISTS <database_name>; [check if db already exists then don't create it]
+// delete database ==> DROP DATABASE <database_name>;
+// select database ==> USE <database_name>;
+
+// create table ==> CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);  
+// contraints are optional 
+// eg: create table dummmy (id int primary key, name varchar(50) not null);
+
+
+// insert data in table==> INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...); 
+// eg: insert into dummy (id, name) values (1, 'dummy');
+
+// delete table ==> DROP TABLE <table_name>;
+
+// Datatypes ==> int, varchar(0-255), char(0-255), text, date, datetime, timestamp, boolean, decimal(p,s), float, double, blob
+// char vs varchar ==> if a char is of 50 then memory will be allocated for 50 char even if string is empty. whereas varchar will only allocate memory for the number of char used in string. 50 will be max value for varchar.
+// BLOB ==> Binary Large Object, used to store large binary data like images, videos.(0-65,535 bytes)
+// INT => To save integer values. (-2,147,483,648 to 2,147,483,647)
+// Float=> To save floating point values. (7 decimal digits)
+// Double=> To save double precision floating point values. (15 decimal digits)
+// Date => To save date values. (YYYY-MM-DD)
+// Time => To save time values. (HH:MM:SS)
+// Timestamp => To save date and time values. (YYYY-MM-DD HH:MM:SS)
+
+// signed vs unsigned data types ==> signed can store negative values, unsigned can only store positive values.
+
+// SHOW DATABASES; ==> show all databases
+// SHOW TABLES; ==> show all tables in current database
+
+
+
+
 
 
 
