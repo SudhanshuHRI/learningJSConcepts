@@ -1,19 +1,45 @@
 ///////////////////////////////////////////  Notes //////////////////////////////////////////
 
 // sql is not case sensitive.
-// create database ==> CREATE DATABASE <database_name>; || CREATE DATABASE IF NOT EXISTS <database_name>; [check if db already exists then don't create it]
-// delete database ==> DROP DATABASE <database_name>;
-// select database ==> USE <database_name>;
+// CREATE DATABASE <database_name>; [create a new database] 
+// CREATE DATABASE IF NOT EXISTS <database_name>; [check if db already exists then don't create it]
+// DROP DATABASE <database_name>;[delete a database]
+// USE <database_name>; [select a database to use]
 
-// create table ==> CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);  
+// CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);[create a new table]
+// CREATE TABLE IF NOT EXISTS <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);[check if table already exists then don't create it]
 // contraints are optional 
-// eg: create table dummmy (id int primary key, name varchar(50) not null);
+
+// DROP TABLE <table_name>;[delete a table]
+
+// SHOW DATABASES; ==> show all databases
+// SHOW TABLES; ==> show all tables in current database
 
 
-// insert data in table==> INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...); 
-// eg: insert into dummy (id, name) values (1, 'dummy');
+// SELECT * FROM <table_name>; [select all data from table] 
+// SELECT column_1, column_2, ... FROM <table_name>; [select specific columns from table]
 
-// delete table ==> DROP TABLE <table_name>;
+// INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...); [insert data into table]
+// eg: INSERT INTO users (name, age) VALUES ('John', 25),('Jane', 30); [insert multiple rows at once]
+
+
+////////////////////////////////////////// keys /////////////////////////////////////////
+
+// Primary Key ==> It cannot be NULL and must be unique. one table can have only one primary key.
+// Foreign Key ==> in 2 tables one table's primary key is used as a foreign key in another table. It can accept Null values. Also it can accept duplicate values. one table can have multiple foreign keys.
+// Unique Key ==> A unique key constraint ensures that all values in a column are different from each other. It can accept NULL values, but only one NULL value is allowed.
+
+//////////////////////////  constraints /////////////////////////////////////////
+
+// constraints is a rule for a column in a table that which data must save in column.
+// NOT NULL ==> column cannot have NULL values. eg: CREATE TABLE USERS (ID INT NOT NULL, NAME VARCHAR(255) NOT NULL);
+// Unique => all values in a column must be unique. eg: CREATE TABLE USERS (ID INT UNIQUE, NAME VARCHAR(255) UNIQUE);
+
+
+
+
+
+/////////////////////////////////////////////////// Data Types /////////////////////////////////////////
 
 // Datatypes ==> int, varchar(0-255), char(0-255), text, date, datetime, timestamp, boolean, decimal(p,s), float, double, blob
 // char vs varchar ==> if a char is of 50 then memory will be allocated for 50 char even if string is empty. whereas varchar will only allocate memory for the number of char used in string. 50 will be max value for varchar.
@@ -24,19 +50,10 @@
 // Date => To save date values. (YYYY-MM-DD)
 // Time => To save time values. (HH:MM:SS)
 // Timestamp => To save date and time values. (YYYY-MM-DD HH:MM:SS)
-
 // signed vs unsigned data types ==> signed can store negative values, unsigned can only store positive values.
 
-// SHOW DATABASES; ==> show all databases
-// SHOW TABLES; ==> show all tables in current database
 
-
-
-
-
-
-
-
+//////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
 //  Advanced SQL Queries
 // Write a query to find the second highest salary from an employees table.
