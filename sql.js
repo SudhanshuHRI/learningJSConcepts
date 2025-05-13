@@ -84,111 +84,273 @@
 
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
-//  Advanced SQL Queries
-// Write a query to find the second highest salary from an employees table.
 
-// Write a query to pivot a table of monthly sales.
+// first create database of company to excute these sql queries.
 
-// Find all employees who earn more than the average salary of their department.
+// 🗃️ Database Schema: TechNova Inc.
+// 1. employees
 
-// Return the top 3 highest paid employees per department.
+// CREATE TABLE employees (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     first_name VARCHAR(50),
+//     last_name VARCHAR(50),
+//     email VARCHAR(100) UNIQUE,
+//     department_id INT,
+//     manager_id INT,
+//     hire_date DATE,
+//     salary DECIMAL(10, 2),
+//     job_title VARCHAR(100)
+// );
+// 2. departments
 
-// Calculate a running total of sales using a window function.
+// CREATE TABLE departments (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     name VARCHAR(100),
+//     location VARCHAR(100)
+// );
+// 3. projects
 
-// Write a query to find duplicate rows based on multiple columns.
+// CREATE TABLE projects (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     name VARCHAR(100),
+//     start_date DATE,
+//     end_date DATE,
+//     budget DECIMAL(12, 2),
+//     department_id INT
+// );
+// 4. employee_projects
 
-// Write a recursive CTE to generate a hierarchy (e.g., org chart).
+// CREATE TABLE employee_projects (
+//     employee_id INT,
+//     project_id INT,
+//     role VARCHAR(100),
+//     PRIMARY KEY (employee_id, project_id)
+// );
+// 5. clients
 
-// Use a CTE to calculate the Fibonacci sequence.
+// CREATE TABLE clients (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     name VARCHAR(100),
+//     email VARCHAR(100),
+//     phone VARCHAR(20),
+//     country VARCHAR(50)
+// );
+// 6. invoices
 
-// Find the first and last purchase date for each customer.
+// CREATE TABLE invoices (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     client_id INT,
+//     project_id INT,
+//     amount DECIMAL(10, 2),
+//     invoice_date DATE,
+//     paid BOOLEAN
+// );
 
-// Calculate a moving average of sales over a 3-day window.
 
-// ⚙️ Indexes & Performance
-// How do indexes affect performance? Explain with a query example.
 
-// Compare the performance of JOIN vs. EXISTS.
 
-// When would a composite index be better than a single-column index?
 
-// How would you identify slow queries in a database?
 
-// Explain how to use EXPLAIN or EXPLAIN ANALYZE to tune queries.
+// Select all columns from employees.
 
-// 🔄 Subqueries & Correlated Subqueries
-// Write a correlated subquery to find customers with orders above their average order value.
+// Select first name and salary from employees.
 
-// What is the difference between IN, EXISTS, and JOIN in subqueries?
+// List all departments.
 
-// Use a subquery to return departments with no employees.
+// Show all clients from the USA.
 
-// Find the employee(s) with the maximum salary using a subquery.
+// Show employees hired after 2022.
 
-// Write a query using NOT EXISTS to find unmatched records.
+// Count total employees.
 
-// 🔍 Window Functions
-// Use RANK() to list employees ranked by salary per department.
+// Get distinct job titles.
 
-// Compare ROW_NUMBER() vs RANK() vs DENSE_RANK() with example.
+// Show clients sorted by name (A-Z).
 
-// Write a query that calculates the percent change in sales over months.
+// List top 5 highest-paid employees.
 
-// Use LAG() and LEAD() to find growth or drop in stock prices.
+// Count number of projects.
 
-// Create a cumulative count using COUNT(*) OVER (...).
+// Show invoices that are unpaid.
 
-// 🧮 Aggregation & Grouping
-// Find the department with the highest average salary.
+// Find employees with salary > 80000.
 
-// Group orders by week and calculate total revenue per week.
+// Show all projects started in 2024.
 
-// Use GROUPING SETS to generate roll-up summaries.
+// Find employee with a specific email.
 
-// Calculate median salary using SQL.
+// Show employees who are managers (manager_id is null).
 
-// Use CUBE and ROLLUP for multidimensional aggregation.
+// Show employees with salary between 50000 and 90000.
 
-// 🔗 Joins and Set Operations
-// Write a full outer join without using FULL OUTER JOIN syntax.
+// List all employees with “Engineer” in job title.
 
-// Use INTERSECT to find common records between two tables.
+// Sort invoices by amount (high to low).
 
-// Use EXCEPT to find unique values in one table.
+// Get employees with null department_id.
 
-// Perform a self-join to find employees and their managers.
+// Show current date using SQL.
 
-// Implement an anti-join using NOT EXISTS.
+// 🟡 INTERMEDIATE (21–50)
+// List employee full names.
 
-// 💾 Stored Procedures, Views, Triggers
-// Create a stored procedure to insert a new order and update inventory.
+// Show total salary by department.
 
-// Write a trigger to log deleted records into an audit table.
+// Count employees in each department.
 
-// Write a view that flattens a normalized set of tables.
+// Show average salary in the company.
 
-// Use a stored function to validate email addresses.
+// List projects and number of assigned employees.
 
-// Create a trigger that prevents duplicate inserts.
+// List clients who have more than 3 invoices.
 
-// 🧩 Schema Design & Constraints
-// What is a surrogate key? When would you use one?
+// Calculate total paid amount per client.
 
-// Compare normalization vs denormalization.
+// Find projects without any assigned employees.
 
-// Define a unique constraint that only applies when a column is NOT NULL.
+// List employees and their managers (self join).
 
-// Create a table with a check constraint enforcing a salary range.
+// Show employees working on more than 1 project.
 
-// What is a foreign key cascade and when should it be avoided?
+// Get highest paid employee in each department.
 
-// 🧠 Conceptual & Theoretical
-// Explain ACID properties in the context of SQL databases.
+// Count number of clients per country.
 
-// Describe isolation levels and how they prevent concurrency issues.
+// Show project budgets grouped by department.
 
-// What is the difference between OLTP and OLAP?
+// Update salary by 10% for all developers.
 
-// Explain how sharding works in distributed SQL systems.
+// Delete invoices older than 2021.
 
-// What are materialized views and how do they differ from regular views?
+// Insert a new employee with all required fields.
+
+// Assign an employee to a project.
+
+// Remove an employee from a project.
+
+// Show employees not assigned to any project.
+
+// List projects with invoice total over 50,000.
+
+// 🟠 ADVANCED (51–80)
+// Find the second highest salary.
+
+// Show department with highest average salary.
+
+// List projects with no invoices yet.
+
+// Show each employee’s total project count.
+
+// List employees assigned to more than 3 projects.
+
+// Find employees without managers.
+
+// Use a window function to rank employees by salary.
+
+// Show cumulative project budget by department.
+
+// Create a view for active invoices.
+
+// Create a view for employee-project-role mapping.
+
+// Write a stored procedure to give bonus to employees in a department.
+
+// Write a function to calculate total earned by an employee from projects.
+
+// Trigger to log when an invoice is inserted.
+
+// Trigger to update budget usage when an invoice is added.
+
+// List top 3 departments by project count.
+
+// Find average project duration by department.
+
+// List employees who never worked with a specific client.
+
+// List clients who paid more than 90% of their invoices.
+
+// Find the longest-running project.
+
+// Create a view for employee hierarchy (manager → subordinate).
+
+// 🔴 EXPERT (81–100)
+// Recursive CTE to build employee hierarchy.
+
+// List clients and their total outstanding amount.
+
+// Use CASE to categorize employees by salary range.
+
+// Correlated subquery to find employees earning above department average.
+
+// Partition invoices by client to get running totals.
+
+// List latest invoice per client.
+
+// Detect duplicate client emails.
+
+// Optimize a slow-running query on invoice totals.
+
+// Write a function to return employee's experience in years.
+
+// Use JSON functions to store metadata in a column (e.g., employee_skills).
+
+// Generate a report of revenue by month and department.
+
+// Simulate monthly payroll expense.
+
+// Dynamic SQL for filtering employees by job title.
+
+// Use temporary table for summarizing project statuses.
+
+// Find clients with projects in more than 2 departments.
+
+// Generate a calendar of project deadlines.
+
+// Use ROLLUP to get subtotals per department.
+
+// Compare total budget vs invoice totals per project.
+
+// Implement full-text search on project names.
+
+// Add an audit log table and use triggers to fill it.
+
+// 🧠 BONUS MASTERY TASKS (Optional but challenging)
+// Design a query to show average delay between project start and first invoice.
+
+// Calculate the ratio of paid to unpaid invoices per client.
+
+// Create a summary dashboard using views for HR, Sales, and Finance.
+
+// Setup materialized view for monthly financial performance.
+
+// Create an index to speed up employee-project join.
+
+// Normalize a denormalized version of employee + project data.
+
+// Use WITH clause to simplify a multi-step query.
+
+// Archive old invoices into another table.
+
+// Calculate the overlap between projects by date.
+
+// Auto-assign default department using trigger on new employee.
+
+// Design a query to simulate promotions based on tenure.
+
+// Create a lookup table for job titles and update schema accordingly.
+
+// Write a complex join using all six tables.
+
+// Use analytics functions to detect salary anomalies.
+
+// Use ENUM or CHECK constraints on job titles.
+
+// Create and use a composite primary key.
+
+// Optimize joins with EXPLAIN or ANALYZE.
+
+// Use conditional logic in updates (e.g., salary change).
+
+// Backup and restore part of the database.
+
+// Create a set of test data for performance testing (insert 1000+ rows).
