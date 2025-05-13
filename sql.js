@@ -37,7 +37,9 @@
 // primary key => make column unique and not null + only one column can be primary key.
 // forign key => other table's primary key can become new table column's forign key. eg: CREATE TABLE temp(cust_id int, forign key (cust_id) references customer(id));
 // DEFAULT => set the default value of column. eg: salary int default 25000;
-// CHECK => to check the condition before storing data in column.
+// CHECK => to check the condition before storing data in column. eg: create table newTab(age int check (age >= 18));
+
+/////////////////////////////////////////  Important command and keywords ////////////////////////////////////////////
 
 
 
