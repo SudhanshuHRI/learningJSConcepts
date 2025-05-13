@@ -41,7 +41,32 @@
 
 /////////////////////////////////////////  Important command and keywords ////////////////////////////////////////////
 
+// => SELECT : SELECT <column name> from <table name>;
+// => DISTINCT keyword : removes duplicates in column . eg: SELECT DISTINCT city from students
+// => WHERE : to define condition || We use multiple operator with WHERE. eg: +,-,*,/,%,=, !=, >, <, AND , OR, NOT, IN, BETWEEN, ALL, LIKE, ANY, &, | 
+// eg1 : SELECT * from students WHERE marks+10 > 100;
+// eg2 : SELECT * FROM students WHERE marks BETWEEN 80 AND 90;
+// eg3 : SELECT * FROM students WHERE city IN ("DELHI","MUMBAI");
+// eg4 : SELECT * FROM students WHERE city NOT IN ("DELHI","MUMBAI");
+// eg5 : SELECT * FROM STUDENTS WHERE marks >=80 AND city = "mumbai";
+// => LIMIT: apply limit on rows.
+// eg1: SELECT * FROM students WHERE marks > 75 LIMIT 3;
+// => ORDER BY : get rows in ascending or decending order; 
+// eg1: SELECT * FROM students ORDER BY city ASC;
+// eg2: SELECT * FROM students ORDER BY MARKS DESC;
+// => GROUP BY : used to create groups on any basis condition.
+// eg: SELECT city, COUNT(name) FROM students GROUP BY city; Here first city column is selected > made group of cities > count name that which name is from which city and return total name in each city. we can also do it for multiple columns like select city,name,count(rollNo) from students group by city,name;
 
+/////////////////////////////////////////////////////// AGGREGATE FUNCTIONS ///////////////////////////////
+
+// => these functions perform calculations on all values and return a single value.
+// =>COUNT() : TO COUNT VALUE 
+// =>MAX() : TO GET MAXIMUM VALUE
+// =>MIN() : TO GET MINIMUM VALUE
+// =>SUM() : TO GET SUM OF VALUE
+// =>AVG() : TO GET AVRAGE OF VALUE
+
+// eg: SELECT MAX(marks) FROM students;
 
 /////////////////////////////////////////////////// Data Types /////////////////////////////////////////
 
