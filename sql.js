@@ -31,11 +31,13 @@
 
 //////////////////////////  constraints /////////////////////////////////////////
 
-// constraints is a rule for a column in a table that which data must save in column.
-// NOT NULL ==> column cannot have NULL values. eg: CREATE TABLE USERS (ID INT NOT NULL, NAME VARCHAR(255) NOT NULL);
+// constraints is a rule for data in the table.
+// NOT NULL ==> column cannot be empty. eg: CREATE TABLE USERS (ID INT NOT NULL, NAME VARCHAR(255) NOT NULL);
 // Unique => all values in a column must be unique. eg: CREATE TABLE USERS (ID INT UNIQUE, NAME VARCHAR(255) UNIQUE);
-
-
+// primary key => make column unique and not null + only one column can be primary key.
+// forign key => other table's primary key can become new table column's forign key. eg: CREATE TABLE temp(cust_id int, forign key (cust_id) references customer(id));
+// DEFAULT => set the default value of column. eg: salary int default 25000;
+// CHECK => to check the condition before storing data in column.
 
 
 
