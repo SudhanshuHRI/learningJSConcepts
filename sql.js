@@ -63,7 +63,15 @@
 // eg: SELECT city, COUNT(name) FROM students GROUP BY city; Here first city column is selected > made group of cities > count name that which name is from which city and return total name in each city. we can also do it for multiple columns like select city,name,count(rollNo) from students group by city,name;
 
 // HAVING : similer to WHERE  but apply only on conditions after grouping.
-// eg: 
+// eg: SELECT city ,COUNT(roll_no)FROM `students` GROUP by city HAVING MAX(marks) > 90;
+
+// General Order to write a query ====> 
+// SELECT column 
+// FROM table_name 
+// WHERE condition 
+// GROUP BY column 
+// HAVING condition 
+// ORDER BY column ASC;
 
 /////////////////////////////////////////////////////// AGGREGATE FUNCTIONS ///////////////////////////////
 
