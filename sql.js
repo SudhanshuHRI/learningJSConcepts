@@ -1,27 +1,25 @@
 ///////////////////////////////////////////  Notes //////////////////////////////////////////
 
 // sql is not case sensitive.
-// CREATE DATABASE <database_name>; [create a new database] 
+// CREATE DATABASE <database_name>; [create a new database]
 // CREATE DATABASE IF NOT EXISTS <database_name>; [check if db already exists then don't create it]
 // DROP DATABASE <database_name>;[delete a database]
 // USE <database_name>; [select a database to use]
 
 // CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);[create a new table]
 // CREATE TABLE IF NOT EXISTS <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);[check if table already exists then don't create it]
-// contraints are optional 
+// contraints are optional
 
 // DROP TABLE <table_name>;[delete a table]
 
 // SHOW DATABASES; ==> show all databases
 // SHOW TABLES; ==> show all tables in current database
 
-
-// SELECT * FROM <table_name>; [select all data from table] 
+// SELECT * FROM <table_name>; [select all data from table]
 // SELECT column_1, column_2, ... FROM <table_name>; [select specific columns from table]
 
 // INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...); [insert data into table]
 // eg: INSERT INTO users (name, age) VALUES ('John', 25),('Jane', 30); [insert multiple rows at once]
-
 
 ////////////////////////////////////////// keys /////////////////////////////////////////
 
@@ -45,7 +43,7 @@
 
 // => DISTINCT keyword : removes duplicates in column . eg: SELECT DISTINCT city from students
 
-// => WHERE : to define condition || We use multiple operator with WHERE. eg: +,-,*,/,%,=, !=, >, <, AND , OR, NOT, IN, BETWEEN, ALL, LIKE, ANY, &, | 
+// => WHERE : to define condition || We use multiple operator with WHERE. eg: +,-,*,/,%,=, !=, >, <, AND , OR, NOT, IN, BETWEEN, ALL, LIKE, ANY, &, |
 // eg1 : SELECT * from students WHERE marks+10 > 100;
 // eg2 : SELECT * FROM students WHERE marks BETWEEN 80 AND 90;
 // eg3 : SELECT * FROM students WHERE city IN ("DELHI","MUMBAI");
@@ -55,7 +53,7 @@
 // => LIMIT: apply limit on rows.
 // eg1: SELECT * FROM students WHERE marks > 75 LIMIT 3;
 
-// => ORDER BY : get rows in ascending or decending order; 
+// => ORDER BY : get rows in ascending or decending order;
 // eg1: SELECT * FROM students ORDER BY city ASC;
 // eg2: SELECT * FROM students ORDER BY MARKS DESC;
 
@@ -65,18 +63,41 @@
 // HAVING : similer to WHERE  but apply only on conditions after grouping.
 // eg: SELECT city ,COUNT(roll_no)FROM `students` GROUP by city HAVING MAX(marks) > 90;
 
-// General Order to write a query ====> 
-// SELECT column 
-// FROM table_name 
-// WHERE condition 
-// GROUP BY column 
-// HAVING condition 
+// General Order to write a query ====>
+// SELECT column
+// FROM table_name
+// WHERE condition
+// GROUP BY column
+// HAVING condition
 // ORDER BY column ASC;
+///////////////////////////////////////////////////  Table related queries  /////////////////////////////////////
+
+// update a value in table || Syntex: UPDATE table_name SET col1=val1,col2=val2 WHERE condition; || eg: UPDATE students SET grade="O" WHERE grade="c"
+// delete a value in tabl || Syntex: DELETE FROM table_name WHERE conditon; || eg: DELETE FROM students WHERE id=101;
+
+////////////////////////////////////////////////  forign key in detail /////////////////////////////////
+
+// we have 2 tables. deparments, teachers. deparments table have science , english , hindi and their primary key is id which is 101, 102, 103, respectively. teachers have id , name , department id columns in which id is primary key.
+
+// we make department's primary key to teacher's dept_id forign key. || CREATE TABLE teachers(id int primary key,dept_id int, Forign key (dept_id)  references deparments(id));
+
+// Cascading in Forign key: means if change in one table the reflect in other table also. To do this we use "ON UPDATE CASCADE" AND 'ON DELETE CASCADE'
+// eg: CREATE TABLE teacher(
+// id INT PRIMARY KEY,
+// name VARCHAR(20),
+// dept_id INT,
+// FORIGN KEY (dept_id) REFERENCES dept(id)
+// ON UPDATE CASCADE
+// ON DELETE CASCADE
+// ); 
+
+
+
 
 /////////////////////////////////////////////////////// AGGREGATE FUNCTIONS ///////////////////////////////
 
 // => these functions perform calculations on all values and return a single value.
-// =>COUNT() : TO COUNT VALUE 
+// =>COUNT() : TO COUNT VALUE
 // =>MAX() : TO GET MAXIMUM VALUE
 // =>MIN() : TO GET MINIMUM VALUE
 // =>SUM() : TO GET SUM OF VALUE
@@ -97,9 +118,7 @@
 // Timestamp => To save date and time values. (YYYY-MM-DD HH:MM:SS)
 // signed vs unsigned data types ==> signed can store negative values, unsigned can only store positive values.
 
-
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
-
 
 // first create database of company to excute these sql queries.
 
@@ -161,11 +180,6 @@
 //     invoice_date DATE,
 //     paid BOOLEAN
 // );
-
-
-
-
-
 
 // Select all columns from employees.
 
