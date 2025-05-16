@@ -125,8 +125,10 @@
 
 ////////////////////////////////////////////////  Joins in sql /////////////////////////////////////////////////
 
-// used to combine rows / two or more tables based on related column between them.
-
+// used to combine rows from 2 or more tables.
+// There is 2 type of joins: 1) Inner Join , 2) Outer Join
+// 1) Inner Join : 
+// 2) Outer Join : It has 3 types. i) Left Join , ii) Right Join iii) Full Join
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
 // first create database of company to excute these sql queries.
