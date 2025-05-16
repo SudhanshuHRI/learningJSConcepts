@@ -127,7 +127,7 @@
 
 // used to combine rows from 2 or more tables.
 // There is 2 type of joins: 1) Inner Join , 2) Outer Join
-// 1) Inner Join : 
+// 1) Inner Join : return data which is matching in both tables + SELECT columns FROM tableA INNER JOIN tableB ON tableA.col_name = tableB.col_name;
 // 2) Outer Join : It has 3 types. i) Left Join , ii) Right Join iii) Full Join
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
