@@ -1,25 +1,22 @@
-///////////////////////////////////////////  Notes //////////////////////////////////////////
+///////////////////////////////////////////  Basics //////////////////////////////////////////
 
-// sql is not case sensitive.
-// CREATE DATABASE <database_name>; [create a new database]
-// CREATE DATABASE IF NOT EXISTS <database_name>; [check if db already exists then don't create it]
-// DROP DATABASE <database_name>;[delete a database]
-// USE <database_name>; [select a database to use]
+// 
+// To create database : CREATE DATABASE <database_name>; 
+// check if not created then : CREATE DATABASE IF NOT EXISTS <database_name>; 
+// Delete a database : DROP DATABASE <database_name>;[delete a database]
+// Select database for use : USE <database_name>;
 
-// CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);[create a new table]
-// CREATE TABLE IF NOT EXISTS <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);[check if table already exists then don't create it]
-// contraints are optional
-
+// Create a table : CREATE TABLE <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);
+// Check if table already exists then : CREATE TABLE IF NOT EXISTS <table_name> (column_1 datatype contraints, column_2 datatype constraints, ...);
 // DROP TABLE <table_name>;[delete a table]
 
-// SHOW DATABASES; ==> show all databases
-// SHOW TABLES; ==> show all tables in current database
+// Show all databases: SHOW DATABASES;
+// Show all tables : SHOW TABLES; 
 
-// SELECT * FROM <table_name>; [select all data from table]
-// SELECT column_1, column_2, ... FROM <table_name>; [select specific columns from table]
+// Select all data of table : SELECT * FROM <table_name>;
+// Select specific column of table : SELECT column_1, column_2, ... FROM <table_name>;
+// Insert data in table : INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...);
 
-// INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...); [insert data into table]
-// eg: INSERT INTO users (name, age) VALUES ('John', 25),('Jane', 30); [insert multiple rows at once]
 
 ////////////////////////////////////////// keys /////////////////////////////////////////
 
@@ -70,10 +67,19 @@
 // GROUP BY column
 // HAVING condition
 // ORDER BY column ASC;
+
+// ALTER : to change the schema means to add or remove or rename any column in table.
+// add column : ALTER TABLE table_name ADD COLUMN column_name datatype constraint;
+// drop column : ALTER TABLE table_name DROP COLUMN column_name;
+// rename table : ALTER TABLE table_name RENAME TO new_table_name;
+// rename column : ALTER TABLE table_name CHANGE COLUMN old_name new_name new_datatype new_constrant;
+// modify constraints / datatype : ALTER TABLE table_name MODIFY col_name new_datatype new_constraint;
+// delete all table's data : TRUNCATE TABLE table_name;
+
 ///////////////////////////////////////////////////  Table related queries  /////////////////////////////////////
 
 // update a value in table || Syntex: UPDATE table_name SET col1=val1,col2=val2 WHERE condition; || eg: UPDATE students SET grade="O" WHERE grade="c"
-// delete a value in tabl || Syntex: DELETE FROM table_name WHERE conditon; || eg: DELETE FROM students WHERE id=101;
+// delete a value in table || Syntex: DELETE FROM table_name WHERE conditon; || eg: DELETE FROM students WHERE id=101;
 
 ////////////////////////////////////////////////  forign key in detail /////////////////////////////////
 
@@ -81,7 +87,7 @@
 
 // we make department's primary key to teacher's dept_id forign key. || CREATE TABLE teachers(id int primary key,dept_id int, Forign key (dept_id)  references deparments(id));
 
-// Cascading in Forign key: means if change in one table the reflect in other table also. To do this we use "ON UPDATE CASCADE" AND 'ON DELETE CASCADE'
+// Cascading in Forign key: means if change in parent table the reflect in child table also. To do this we use "ON UPDATE CASCADE" AND 'ON DELETE CASCADE'
 // eg: CREATE TABLE teacher(
 // id INT PRIMARY KEY,
 // name VARCHAR(20),
@@ -90,9 +96,6 @@
 // ON UPDATE CASCADE
 // ON DELETE CASCADE
 // ); 
-
-
-
 
 /////////////////////////////////////////////////////// AGGREGATE FUNCTIONS ///////////////////////////////
 
@@ -117,6 +120,12 @@
 // Time => To save time values. (HH:MM:SS)
 // Timestamp => To save date and time values. (YYYY-MM-DD HH:MM:SS)
 // signed vs unsigned data types ==> signed can store negative values, unsigned can only store positive values.
+
+
+
+////////////////////////////////////////////////  Joins in sql /////////////////////////////////////////////////
+
+// used to combine rows / two or more tables based on related column between them.
 
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
