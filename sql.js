@@ -156,6 +156,10 @@
 // to write query into query + SELECT column FROM table_name WHERE col_name <operator> (subquery);
 // eg: select full_name,marks from students where marks > (select AVG(marks) from students);
 
+
+///////////////////////////////////////////////  MySQL Views   ///////////////////////////////////
+
+// it is used to restrict column  data to user + CREATE VIEW view1 SELECT rollno, name FROM student;
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
 // first create database of company to excute these sql queries.
