@@ -135,7 +135,26 @@
 // i) Left Join : gets full data of table A with common data with table B. + SELECT * FROM tableA LEFT JOIN tableB ON tableA.col_name = tableB.col_name; + here tableA is left joined with tableB so it will return tableA's full data and tableB's common data.
 // eg: SELECT * FROM students LEFT JOIN courses ON students.student_id = courses.course_id;
 
-// ii) Right Join : gets full data of table B with commom data with table A + SELECT * FROM tableB as tbB RIGHT JOIN tableA as tbA ON tableA.col_name = tableB.col_name; + 
+// ii) Right Join : gets full data of table B with commom data with table A + SELECT * FROM tableA as tbA RIGHT JOIN tableB as tbB ON tableA.col_name = tableB.col_name; + here tableA is right joined with tableB so it will return tableB's full data and tableA's commin data.
+// eg: SELECT * FROM students as s RIGHT JOIN courses as c ON s.student_id = c.course_id;
+
+// iii) Full Join : we use UNION between left join query and right join query to get all data of TableA and TableB;
+// eg: SELECT * FROM students LEFT JOIN courses ON students.student_id = courses.course_id
+//  UNION 
+// SELECT * FROM students as s RIGHT JOIN courses as c ON s.student_id = c.course_id ; 
+
+// Left exculsive join / Right exclusive join : to get unique value in TableA / TableB + to do this we use WHERE command 
+// eg: SELECT * FROM students LEFT JOIN courses ON students.student_id = courses.course_id WHERE courses.course_id IS NULL;
+
+
+//////////////////////////////////////////////////////////////  UNION  ///////////////////////
+
+// used to combine 2 data sets + Also removes duplicate values + UNION ALL will give all values including duplicates +  SELECT columns FROM TableA UNION SELECT columns FROM TableB
+
+/////////////////////////////////////////////////////// Sub Queries  //////////////////////////////////////////////
+
+// to write query into query + SELECT column FROM table_name WHERE col_name <operator> (subquery);
+// eg: select full_name,marks from students where marks > (select AVG(marks) from students);
 
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
