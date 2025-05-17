@@ -128,8 +128,15 @@
 // used to combine rows from 2 or more tables.
 // There is 2 type of joins: 1) Inner Join , 2) Outer Join
 // 1) Inner Join : return data which is common in both tables + SELECT columns FROM tableA INNER JOIN tableB ON tableA.col_name = tableB.col_name;
-// eg: 
-// 2) Outer Join : It has 3 types. i) Left Join , ii) Right Join iii) Full Join
+// eg: SELECT * FROM students INNER JOIN cources ON students.student_id = courses.courses.id;
+
+// 2) Outer Join : It has 3 types. i) Left Join , ii) Right Join iii) Full Join.
+
+// i) Left Join : gets full data of table A with common data with table B. + SELECT * FROM tableA LEFT JOIN tableB ON tableA.col_name = tableB.col_name; + here tableA is left joined with tableB so it will return tableA's full data and tableB's common data.
+// eg: SELECT * FROM students LEFT JOIN courses ON students.student_id = courses.course_id;
+
+// ii) Right Join : gets full data of table B with commom data with table A + SELECT * FROM tableB as tbB RIGHT JOIN tableA as tbA ON tableA.col_name = tableB.col_name; + 
+
 //////////////////////////////////////////////////////////////////  questions  /////////////////////////////////////////
 
 // first create database of company to excute these sql queries.
