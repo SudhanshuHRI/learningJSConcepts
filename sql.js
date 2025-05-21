@@ -258,7 +258,6 @@
 
 //  Beginner Level (1–30)
 
-
 // List all columns of all employees.
 
 // Show first names and last names of employees.
