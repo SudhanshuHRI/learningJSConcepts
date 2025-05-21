@@ -164,8 +164,13 @@
 
 // first create database of company to excute these sql queries.
 
-// 🗃️ Database Schema: TechNova Inc.
-// 1. employees
+// CREATE DATABASE CompanyDB;
+// USE CompanyDB;
+
+// CREATE TABLE departments (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     name VARCHAR(100)
+// );
 
 // CREATE TABLE employees (
 //     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -175,254 +180,277 @@
 //     department_id INT,
 //     manager_id INT,
 //     hire_date DATE,
-//     salary DECIMAL(10, 2),
-//     job_title VARCHAR(100)
+//     job_title VARCHAR(100),
+//     FOREIGN KEY (department_id) REFERENCES departments(id),
+//     FOREIGN KEY (manager_id) REFERENCES employees(id)
 // );
-// 2. departments
-
-// CREATE TABLE departments (
-//     id INT PRIMARY KEY AUTO_INCREMENT,
-//     name VARCHAR(100),
-//     location VARCHAR(100)
-// );
-// 3. projects
 
 // CREATE TABLE projects (
 //     id INT PRIMARY KEY AUTO_INCREMENT,
 //     name VARCHAR(100),
 //     start_date DATE,
 //     end_date DATE,
-//     budget DECIMAL(12, 2),
-//     department_id INT
+//     budget DECIMAL(10, 2)
 // );
-// 4. employee_projects
 
-// CREATE TABLE employee_projects (
-//     employee_id INT,
-//     project_id INT,
-//     role VARCHAR(100),
-//     PRIMARY KEY (employee_id, project_id)
-// );
-// 5. clients
-
-// CREATE TABLE clients (
-//     id INT PRIMARY KEY AUTO_INCREMENT,
-//     name VARCHAR(100),
-//     email VARCHAR(100),
-//     phone VARCHAR(20),
-//     country VARCHAR(50)
-// );
-// 6. invoices
-
-// CREATE TABLE invoices (
-//     id INT PRIMARY KEY AUTO_INCREMENT,
-//     client_id INT,
-//     project_id INT,
+// CREATE TABLE salaries (
+//     employee_id INT PRIMARY KEY,
 //     amount DECIMAL(10, 2),
-//     invoice_date DATE,
-//     paid BOOLEAN
+//     effective_date DATE,
+//     FOREIGN KEY (employee_id) REFERENCES employees(id)
 // );
 
-// Select all columns from employees.
+// CREATE TABLE attendances (
+//     id INT PRIMARY KEY AUTO_INCREMENT,
+//     employee_id INT,
+//     date DATE,
+//     status ENUM('Present', 'Absent', 'Leave'),
+//     FOREIGN KEY (employee_id) REFERENCES employees(id)
+// );
 
-// Select first name and salary from employees.
 
-// List all departments.
 
-// Show all clients from the USA.
+// -- Departments
+// INSERT INTO departments (name) VALUES 
+// ('Engineering'), ('HR'), ('Sales'), ('Finance');
 
-// Show employees hired after 2022.
+// -- Employees
+// INSERT INTO employees (first_name, last_name, email, department_id, manager_id, hire_date, job_title)
+// VALUES 
+// ('John', 'Doe', 'john.doe@example.com', 1, NULL, '2020-01-10', 'Engineering Manager'),
+// ('Jane', 'Smith', 'jane.smith@example.com', 1, 1, '2021-03-15', 'Software Engineer'),
+// ('Mike', 'Taylor', 'mike.taylor@example.com', 2, NULL, '2019-08-01', 'HR Manager'),
+// ('Emily', 'Clark', 'emily.clark@example.com', 2, 3, '2022-07-11', 'HR Executive'),
+// ('Robert', 'King', 'robert.king@example.com', 3, NULL, '2018-05-25', 'Sales Manager'),
+// ('Laura', 'Jones', 'laura.jones@example.com', 3, 5, '2023-01-03', 'Sales Executive');
 
-// Count total employees.
+// -- Projects
+// INSERT INTO projects (name, start_date, end_date, budget)
+// VALUES 
+// ('Website Revamp', '2023-01-01', '2023-06-30', 50000.00),
+// ('Recruitment Drive', '2023-02-15', '2023-04-15', 10000.00),
+// ('Product Launch', '2023-03-01', '2023-07-01', 75000.00);
 
-// Get distinct job titles.
+// -- Salaries
+// INSERT INTO salaries (employee_id, amount, effective_date)
+// VALUES 
+// (1, 95000.00, '2023-01-01'),
+// (2, 65000.00, '2023-01-01'),
+// (3, 80000.00, '2023-01-01'),
+// (4, 50000.00, '2023-01-01'),
+// (5, 88000.00, '2023-01-01'),
+// (6, 47000.00, '2023-01-01');
 
-// Show clients sorted by name (A-Z).
+// -- Attendance
+// INSERT INTO attendances (employee_id, date, status)
+// VALUES
+// (1, '2023-05-01', 'Present'),
+// (2, '2023-05-01', 'Absent'),
+// (3, '2023-05-01', 'Present'),
+// (4, '2023-05-01', 'Leave'),
+// (5, '2023-05-01', 'Present'),
+// (6, '2023-05-01', 'Present');
 
-// List top 5 highest-paid employees.
 
-// Count number of projects.
+//  Beginner Level (1–30)
+// List all columns of all employees.
 
-// Show invoices that are unpaid.
+// Show first names and last names of employees.
 
-// Find employees with salary > 80000.
+// What are the distinct department IDs in the employee table?
 
-// Show all projects started in 2024.
+// Find all employees who work in the 'HR' department.
 
-// Find employee with a specific email.
+// List all employees who joined after January 1, 2020.
 
-// Show employees who are managers (manager_id is null).
+// Get the employee(s) with a salary greater than 70,000.
 
-// Show employees with salary between 50000 and 90000.
+// Show all employees ordered by their first names.
 
-// List all employees with “Engineer” in job title.
+// List employees ordered by hire date in descending order.
 
-// Sort invoices by amount (high to low).
+// How many employees are there in total?
 
-// Get employees with null department_id.
+// What is the maximum salary?
 
-// Show current date using SQL.
+// What is the minimum salary?
 
-// 🟡 INTERMEDIATE (21–50)
-// List employee full names.
+// What is the average salary?
 
-// Show total salary by department.
+// What is the total sum of all salaries?
 
-// Count employees in each department.
+// Find all employees whose job title contains "Manager".
 
-// Show average salary in the company.
+// List all attendances marked as "Absent".
 
-// List projects and number of assigned employees.
+// Find employees with first names either "John" or "Jane".
 
-// List clients who have more than 3 invoices.
+// Find all employees in department 1 with the job title "Engineer".
 
-// Calculate total paid amount per client.
+// Find employees who have a non-null email.
 
-// Find projects without any assigned employees.
+// Show the first 5 employees in the table.
 
-// List employees and their managers (self join).
+// Find projects that have no end date.
 
-// Show employees working on more than 1 project.
+// Display the id and first_name of all employees with an alias.
 
-// Get highest paid employee in each department.
+// Show the length of each employee's first name.
 
-// Count number of clients per country.
+// Convert all last names to uppercase.
 
-// Show project budgets grouped by department.
+// Convert all email addresses to lowercase.
 
-// Update salary by 10% for all developers.
+// Show the year part of the hire date of each employee.
 
-// Delete invoices older than 2021.
+// List employees hired in 2022.
 
-// Insert a new employee with all required fields.
+// Show how many days each employee has worked till today.
 
-// Assign an employee to a project.
+// Display the current date and time.
 
-// Remove an employee from a project.
+// Show only the current date.
 
-// Show employees not assigned to any project.
+// Find employees hired between 2021 and 2023.
 
-// List projects with invoice total over 50,000.
+// 🧠 Intermediate Level (31–70)
+// Count the number of employees in each department.
 
-// 🟠 ADVANCED (51–80)
-// Find the second highest salary.
+// Count how many times each attendance status appears.
 
-// Show department with highest average salary.
+// Show average salary per job title.
 
-// List projects with no invoices yet.
+// Show department name with number of employees in each.
 
-// Show each employee’s total project count.
+// Find projects with a budget between 10,000 and 60,000.
 
-// List employees assigned to more than 3 projects.
+// List employees whose last name starts with 'S'.
 
-// Find employees without managers.
+// Display employees and their department names using a join.
 
-// Use a window function to rank employees by salary.
+// Show each employee with their manager's name.
 
-// Show cumulative project budget by department.
+// Display only employees who have managers.
 
-// Create a view for active invoices.
+// Find employees earning the highest salary.
 
-// Create a view for employee-project-role mapping.
+// Find employees working in the 'Sales' department.
 
-// Write a stored procedure to give bonus to employees in a department.
+// List departments where no employee is assigned.
 
-// Write a function to calculate total earned by an employee from projects.
+// Show employees that have a salary record.
 
-// Trigger to log when an invoice is inserted.
+// Update the email of employee with id = 1.
 
-// Trigger to update budget usage when an invoice is added.
+// Increase employee 2’s salary by 5,000.
 
-// List top 3 departments by project count.
+// Delete all attendance records marked as "Absent" before 2023.
 
-// Find average project duration by department.
+// Delete projects that ended before 2022.
 
-// List employees who never worked with a specific client.
+// Insert a new department named 'Legal'.
 
-// List clients who paid more than 90% of their invoices.
+// Add a new salary record for a new employee.
 
-// Find the longest-running project.
+// List employees earning more than 60,000 with their salary.
 
-// Create a view for employee hierarchy (manager → subordinate).
+// Calculate the duration of each project in days.
 
-// 🔴 EXPERT (81–100)
-// Recursive CTE to build employee hierarchy.
+// Show department names with average salary of their employees.
 
-// List clients and their total outstanding amount.
+// Show job titles having more than one employee.
 
-// Use CASE to categorize employees by salary range.
+// List employees that do not have a salary entry.
 
-// Correlated subquery to find employees earning above department average.
+// Find employees present on '2023-05-01'.
 
-// Partition invoices by client to get running totals.
+// Find projects whose budget is above average.
 
-// List latest invoice per client.
+// Count distinct employees in the attendance table.
 
-// Detect duplicate client emails.
+// Show total number of days each employee has attendance.
 
-// Optimize a slow-running query on invoice totals.
+// Order employees by length of their first name (longest first).
 
-// Write a function to return employee's experience in years.
+// Display full names of employees (first + last).
 
-// Use JSON functions to store metadata in a column (e.g., employee_skills).
+// Find employees whose job title contains either “Engineer” or “Manager”.
 
-// Generate a report of revenue by month and department.
+// Join employees with their departments and filter only 'Engineering'.
 
-// Simulate monthly payroll expense.
+// Show employees hired over 2 years ago.
 
-// Dynamic SQL for filtering employees by job title.
+// List salaries greater than or equal to all other salaries.
 
-// Use temporary table for summarizing project statuses.
+// List emails that end with '@example.com'.
 
-// Find clients with projects in more than 2 departments.
+// Show most common job titles in the company.
 
-// Generate a calendar of project deadlines.
+// List employees and their departments using a subquery.
 
-// Use ROLLUP to get subtotals per department.
+// Show all departments that have more than 1 employee.
 
-// Compare total budget vs invoice totals per project.
+// Find the project with the longest duration.
 
-// Implement full-text search on project names.
+// Get the latest hire date in each department.
 
-// Add an audit log table and use triggers to fill it.
+// 🚀 Advanced Level (71–100)
+// Create a view showing employees and their salary.
 
-// 🧠 BONUS MASTERY TASKS (Optional but challenging)
-// Design a query to show average delay between project start and first invoice.
+// Select all employees from the salary view whose salary > 70,000.
 
-// Calculate the ratio of paid to unpaid invoices per client.
+// Create a stored procedure to list employees by department ID.
 
-// Create a summary dashboard using views for HR, Sales, and Finance.
+// Call the stored procedure for department ID = 1.
 
-// Setup materialized view for monthly financial performance.
+// Create a trigger that logs salary changes.
 
-// Create an index to speed up employee-project join.
+// Find employees whose salary increased compared to a previous value.
 
-// Normalize a denormalized version of employee + project data.
+// Show employee salary rank using RANK() window function.
 
-// Use WITH clause to simplify a multi-step query.
+// Show department-wise average salary using PARTITION BY.
 
-// Archive old invoices into another table.
+// Get each employee’s salary vs. overall average using window function.
 
-// Calculate the overlap between projects by date.
+// Get top 2 earners from each department using DENSE_RANK().
 
-// Auto-assign default department using trigger on new employee.
+// Create a CTE that lists high-earning employees (salary > 70k).
 
-// Design a query to simulate promotions based on tenure.
+// Use a CTE to count employees per department.
 
-// Create a lookup table for job titles and update schema accordingly.
+// Show the employee with the longest name.
 
-// Write a complex join using all six tables.
+// Find departments with the highest number of employees.
 
-// Use analytics functions to detect salary anomalies.
+// List employees with more attendance days than average.
 
-// Use ENUM or CHECK constraints on job titles.
+// Write a query to transpose attendance statuses by employee.
 
-// Create and use a composite primary key.
+// Find average number of days present per department.
 
-// Optimize joins with EXPLAIN or ANALYZE.
+// Show employee-manager pairs where both belong to same department.
 
-// Use conditional logic in updates (e.g., salary change).
+// List employees who never took leave.
 
-// Backup and restore part of the database.
+// Find employees working on the most expensive project.
 
-// Create a set of test data for performance testing (insert 1000+ rows).
+// Calculate the percentage of "Present" days per employee.
+
+// Write a query to find salary difference between manager and reportee.
+
+// Create a function to return full name of employee by ID.
+
+// List top 3 employees with highest salary overall.
+
+// Show departments with less than 2 employees.
+
+// Generate a running total of salaries department-wise.
+
+// Rank projects by budget.
+
+// Show total cost of salaries by department.
+
+// Find employees whose names appear more than once (duplicates).
+
+// Display employees hired in the same year as their manager.
