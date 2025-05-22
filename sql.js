@@ -266,9 +266,9 @@
 
 // Find all employees who work in the 'HR' department.
 
-// List all employees who joined after January 1, 2020.
+// List all employees who joined after January 1, 2020. 
 
-// Get the employee(s) with a salary greater than 70,000.
+// Get the employee(s) with a salary greater than 70,000. <===============
 
 // Show all employees ordered by their first names.
 
