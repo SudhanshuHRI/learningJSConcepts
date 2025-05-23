@@ -280,17 +280,17 @@
 
 // What is the minimum salary?
 
-// What is the average salary? <===============
+// What is the average salary?   
 
-// What is the total sum of all salaries?
+// What is the total sum of all salaries? 
 
-// Find all employees whose job title contains "Manager".
+// Find all employees whose job title contains "Manager" 
 
-// List all attendances marked as "Absent".
+// List all attendances marked as "Absent" 
 
 // Find employees with first names either "John" or "Jane".
 
-// Find all employees in department 1 with the job title "Engineer".
+// Find all employees in department 1 with the job title "Engineer". <=============== 
 
 // Find employees who have a non-null email.
 
