@@ -272,9 +272,9 @@
 
 // Show all employees ordered by their first names.
 
-// List employees ordered by hire date in descending order.  <===============
+// List employees ordered by hire date in descending order.  
 
-// How many employees are there in total?
+// How many employees are there in total? <===============
 
 // What is the maximum salary?
 
