@@ -274,13 +274,13 @@
 
 // List employees ordered by hire date in descending order.  
 
-// How many employees are there in total? <===============
+// How many employees are there in total? 
 
-// What is the maximum salary?
+// What is the maximum salary? 
 
 // What is the minimum salary?
 
-// What is the average salary?
+// What is the average salary? <===============
 
 // What is the total sum of all salaries?
 
