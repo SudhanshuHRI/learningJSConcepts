@@ -3,7 +3,7 @@
 // 3. Puzzles
 
 ////////////////////////////////////////////  interview questions  //////////////////////////////////////////////////////
-// Q. How to setup node project ??
+// Q. How to setup node project ??=========================
 
 // 1. make a project folder.
 // 2. open in vs code
@@ -45,16 +45,16 @@
 // What is the cluster module in Node.js, and how does it help in scaling applications? ==================================
 // used for load balancing of server by using multi core cpu processor + create workers + each worker per core + each worker handles incomming requests separately + great for makeing scalable node servers that fully utilize all cpu cores. 
 
-// Difference between cluster module and child_process.
+// Difference between cluster module and child_process. ==================================
 // cluster module : Scale node.js server using cpu's multi core + used for load balancing of server
 // child_process module : used to run external scripts
 
-// How do worker threads differ from cluster?
+// How do worker threads differ from cluster? ==========================
 // Both are used for Parallelism
 // worker_thread : runs tasks in parallel threads inside same process
 // cluster module : runs seperate processess to scale server workload
 
-// How would you manage concurrency in node.js application ? 
+// How would you manage concurrency in node.js application ?  =========================================
 // through event loop , callback, Promises, async/await etc.
 // 
 // how would you manage parallelism in a Node.js application? ==================================
@@ -86,8 +86,6 @@
 
 // How do you handle WebSockets in Node.js for real-time communication? ============================
 // provides read time two-way communication + ws library is used 
-
-
 
 // How can you manage session state in a stateless environment like Node.js?
 // restfull api are stateless means each request from client must contain all the info every time , server dont retain any info + so we use token or cookies that validate on each request 
@@ -125,10 +123,14 @@
 // What is cross-site request forgery (CSRF), and how can you prevent it in Node.js? ====================
 // user is tricked to perform action they didn't intend + prevent it by csrf token + use csurf library + set cookies sameSite to "strict" + restrict which domain can send request using cors + avoid get request for changing data the data in db
 
-// How do you protect sensitive data using encryption in Node.js? ==========================
-// 
-// What is the helmet middleware in Express.js, and how does it help secure an app?
-// How would you handle rate limiting in a Node.js application?
+
+// What is the helmet middleware in Express.js, and how does it help secure an app? ===================
+// security middleware + helps app for common web vulnerabies by setting secure http headers + it protect from : XSS, MIME sniffing, clickjacking, hides "X-powered-By: Express" header
+
+
+
+// How would you handle rate limiting in a Node.js application? 
+
 // What is CORS (Cross-Origin Resource Sharing), and how do you configure it in Node.js?
 // How do you manage OAuth 2.0 authentication in Node.js?
 // How would you implement unit testing in a Node.js application?
