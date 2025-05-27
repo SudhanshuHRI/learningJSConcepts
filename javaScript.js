@@ -12,7 +12,7 @@
 // 4. Abstraction : Hiding complex stuff and only show simple things.
 
 
-
+ 
 
 // Q. Explain the working of JavaScript ? =============================================================================
 // Ans.
