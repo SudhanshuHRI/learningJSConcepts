@@ -17,16 +17,31 @@
 // how node.js work ?
 // what is non blocking I/O in node.js ?
 // Event loop in node.js.
-// process.nextTick() vs setImmidiate()? 
-// setTimeout() vs setIntervel()?  
-// Explain the concept of callback hell and how can it be avoided in Node.js? 
-// How does Node.js manage memory? 
+// process.nextTick() vs setImmidiate()?
+// setTimeout() vs setIntervel()?
+// Explain the concept of callback hell and how can it be avoided in Node.js?
+
+// How does Node.js manage memory?
+// manages memory using v8 engine + node uses main 2 memory: stack (stores primitive data types, fast,small in size,managed by call stack), heap (stores object, array, larger than stack, managed by garbage collector)
+
 // What is the role of the garbage collector?
-// What is the EventEmitter in Node.js, and how does it work?  
-// What are streams in Node.js, and how do they improve performance? 
+// Autometic memory cleanup by deleting objects that are no longer used + helps to manage memory +
+
+// What is the EventEmitter in Node.js, and how does it work?
+// provided by events module + used to click events + emitter.on('greet',(name)=>console.log(hello, ${name})); emitter.emit ('greet','Alice')
+
+// What are streams in Node.js, and how do they improve performance?
+// under fs module + used to stream data + data is read or write in chunks + dont load entire file besides use chucks + fs.createReadStream() 
+
 // How many types of streams? give example code.
+// 4 types +  read, write, duplex (read and write in same time), Tranform (used to manipulate chunk before read or write)
+
+
 // pipe() method in streams?
-// How does Node.js handle child processes module, and when should you use them? 
+// used to connect a read stream to write stream + readableStream.pipe(writeableStream) 
+
+// How does Node.js handle child processes module, and when should you use them?
+// 
 // What is the cluster module in Node.js, and how does it help in scaling applications?
 // How would you manage concurrency and parallelism in a Node.js application?
 // Explain the non-blocking I/O model in Node.js. How does it impact performance? <=====================
@@ -161,52 +176,48 @@
 // How do you install, update, and delete a dependency?
 // How do you create a simple server in Node.js that returns Hello World?
 
-
 // Explain the Node.js event loop in detail.
 
-// What are microtasks and macrotasks in Node.js?
+// Q.What are microtasks and macrotasks in Node.js?
+// A.
+// 1)Microtasks : high priority + excuted immidiately after corrent operation and before macrotasks + process.nextTick(), Promises + goes in Check Queue + Process.nextTick will excute first from promises
+// 2)Macrotasks : regular async tasks + excuted in next phase of event loop + setTimeout, SetIntervel, setImmediate etc + goes in Timer Queue
 
-// How does the call stack differ from the event loop queue?
+// How does the call stack differ from the event loop queue / task queue / callback queue?
 
 // What is the difference between process.nextTick() and setImmediate()?
 
 // How does Node.js handle blocking code?
 
 // What is the role of the libuv library?
+// libuv is the engine that provides node.js async power.
 
 // Explain how timers work in Node.js.
+// Timers are functions that allow you to schedule code excution after delay + setTimeout, setInterval, setImmidiate etc.
 
 // What happens if you block the event loop?
+// whole application will stop processing other taska until the blocking code finishes.
 
 // How can you monitor and debug event loop lag?
-
-// Explain process.hrtime() and its usage.
+// event loop lag means when event loop is blocked + often caused by sync or blocking operations + we use perf_hooks built in library to moniter
 
 // Difference between cluster module and child_process.
+// cluster module : Scale node.js server using cpu's multi core + used for load balancing of server
+// child_process module : used to run external scripts
 
 // How do worker threads differ from cluster?
-
-// How do you manage shared memory between threads?
-
-// What are Atomics in Node.js?
-
-// How do you use MessageChannel and TransferList?
-
-// What are the types of streams in Node.js?
+// Both are used for Parallelism
+// worker_thread : runs tasks in parallel threads inside same process
+// cluster module : runs seperate processess to scale server workload
 
 // How does backpressure work in streams?
-
-// Difference between fs.createReadStream() and reading entire file at once.
-
-// How do you pipe streams together?
-
-// What is a Duplex stream?
+// Backpressure happens when the data producer (Readable stream) is sending data faster than the consumer (Writable stream) can process.To prevent overload, Node.js provides built-in mechanisms to pause or slow down the producer until the consumer catches up.
 
 // How does the HTTP module work in Node.js?
-
-// How would you build an HTTPS server?
+// HTTP module is built-in + used to create a server without express.js + allow to make http requests
 
 // Explain how Node handles connection pooling.
+// A technique to manage or reuse open database connections + Connection pooling is a way to efficiently reuse existing connections instead of creating new ones repeatedly
 
 // How to handle socket hang-up errors?
 

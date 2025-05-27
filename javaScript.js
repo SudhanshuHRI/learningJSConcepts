@@ -5,6 +5,15 @@
 
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
 
+// 4 pillors of oops :-
+// 1. Encapsulation : Keep inner working of machine hidden + keep data safety + only give result
+// 2. Polymorphism : Using same command to do different things according to context
+// 3. Inheritence : Taking parents properties in child
+// 4. Abstraction : Hiding complex stuff and only show simple things.
+
+
+
+
 // Q. Explain the working of JavaScript ? =============================================================================
 // Ans.
 // => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
