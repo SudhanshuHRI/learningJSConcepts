@@ -13,7 +13,7 @@
 // 6. add gitignone file in the project.
 // 7. add dependencies as required and add modules and other files as required.
 
-// What is Node.js and it's history?
+// What is Node.js and it's history? ================================
 // how node.js work ?
 // what is non blocking I/O in node.js ?
 // Event loop in node.js.
@@ -21,57 +21,112 @@
 // setTimeout() vs setIntervel()?
 // Explain the concept of callback hell and how can it be avoided in Node.js?
 
-// How does Node.js manage memory?
+// How does Node.js manage memory?===================================
 // manages memory using v8 engine + node uses main 2 memory: stack (stores primitive data types, fast,small in size,managed by call stack), heap (stores object, array, larger than stack, managed by garbage collector)
 
-// What is the role of the garbage collector?
+// What is the role of the garbage collector? ==================================
 // Autometic memory cleanup by deleting objects that are no longer used + helps to manage memory +
 
-// What is the EventEmitter in Node.js, and how does it work?
+// What is the EventEmitter in Node.js, and how does it work? ==================================
 // provided by events module + used to click events + emitter.on('greet',(name)=>console.log(hello, ${name})); emitter.emit ('greet','Alice')
 
-// What are streams in Node.js, and how do they improve performance?
+// What are streams in Node.js, and how do they improve performance? ==================================
 // under fs module + used to stream data + data is read or write in chunks + dont load entire file besides use chucks + fs.createReadStream() 
 
-// How many types of streams? give example code.
+// How many types of streams? give example code. ==================================
 // 4 types +  read, write, duplex (read and write in same time), Tranform (used to manipulate chunk before read or write)
 
-
-// pipe() method in streams?
+// pipe() method in streams? ==================================
 // used to connect a read stream to write stream + readableStream.pipe(writeableStream) 
 
-// How does Node.js handle child processes module, and when should you use them?
+// How does Node.js handle child processes module, and when should you use them? ==================================
+// used to run external scripts + When run cpu intensive operations or external cmd commands, it can block event loop because it takes time so child process keeps main thread non-blocking by creating child_process
+
+// What is the cluster module in Node.js, and how does it help in scaling applications? ==================================
+// used for load balancing of server by using multi core cpu processor + create workers + each worker per core + each worker handles incomming requests separately + great for makeing scalable node servers that fully utilize all cpu cores. 
+
+// Difference between cluster module and child_process.
+// cluster module : Scale node.js server using cpu's multi core + used for load balancing of server
+// child_process module : used to run external scripts
+
+// How do worker threads differ from cluster?
+// Both are used for Parallelism
+// worker_thread : runs tasks in parallel threads inside same process
+// cluster module : runs seperate processess to scale server workload
+
+// How would you manage concurrency in node.js application ? 
+// through event loop , callback, Promises, async/await etc.
 // 
-// What is the cluster module in Node.js, and how does it help in scaling applications?
-// How would you manage concurrency and parallelism in a Node.js application?
-// Explain the non-blocking I/O model in Node.js. How does it impact performance? <=====================
-// What are worker threads in Node.js, and how are they used ?
-// What are the advantages of using the async/await syntax over callbacks and promises?
-// How do you handle errors in asynchronous code in Node.js?
-// What are Promises in Node.js, and how do they differ from callbacks?
-// Can you explain the concept of Event Loop phases in Node.js?
+// how would you manage parallelism in a Node.js application? ==================================
+// through worker_threads, child_process, cluster modules.
+
+// Explain the non-blocking I/O model in Node.js. How does it impact performance? =====================
+// I/O means operations like reading files, quering database, makeing network requests + blocking I/O means program waits until the operation completes before moveing to next task + Non-blocking I/O means program initiates the operation and keeps running other code immidiately + non-blocking I/O is important in node because it is single theread + if it blocked on I/O operation, node could not handle other requests.
+
+
+// What are worker threads in Node.js, and how are they used ? =================================
+// used to work js in parallel on multiple threads without blocking main event loop thread.
+
+// What are the advantages of using the async/await syntax over callbacks and promises? =======================================
+// simplified syntex + avoid callback hell + better error handling with try-catch 
+
+// How do you handle errors in asynchronous code in Node.js? =======================================
+// using callback ((err,data)=>{}) + using promises (.catch()) + async/await (try-catch block)
+
+// What are Promises in Node.js, and how do they differ from callbacks?  =======================================
+// promise is an object represent eventual compilation of async operation + states: pending, fulfilled, rejected + more powerful than callback + error handling and chaining cleaner 
+
+
 // How does Node.js handle HTTP requests and responses? Explain how the http module works.
-// How would you implement RESTful API with Node.js?
-// What is the purpose of the middleware in Express.js, and how is it used in routing?
-// Explain the difference between HTTP/1.1 and HTTP/2 in the context of Node.js.
-// How do you handle WebSockets in Node.js for real-time communication?
-// How would you implement authentication and authorization in a Node.js application?
-// How would you secure a Node.js REST API using JWT (JSON Web Tokens)?
-// What is the difference between GET and POST HTTP methods in terms of Node.js handling?
+// http requests are handle with http module in node + http module is also used to create HTTP server, send response 
+
+// What is the purpose of the middleware in Express.js, and how is it used in routing? ==================================
+// mostly used to authenticate the user + app.use((req,res,next)=>{console.log("hello"); next();})
+
+
+// How do you handle WebSockets in Node.js for real-time communication? ============================
+// provides read time two-way communication + ws library is used 
+
+
+
 // How can you manage session state in a stateless environment like Node.js?
-// How would you optimize the performance of a Node.js application?
-// How can you profile and debug a Node.js application?
-// What tools would you use for load balancing in Node.js?
-// Explain the concept of caching in Node.js. How would you implement caching for better performance?
-// How can you handle large file uploads in Node.js efficiently?
-// How can you improve the response time of an HTTP server in Node.js?
-// What are memory leaks in Node.js, and how do you detect and fix them?
-// How do you optimize database queries when working with MongoDB in a Node.js application?
-// What is Zero-configuration deployment in Node.js, and how does it impact scalability?
-// How do you ensure security in a Node.js application?
-// What is cross-site scripting (XSS), and how can you prevent it in a Node.js application?
-// What is cross-site request forgery (CSRF), and how can you prevent it in Node.js?
-// How do you protect sensitive data using encryption in Node.js?
+// restfull api are stateless means each request from client must contain all the info every time , server dont retain any info + so we use token or cookies that validate on each request 
+
+// How would you optimize the performance of a Node.js application? ============================
+// use non-blocking async code + use cluster or worker_threads etc.
+
+// What tools would you use for load balancing in Node.js? ===========================
+// built in cluster module.
+
+// Explain the concept of caching in Node.js. How would you implement caching for better performance? =====================
+// to store the data once and next time read it from memory + we use redis library  + also can be saved in node.js's process memory but if server restarts , data is lost + suppose we fetch user details with id 23 from database, every time it will be fetched when requred so we save details in cache on server side + we use server side cache when want to reduce database API calls, data dont change frequently, fast access to frequently used data
+
+// How can you handle large file uploads in Node.js efficiently? =================================
+// we can use streams to do that.
+
+// How can you improve the response time of an HTTP server in Node.js? ===========================
+// avoid blocking event loop by using async/await + implement caching + use cluster or worker_threads
+
+// What are memory leaks in Node.js, and how do you detect and fix them? ===============================
+// when app is using more and more memory without relasing memory that is no longer needed + common cause :  global variables (globals never garbage collected) , setInterval keep running , clousers keep variable references , eventListener not removed + to detect memory leaks we use built in "node -- inspect index.js"
+
+
+
+// What is Zero-configuration deployment in Node.js, and how does it impact scalability? ============================
+// it is a deployment method in which we push code with minimal or no configrations + varcel,netlify, heroku plateforms commonly used for that + automatically detects the application type, install dependencies, set env variables etc + used to build ci/cd pipeline
+
+// How do you ensure security in a Node.js application? ===============================
+// use https + prevent sql injections + cross-site scripting(XSS) + prevent injecting query operators in mongodb + use helmet middleware + implement jwt and bycrytp to hash password + keep senstive data in .env + keep dependencies updated + use CSRF (Cross site request forgery) protection through csurf library + use Strict mode for common bugs + 
+
+// What is cross-site scripting (XSS), and how can you prevent it in a Node.js application? ====================
+// attackers inject malicious script like <script>alert("hacked")</script> + can stole cookies or session + to prevent this we use "sanitize-html" library that removes html tags from user input + we can also use "helmet" library that include content-security-policy(CSP) in HTTP headers.
+
+
+// What is cross-site request forgery (CSRF), and how can you prevent it in Node.js? ====================
+// user is tricked to perform action they didn't intend + prevent it by csrf token + use csurf library + set cookies sameSite to "strict" + restrict which domain can send request using cors + avoid get request for changing data the data in db
+
+// How do you protect sensitive data using encryption in Node.js? ==========================
+// 
 // What is the helmet middleware in Express.js, and how does it help secure an app?
 // How would you handle rate limiting in a Node.js application?
 // What is CORS (Cross-Origin Resource Sharing), and how do you configure it in Node.js?
@@ -201,14 +256,7 @@
 // How can you monitor and debug event loop lag?
 // event loop lag means when event loop is blocked + often caused by sync or blocking operations + we use perf_hooks built in library to moniter
 
-// Difference between cluster module and child_process.
-// cluster module : Scale node.js server using cpu's multi core + used for load balancing of server
-// child_process module : used to run external scripts
 
-// How do worker threads differ from cluster?
-// Both are used for Parallelism
-// worker_thread : runs tasks in parallel threads inside same process
-// cluster module : runs seperate processess to scale server workload
 
 // How does backpressure work in streams?
 // Backpressure happens when the data producer (Readable stream) is sending data faster than the consumer (Writable stream) can process.To prevent overload, Node.js provides built-in mechanisms to pause or slow down the producer until the consumer catches up.
