@@ -128,11 +128,6 @@
 // 
 // Q.Explain the working of Next.js middleware and how it affects rendering. ============================================================
 
-// Q.How does the React Context API compare to Redux? ============================================================
-// 
-// Q.What is the difference between Redux Thunk and Redux Saga? ============================================================
-// 
-// Q.What are the pros and cons of Recoil, Zustand, and Jotai compared to Redux? ============================================================
 
 // Q.How does React’s hooks dependency array work in useEffect? ============================================================
 // 

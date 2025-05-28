@@ -2,17 +2,7 @@
 // 2.  Practice Questions
 // 3.  Puzzles
 
-
 /////////////////////////////////////////  interview questions  ////////////////////////////////////////////////////////
-
-// 4 pillors of oops :-
-// 1. Encapsulation : Keep inner working of machine hidden + keep data safety + only give result
-// 2. Polymorphism : Using same command to do different things according to context
-// 3. Inheritence : Taking parents properties in child
-// 4. Abstraction : Hiding complex stuff and only show simple things.
-
-
- 
 
 // Q. Explain the working of JavaScript ? =============================================================================
 // Ans.
@@ -24,8 +14,6 @@
 //=>syncronise example:-
 // console.log("start")
 // console.log("end")
-
-
 
 // => async example:-
 
@@ -131,7 +119,6 @@
 
 // Q. what is IIFE ? why it is usefull? ====================================
 
-
 // Q. Why are functions called first class objects ? ======================================
 
 // Q. "Array.prototype.map" ?? ========================================
@@ -201,7 +188,6 @@
 
 //getFullName("Hello") // this will give undefined
 
-
 // Q. object.seal vs object.freeze ==============================================================
 
 // Q. pure functions and impure functions in js ? ==============================================
@@ -215,6 +201,11 @@
 // Q.controlled and uncontrolled components? ========================================================================
 
 // Q.Explain about the Oops concepts 4 principle.========================================================================
+// 4 pillors of oops :-
+// 1. Encapsulation : Keep inner working of machine hidden + keep data safety + only give result
+// 2. Polymorphism : Using same command to do different things according to context
+// 3. Inheritence : Taking parents properties in child
+// 4. Abstraction : Hiding complex stuff and only show simple things.
 
 // Q.what is use strict in js? ===========================================
 
@@ -226,7 +217,7 @@
 
 // Q. null vs undefined ====================================================================
 
-// Q. all false values in js?====================================================
+// Q. all false values in js? ====================================================
 
 // Q. all true values in js? ==========================================
 
@@ -258,7 +249,7 @@
 
 // Q. Optinal chining operator in js?========================================================
 
-// Q. Nullish operator in js??=============================================================
+// Q. Nullish operator in js?? =============================================================
 
 // Q.  e.preventDefault() vs e.stopPropagation() ? ==================================
 
@@ -266,11 +257,11 @@
 
 // Q. What is str.at() in js ?==============================================
 
-// Q. map vs foreach function ?==========================================
+// Q. map vs foreach function ? ==========================================
 
 // Q.What is navigator in js ? ============================================
 
-// Q. how to know in js if function is called by use click or by any script ?=======================================
+// Q. how to know in js if function is called by use click or by any script ? =======================================
 
 // Q. What is object ? give advantages and disadvantages ==================================
 
@@ -283,7 +274,7 @@
 
 // Q. Guess the output of the following ? ===================================================================
 
-//  let data = "    Hello, How are you?    "
+ let data = "    Hello, How are you?    "
 
 // console.log(data.split())
 // console.log(data.split(''))
@@ -293,7 +284,7 @@
 // console.log(data.replace('H','_'))
 // console.log(data.replace(/H/g,'_'))
 
-// console.log(data.substring(1,data.length))
+// console.log(data.substring(1,data.length)) 
 // console.log(data.substring(0,data.length-1))
 // console.log(data.split('o')[0])
 // console.log(data.split('o')[1])
@@ -315,7 +306,7 @@
 // console.log(null <=0)
 // console.log(null>=0)
 // console.log(NaN==NaN)
-// console.log( true && 'hello')
+// console.log( true && 'hello') 
 // console.log(Array(3)==",,")
 // console.log(!!10+20)
 // console.log(typeof typeof 1)
@@ -327,7 +318,7 @@
 // console.log(!!-2);
 // console.log(!!0);
 // console.log(!!2);
-//console.log(typeof 3 + 4 + "5");
+// console.log(typeof 3 + 4 + "5");
 // console.log(false || "Hello");
 // console.log(true && "World");
 // console.log(null || undefined);

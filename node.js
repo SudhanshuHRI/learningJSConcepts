@@ -77,7 +77,7 @@
 // promise is an object represent eventual compilation of async operation + states: pending, fulfilled, rejected + more powerful than callback + error handling and chaining cleaner 
 
 
-// How does Node.js handle HTTP requests and responses? Explain how the http module works.
+// How does Node.js handle HTTP requests and responses? Explain how the http module works. =======================
 // http requests are handle with http module in node + http module is also used to create HTTP server, send response 
 
 // What is the purpose of the middleware in Express.js, and how is it used in routing? ==================================
@@ -87,7 +87,7 @@
 // How do you handle WebSockets in Node.js for real-time communication? ============================
 // provides read time two-way communication + ws library is used 
 
-// How can you manage session state in a stateless environment like Node.js?
+// How can you manage session state in a stateless environment like Node.js? ===========================
 // restfull api are stateless means each request from client must contain all the info every time , server dont retain any info + so we use token or cookies that validate on each request 
 
 // How would you optimize the performance of a Node.js application? ============================
@@ -130,13 +130,20 @@
 
 
 // How would you handle rate limiting in a Node.js application? =============
+// technique to control no of request by client in limited time + we use "express-rate-limit" library for that
 
-// What is CORS (Cross-Origin Resource Sharing), and how do you configure it in Node.js?
-// How do you manage OAuth 2.0 authentication in Node.js?
-// How would you implement unit testing in a Node.js application?
-// What is the purpose of the Mocha framework in Node.js, and how do you use it for testing?
-// Explain the concept of Test-Driven Development (TDD) in the context of Node.js.
-// What are some best practices you follow when writing a Node.js application?
+// What is CORS (Cross-Origin Resource Sharing), and how do you configure it in Node.js? ==================
+// Allows server to share resource to indicated origin
+
+// How do you manage OAuth 2.0 authentication in Node.js? =====================================
+// OAuth 2.0 means node will interact with third party (google,facebook,linkdin,github) to authenticate user 
+
+// unit testing in a Node.js application? =======================
+// Through JEST library or Mocha etc
+
+// What are some best practices you follow when writing a Node.js application?============
+// 
+
 // How to make import export work on node.js ? which is better import export or require() ?
 // What kind of API function is supported by Node.js?
 // What is a module in Node.js?
