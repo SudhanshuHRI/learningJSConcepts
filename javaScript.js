@@ -87,17 +87,17 @@
 
 // 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion + 
 
-// 15. reduce() : 
+// 15. reduce() : used to reduce an array to single value + 
 
-// 16. reduceRight()
+// 16. reduceRight() : works from right index of array
 
-// 17. sort()
+// 17. sort() : used to sort the array + returns sorted array + element are converted in string then short
 
-// 18. reverse()
+// 18. reverse() : reverse the order of elements in array + modifies orignal array + returns the reverse array
 
-// 19. includes()
+// 19. includes() : checks if an array or string contains certain element or substring + returns boolean 
 
-// 20. indexOf()
+// 20. indexOf() : 
 
 // 21. lastIndexOf()
 
