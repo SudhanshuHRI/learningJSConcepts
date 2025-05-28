@@ -57,7 +57,7 @@
 // How would you manage concurrency in node.js application ?  =========================================
 // through event loop , callback, Promises, async/await etc.
 // 
-// how would you manage parallelism in a Node.js application? ==================================
+// how would you manage . in a Node.js application? ==================================
 // through worker_threads, child_process, cluster modules.
 
 // Explain the non-blocking I/O model in Node.js. How does it impact performance? =====================
