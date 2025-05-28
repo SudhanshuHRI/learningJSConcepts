@@ -25,53 +25,69 @@
 //                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
 
 // Q. diff between var , let ,const ? ============================================================
-// => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + 
-// eg:
+// => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + all 3 are hosted but only var is initialised as undefined
+// => eg:
+// const scope = () => {
+//   if (true) {
+//     var a = 10;
+//     let b = 20;
+//     const c = 30;
+//   }
+//   console.log("Inside Function Scope", a);
+//   console.log("Inside Function Scope", b);
+//   console.log("Inside Function Scope", c);
+// };
+// scope();
 
 // Q. What are callback function ? Give advantages and disadvantages ============================================================
+// => function passed as argument to another function + advantage : async + disadvantage : callback hell
 
-// Q. What is callback hell or pyramid of doom? give example =================================================
+// Q. What is callback hell or pyramid of doom? =================================================
+// => passing too much calback functions will become call back hell +  to avoid use Promises or async/await
 
 // Q. What are ES6 features ?? ==========================================================
+// => Blocke scoped variables(let,const) + arrow function + templete letrals + default parameters + array , object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures  
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
+// => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted 
+// => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
 // Q. What are premitive and non premetive data types in js ? =============================================
-
-// Q. what is Symbol() in js ? =========================================
+// => Premitive : immutable (unable to change) + copied by value + stored in Stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
+// => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory + 
 
 // Q. all built - in array functions in react ? give all ==================================================
 // Ans. React dont have any built in methods. it takes form js.
 
-// 1. forEach()
+// 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early + only works on array not objects or string + used when you want to do something with each element
 
-// 2. map()
+// 2. map() : itrates over each element + return a new array with transform values + dont change original array 
 
-// 3. filter()
+// 3. filter() : create a new array of only condition passed elements + returns a new array + dont change original array
 
-// 4. find()
+// 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined + 
 
-// 5. findIndex()
+// 5. findIndex() : search the array and return first element's index that satisfies the condition +if no element passed, it will return "-1"
 
-// 6. some()
+// 6. some() : tests wheather at least one element pass the test + it will return boolean + if no element passed, it will return false
 
-// 7. every()
+// 7. every() : tests wheater all element pass the test +  it will also return boolean +  if any of the elemnt dont pass the test, it will return false.
 
-// 8. push()
+// 8. push() : add one or more element in end or array and returns new length of array + modifies orignal array
 
-// 9. pop()
+// 9. pop() : remove last elemnt of array + return removed element +  modifies original array
 
-// 10. unshift()
+// 10. unshift() : add element in beginning + return new length of array + modifies orignal array
 
-// 11. shift ()
+// 11. shift () : remove first element of array + return removed element + modifies original array
 
-// 12. splice()
+// 12. splice() : add,remove,replace element in array + modifies original array + return array of removed elements , if no element removed,it returns blank array + array.splice(startIndex, noOfValuesToDelete, addItem1,addItem2,addItem3,.....) 
 
-// 13. concat()
+// 13. concat() : merge 2 or more array + returns new concated array + 
 
-// 14. slice()
+// 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion + 
 
-// 15. reduce()
+// 15. reduce() : 
 
 // 16. reduceRight()
 
@@ -254,7 +270,7 @@
 
 // Q. Guess the output of the following ? ===================================================================
 
- let data = "    Hello, How are you?    "
+// let data = "    Hello, How are you?    ";
 
 // console.log(data.split())
 // console.log(data.split(''))
@@ -264,14 +280,14 @@
 // console.log(data.replace('H','_'))
 // console.log(data.replace(/H/g,'_'))
 
-// console.log(data.substring(1,data.length)) 
+// console.log(data.substring(1,data.length))
 // console.log(data.substring(0,data.length-1))
 // console.log(data.split('o')[0])
 // console.log(data.split('o')[1])
 // console.log(data.split('').reverse().join(''))
 // console.log(data.trim())
 
-// Q. guess the output of the following ?==================================================================================
+// Q. guess the output of the following ? ==================================================================================
 // Ans.
 // console.log(1 + "2" + "2");
 // console.log(1 + +"2" + "2");
@@ -286,7 +302,7 @@
 // console.log(null <=0)
 // console.log(null>=0)
 // console.log(NaN==NaN)
-// console.log( true && 'hello') 
+// console.log( true && 'hello')
 // console.log(Array(3)==",,")
 // console.log(!!10+20)
 // console.log(typeof typeof 1)
