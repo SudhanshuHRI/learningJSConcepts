@@ -9,36 +9,14 @@
 // => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
 // => Memeory Heap :- where variable are saved. browser's memeory
 // => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
-//=> js is single threaded. means it has single call stack so it can do only one task in one time.
-// => js is single threaded and syncronous by default but it has built in features to handl async operations like callback, Promises, async/await, Event loop.
-//=>syncronise example:-
-// console.log("start")
-// console.log("end")
+// => js is single threaded. means it has single call stack so it can do only one task in one time.
+// => js is single threaded and syncronous by default but it has built in features to handle async operations like callback, Promises, async/await, Event loop.
 
-// => async example:-
-
-// console.log("start");
-// setTimeout(() => console.log("async operation"), 2000);
-// console.log("end");
-
-// => js use event loop and task que to manage asyncronous operation without blocking main thread. it helps in fetching api and file reading
-// => in call stack which task is on top it will excute first.
-
-//*code                                //*WebAPI
-// *task Que/callback que
-//*call stack                  //*event loop
-
-// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤:
-// - This is where JavaScript runs your code one step at a time.
-
-// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬:
-// - Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
-
-// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞:
-// - Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
-
-// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩:
-// - The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
+// working of js----------------------
+// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: This is where JavaScript runs your code one step at a time.
+// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬: Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
+// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞: Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
+// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
 // ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
 
@@ -47,6 +25,8 @@
 //                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
 
 // Q. diff between var , let ,const ? ============================================================
+// => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + 
+// eg:
 
 // Q. What are callback function ? Give advantages and disadvantages ============================================================
 
