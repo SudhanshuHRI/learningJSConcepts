@@ -97,21 +97,20 @@
 
 // 19. includes() : checks if an array or string contains certain element or substring + returns boolean 
 
-// 20. indexOf() : 
+// 20. indexOf() : used to find first index of specified element in array or string + if not found returns -1 
 
-// 21. lastIndexOf()
+// 21. lastIndexOf() : returns the last index at which element is found + serches from backword
 
-// 22. join()
-
-// 23. Array.from('123')
-
-// 24. Array.of(1,2,3)
+// 22. join() : used to combine all elements of array into single atring with specified operator + array.join("-")
 
 // Q. sort [1,2,3,11,22,33] using sort() method. =========================
+// => arr.sort((a,b)=>a-b) for increment + arr.sort((a,b)=>b-a) for decriment
 
 // Q. why 2 similer objects comparing returns false ? =========================================
+// => beacuse object are declared by refrence 
 
 // Q. slice vs splice who modify orignal array?? give example =================================================================
+// => splice is used to modify orignal array
 
 // Q. what is IIFE ? why it is usefull? ====================================
 
