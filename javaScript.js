@@ -46,26 +46,26 @@
 // => passing too much calback functions will become call back hell +  to avoid use Promises or async/await
 
 // Q. What are ES6 features ?? ==========================================================
-// => Blocke scoped variables(let,const) + arrow function + templete letrals + default parameters + array , object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures  
+// => Blocke scoped variables(let,const) + arrow function + templete letrals + default parameters + array , object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
-// => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted 
+// => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
 // Q. What are premitive and non premetive data types in js ? =============================================
 // => Premitive : immutable (unable to change) + copied by value + stored in Stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
-// => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory + 
+// => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory +
 
 // Q. all built - in array functions in react ? give all ==================================================
 // Ans. React dont have any built in methods. it takes form js.
 
 // 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early + only works on array not objects or string + used when you want to do something with each element
 
-// 2. map() : itrates over each element + return a new array with transform values + dont change original array 
+// 2. map() : itrates over each element + return a new array with transform values + dont change original array
 
 // 3. filter() : create a new array of only condition passed elements + returns a new array + dont change original array
 
-// 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined + 
+// 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined +
 
 // 5. findIndex() : search the array and return first element's index that satisfies the condition +if no element passed, it will return "-1"
 
@@ -81,13 +81,13 @@
 
 // 11. shift () : remove first element of array + return removed element + modifies original array
 
-// 12. splice() : add,remove,replace element in array + modifies original array + return array of removed elements , if no element removed,it returns blank array + array.splice(startIndex, noOfValuesToDelete, addItem1,addItem2,addItem3,.....) 
+// 12. splice() : add,remove,replace element in array + modifies original array + return array of removed elements , if no element removed,it returns blank array + array.splice(startIndex, noOfValuesToDelete, addItem1,addItem2,addItem3,.....)
 
-// 13. concat() : merge 2 or more array + returns new concated array + 
+// 13. concat() : merge 2 or more array + returns new concated array +
 
-// 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion + 
+// 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion +
 
-// 15. reduce() : used to reduce an array to single value + 
+// 15. reduce() : used to reduce an array to single value +
 
 // 16. reduceRight() : works from right index of array
 
@@ -95,9 +95,9 @@
 
 // 18. reverse() : reverse the order of elements in array + modifies orignal array + returns the reverse array
 
-// 19. includes() : checks if an array or string contains certain element or substring + returns boolean 
+// 19. includes() : checks if an array or string contains certain element or substring + returns boolean
 
-// 20. indexOf() : used to find first index of specified element in array or string + if not found returns -1 
+// 20. indexOf() : used to find first index of specified element in array or string + if not found returns -1
 
 // 21. lastIndexOf() : returns the last index at which element is found + serches from backword
 
@@ -107,7 +107,7 @@
 // => arr.sort((a,b)=>a-b) for increment + arr.sort((a,b)=>b-a) for decriment
 
 // Q. why 2 similer objects comparing returns false ? =========================================
-// => beacuse object are declared by refrence 
+// => beacuse object are declared by refrence
 
 // Q. slice vs splice who modify orignal array?? give example =================================================================
 // => splice is used to modify orignal array + slice give only shallow copy + splict(1,0,12,13) + slice (2,5)
@@ -116,7 +116,7 @@
 // => immidiately inveked function + runs code immidiately + variables and functions inside it are not accessible outsite it
 
 // Q. Why are functions called first class objects ? ======================================
-// => becz functions can assign to variables + passed as arguments 
+// => becz functions can assign to variables + passed as arguments
 // Q. "Array.prototype.map" ?? ========================================
 
 // Q. how to create a object without a prototype ? ===============================
@@ -129,7 +129,7 @@
 // => const [a,b] = [1,2]
 
 // Q. What are wrapper Objects ? ========================
-// => primitive values like string,numbers,booleans are not objects but they behave like objects when you access their properties or methods + js automatically wraps these with temperory objects called wraper objects + string - String, number - Number, boolean - Boolean 
+// => primitive values like string,numbers,booleans are not objects but they behave like objects when you access their properties or methods + js automatically wraps these with temperory objects called wraper objects + string - String, number - Number, boolean - Boolean
 // => eg: const str = "hello" ; console.log(str.toUpperCase()); + here str is primitive still js automatically converts it in String Object so .toUpperCase() will work
 
 // Q. implicit vs explicit coercion ? =================================
@@ -142,7 +142,7 @@
 // => Math.floor(num/2)*2===num ; + if it is true the even other false
 
 // Q. How to check certain property exists in object ? =============================================
-// => using "in" operator + obj.hasOwnProperty("name") 
+// => using "in" operator + obj.hasOwnProperty("name")
 
 // Q. "in " vs "hasOwnProperty" ? =================================
 // in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
@@ -151,10 +151,10 @@
 // => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")} + function declaration : when defined with function keyword , hoisted, can be called before , eg: function sayHi(){console.log("hi")}
 
 // Q. How to check if value is null ?  why typeof null == object ? ===============================
-// => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object 
+// => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object
 
 // Q. What is "new" keyword do ? ===============================
-// => new keyword is used to create instance of object form constructor function or class 
+// => new keyword is used to create instance of object form constructor function or class
 
 // Q. concat 2 array using spread operator ? =======================================
 // => [...arr1,...arr2]
@@ -166,39 +166,38 @@
 // => const merged = [...str1, ' ',...str2].join("")
 
 // Q.  What is AJAX ? =======================================
+// => Asyncronous JavaScript And XML + it is a technique that send or recieve data form server without reloading the entire page + with ajax send request to server , receive the response in json, update the webpage without refreshing it + eg: you fill a form, you enter email to check if already registered, it check in real time without refreshing the page
 
 // Q.all object buit-in functions?? give examples ========================================================================
 
-// 1.Object.create()
+// 1.Object.create() : used to create new object with choosen prototype + const dog = Object.create(animal) + here dog will have animal's properties
 
-// 2.Object.assign()
+// 2.Object.assign() : used to copy properties from source object to target objects + Object.assign(target, source1,source2,......)
 
-// 3.Object.keys()
+// 3.Object.keys() : returns the array of keys + const keys = Object.keys(user)
 
-// 4.object.values()
+// 4.object.values() : returns the array of values + returns Own values not prototype + const values = Object.values(user)
 
-// 5.object.entries()
+// 5.object.entries() : returns the array of key-value pairs + [[key1,value1],[key2,value2],.......]
 
-// 6.Object.getOwnPropertyNames()
+// 6.Object.getOwnPropertyNames() : returns array of all own property names of object
 
-// 7.Object.defineProperty()
+// 7.Object.defineProperty() : lets you to add or modify a property + Object.defineProperty(objectName, propertyName, {value:"value"}) + Object.defineProperty(person,"name",{value:"Sudhanshu"})
 
-// 8.object.freeze()
+// 8.object.freeze() : cannot add,remove,change property + object becoms immutable(read-only) + only freeze first level
 
-// 9.object.seal()
+// 9.object.seal() : prevent adding and deleting property + allows to modify existing properties + only woks on first level +
 
-// 10. object.is()
+// 10. object.is() : compare 2 values to check if same + like === + returns boolean + Object.is(25,25)
 
 // Q. What are Call, apply and bind methods? ============================================================
 
 // Problem:-
-// function getFullName(greet) {
-//  console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);
-// }
-
+// function getFullName(greet) { console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);}
 // const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
+// getFullName("Hello") // this will give undefined
 
-//getFullName("Hello") // this will give undefined
+// 1.Call : 
 
 // Q. object.seal vs object.freeze ==============================================================
 
@@ -213,7 +212,7 @@
 // Q.controlled and uncontrolled components? ========================================================================
 
 // Q.Explain about the Oops concepts 4 principle.========================================================================
-// 4 pillors of oops :-
+// 4 principle of oops :-
 // 1. Encapsulation : Keep inner working of machine hidden + keep data safety + only give result
 // 2. Polymorphism : Using same command to do different things according to context
 // 3. Inheritence : Taking parents properties in child
@@ -271,7 +270,7 @@
 
 // Q. map vs foreach function ? ==========================================
 
-// Q.What is navigator in js ? ============================================
+// Q. What is navigator in js ? ============================================
 
 // Q. how to know in js if function is called by use click or by any script ? =======================================
 
