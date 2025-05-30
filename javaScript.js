@@ -110,43 +110,60 @@
 // => beacuse object are declared by refrence 
 
 // Q. slice vs splice who modify orignal array?? give example =================================================================
-// => splice is used to modify orignal array
+// => splice is used to modify orignal array + slice give only shallow copy + splict(1,0,12,13) + slice (2,5)
 
 // Q. what is IIFE ? why it is usefull? ====================================
+// => immidiately inveked function + runs code immidiately + variables and functions inside it are not accessible outsite it
 
 // Q. Why are functions called first class objects ? ======================================
-
+// => becz functions can assign to variables + passed as arguments 
 // Q. "Array.prototype.map" ?? ========================================
 
 // Q. how to create a object without a prototype ? ===============================
+// => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() functions
 
 // Q. how to destructure object ?? ========================
+// => const person = {name:"sudhanshu",age:28} ; const {name,age} = person ;
 
 // Q. how to destructure array ? ===================
+// => const [a,b] = [1,2]
 
 // Q. What are wrapper Objects ? ========================
+// => primitive values like string,numbers,booleans are not objects but they behave like objects when you access their properties or methods + js automatically wraps these with temperory objects called wraper objects + string - String, number - Number, boolean - Boolean 
+// => eg: const str = "hello" ; console.log(str.toUpperCase()); + here str is primitive still js automatically converts it in String Object so .toUpperCase() will work
 
 // Q. implicit vs explicit coercion ? =================================
+// => coercion means converting value from one type to another + js is dynamic typed so automatically convert types + explicit means when manually changed , eg: Number("42") it will convert it in number + implicit means when convert automatically , eg: console.log("5" + 1 )
 
 // Q. How to check value is NaN ? ================================
+// => Number.isNan(value) + give boolean
 
 // Q. How to check a number is even or odd without using modular operator ? ============================
+// => Math.floor(num/2)*2===num ; + if it is true the even other false
 
 // Q. How to check certain property exists in object ? =============================================
+// => using "in" operator + obj.hasOwnProperty("name") 
 
 // Q. "in " vs "hasOwnProperty" ? =================================
+// in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
 
 // Q. Function expression and function declaration ? =====================================
+// => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")} + function declaration : when defined with function keyword , hoisted, can be called before , eg: function sayHi(){console.log("hi")}
 
 // Q. How to check if value is null ?  why typeof null == object ? ===============================
+// => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object 
 
 // Q. What is "new" keyword do ? ===============================
+// => new keyword is used to create instance of object form constructor function or class 
 
 // Q. concat 2 array using spread operator ? =======================================
+// => [...arr1,...arr2]
 
 // Q. merge 2 objects using spread operator ? =======================================
+// => {...obj1,...obj2}
 
 // Q. merge 2 strings using spread operator ? =======================================
+// => const merged = [...str1, ' ',...str2].join("")
 
 // Q.  What is AJAX ? =======================================
 
