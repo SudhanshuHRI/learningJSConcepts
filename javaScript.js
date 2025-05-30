@@ -198,6 +198,8 @@
 // getFullName("Hello") // this will give undefined
 
 // 1.Call : 
+// 2.Apply : 
+// 3.Bind : 
 
 // Q. object.seal vs object.freeze ==============================================================
 
