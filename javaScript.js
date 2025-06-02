@@ -219,8 +219,10 @@
 // => Callbacks : a function passed as an argument + using too much callback will result to callback hell + hard to read, debug, maintain + should used when code is simple
 
 // Q. "throw" keyword in js ? =============================================================================
+// => used to throw manually error + should be used with try-catch + should throw error with "throw new Error("something went wrong")" object for good practice +  it stops excution of all the loops (map or for) + 
 
 // Q.controlled and uncontrolled components? ========================================================================
+// => component that used in form can be controlled or uncontrolled + controlled means react state controls the form data + uncontrolled means when DOM direactly controls the elements , using useRef hook in react is used to directly cange in DOM, value is stored in DOM
 
 // Q.Explain about the Oops concepts 4 principle.========================================================================
 // 4 principle of oops :-
@@ -230,23 +232,42 @@
 // 4. Abstraction : Hiding complex stuff and only show simple things.
 
 // Q.what is use strict in js? ===========================================
+// => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined  
 
 // Q. setTimeout vs setInterval ============================================================
+// => setTimeout : excute function after delay +
+// => setInterval : excute functions repeted after give time + 
+
+// Q. macroTask Queue vs MicroTask Queue ===============================================================
+// => macroTask queue : also called task queue + runs after call stack is empty + setTiemout, setInterval etc
+// => microTask queue : also called job queue + runs immidiately after current task + have high priority + Promises etc
 
 // Q.spread and rest operator ? =====================================================================
+// => spread : used to spread elements of array or object 
+// => rest : used to collect multiple elements in single array + used in params, destructuring of array and object + const [first, ...rest] = [10, 20, 30, 40] + const { a, ...rest } = { a: 1, b: 2, c: 3 };
 
-// Q.event bubbling and event capturing .how to stop event prapagation in js ?=================================================
+// Q.event bubbling and event capturing ===================================== 
+// => event bubbling : from bottom to up side component + addEventListner('click',handler)
+// => event capturing : from top component to bottom component + addEveentListner ('click', handler, true)
+
+// Q. how to stop event prapagation in js ?=================================================
+// => prapagation means when we click on a componet , three phases  activated : Capturing phase > target phase > bubbling Phase + this is called event prapagation + to stop prapagation : element.addEventListner('click',(event)=> event.stopPropagation();) 
 
 // Q. null vs undefined ====================================================================
+// => undefined : variable is diclared but not assigned any value
+// => null : variable is declared but assigned  no value or empty value
 
 // Q. all false values in js? ====================================================
+// => false + 0 + -0 + "" + null + undefined + NaN
 
 // Q. all true values in js? ==========================================
+//=>  true + "hello" + ' ' + any non-zero number + [] + {} + function(){} + any float that isn't 0 or NaN
 
 // Q.json.stringify vs parse ==================================================================
+//=> JSON.stringify is used to convert JSON to string + JSON.parse is used to convert string to JSON data
 
 // Q.what is dead zone in js ? ========================================================
-
+// => 
 // Q.what is mutation observer in js? =====================================================================
 
 // Q.high order functions ?? ================================================================
