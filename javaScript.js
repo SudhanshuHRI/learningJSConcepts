@@ -197,17 +197,26 @@
 // const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
 // getFullName("Hello") // this will give undefined
 
-// 1.Call : 
-// 2.Apply : 
-// 3.Bind : 
+// => all of three are used to attach this keyword's value to a function
+// 1.Call : invoked immidiatedly + pass the arguments individually + func.call(object, arg1, arg2)
+// 2.Apply : invoked immidiately + pass the arguments in array + func.apply(object,[arg1, arg2])
+// 3.Bind : dont call immidiately + pass the argument individually + const newFunc = func.bind(object,arg1,arg2)
 
 // Q. object.seal vs object.freeze ==============================================================
+// => object.seal : prevent adding or removing properties from an object + modify the existing objects
+// => object.freeze : prevent adding or removing or modifying the existing objects
 
 // Q. pure functions and impure functions in js ? ==============================================
+// => Pure functions : always give same output for same input + has no side effects + dont change any external states
+// => impure function : always give different output + has side effects like modifying a global variable + changes external states
 
 // Q. what are side effects in js ? ======================================
+// => when function changes the value of states or global variables , it is called side effects
 
-// Q.Difference between promise and async await? ===========================================================================================
+// Q.Difference between promise , async await, callbacks? ===========================================================================================
+// => Promises : a object that represent 3 states + Pending, fulfilled, rejected + cleaner and easier avoids deep nesting + should use when api calling or chaining tasks
+// => Async/Await : makes async code look like synchronous + vary clean and readable + easy error handling with try-catch blocks + 
+// => Callbacks : a function passed as an argument + using too much callback will result to callback hell + hard to read, debug, maintain + should used when code is simple
 
 // Q. "throw" keyword in js ? =============================================================================
 
