@@ -215,11 +215,11 @@
 
 // Q.Difference between promise , async await, callbacks? ===========================================================================================
 // => Promises : a object that represent 3 states + Pending, fulfilled, rejected + cleaner and easier avoids deep nesting + should use when api calling or chaining tasks
-// => Async/Await : makes async code look like synchronous + vary clean and readable + easy error handling with try-catch blocks + 
+// => Async/Await : makes async code look like synchronous + vary clean and readable + easy error handling with try-catch blocks +
 // => Callbacks : a function passed as an argument + using too much callback will result to callback hell + hard to read, debug, maintain + should used when code is simple
 
 // Q. "throw" keyword in js ? =============================================================================
-// => used to throw manually error + should be used with try-catch + should throw error with "throw new Error("something went wrong")" object for good practice +  it stops excution of all the loops (map or for) + 
+// => used to throw manually error + should be used with try-catch + should throw error with "throw new Error("something went wrong")" object for good practice +  it stops excution of all the loops (map or for) +
 
 // Q.controlled and uncontrolled components? ========================================================================
 // => component that used in form can be controlled or uncontrolled + controlled means react state controls the form data + uncontrolled means when DOM direactly controls the elements , using useRef hook in react is used to directly cange in DOM, value is stored in DOM
@@ -232,26 +232,26 @@
 // 4. Abstraction : Hiding complex stuff and only show simple things.
 
 // Q.what is use strict in js? ===========================================
-// => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined  
+// => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined
 
 // Q. setTimeout vs setInterval ============================================================
 // => setTimeout : excute function after delay +
-// => setInterval : excute functions repeted after give time + 
+// => setInterval : excute functions repeted after give time +
 
 // Q. macroTask Queue vs MicroTask Queue ===============================================================
 // => macroTask queue : also called task queue + runs after call stack is empty + setTiemout, setInterval etc
 // => microTask queue : also called job queue + runs immidiately after current task + have high priority + Promises etc
 
 // Q.spread and rest operator ? =====================================================================
-// => spread : used to spread elements of array or object 
+// => spread : used to spread elements of array or object
 // => rest : used to collect multiple elements in single array + used in params, destructuring of array and object + const [first, ...rest] = [10, 20, 30, 40] + const { a, ...rest } = { a: 1, b: 2, c: 3 };
 
-// Q.event bubbling and event capturing ===================================== 
+// Q.event bubbling and event capturing =====================================
 // => event bubbling : from bottom to up side component + addEventListner('click',handler)
 // => event capturing : from top component to bottom component + addEveentListner ('click', handler, true)
 
 // Q. how to stop event prapagation in js ?=================================================
-// => prapagation means when we click on a componet , three phases  activated : Capturing phase > target phase > bubbling Phase + this is called event prapagation + to stop prapagation : element.addEventListner('click',(event)=> event.stopPropagation();) 
+// => prapagation means when we click on a componet , three phases  activated : Capturing phase > target phase > bubbling Phase + this is called event prapagation + to stop prapagation : element.addEventListner('click',(event)=> event.stopPropagation();)
 
 // Q. null vs undefined ====================================================================
 // => undefined : variable is diclared but not assigned any value
@@ -267,10 +267,13 @@
 //=> JSON.stringify is used to convert JSON to string + JSON.parse is used to convert string to JSON data
 
 // Q.what is dead zone in js ? ========================================================
-// => 
+// => Only let and const have dead zone(TDZ) + we cannot uset let and const before it's declaration +  that is called dead zone
+
 // Q.what is mutation observer in js? =====================================================================
+//=> it is built-in api in js which lets you watch changes in DOM tree + const observer = new MutationObserver(callback) + detect new elements or removed elements + good for dynamic UI
 
 // Q.high order functions ?? ================================================================
+// => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
 
 // Q.Private property and private fucntion in js ? ====================================================
 
