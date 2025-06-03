@@ -276,9 +276,10 @@
 // => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
 
 // Q.Private property and private fucntion in js ? ====================================================
+// => Works in function based components + only valid in classes + 
 
 // Q. What is Laxical Scope vs closures ? give code ===========================================================================
-
+// => 
 // Q. What are promises in js ? async/await vs promises ======================================================================
 
 // Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
