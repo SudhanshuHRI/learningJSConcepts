@@ -279,10 +279,12 @@
 // => Works in function based components + only valid in classes + 
 
 // Q. What is Laxical Scope vs closures ? give code ===========================================================================
-// => 
-// Q. What are promises in js ? async/await vs promises ======================================================================
+// => laxical scope means where variables are accessible based on code structure + closures are a feature that comes because of laxical scope, allow a function to remember variables even after parent function has excuted
 
 // Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
+// => Promise.all : takes array of promise + wait for all of them to fulfill + if any rejected, all will reject + Promise.all([Promise1,Promise2, Promise3])
+// => Promise.allsettled : takes array of promise + wait for all of them to fulfilled +  returns an array with the result of each promise 
+// => Promise.race : takes array of promise + returnes as the first promise settles + dont wait for others 
 
 // Q. What are Prototypes in JS  ? why we use them in js ? How we can use Prototype functionallity without useing prototype and what will be the difference ? =====================================================================
 
