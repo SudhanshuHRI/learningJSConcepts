@@ -291,22 +291,28 @@
 
 
 // Q. I want when a object/string is declared, a defalut variable or function is already present there . How can i do that using prototype ?====
-// => 
+// => Sting.prototype.name = "Sudhanshu" + Object.prototype.name = "Srivastava"
 
 // Q. What is  Deep copy and shallow copy  of object ? give code ===================================================
+// => shallow copy means copy only first level of methods and property + deep copy means copy all level of methods and properties +  for deep copy : const deep = JSON.parse(JSON.stringify(original)); 
 
 // Q. What are Generator functions in Js ?? give code =====================================================================
+// => a function that can pause and resume during excution + function* greet(){yield "hello"; yield "How are you?"; yield "Goodbye";}
 
 // Q. What is Quama Operator in js ===========================================================
+// => all expresions excutes from left to right + returns last expression only 
 
-// Q. Optinal chining operator in js?========================================================
+// Q. Optinal chining operator in js ?========================================================
+// => ?. + insted of throwing error , it returns undefined + used to safely access nested object's properties without error 
 
 // Q. Nullish operator in js?? =============================================================
+// => used to set default value if left value is null or undefined + let result = a ?? b;
 
 // Q.  e.preventDefault() vs e.stopPropagation() ? ==================================
+// => preventDefault prevents the default browser of an element + stopPropogation is used to stop event bubbling 
 
 // Q. What is matchAll() function in js ? ==========================================================
-
+// => 
 // Q. What is str.at() in js ?==============================================
 
 // Q. map vs foreach function ? ==========================================
