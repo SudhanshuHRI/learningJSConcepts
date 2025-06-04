@@ -284,11 +284,14 @@
 // Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
 // => Promise.all : takes array of promise + wait for all of them to fulfill + if any rejected, all will reject + Promise.all([Promise1,Promise2, Promise3])
 // => Promise.allsettled : takes array of promise + wait for all of them to fulfilled +  returns an array with the result of each promise 
-// => Promise.race : takes array of promise + returnes as the first promise settles + dont wait for others 
+// => Promise.race : takes array of promise + returnes as the first promise settles (fullfilled or rejected) + dont wait for others 
 
-// Q. What are Prototypes in JS  ? why we use them in js ? How we can use Prototype functionallity without useing prototype and what will be the difference ? =====================================================================
+// Q. What are Prototypes in JS  ? why we use them in js ? ==================
+// => Every object has hidden internal property called prototype + js use prototype based inharitence + we use it to share methods and properties between multiple objects 
 
-// Q. I want when a object/string is declared, a defalut variable or function is already present there . How can i do that using prototype ?
+
+// Q. I want when a object/string is declared, a defalut variable or function is already present there . How can i do that using prototype ?====
+// => 
 
 // Q. What is  Deep copy and shallow copy  of object ? give code ===================================================
 
