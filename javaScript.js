@@ -319,6 +319,7 @@
 
 // Q. What is navigator in js ? ============================================
 
+// .has() vs .add()
 // Q. how to know in js if function is called by use click or by any script ? =======================================
 
 // Q. What is object ? give advantages and disadvantages ==================================
