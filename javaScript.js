@@ -313,12 +313,17 @@
 
 
 // Q. What is str.at() in js ?==============================================
+// => used to get character of specific index + str.at(index)
 
 // Q. map vs foreach function ? ==========================================
+// => map returns new array with transform element + forEach returns undefined + map is used when need to transform data into new array + forEach is used when do something with each element
 
 // Q. What is navigator in js ? ============================================
+// => built in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator) 
 
-// .has() vs .add()
+// Q. .has() vs .add() ? ===================================
+// => Both used in "Set" Objects + add is used to add value to a set + 
+
 // Q. how to know in js if function is called by use click or by any script ? =======================================
 
 // Q. What is object ? give advantages and disadvantages ==================================
