@@ -423,7 +423,7 @@
 // console.log( typeof a)
 // console.log(typeof b)
 
-// here b=3 assigned successfully beacuse of hoisting . while declaring var a means a's scope limited to function so it is not accesible outside the function. if we use only 'a=b=3' without using var, then both values  will be accesible.
+// Ans. here b=3 assigned successfully beacuse of hoisting . while declaring var a means a's scope limited to function so it is not accesible outside the function. if we use only 'a=b=3' without using var, then both values  will be accesible.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -435,7 +435,7 @@
 // }
 // console.log(foo())
 
-//it is required to set data in front of "return" statement. other wise it will return "undefined"
+// Ans. it is required to set data in front of "return" statement. other wise it will return "undefined"
 
 // ---------------------------------------------------------------------------------------------------------------------
 
