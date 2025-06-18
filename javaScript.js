@@ -311,8 +311,7 @@
 // Q.  e.preventDefault() vs e.stopPropagation() ? ==================================
 // => preventDefault prevents the default browser of an element + stopPropogation is used to stop event bubbling 
 
-// Q. What is matchAll() function in js ? ==========================================================
-// => 
+
 // Q. What is str.at() in js ?==============================================
 
 // Q. map vs foreach function ? ==========================================
