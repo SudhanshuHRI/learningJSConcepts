@@ -322,18 +322,28 @@
 // => built in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator) 
 
 // Q. .has() vs .add() ? ===================================
-// => Both used in "Set" Objects + add is used to add value to a set + 
+// => Both used in "Set" Objects + add is used to add value to a set + has is used to check if value exists
 
 // Q. how to know in js if function is called by use click or by any script ? =======================================
+// => we use element.addEventListner('click', (event)=>{event.isTrusted}) method to check it + if event.isTrusted is true then clicked by user
 
 // Q. What is object ? give advantages and disadvantages ==================================
+// => object is collection of data in key-value pairs + advantages : organized data , dynamically update properties + disadvantages : deep nested object cunsume more memory 
 
 // Q. How to loop a object ?? =========================================================
+// => for(let key in user){console.log(key, user[key])}
 
 // Q. In object how you can add "pin code" key with space ? ==========================
+// => address["pin code"] = 241001
+
 // Q. In object how you can add key dynamically ? ==============================
+// => user[keyName] = "test@example.com"
+
 // Q.  In object if we decalre it as const can we reassign it or add only properties ? ======================================
+// =>  we cannot reassign but modify it's contents
+
 // Q. how to delete a key in object ? ==============================
+// => delete object.key || delete object['key']
 
 // Q. Guess the output of the following ? ===================================================================
 
@@ -403,60 +413,9 @@
 // console.log([] == false);
 // console.log([] == ![]);
 
-///////////////////////////////////////////////////// Practice Questions for DSA ///////////////////////////////////////////
 
-// 1. Program to find longest word in a given sentence ?
-//  2. How to check whether a string is palindrome or not ?
-//  3. Write a program to remove duplicates from an array ?
-//  4. Program to find Reverse of a string without using built-in method ?
-//  5. Find the max count of consecutive 1’s in an array ?
-//  6. Find the factorial of given number ?
-//  7. Given 2 arrays that are sorted [0,3,4,31] and [4,6,30]. Merge them and sort [0,3,4,4,6,30,31] ? hint:- sorting can done by destructuing swaping
-//  8. Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same. ex-arr1 = [1, 2, 2]; arr2 = [1, 4, 9]; then it will give [true,true,false]
-//  9. Given two strings. Find if one string can be formed by rearranging the letters of other string.  find anagrams
-//  10. Write logic to get unique objects from below array ?
-//  I/P: [{name: "sai"},{name:"Nang"},{name: "sai"},{name:"Nang"},{name: "111111"}];
-//  O/P: [{name: "sai"},{name:"Nang"}{name: "111111"}
-//  11. Write a JavaScript program to find the maximum number in an array.
-//  12. Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.
-//  13. Write a JavaScript function to check if a given number is prime.
-//  14. Write a JavaScript program to find the largest element in a nested array.
-//  [[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]
-//  15. Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms.
-//  16. Given a string, write a javascript function to count the occurrences of each character in the string.
-//  17. Write a javascript function that sorts an array of numbers in ascending order.
-//  18. Write a javascript function that sorts an array of numbers in descending order.
-//  19. Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method.
-//  20. Implement a javascript function that flattens a nested array into a single-dimensional array.
-// write a program to find element accurence in array; ex-{1:2,4:6,8:7times}
-// remove duplicate from array
-// multiply 2 no without multiply sign
-// document.designMode = 'on'
 
-//////////////////////////////////////////////////// Puzzle topics //////////////////////////////////////////////
-
-// Scope and Closure Puzzles: Challenge yourself to identify variables in different scopes and predict closures' behavior.
-// Hoisting Puzzles: Figure out how JavaScript hoists variables and functions and predict the result of variable assignments and function calls.
-// Event Loop and Asynchronous Behavior Puzzles: Predict the sequence of execution in asynchronous code and how events are processed.
-// Object and Prototype Puzzles: Solve puzzles involving inheritance and prototype chains.
-// Type Coercion and Comparison Puzzles: Work with type coercion in JavaScript and understand how comparisons behave under type conversion. //////Done
-// Function and Execution Context Puzzles: Delve into execution contexts and the stack, and solve puzzles related to this and function calls.
-// Array and String Manipulation Puzzles: Solve challenges involving sorting, slicing, and other array manipulations.
-// Algorithm and Data Structure Puzzles: Practice solving common algorithmic challenges like sorting, searching, and optimization.
-// Destructuring and Spread Operator Puzzles: Solve puzzles that involve destructuring arrays and objects, and using the spread operator for both objects and arrays.
-// Regular Expression Puzzles: Challenge yourself to write regular expressions that match specific patterns.
-// Error Handling and Exception Puzzles: Predict and handle errors in code, such as try-catch blocks and asynchronous error handling.
-// Bitwise Operations Puzzles: Solve challenges using bitwise operators for efficient calculations.
-// Logical Puzzles and Challenges: Solve logical puzzles that require reasoning through JavaScript’s behavior.
-// Functional Programming Puzzles: Work with higher-order functions, immutability, and pure functions.
-// Performance and Optimization Puzzles: Optimize code for performance and solve challenges related to memory usage and execution time.
-// Recursion Puzzles: Solve puzzles that involve recursive function calls.
-// Promise and Async/Await Puzzles: Dive into asynchronous code and solve challenges using promises and async/await.
-// Destructuring and Template Literal Puzzles: Combine destructuring with template literals to solve complex puzzles.
-// Garbage Collection and Memory Puzzles: Solve puzzles related to garbage collection and memory management.
-// Date and Time Puzzles: Work with JavaScript's Date object and solve puzzles related to date/time manipulation.
-
-/////////////////////////////////////////////////// Puzzles in JS ////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////  Puzzles in JS  ////////////////////////////////////////////////////////////////////
 // (function (){
 //     var a = b = 3;
 // })();
