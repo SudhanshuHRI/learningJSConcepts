@@ -444,7 +444,7 @@
 // var b = {};
 // console.log(a===b); //false
 
-// when we compare 2 variables , the will compare 2 values. when we comapre 2 objects, it will compare memory locations so it is false.
+// Ans. when we compare 2 variables , the will compare 2 values. when we comapre 2 objects, it will compare memory locations so it is false.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -458,7 +458,7 @@
 // b();
 // console.log(a)//0
 
-// beacuse when we use var inside function , this a will become scope based and become local variable. if we not use var in function b then a will become 10.
+// Ans. beacuse when we use var inside function , this a will become scope based and become local variable. if we not use var in function b then a will become 10.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -478,7 +478,7 @@
 // console.log(a===b)//false
 // console.log(a[0]===b[0])//true because it is checking values of array
 
-// here a object memory location is copied in b so true + if object and array  compare whether it is blank or have values , it will compare memory location .
+// Ans. here a object memory location is copied in b so true + if object and array  compare whether it is blank or have values , it will compare memory location .
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -490,7 +490,7 @@
 // console.log(a===b)//true
 // console.log(typeof a)// undefined
 
-//  here both values are compared because they both are variables not array or objects. they both are undefined.
+//  Ans. here both values are compared because they both are variables not array or objects. they both are undefined.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -507,7 +507,7 @@
 
 // console.log(test())//10
 
-// here because functions also have hoisting quality. so both foo function go on top . first foo goes up and second foo goes second. then after calling foo() , 2nd foo function overwrite first foo. so output is 10 .
+// Ans. here because functions also have hoisting quality. so both foo function go on top . first foo goes up and second foo goes second. then after calling foo() , 2nd foo function overwrite first foo. so output is 10 .
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -520,7 +520,7 @@
 
 // test()
 
-// here if we use function in variable , then hoisting not works. if we console test then it will be undefined because of hoisting. same goes for arrow functions.
+// Ans. here if we use function in variable , then hoisting not works. if we console test then it will be undefined because of hoisting. same goes for arrow functions.
 // function (){} => this is function declaration
 // var test = fucntion (){} => this is function expression
 
@@ -544,7 +544,8 @@
 //     a:"three"
 // }
 
-// console.log(obj) // here on 'a'  key "three" will updated. and "one" will overwrited
+// console.log(obj) 
+// Ans. here on 'a'  key "three" will updated. and "one" will overwrited
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -571,7 +572,8 @@
 //     city:"hardoi"
 //  }
 
-//  console.table(data) // console data in table format
+//  console.table(data) 
+// Ans.  console data in table format
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -609,7 +611,7 @@
 // }
 // fruit();
 
-// => hoisting is not applied on const and let
+// Ans.  hoisting is not applied on const and let
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -617,14 +619,14 @@
 //     setTimeout(()=>{console.log(i)},2000)
 // }
 
-// =>beacuse var have global scope. first full loop will finished and setTimout will be in callback que. so all values will be 3
+// Ans. beacuse var have global scope. first full loop will finished and setTimout will be in callback que. so all values will be 3
 
 // ---------------------------------------------------------------------------------------------------------------------
 
 // for (let i=0; i<3; i++){
 //     setTimeout(()=>{console.log(i)},2000)
 // }
-// => beacuse let have block scope . so when all 3 setTimeout will be in callback que, each have unique value of i so it will be 0,1,2.
+// Ans. beacuse let have block scope . so when all 3 setTimeout will be in callback que, each have unique value of i so it will be 0,1,2.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -654,7 +656,8 @@
 // var x = 10;
 // var x = 14
 // var x = 20;
-// console.log(x) // we  can declare same varibale multiple times with var not let. but latest value will be considered . var have global scope and let have block scope.
+// console.log(x) 
+// Ans. we  can declare same varibale multiple times with var not let. but latest value will be considered . var have global scope and let have block scope.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -677,7 +680,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
 
 // a=20;
-// console.log(a) // if no let var const is used to declare a variable it will be treat as var and global variable. it will be hoisted, reassigned and accessed from anywhare.
+// console.log(a) 
+// Ans.  if no let var const is used to declare a variable it will be treat as var and global variable. it will be hoisted, reassigned and accessed from anywhare.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -688,7 +692,7 @@
 // fruit.name = "apple";
 
 // fruit();
-// if fruit is function then we can assign multiple properties still funciton will have no effect on excuting.
+// Ans. if fruit is function then we can assign multiple properties still funciton will have no effect on excuting.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -706,7 +710,7 @@
 // }
 
 // getAge()
-// beacuse we are using strict mode so we have to put var or let in front of age. this use strict is limited to this function only. when we use 'use strict ' on top of page , it will apply on all page.
+// Ans. beacuse we are using strict mode so we have to put var or let in front of age. this use strict is limited to this function only. when we use 'use strict ' on top of page , it will apply on all page.
 // strict mode :- dont allow recieving argument with same name + always have to declare with let const var + stops "this" keyword and make it undefined +  not accepts octal values
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -733,7 +737,7 @@
 //   console.log(i);
 // }
 
-//when go to contiue , it will exit current loop and not go to console.log(i).
+// Ans. when go to contiue , it will exit current loop and not go to console.log(i).
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -760,7 +764,7 @@
 // console.log(sayHi.bind(person,21))
 // console.log(sayHi.bind(person,21)())
 
-// call() dont have to call again but bind have to call itself again.
+// Ans. call() dont have to call again but bind have to call itself again.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -782,7 +786,7 @@
 // console.log(setInterval(()=> console.log('HI'),1000))
 // console.log(setInterval(()=> console.log('HI'),1000))
 
-// every setInterval returns a unique id. so it will return 3 unique id.
+// Ans. every setInterval returns a unique id. so it will return 3 unique id.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -817,7 +821,8 @@
 
 
 //let data = {name:"sudhanshu"}
-//console.log(delete data.name) // true becz delete action is completed  successfully and it will return true. if action is not completed, then it will be false.
+//console.log(delete data.name) 
+//Ans.  true becz delete action is completed  successfully and it will return true. if action is not completed, then it will be false.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -885,7 +890,7 @@
 // person.age = 29;
 // console.log(person);
 
-// if we seal the object then we cannot add new properties in object. but we can change the existing properties.
+// Ans. if we seal the object then we cannot add new properties in object. but we can change the existing properties.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -901,7 +906,7 @@
 // delete data[1];
 // console.log(data);
 //console.log(data.length);
-// it will remove bruce and make it empty. null and undefined take some space but empty dont take any space. array's length will remain same.
+// Ans. it will remove bruce and make it empty. null and undefined take some space but empty dont take any space. array's length will remain same.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
@@ -917,20 +922,23 @@
 // let a = "like";
 // let b = `like`
 
-// console.log(a === b) // true becz both are same. backticks are used to write multi line strings and to use variables in strings.
+// console.log(a === b) 
+// Ans. true becz both are same. backticks are used to write multi line strings and to use variables in strings.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
 // let a = 1;
 // let c=2;
-// console.log(--c===a) // true becz first c will be decremented then compared with a.
+// console.log(--c===a) 
+//Ans.  true becz first c will be decremented then compared with a.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
 // let a = 1;
 // let b = 1;
 // let c = 2;
-// console.log(a === b === --c); //false becz first a===b will be true then it will compare with c.
+// console.log(a === b === --c); 
+// Ans. false becz first a===b will be true then it will compare with c.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
