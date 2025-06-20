@@ -60,6 +60,16 @@
 // => Dom is a tree structure that represent HTML elements in the browser + Real Dom : it is actual Dom elements in browser, slower for frequent updates, any update will direct update DOM, give less performance for big apps, managed by browser + Virtual Dom : JS copy of real Dom, faster for frequent updates, only updates real dom for bulk changes , give good performance for big apps, managed by react
 
 // Q.What is  currying in react? ====================================================
+// => in Currying, function dont take all arguments at once + instead takes only one argument at a time and return a new function each time + useful for breaking one function to many reusable pieces 
+// eg:
+
+// function addCurried(a) {
+//   return function (b) {
+//     return a + b;
+//   };
+// }
+
+// console.log(addCurried(2)(3));
 
 // Q.What is Data binding in react js? ==================================================================
 
