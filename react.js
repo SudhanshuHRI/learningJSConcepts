@@ -5,26 +5,59 @@
 //////////////////////////////////////////////// Interview Questions ///////////////////////////////////////////
 
 // Q. element vs component ? =======================================================
+// element is plain js object that describes a DOM node , const element = <h1>Hello World</h1> + component is a function that returns react elements, comonents can be reused
 
 // Q. how lifting state up in react ? =======================================================
+// => lifting state means moving state from child to parent + used to share data with sibling component
+// eg:
+
+// const ParentComp = () => {
+//   const [data, setData] = useState("");
+//   const handleDataFromChild = (childData) => {
+//     setData(childData);
+//   };
+//   console.log("Data got from child is :", data);
+
+//   return (
+//     <>
+//       <Child sendData={handleDataFromChild} />
+//     </>
+//   );
+// };
+
+// const ChildComp = ({ sendData }) => {
+//   sendData("Hello");
+// };
 
 // Q.why fragments are better then div container =======================================================
+// fragments dont add extra nodes to DOM + so app gets render quickly + reduce memory usage 
 
 // Q.why react use className over class =======================================================
+// => class is a reserve keyword in JS + JSX is javaScript not HTML + JSX uses React.createElement('div',{className:'box'}) 
 
 // Q. What is React.js  and it's history? ============================================================
+// => created by facebook in 2011 + open source + SPA + 
 
 // Q. What are the advantages of react? and disadvantages ============================================================
-
-// Q. difference between function and class component? ============================================================
+// => advantage : component based architecture , Virtual DOM , Unidirectional Data flow, React Hooks + Disadvantages : Poor in SEO, Dependency on libraries 
 
 // Q.What are higher-order components? ============================================================
+// => a function that takes component as arguments and returns a new component with additional behaviour
+// eg: 
+// function withMessage(WrappedComponent) {
+//   return function EnhancedComponent() {
+//     return <WrappedComponent message="Hello from HOC!" />;
+//   };
+// }
 
-// Q. what is typescript and how it's different. ============================================================
+// Q.  typescript vs js. ============================================================
+// => Js dont provide type checking of variables + in js error catching is at runtime while typescript catch error at compile time 
 
 // Q. how would you add a Dynamic title on every page in React?? =====================================================
+// => document.title = "about-us page" + we can use react-helmet library also
 
 // Q. virtual DOM Vs Actual DOM ?  ================================================================
+// => Dom is a tree structure that represent HTML elements in the browser + Real Dom : it is actual Dom elements in browser, slower for frequent updates, any update will direct update DOM, give less performance for big apps, managed by browser + Virtual Dom : JS copy of real Dom, faster for frequent updates, only updates real dom for bulk changes , give good performance for big apps, managed by react
 
 // Q.What is  currying in react? ====================================================
 
@@ -103,60 +136,58 @@
 // Q. how to update array and object which is in state ? ========================================
 
 // Q. How does React’s reconciliation algorithm work? ============================================================
-// 
+//
 // Q.What is React Fiber, and how does it improve React’s performance? ============================================================
-// 
+//
 // Q.Explain the concept of priority scheduling in React Fiber. ============================================================
 
-// 
+//
 // Q.What is Concurrent Mode in React, and how does it improve UI responsiveness? ============================================================
-// 
+//
 // Q.How does useTransition work in React? ============================================================
 //
 //  Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
 
-
 // Q.What are React’s rendering phases? ============================================================
-// 
+//
 // Q.How does memoization (React.memo, useMemo, useCallback) optimize performance? ============================================================
-// 
+//
 // Q.How does React’s batching mechanism work in React 18? ============================================================
 
 // Q.What are the key differences between SSR, SSG, ISR, and CSR? ============================================================
-// 
+//
 // Q.How does React Server Components (RSC) improve performance? ============================================================
-// 
+//
 // Q.Explain the working of Next.js middleware and how it affects rendering. ============================================================
 
-
 // Q.How does React’s hooks dependency array work in useEffect? ============================================================
-// 
+//
 // Q.What are the best practices to prevent stale closures in hooks? ============================================================
-// 
+//
 // Q.What is useDeferredValue, and how does it differ from useMemo? ============================================================
 
 // Q.How does React.lazy and Suspense help in code splitting? ============================================================
-// 
+//
 // Q.What are the challenges of server-side rendering with lazy-loaded components? ============================================================
-// 
+//
 // Q.How does dynamic imports work in Next.js? ============================================================
 
 // Q.When should you use a custom hook vs. a HOC? ============================================================
-// 
+//
 // Q.How do you share logic between components efficiently in React? ============================================================
-// 
+//
 // Q.What are the best practices when designing custom hooks? ============================================================
 
 // Q.How does React’s event delegation work? ============================================================
-// 
+//
 // Q.What is event pooling, and why was it removed in React 17? ============================================================
-// 
+//
 // Q.How do you prevent unnecessary re-renders in event handlers? ============================================================
 
 // Q.How does React hydrate the UI in SSR applications? ============================================================
-// 
+//
 // Q.What is React’s Offscreen Rendering, and how does it work? ============================================================
-// 
+//
 // Q.Explain React’s Virtual DOM diffing algorithm in detail. ============================================================
 
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
