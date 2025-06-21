@@ -78,23 +78,28 @@
 // => means data goes in one direction from parent to child to UI
 
 // Q.What is anti pattern in react? =========================================================================================
-// => anti pattern m
-// Q.how to handle cors error on front end or postman? ==============================================================================
+// => anti pattern means common coding practice + patterns you should avoid 
 
-// Q.what we send in header to authentication? ========================================================================
+// Q.how to handle cors error on front end or postman? ==============================================================================
+// =>We use proxy in package.json + "proxy" : "http://localhost:5000"
 
 // Q. we have so many states declared in a component. How to avoid to declare it multiple times ?? ======================
+// => const [form,setForm] = useState({name:"",email:"",age:0}) + to update : setForm(prev=>({...prev,name:"john"}))
 
-// Q.What is reconcilation in ReactJs? ===============================================================================
+// Q. What is reconcilation in ReactJs? ===============================================================================
+// => react process to update the DOM Effectiently + updating only the changed part of your UI, innstead of rebuilding the whole thing.
 
-// Q.statefull vs stateless ? ===========================================================
+// Q. statefull component vs stateless component ? ===========================================================
+// => stateless compnent dont have state inside. it only shows data it gets from props + statefull component has it's own state and changes overtime
 
 // Q.Explain microfrontend approach in react? =========================================================
+// => microfrontend means instead of bulding on big app, split it into small, independent apps and then combine them to look like one + 
 
 // Q. What is CI/CD pipeline ? ===========================================================
+// => CI : Continous Integration + CD : Continous Development
 
 // Q.What is the difference between useref and createRef in React ? ==============================
-
+// => 
 // Q.Explain why and how to update state of components using callback? =========================================
 
 // Q. Does React useState Hook update immediately ? ==============================================
