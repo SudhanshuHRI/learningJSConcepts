@@ -72,12 +72,14 @@
 // console.log(addCurried(2)(3));
 
 // Q.What is Data binding in react js? ==================================================================
+// => Data binding means a process where data is connected to UI so that UI updates automatically when data changes + in react default is one-way data binding (UniDirectional) means data flows in one direction from parent to child to UI 
 
 // Q. what is uni directioanl data flow in react? ====================================================================
+// => means data goes in one direction from parent to child to UI
 
 // Q.What is anti pattern in react? =========================================================================================
-
-// Q.how to handle cors error on front end? ==============================================================================
+// => anti pattern m
+// Q.how to handle cors error on front end or postman? ==============================================================================
 
 // Q.what we send in header to authentication? ========================================================================
 
