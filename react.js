@@ -30,20 +30,20 @@
 // };
 
 // Q.why fragments are better then div container =======================================================
-// fragments dont add extra nodes to DOM + so app gets render quickly + reduce memory usage 
+// fragments dont add extra nodes to DOM + so app gets render quickly + reduce memory usage
 
 // Q.why react use className over class =======================================================
-// => class is a reserve keyword in JS + JSX is javaScript not HTML + JSX uses React.createElement('div',{className:'box'}) 
+// => class is a reserve keyword in JS + JSX is javaScript not HTML + JSX uses React.createElement('div',{className:'box'})
 
 // Q. What is React.js  and it's history? ============================================================
-// => created by facebook in 2011 + open source + SPA + 
+// => created by facebook in 2011 + open source + SPA +
 
 // Q. What are the advantages of react? and disadvantages ============================================================
-// => advantage : component based architecture , Virtual DOM , Unidirectional Data flow, React Hooks + Disadvantages : Poor in SEO, Dependency on libraries 
+// => advantage : component based architecture , Virtual DOM , Unidirectional Data flow, React Hooks + Disadvantages : Poor in SEO, Dependency on libraries
 
 // Q.What are higher-order components? ============================================================
 // => a function that takes component as arguments and returns a new component with additional behaviour
-// eg: 
+// eg:
 // function withMessage(WrappedComponent) {
 //   return function EnhancedComponent() {
 //     return <WrappedComponent message="Hello from HOC!" />;
@@ -51,7 +51,7 @@
 // }
 
 // Q.  typescript vs js. ============================================================
-// => Js dont provide type checking of variables + in js error catching is at runtime while typescript catch error at compile time 
+// => Js dont provide type checking of variables + in js error catching is at runtime while typescript catch error at compile time
 
 // Q. how would you add a Dynamic title on every page in React?? =====================================================
 // => document.title = "about-us page" + we can use react-helmet library also
@@ -60,7 +60,7 @@
 // => Dom is a tree structure that represent HTML elements in the browser + Real Dom : it is actual Dom elements in browser, slower for frequent updates, any update will direct update DOM, give less performance for big apps, managed by browser + Virtual Dom : JS copy of real Dom, faster for frequent updates, only updates real dom for bulk changes , give good performance for big apps, managed by react
 
 // Q.What is  currying in react? ====================================================
-// => in Currying, function dont take all arguments at once + instead takes only one argument at a time and return a new function each time + useful for breaking one function to many reusable pieces 
+// => in Currying, function dont take all arguments at once + instead takes only one argument at a time and return a new function each time + useful for breaking one function to many reusable pieces
 // eg:
 
 // function addCurried(a) {
@@ -72,13 +72,13 @@
 // console.log(addCurried(2)(3));
 
 // Q.What is Data binding in react js? ==================================================================
-// => Data binding means a process where data is connected to UI so that UI updates automatically when data changes + in react default is one-way data binding (UniDirectional) means data flows in one direction from parent to child to UI 
+// => Data binding means a process where data is connected to UI so that UI updates automatically when data changes + in react default is one-way data binding (UniDirectional) means data flows in one direction from parent to child to UI
 
 // Q. what is uni directioanl data flow in react? ====================================================================
 // => means data goes in one direction from parent to child to UI
 
 // Q.What is anti pattern in react? =========================================================================================
-// => anti pattern means common coding practice + patterns you should avoid 
+// => anti pattern means common coding practice + patterns you should avoid
 
 // Q.how to handle cors error on front end or postman? ==============================================================================
 // =>We use proxy in package.json + "proxy" : "http://localhost:5000"
@@ -93,22 +93,45 @@
 // => stateless compnent dont have state inside. it only shows data it gets from props + statefull component has it's own state and changes overtime
 
 // Q.Explain microfrontend approach in react? =========================================================
-// => microfrontend means instead of bulding on big app, split it into small, independent apps and then combine them to look like one + 
+// => microfrontend means instead of bulding on big app, split it into small, independent apps and then combine them to look like one
 
 // Q. What is CI/CD pipeline ? ===========================================================
 // => CI : Continous Integration + CD : Continous Development
 
 // Q.What is the difference between useref and createRef in React ? ==============================
-// => 
-// Q.Explain why and how to update state of components using callback? =========================================
+// =>  createRef is used in class based component + useRef is used in Function based component + useRef dont reder the component + used to direct change in DOM + commonly used in uncontrolled components (manages their own state internally) + works as "getElememntById" +
+
+// Q. Explain why and how to update state of components using callback? =========================================
+// => state update in react is async + callback helps to safely perform logic that depends on the updated state + setCount ((previousValue)=> previousValue + New Value)
 
 // Q. Does React useState Hook update immediately ? ==============================================
+// => No + useState updates are async + it update the state at re-render + correct way is to use useEffect hook or We can use
+// eg:
+// const [count,setCoung] = useState(0);
+// setCount(5);
+// useEffect(()=>{console.log("updated Count is :",count)},[count]);
 
 // Q.how to update array and object that is in state in React?? ===========================================
+// => for array : setCount(prev=> []...prev , newValue]) + for object : setCount(prev =>{ ...prev, name:"Jane" })
 
-// Q.What is StrictMode in React ? Why we use it ?===================================
+// Q.What is StrictMode in React ? Why we use it ? ===================================
+// => used to highlight potential problems + helps to write better code + sends warnings + re-renders component twice in development mode + it does not impact production + it doesnot fix bugs automatically, it just warns you
 
-// Q.Explain the concept of lazy loading in React and how it can be implemented? ==============================================
+// Q. Explain the concept of lazy loading in React and how it can be implemented? ==============================================
+// => means only render component when needed, instead of loading everything at once + reduces initial load time +
+// eg:
+// import React,{Suspense} from "react";
+// const LazyCompnent = React.lazy(()=>import('./myComponent'));
+
+// function App() {
+//   return (
+//     <div>
+//       <Suspense fallback={<div>Loading...</div>}>
+//         <LazyCompnent />
+//       </Suspense>
+//     </div>
+//   );
+// }
 
 // Q. Describe static site generation (SSG) in the context of React.============================
 
