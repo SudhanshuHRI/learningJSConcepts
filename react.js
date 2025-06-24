@@ -7,7 +7,7 @@
 // Q. element vs component ? =======================================================
 // element is plain js object that describes a DOM node , const element = <h1>Hello World</h1> + component is a function that returns react elements, comonents can be reused
 
-// Q. how lifting state up in react ? =======================================================
+// Q. how lifting state up in react or pass data from childen to parent ? =======================================================
 // => lifting state means moving state from child to parent + used to share data with sibling component
 // eg:
 
@@ -118,7 +118,7 @@
 // => used to highlight potential problems + helps to write better code + sends warnings + re-renders component twice in development mode + it does not impact production + it doesnot fix bugs automatically, it just warns you
 
 // Q. Explain the concept of lazy loading in React and how it can be implemented? ==============================================
-// => means only render component when needed, instead of loading everything at once + reduces initial load time +
+// => means only render component when needed, instead of loading everything at once + reduces initial load time + we can lazy load routes, pages, models etc.
 // eg:
 // import React,{Suspense} from "react";
 // const LazyCompnent = React.lazy(()=>import('./myComponent'));
@@ -133,47 +133,94 @@
 //   );
 // }
 
-// Q. Describe static site generation (SSG) in the context of React.============================
-
-// Q.How do you handle internationalization (i18n) in React applications?===================================
+// Q. Describe static site generation (SSG) in the context of React. ============================
+// => SSG is a method where react pages are pre-rendered to HTML at bulid time + when user visit site, server just send prebulit files directly + We can use SSG when page content not changes often, We dont need reat time dynamic content + React dont use SSG directly instead of Next.js uses it + good for SEO because search engines see prebuilt HTML  + SSR means page is rendered on Server on each request , SSG means page is Pre-rendered on built time and served as static file
 
 // Q. tree shaking. ==================================
+// => used in js build tools + removing unused code from your final build + reduce bundle size, speeds load time + tree shaking works on ES modules only + bundler(Webpack) uses this
 
-// Q. How to pass data between sibling components using React router? ==========================================
+// Q. What is Webpack in react ? ===========================================
+// => Webpack is a bundler in react who bunldes js,css,images into optimaized files for production + Babel is a library used to transpiles modern js nad jsx to browser compatible code.
 
-// Q.react 19 and its fearures?====================================================================================
+
+// Q.react 19 and its fearures? ====================================================================================
+// React 19 have new compilor who can memoize components automatically without react.memo or useMemo to avoid re-renders + use() hook etc
 
 // Q.export default vs export ? ============================================================================
+// => export default: used when module export single value + no curly braces required when import + rename the import [import add from './math';] + 
+// => export : used when want to export multiple value from a single module + must use curly braces + cannot rename unless use "as" [import { add as addition } from './math';] 
 
-// Q.what is webpack in react ? ==============================================================================
 
 // Q.how can we change local server port in react =====================================================================
+// by usign .env file 
 
-// Q. How are data passed from children to parents in react component? ============================================================
 
-// Q. how to implement context api? give code. ============================================================
+
+
 
 // Q.What are lifecycle methods of component in react? How we can achieve same in functional components? ========================================
+// => useEffect, useState, useRef hooks are used for lifecycle method in react 
+// => Lifecycle phases : mount -> update -> unmount
 
-// Q. how to make custom hooks ? ============================================================
 
-//  Q. Props vs state ============================================================
 
-// Q.Debouncing in js and react =====================================================================
+// Q. Props vs state ============================================================
+// => props : passed from parent to child + read-only + child cannot change it + 
+// => State : internal data maintained by component + mutable  + triggers re-render when changed 
 
-// Q.Throttling in js and react ===========================================================================
+// Q. Debouncing in react =====================================================================
+// => a function is excuted , after a time, until user stops typing or doing something + we use it in search box + if we dont use it , on each keyStroke we fetch too many api, update too many state, makes too many re-reders. + without debouncing it calls api on every keystorke +  With debouncing it waits until you stop typing for a few miliseconds, then calls the api only once
+
+// Q.Throttling in react ===========================================================================
+//  Trottling runs a function at regular intervals even if you're still doing something + used in Window Scroll, mouse move, resize 
 
 // Q. polyfills in react ===========================================================================
+// => polyfill in a piece of code + It "fills in the gap" for older browsers that don't support modern JavaScript features like Promise, fetch, Array.includes() etc.
 
 // Q.what is portal in react ===================================================================================
+// => normally component is render in it's parent DOM node, but sometimes we need to appear outside the current DOM node like z-index,position:relative etc + it is called portal + ReactDOM.createPortal(jsxElement, DOMName(document.getElementById()) where to add  )
 
 // Q.API polling ? =========================================================================
+// => a technique where fron-end repeatedly sends request to server at regular intervals to check for new updated data. + to keep UI updated with real time without websockets + used to check for new messages, monitoring job progress, tracking live status + 
+// eg:
+// useEffect(() => {
+//     const interval = setInterval(() => {
+//       fetch("https://api.example.com/data")
+//         .then((res) => res.json())
+//         .then((json) => setData(json));
+//     }, 5000); // every 5 seconds
+
+//     return () => clearInterval(interval); // cleanup on unmount
+//   }, []);
+
 
 // Q. React Profiler ============================================
+// => a tool helps to measure and analyze performance of react components + we have to use react's Profiler to do so +
+// eg: 
+// import React, { Profiler } from 'react';
+
+// function onRenderCallback(
+//   id, // the "id" prop of the Profiler tree
+//   phase, // "mount" or "update"
+//   actualDuration, // time spent rendering
+//   baseDuration, // estimated time without memoization
+//   startTime, // when React started rendering
+//   commitTime, // when React committed changes
+//   interactions // Set of interactions
+// ) {
+//   console.log(`${id} rendered in ${actualDuration}ms`);
+// }
+
+// function App() {
+//   return (
+//     <Profiler id="MyApp" onRender={onRenderCallback}>
+//       <MyComponent />
+//     </Profiler>
+//   );
+// }
 
 // Q. how to make layout in react?? ==============================================================
 
-// Q. how to update array and object which is in state ? ========================================
 
 // Q. How does React’s reconciliation algorithm work? ============================================================
 //
@@ -240,6 +287,8 @@
 // => useReducer
 // => useRef
 
+// Q. how to implement context api? give code. ============================================================
+
 //  Q. difference between useCallback, useMemo, React.memo? ============================================================
 // Ans.
 // 1. React.memo : - when parent's state is changed, it's children also re-render. so we use React.memo() in child component to stop unnessasory render + it is pure component + also HOC + syntex = export defalut React.memo(child); + it will only re-render when props will change + it works on shallow level only means it wont work on nested objects.
@@ -254,6 +303,10 @@
 
 // example:-
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
+
+
+
+// Q. how to make custom hooks ? ============================================================
 
 /////////////////////////////////////////////  Exersises  ///////////////////////////////////////////////////////
 // Implement counter such that it has 2 buttons to increment and decrement the values
