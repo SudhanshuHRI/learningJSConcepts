@@ -219,14 +219,13 @@
 //   );
 // }
 
-// Q. how to make layout in react?? ==============================================================
-
-
 // Q. How does React’s reconciliation algorithm work? ============================================================
-//
+// => Reconciliation is the process of comparing the new Virtural DOM with previous one + algorithm : first creates a new virtual DOM > compares it with previous virtual DOM > calculates the difference > updates the real DOM only when necessory
+
 // Q.What is React Fiber, and how does it improve React’s performance? ============================================================
-//
-// Q.Explain the concept of priority scheduling in React Fiber. ============================================================
+// => it is a reconciliation engine of react from react 16 
+
+
 
 //
 // Q.What is Concurrent Mode in React, and how does it improve UI responsiveness? ============================================================
