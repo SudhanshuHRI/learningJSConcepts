@@ -223,15 +223,13 @@
 // => Reconciliation is the process of comparing the new Virtural DOM with previous one + algorithm : first creates a new virtual DOM > compares it with previous virtual DOM > calculates the difference > updates the real DOM only when necessory
 
 // Q.What is React Fiber, and how does it improve React’s performance? ============================================================
-// => it is a reconciliation engine of react from react 16 
-
-
-
+// => it is a reconciliation engine of react from react 16 + before fiber react was unable to prioritise the task and renders as syncronous
 //
 // Q.What is Concurrent Mode in React, and how does it improve UI responsiveness? ============================================================
-//
+// => it is a set of new features that let react work on multiple tasks at once + also pause, abort, resume and prioritise rendering tasks. + it is a part of react fiber
+
 // Q.How does useTransition work in React? ============================================================
-//
+// => 
 //  Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
 
 // Q.What are React’s rendering phases? ============================================================
