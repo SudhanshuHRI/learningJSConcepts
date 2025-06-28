@@ -263,37 +263,30 @@
 // ISR : Incremental Static Regeneration : rendered on build + runs on server + html is generated as static and auto updated + used ofr news etc
 // CSR : Client Side Rendering : render on client + runs on user browser + js fetches data + dashboard and SPA
 
-// Q.How does React Server Components (RSC) improve performance? ============================================================
-//
-
 // Q.How does React’s hooks dependency array work in useEffect? ============================================================
-//
+// => []: effect runcs only once after the initial render + no array : effect runs after every render
 // Q.What are the best practices to prevent stale closures in hooks? ============================================================
 //
 // Q.What is useDeferredValue, and how does it differ from useMemo? ============================================================
+// => useDeferredValue : used when you want to delay expensive rendering like large list duting user interactions like typing adn clicking
+// => memo : a computed value to avoid recalculating it on every render.
 
-//
 // Q.What are the challenges of server-side rendering with lazy-loaded components? ============================================================
-//
+// => React.lazy() uses dynamic import() which is async while SSR is sync by default beacuse server renders everyting on one go. So on server react can't wait for import() to resolve before rendering + SEO suffered if important components aren't rendered. + 
+
 // Q.How does dynamic imports work in Next.js? ============================================================
+// => A dynamic import loads a component on demand, instead of at the initial page load + const MyComponent = dynamic(()=> import ("../components/mycomponents"))
 
-// Q.When should you use a custom hook vs. a HOC? ============================================================
-//
+
 // Q.How do you share logic between components efficiently in React? ============================================================
-//
-// Q.What are the best practices when designing custom hooks? ============================================================
+// using custom hooks
 
-// Q.How does React’s event delegation work? ============================================================
-//
-
-//
 // Q.How do you prevent unnecessary re-renders in event handlers? ============================================================
+// => to prevent unnessary re-renders we use useCallback, react.memo, + using inline functions like [<Child onClick={() => doSomething()} />] creates a new function every time which cuses child to re-render 
 
-// Q.How does React hydrate the UI in SSR applications? ============================================================
-//
 // Q.What is React’s Offscreen Rendering, and how does it work? ============================================================
-//
-// Q.Explain React’s Virtual DOM diffing algorithm in detail. ============================================================
+// => it allows react to pre-render components in the background while keeping them hidden, then reveal them instantly when required - without re-rendering them from scratch. 
+
 
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
@@ -305,7 +298,6 @@
 // => useReducer
 // => useRef
 
-// Q. how to implement context api? give code. ============================================================
 
 //  Q. difference between useCallback, useMemo, React.memo? ============================================================
 // Ans.
@@ -323,3 +315,29 @@
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
 // Q. how to make custom hooks ? ============================================================
+// custom hooks are normal js function that starts with "use" and can use useState and useEffect in it + custom hooks are used to reuse the logic like fetching data, handling forms accross mulitple components without repeating code. 
+// eg :
+// import { useState, useEffect } from "react";
+
+// function useFetch(url) {
+//   const [data, setData] = useState(null);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     fetch(url)
+//       .then(res => res.json())
+//       .then(json => {
+//         setData(json);
+//         setLoading(false);
+//       });
+//   }, [url]);
+
+//   return { data, loading };
+// }
+
+// => how to use custom hooks : const { data, loading } = useFetch("https://api.example.com/users");
+
+// Q. how to implement context api? give code. ============================================================
+
+
+///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
