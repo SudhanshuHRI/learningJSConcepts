@@ -229,7 +229,8 @@
 // => it is a set of new features that let react work on multiple tasks at once + also pause, abort, resume and prioritise rendering tasks. + it is a part of react fiber
 
 // Q.How does useTransition work in React? ============================================================
-// => 
+// => used to prioritize state updates in UI + 
+
 //  Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
 
 // Q.What are React’s rendering phases? ============================================================
