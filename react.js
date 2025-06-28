@@ -255,10 +255,14 @@
 
 //
 // Q.How does React’s batching mechanism work in React 18? ============================================================
-// batching means group multiple state updates togather and process them in single render + 
+// batching means group multiple state updates togather and process them in single render + react 18 automatically batches but still gives you control via flushSync() function when needed.
 
 // Q.What are the key differences between SSR, SSG, ISR, and CSR? ============================================================
-//
+// SSR : Server Side Rendering : rendered on every request + runs on server + fresh HTML generated on every request + used for dyncmic pages
+// SSG : Static Site Generation : rendered on build time + runs on built + html generated as static on built time + used for blog, docs etc.
+// ISR : Incremental Static Regeneration : rendered on build + runs on server + html is generated as static and auto updated + used ofr news etc
+// CSR : Client Side Rendering : render on client + runs on user browser + js fetches data + dashboard and SPA
+
 // Q.How does React Server Components (RSC) improve performance? ============================================================
 //
 
