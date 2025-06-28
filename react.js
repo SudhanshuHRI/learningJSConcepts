@@ -251,10 +251,11 @@
 // => before react 18 legacy mode is working now concurrent mode is working + in legacy mode, every state change blocks the UI until it's fully done , no built-in prioritize method + in concurrent mode react can pause, resume rendring, allows non blocking rendering with large state updates
 
 // Q.What are React’s rendering phases? ============================================================
-// => REACT rendering process have 2 phases. + 1. render phase [called reconcilation phase] 
+// => REACT rendering process have 2 phases. + 1. render phase [called reconcilation phase] : react checks what to render according to latest state and props , then calles components to build new virtual DOM , then compares it with previous one for changes , then does not touch the real DOM yet + 2. commit phase : react applies changes to real DOM , then run side effects like useEffect, useLayoutEffect etc
 
 //
 // Q.How does React’s batching mechanism work in React 18? ============================================================
+// batching means group multiple state updates togather and process them in single render + 
 
 // Q.What are the key differences between SSR, SSG, ISR, and CSR? ============================================================
 //
