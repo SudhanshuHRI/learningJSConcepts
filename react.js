@@ -142,37 +142,29 @@
 // Q. What is Webpack in react ? ===========================================
 // => Webpack is a bundler in react who bunldes js,css,images into optimaized files for production + Babel is a library used to transpiles modern js nad jsx to browser compatible code.
 
-
 // Q.react 19 and its fearures? ====================================================================================
 // React 19 have new compilor who can memoize components automatically without react.memo or useMemo to avoid re-renders + use() hook etc
 
 // Q.export default vs export ? ============================================================================
-// => export default: used when module export single value + no curly braces required when import + rename the import [import add from './math';] + 
-// => export : used when want to export multiple value from a single module + must use curly braces + cannot rename unless use "as" [import { add as addition } from './math';] 
-
+// => export default: used when module export single value + no curly braces required when import + rename the import [import add from './math';] +
+// => export : used when want to export multiple value from a single module + must use curly braces + cannot rename unless use "as" [import { add as addition } from './math';]
 
 // Q.how can we change local server port in react =====================================================================
-// by usign .env file 
-
-
-
-
+// by usign .env file
 
 // Q.What are lifecycle methods of component in react? How we can achieve same in functional components? ========================================
-// => useEffect, useState, useRef hooks are used for lifecycle method in react 
+// => useEffect, useState, useRef hooks are used for lifecycle method in react
 // => Lifecycle phases : mount -> update -> unmount
 
-
-
 // Q. Props vs state ============================================================
-// => props : passed from parent to child + read-only + child cannot change it + 
-// => State : internal data maintained by component + mutable  + triggers re-render when changed 
+// => props : passed from parent to child + read-only + child cannot change it +
+// => State : internal data maintained by component + mutable  + triggers re-render when changed
 
 // Q. Debouncing in react =====================================================================
 // => a function is excuted , after a time, until user stops typing or doing something + we use it in search box + if we dont use it , on each keyStroke we fetch too many api, update too many state, makes too many re-reders. + without debouncing it calls api on every keystorke +  With debouncing it waits until you stop typing for a few miliseconds, then calls the api only once
 
 // Q.Throttling in react ===========================================================================
-//  Trottling runs a function at regular intervals even if you're still doing something + used in Window Scroll, mouse move, resize 
+//  Trottling runs a function at regular intervals even if you're still doing something + used in Window Scroll, mouse move, resize
 
 // Q. polyfills in react ===========================================================================
 // => polyfill in a piece of code + It "fills in the gap" for older browsers that don't support modern JavaScript features like Promise, fetch, Array.includes() etc.
@@ -181,7 +173,7 @@
 // => normally component is render in it's parent DOM node, but sometimes we need to appear outside the current DOM node like z-index,position:relative etc + it is called portal + ReactDOM.createPortal(jsxElement, DOMName(document.getElementById()) where to add  )
 
 // Q.API polling ? =========================================================================
-// => a technique where fron-end repeatedly sends request to server at regular intervals to check for new updated data. + to keep UI updated with real time without websockets + used to check for new messages, monitoring job progress, tracking live status + 
+// => a technique where fron-end repeatedly sends request to server at regular intervals to check for new updated data. + to keep UI updated with real time without websockets + used to check for new messages, monitoring job progress, tracking live status +
 // eg:
 // useEffect(() => {
 //     const interval = setInterval(() => {
@@ -193,10 +185,9 @@
 //     return () => clearInterval(interval); // cleanup on unmount
 //   }, []);
 
-
 // Q. React Profiler ============================================
 // => a tool helps to measure and analyze performance of react components + we have to use react's Profiler to do so +
-// eg: 
+// eg:
 // import React, { Profiler } from 'react';
 
 // function onRenderCallback(
@@ -229,12 +220,38 @@
 // => it is a set of new features that let react work on multiple tasks at once + also pause, abort, resume and prioritise rendering tasks. + it is a part of react fiber
 
 // Q.How does useTransition work in React? ============================================================
-// => used to prioritize state updates in UI + 
+// => used to prioritize state updates in UI + if 2 states are updating , one is updating suddenly then a loop is running 20000000 times, then second is updating , first state is updating soon and other is updating in some time then we use useTransiton
+// eg:
+// const [isPending, startTransiton] = useTransition();
+// const [val, setVal] = useState();
+// const [items, setItems] = useState();
 
-//  Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
+// function changeHandler(e) {
+//   setVal(e.target.value);
+
+//   startTransiton(() => {
+//     const arr = [];
+//     for (let i = 0; i < 2000000; i++) {
+//       arr.push(e.target.value);
+//     }
+//     setItems(arr);
+//   });
+// }
+
+// return (
+//   <>
+//     <div>
+//       <input type="text" value={val} onchange={changeHandler} />
+//       {isPending ? "Loading..." : items.map((item, i) => <div>{item}</div>)}
+//     </div>
+//   </>
+// );
+
+// Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
+// => before react 18 legacy mode is working now concurrent mode is working + in legacy mode, every state change blocks the UI until it's fully done , no built-in prioritize method + in concurrent mode react can pause, resume rendring, allows non blocking rendering with large state updates
 
 // Q.What are React’s rendering phases? ============================================================
-//
+// => REACT rendering process have 2 phases. + 1. render phase [called reconcilation phase] 
 
 //
 // Q.How does React’s batching mechanism work in React 18? ============================================================
@@ -244,13 +261,11 @@
 // Q.How does React Server Components (RSC) improve performance? ============================================================
 //
 
-
 // Q.How does React’s hooks dependency array work in useEffect? ============================================================
 //
 // Q.What are the best practices to prevent stale closures in hooks? ============================================================
 //
 // Q.What is useDeferredValue, and how does it differ from useMemo? ============================================================
-
 
 //
 // Q.What are the challenges of server-side rendering with lazy-loaded components? ============================================================
@@ -302,8 +317,4 @@
 // example:-
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
-
-
 // Q. how to make custom hooks ? ============================================================
-
-
