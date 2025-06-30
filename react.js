@@ -374,7 +374,7 @@
 // => useCallback : used for rerendering
 // => useMemo : used for reredering
 // => useContext : used in Context API
-// => useReducer : alternate of useState hook + it works like redux 
+// => useReducer : alternate of useState hook + it works like redux
 // eg:
 // import React, { useReducer } from "react";
 
@@ -397,6 +397,33 @@
 
 // export default App;
 
-// => useRef : used to change dom directely without re-render + 
+// => useRef : used to change dom directely without re-render + used to control any html element + we gell all the control of input field in useRef +
+// eg:
+// import { useRef } from "react";
+
+// const APP = () => {
+//   const inputRef = useRef(null);
+//   const h1Ref = useRef(null);
+//   const inputHandle = () => {
+//     inputRef.current.focus();
+//     inputRef.current.style.color = "red";
+//     inputRef.current.placeholder = "New Placeholder";
+//   };
+
+//   const h1Handler = ()=>{
+
+//     h1Ref.current.style.color="green"
+//   }
+//   return (
+//     <>
+//       <h1 ref={h1Ref}>This is h1</h1>
+//       <input ref={inputRef} placeholder="Enter user name" />
+//       <button onClick={inputHandle}>Focus on input field</button>
+//       <button onClick={h1Handler}>H1 useRef</button>
+//     </>
+//   );
+// };
+
+// export default APP;
 
 ///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
