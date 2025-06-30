@@ -332,25 +332,25 @@
 
 // => Step 1 : create context
 
-import React, { createContext, useState } from "react";
+// import React, { createContext, useState } from "react";
+// export const GlobalData = createContext();
+// export default App = () => {return (<></>)};
 
-export const GlobalData = createContext();
+// => Step 2 : Provider
 
-const App = () => {
-  const [color, setColor] = useState("green");
-  return (
-    <>
-      <GlobalData.Provider value={{ appColor: color }}>
-        <div>
-          <h1>App component</h1>
-          <p>This is a parent component</p>
-        </div>
-      </GlobalData.Provider>
-    </>
-  );
-};
+// export default App = () => {
+//     const [color, setColor] = useState("green");
+//   return (
+//     <>
+//       <GlobalData.Provider value={{ appColor: color }}>
+//         <div>
+//           <h1>App component</h1>
+//         </div>
+//       </GlobalData.Provider>
+//     </>
+//   );
+// };
 
-export default App;
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
 // => UseState.
