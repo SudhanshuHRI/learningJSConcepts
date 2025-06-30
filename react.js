@@ -272,20 +272,19 @@
 // => memo : a computed value to avoid recalculating it on every render.
 
 // Q.What are the challenges of server-side rendering with lazy-loaded components? ============================================================
-// => React.lazy() uses dynamic import() which is async while SSR is sync by default beacuse server renders everyting on one go. So on server react can't wait for import() to resolve before rendering + SEO suffered if important components aren't rendered. + 
+// => React.lazy() uses dynamic import() which is async while SSR is sync by default beacuse server renders everyting on one go. So on server react can't wait for import() to resolve before rendering + SEO suffered if important components aren't rendered. +
 
 // Q.How does dynamic imports work in Next.js? ============================================================
 // => A dynamic import loads a component on demand, instead of at the initial page load + const MyComponent = dynamic(()=> import ("../components/mycomponents"))
-
 
 // Q.How do you share logic between components efficiently in React? ============================================================
 // using custom hooks
 
 // Q.How do you prevent unnecessary re-renders in event handlers? ============================================================
-// => to prevent unnessary re-renders we use useCallback, react.memo, + using inline functions like [<Child onClick={() => doSomething()} />] creates a new function every time which cuses child to re-render 
+// => to prevent unnessary re-renders we use useCallback, react.memo, + using inline functions like [<Child onClick={() => doSomething()} />] creates a new function every time which cuses child to re-render
 
 // Q.What is React’s Offscreen Rendering, and how does it work? ============================================================
-// => it allows react to pre-render components in the background while keeping them hidden, then reveal them instantly when required - without re-rendering them from scratch. 
+// => it allows react to pre-render components in the background while keeping them hidden, then reveal them instantly when required - without re-rendering them from scratch.
 
 //  Q. difference between useCallback, useMemo, React.memo? ============================================================
 // Ans.
@@ -303,7 +302,7 @@
 // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
 // Q. how to make custom hooks ? ============================================================
-// custom hooks are normal js function that starts with "use" and can use useState and useEffect in it + custom hooks are used to reuse the logic like fetching data, handling forms accross mulitple components without repeating code. 
+// custom hooks are normal js function that starts with "use" and can use useState and useEffect in it + custom hooks are used to reuse the logic like fetching data, handling forms accross mulitple components without repeating code.
 // eg :
 // import { useState, useEffect } from "react";
 
@@ -326,6 +325,12 @@
 // => how to use custom hooks : const { data, loading } = useFetch("https://api.example.com/users");
 
 // Q. how to implement context api? give code. ============================================================
+// => Step 1 : create context
+
+import React, { createContext, useState } from "react";
+
+export const ThemeContext = createContext();
+
 
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
