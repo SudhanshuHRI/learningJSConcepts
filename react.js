@@ -340,9 +340,12 @@
 
 // export default App = () => {
 //     const [color, setColor] = useState("green");
+//     const getDay = (item) =>{
+//          console.log("data got from child:",item)
+//  }
 //   return (
 //     <>
-//       <GlobalData.Provider value={{ appColor: color }}>
+//       <GlobalData.Provider value={{ appColor: color,getDay:getDay }}>
 //         <div>
 //           <h1>App component</h1>
 //         </div>
