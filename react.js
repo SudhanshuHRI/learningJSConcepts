@@ -287,18 +287,6 @@
 // Q.What is React’s Offscreen Rendering, and how does it work? ============================================================
 // => it allows react to pre-render components in the background while keeping them hidden, then reveal them instantly when required - without re-rendering them from scratch. 
 
-
-// Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
-// Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
-// => UseState.
-// => useEffect.
-// => useCallback
-// => useMemo
-// => useContext
-// => useReducer
-// => useRef
-
-
 //  Q. difference between useCallback, useMemo, React.memo? ============================================================
 // Ans.
 // 1. React.memo : - when parent's state is changed, it's children also re-render. so we use React.memo() in child component to stop unnessasory render + it is pure component + also HOC + syntex = export defalut React.memo(child); + it will only re-render when props will change + it works on shallow level only means it wont work on nested objects.
@@ -339,5 +327,14 @@
 
 // Q. how to implement context api? give code. ============================================================
 
+// Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
+// Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
+// => UseState.
+// => useEffect.
+// => useCallback
+// => useMemo
+// => useContext
+// => useReducer
+// => useRef
 
 ///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
