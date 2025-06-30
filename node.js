@@ -14,7 +14,19 @@
 // 7. add dependencies as required and add modules and other files as required.
 
 // What is Node.js and it's history? ================================
-// how node.js work ?
+// => created by Ryan Dahl in 2009 + js runtime environment that runs js outside the browser
+
+// how node.js work ? ==============================
+// => Single thread + non-blocking I/O
+
+// Explain Single thread ? =================================================
+// only one thread runs at a time + tasks are excuted one after another + slower from multitasking + 
+
+// How node handle single thread behaviour for multiTask ? ==========================
+
+// Core vs thread vs process =====================
+//  => CPU -> cores -> Process -> thread -> callStack / Event Loop  + A cpu can have multiple cores , Each core can run one or more process , each process can have one or more threads , threads shares memeory in same process but process dont share memory 
+
 // what is non blocking I/O in node.js ?
 // Event loop in node.js.
 // process.nextTick() vs setImmidiate()?
