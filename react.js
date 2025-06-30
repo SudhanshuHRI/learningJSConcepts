@@ -369,12 +369,12 @@
 
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
-// => UseState.
-// => useEffect.
-// => useCallback
-// => useMemo
-// => useContext
-// => useReducer
-// => useRef
+// => UseState : for update state
+// => useEffect : for lifeCycle method
+// => useCallback : used for rerendering 
+// => useMemo : used for reredering
+// => useContext : used in Context API 
+// => useReducer : 
+// => useRef : 
 
 ///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
