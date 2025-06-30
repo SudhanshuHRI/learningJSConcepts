@@ -325,13 +325,32 @@
 // => how to use custom hooks : const { data, loading } = useFetch("https://api.example.com/users");
 
 // Q. how to implement context api? give code. ============================================================
+// => it have 3 steps :
+// Step 1. createContext : to initiate Context API.
+// Step 2. Provider : used for update or provide data.
+// Step 3. useContext : get data from context api
+
 // => Step 1 : create context
 
 import React, { createContext, useState } from "react";
 
-export const ThemeContext = createContext();
+export const GlobalData = createContext();
 
+const App = () => {
+    return ( 
+        <>
+         <GlobalData>
+            <div>
+                <h1>App component</h1>
+            </div>
 
+         </GlobalData>
+        
+        </>
+     );
+}
+ 
+export default App;
 // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
 // => UseState.
