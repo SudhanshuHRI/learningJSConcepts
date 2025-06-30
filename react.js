@@ -371,10 +371,26 @@
 // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
 // => UseState : for update state
 // => useEffect : for lifeCycle method
-// => useCallback : used for rerendering 
+// => useCallback : used for rerendering
 // => useMemo : used for reredering
-// => useContext : used in Context API 
-// => useReducer : 
-// => useRef : 
+// => useContext : used in Context API
+// => useReducer : alternate of useState hook + it works like redux +
+// eg:
+import React, { useReducer } from "react";
+
+const App = () => {
+  const [count, dispatch] = useReducer(reducer, 0);
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button>Increment</button>
+      <button>Decrement</button>
+    </div>
+  );
+};
+
+export default App;
+
+// => useRef :
 
 ///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
