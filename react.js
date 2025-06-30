@@ -339,18 +339,31 @@
 // => Step 2 : Provider
 
 // export default App = () => {
-//     const [color, setColor] = useState("green");
-//     const getDay = (item) =>{
-//          console.log("data got from child:",item)
-//  }
+//     const [color, setColor] = useState("green");   // used to send data from parent to child using context not props
+//     const getDay = (item) =>{console.log("data got from child:",item)}  // used to recieve data from chilt to parent using context
 //   return (
 //     <>
-//       <GlobalData.Provider value={{ appColor: color,getDay:getDay }}>
+//       <GlobalData.Provider value={{ appColor : color , getDay : getDay }}>
 //         <div>
 //           <h1>App component</h1>
 //         </div>
 //       </GlobalData.Provider>
 //     </>
+//   );
+// };
+
+// Step 3 : useContext
+
+// import React, { useContext } from "react";
+// import { GlobalData } from "./App";
+// export default SuperChild = () => {
+//   const { appColor, getDay } = useContext(GlobalData);
+//   const day = "Sunday";
+//   return (
+//     <div>
+//       <h1 style={{ color: appColor }}>SuperChild Component</h1>
+//       <button onClick={() => getDay(day)}>Click Me</button>
+//     </div>
 //   );
 // };
 
