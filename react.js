@@ -374,23 +374,29 @@
 // => useCallback : used for rerendering
 // => useMemo : used for reredering
 // => useContext : used in Context API
-// => useReducer : alternate of useState hook + it works like redux +
+// => useReducer : alternate of useState hook + it works like redux 
 // eg:
-import React, { useReducer } from "react";
+// import React, { useReducer } from "react";
 
-const App = () => {
-  const [count, dispatch] = useReducer(reducer, 0);
-  return (
-    <div>
-      <h1>{count}</h1>
-      <button>Increment</button>
-      <button>Decrement</button>
-    </div>
-  );
-};
+// const App = () => {
+//   const [count, dispatch] = useReducer(reducer, 0);
 
-export default App;
+//   const reducer = (state, action) => {
+//     if(action.type=="Increment") return state+1;
+//     if(action.type=="Decrement") return state-1;
+//   };
 
-// => useRef :
+//   return (
+//     <div>
+//       <h1>{count}</h1>
+//       <button onClick={() => { dispatch({ type: "Increment" })}}>Increment</button>
+//       <button onClick={() => {dispatch({ type: "Decrement" })}}>Decrement</button>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// => useRef : used to change dom directely without re-render + 
 
 ///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
