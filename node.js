@@ -25,11 +25,11 @@
 // Core vs thread vs process =====================
 //  => CPU -> cores -> Process -> thread -> callStack / Event Loop  + A cpu can have multiple cores , Each core can run one or more process , each process can have one or more threads , threads shares memeory in same process but process dont share memory 
 
-// what is non blocking I/O in node.js ?
-// Event loop in node.js.
-// process.nextTick() vs setImmidiate()?
-// setTimeout() vs setIntervel()?
-// Explain the concept of callback hell and how can it be avoided in Node.js?
+// what is non blocking I/O in node.js ?============================
+// Event loop in node.js. ============================
+// process.nextTick() vs setImmidiate()? ============================
+// setTimeout() vs setIntervel()? ============================
+// Explain the concept of callback hell and how can it be avoided in Node.js? ============================
 
 // How does Node.js manage memory?===================================
 // manages memory using v8 engine + node uses main 2 memory: stack (stores primitive data types, fast,small in size,managed by call stack), heap (stores object, array, larger than stack, managed by garbage collector)
