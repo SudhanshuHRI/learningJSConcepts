@@ -19,10 +19,8 @@
 // how node.js work ? ==============================
 // => Single thread + non-blocking I/O
 
-// Explain Single thread ? =================================================
-// only one thread runs at a time + tasks are excuted one after another + slower from multitasking + 
-
 // How node handle single thread behaviour for multiTask ? ==========================
+// Event loop helps node to perform non-blocking I/O like reading a file without blocking the main thread. + Libuv library handles I/O in background threads 
 
 // Core vs thread vs process =====================
 //  => CPU -> cores -> Process -> thread -> callStack / Event Loop  + A cpu can have multiple cores , Each core can run one or more process , each process can have one or more threads , threads shares memeory in same process but process dont share memory 
