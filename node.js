@@ -146,11 +146,12 @@
 // unit testing in a Node.js application? =======================
 // Through JEST library or Mocha etc
 
-// What are some best practices you follow when writing a Node.js application?============
+// What are some best practices you follow when writing a Node.js application? ============
 //
 
 // How to make import export work on node.js ? which is better import export or require() ?
-// What kind of API function is supported by Node.js?
+// What kind of API function is supported by Node.js?  =======================
+// => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io, 
 // What is a module in Node.js?
 // What is npm and its advantages?
 // What is middleware?
