@@ -25,8 +25,12 @@
 // Core vs thread vs process =====================
 //  => CPU -> cores -> Process -> thread -> callStack / Event Loop  + A cpu can have multiple cores , Each core can run one or more process , each process can have one or more threads , threads shares memeory in same process but process dont share memory 
 
-// what is non blocking I/O in node.js ?============================
+// what is non-blocking I/O in node.js ? ============================
+// => means all async tasks . 
+
 // Event loop in node.js. ============================
+// => first request goes to event queue container + then event loop take one request and checks if request is sync(blocking) or async(non-blocking) + if async then goes to event queue and after solving event loop push it to evetn queue and the give respone to user + if blocking task then it goes to thread pool and if any thread is free then assign the task to that thread and thread gives the result , if not then it will wait for thread to be empty +
+
 // process.nextTick() vs setImmidiate()? ============================
 // setTimeout() vs setIntervel()? ============================
 // Explain the concept of callback hell and how can it be avoided in Node.js? ============================
