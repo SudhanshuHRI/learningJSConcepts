@@ -26,26 +26,31 @@
 //  => CPU -> cores -> Process -> thread -> callStack / Event Loop  + A cpu can have multiple cores , Each core can run one or more process , each process can have one or more threads , threads shares memeory in same process but process dont share memory
 
 // what is non-blocking I/O in node.js ? ============================
-// => means all async tasks .
+// => non-blocking I/O means async tasks .
 
 // Event loop in node.js. ============================
 // => first request goes to event queue container + then event loop take one request and checks if request is sync(blocking) or async(non-blocking) + if async then goes to event queue and after solving event loop push it to evetn queue and the give respone to user + if blocking task then it goes to thread pool and if any thread is free then assign the task to that thread and thread gives the result , if not then it will wait for thread to be empty
 
+// Microtask Queue vs Macrotask Queue ===============================
+// => when request comes, after catogarise in sync task or async task , event loop sends all async tasks to microtask Queue and macrotask Queue to excute + microtask has priority over macroTask + MicroTask : async functions, promise, process.nextTick etc + MacroTask : setIntervel, setTimeout etc.
+
 // process.nextTick() vs setImmidiate()? ============================
-// setTimeout() vs setIntervel()? ============================
-// Explain the concept of callback hell and how can it be avoided in Node.js? ============================
+// => both used for async task + process.nextTick() has priority on setImmidiate () + process.nextTick() will excute after current JS Call Stack completes [before the event loop conticues] and setImmidiate will excute on the next iteration of the event loop 
+
+// setTimeout() vs setIntervel() ============================
+// => setTimeout() used when a task should excute a specific delay, it will exucte once after delay + setIntervel() used when a task should retedely after a specific delay, it will excute again and again after delay
 
 // How does Node.js manage memory?===================================
 // manages memory using v8 engine + node uses main 2 memory: stack (stores primitive data types, fast,small in size,managed by call stack), heap (stores object, array, larger than stack, managed by garbage collector)
 
 // What is the role of the garbage collector? ==================================
-// Autometic memory cleanup by deleting objects that are no longer used + helps to manage memory +
+// Autometic memory cleanup by deleting objects, variables, functions that are no longer used + helps to manage memory + garbage collector dont remove global variables because they are always reachable in program running + GC only removes memory that is unrechable + unreachable means when your code has no way to access it anymore
 
 // What is the EventEmitter in Node.js, and how does it work? ==================================
 // provided by events module + used to click events + emitter.on('greet',(name)=>console.log(hello, ${name})); emitter.emit ('greet','Alice')
 
 // What are streams in Node.js, and how do they improve performance? ==================================
-// under fs module + used to stream data + data is read or write in chunks + dont load entire file besides use chucks + fs.createReadStream()
+// under fs module + used to stream data + data is read or write in chunks + dont load entire file , besides use chucks + fs.createReadStream()
 
 // How many types of streams? give example code. ==================================
 // 4 types +  read, write, duplex (read and write in same time), Tranform (used to manipulate chunk before read or write)
@@ -60,7 +65,7 @@
 // used for load balancing of server by using multi core cpu processor + create workers + each worker per core + each worker handles incomming requests separately + great for makeing scalable node servers that fully utilize all cpu cores.
 
 // Difference between cluster module and child_process. ==================================
-// cluster module : Scale node.js server using cpu's multi core + used for load balancing of server
+// cluster module : Scale node.js server using cpu's multicore + used for load balancing of server
 // child_process module : used to run external scripts
 
 // How do worker threads differ from cluster? ==========================
@@ -71,7 +76,7 @@
 // How would you manage concurrency in node.js application ?  =========================================
 // through event loop , callback, Promises, async/await etc.
 //
-// how would you manage . in a Node.js application? ==================================
+// how would you manage maltiple request in a Node.js application? ==================================
 // through worker_threads, child_process, cluster modules.
 
 // Explain the non-blocking I/O model in Node.js. How does it impact performance? =====================
