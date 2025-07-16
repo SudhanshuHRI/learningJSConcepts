@@ -148,20 +148,35 @@
 // How do you manage OAuth 2.0 authentication in Node.js? =====================================
 // OAuth 2.0 means node will interact with third party (google,facebook,linkdin,github) to authenticate user
 
-// unit testing in a Node.js application? =======================
-// Through JEST library or Mocha etc
-
 // What are some best practices you follow when writing a Node.js application? ============
 //
 
-// How to make import export work on node.js ? which is better import export or require() ?
+// How to make import export work on node.js ? which is better import export or require() ? =========================
+
 // What kind of API function is supported by Node.js?  =======================
-// => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io,
-// What is a module in Node.js?
-// What is npm and its advantages?
-// What is middleware?
-// How does Node.js handle concurrency despite being single-threaded?
-// What is the control flow in Node.js?
+// => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io
+
+// What is a module in Node.js? ====================
+// => reusable block of code
+
+// What is middleware? give example to varify user========================
+// =>eg:
+// const middleware = async (req, res, next) => {
+//   const userToken = req.cookies["usejwtToken"];
+//   const jwtSecreatKey = process.env.JWT_SECREAT_KEY;
+
+//   const result = await jwt.varify(userToken, jwtSecreatKey);
+
+//   if (result) next();
+//   else res.json("user not varified!!");
+// };
+
+// app.get("/getUser", middleware, (req, res) => {});
+
+
+
+// What is the control flow in Node.js? ============================================
+// 
 // What are the main disadvantages of Node.js?
 // What is REPL in Node.js?
 // How to import a module in Node.js?
@@ -183,14 +198,12 @@
 // What is CORS in Node.js?
 // Explain the tls module in Node.js.
 // How to manage sessions in Node.js?
-// Explain the types of streams in Node.js.
+
 // How can we implement authentication and authorization in Node.js?
 // Explain the packages used for file uploading in Node.js.
 // How to handle database connections in Node.js?
 // How to read command line arguments in Node.js?
-// What are child processes in Node.js?
-// What are the main modules of Node.js? Explain in detail.
-// what is middleware ?
+
 // what is JWT ?
 // Difference between POST, PUT and GET ?
 // Difference between RDBMS and No-sql DBMS ?
