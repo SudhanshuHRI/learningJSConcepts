@@ -35,7 +35,7 @@
 // => when request comes, after catogarise in sync task or async task , event loop sends all async tasks to microtask Queue and macrotask Queue to excute + microtask has priority over macroTask + MicroTask : async functions, promise, process.nextTick etc + MacroTask : setIntervel, setTimeout etc.
 
 // process.nextTick() vs setImmidiate()? ============================
-// => both used for async task + process.nextTick() has priority on setImmidiate () + process.nextTick() will excute after current JS Call Stack completes [before the event loop conticues] and setImmidiate will excute on the next iteration of the event loop 
+// => both used for async task + process.nextTick() has priority on setImmidiate () + process.nextTick() will excute after current JS Call Stack completes [before the event loop conticues] and setImmidiate will excute on the next iteration of the event loop
 
 // setTimeout() vs setIntervel() ============================
 // => setTimeout() used when a task should excute a specific delay, it will exucte once after delay + setIntervel() used when a task should retedely after a specific delay, it will excute again and again after delay
@@ -156,7 +156,7 @@
 
 // How to make import export work on node.js ? which is better import export or require() ?
 // What kind of API function is supported by Node.js?  =======================
-// => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io, 
+// => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io,
 // What is a module in Node.js?
 // What is npm and its advantages?
 // What is middleware?
