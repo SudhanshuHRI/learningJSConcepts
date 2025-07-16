@@ -69,10 +69,10 @@
 // emitter.on("greet", () => {
 //   console.log("Hello! An event was triggered.");
 // });
-// emitter.emit("greet"); 
+// emitter.emit("greet");
 
 // What are streams in Node.js, and how do they improve performance? ==================================
-// => under "fs" module + used to stream data + data is read or write in chunks + dont load entire file , besides use chucks 
+// => under "fs" module + used to stream data + data is read or write in chunks + dont load entire file , besides use chucks
 // => eg:
 // const fs = require('fs');
 // const readStream = fs.createReadStream('largefile.txt', { encoding: 'utf8' });
@@ -106,11 +106,11 @@
 // using callback ((err,data)=>{}) + using promises (.catch()) + async/await (try-catch block)
 
 // is event loop in react.js and node.js different ? =========================================
-// => yes + react.js doesn't have its own event loop , it works on browser's event loop + react's async ops handles with web api +  node's event loop provided by libuv + node handles async ops with libuv 
+// => yes + react.js doesn't have its own event loop , it works on browser's event loop + react's async ops handles with web api +  node's event loop provided by libuv + node handles async ops with libuv
 
 // What are Promises in Node.js, and how do they differ from callbacks?  =======================================
 // => promise is an object represent eventual compilation of async operation + states: pending, fulfilled, rejected + more powerful than callback + error handling and chaining cleaner
-// => eg: 
+// => eg:
 //  const myPromise = new Promise ((resolve,reject)=>{
 //     const success = true;
 //     if(success) resolve("it worked")
@@ -137,8 +137,14 @@
 // How do you ensure security in a Node.js application? ===============================
 // => use https + use parameterise query to prevent sql injections + validate and sanitize input + use helmet middleware + implement jwt + bycrypt to hash password + keep senstive data in .env + keep dependencies updated + use Strict mode for common bugs
 
+// Cross-Site-Scripting(XSS) ===========================================
+// => when attacker injects malicious JS through input box + it can steal cookies, redirece users, log keystrokes + for preventing we have to sanatise input using "xss" library
+// => eg:
+// import xss from 'xss';
+// const safeInput = xss(req.body.comment);
 
-// XSS vs CORS vs CSRF ===============================================
+// CORS =================================================
+// CSRF ===============================================
 // What is helmet library how to use it ? ==================================
 // What is cross-site scripting (XSS), and how can you prevent it in a Node.js application? ====================
 // attackers inject malicious script like <script>alert("hacked")</script> + can stole cookies or session + to prevent this we use "sanitize-html" library that removes html tags from user input + we can also use "helmet" library that include content-security-policy(CSP) in HTTP headers.
@@ -181,7 +187,7 @@
 // app.get("/getUser", middleware, (req, res) => {});
 
 // What is the control flow in Node.js? ============================================
-// 
+//
 // What are the main disadvantages of Node.js?
 // What is REPL in Node.js?
 // How to import a module in Node.js?
@@ -446,7 +452,6 @@
 
 // How to create and monitor health checks in Node.js?
 
-
 // 5. If Node.js is single-threaded, then how does it handle concurrency?
 // 6. Explain callback in Node.js.
 // 7. What are the advantages of using promises instead of callbacks?
@@ -496,7 +501,6 @@
 // 51. What is the purpose of NODE_ENV?
 // 52. List the various Node.js timing features.
 // 53. What is WASI, and why is it being introduced?
-
 
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
 // write a code for schema and model
