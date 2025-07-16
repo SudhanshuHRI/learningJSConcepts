@@ -16,17 +16,28 @@
 // What is Node.js and it's history? ================================
 // => created by Ryan Dahl in 2009 + js runtime environment that runs js outside the browser
 
-// how node.js work ? ==============================
-// => Single thread + non-blocking I/O
+// Node.js is single threaded means ?  ==============================
+// => means only one operation is excuted in one time + code is excuted synchronously
 
-// How node handle single thread behaviour for multiTask ? ==========================
-// => Event loop helps node to perform non-blocking I/O like reading a file without blocking the main thread. + Libuv library handles I/O in background threads
+// how node.js defeats single thread system ? ======================================
+// => libuv thread pool used to solve this issue + libuv give node.js async and non-blocking power + when any async task comes , main thread passes it to libuv thread pool and moves on + libuv thread pool have default 4 background threads to do heavy tasks + Event loop is also provided by libuv in node.js
 
 // Core vs thread vs process =====================
-// => CPU -> cores -> Process -> thread -> callStack / Event Loop  + A cpu can have multiple cores , Each core can run one or more process , each process can have one or more threads , threads shares memeory in same process but process dont share memory
+// =>CPU
+//  └── Core(s)
+//       └── Process (e.g., node app.js)
+//           ├── Main Thread (single thread runs JS code)
+//           │    ├── Call Stack (executes your JavaScript)
+//           │    └── Event Loop (libuv - schedules async tasks)
+//           └── Worker Threads (libuv thread pool for async I/O)
+
+// Cluster , child_process, worker_thread module in node.js ? ==================================
+// => Cluster module : used to seperate process + mainly used for Scaling http servers
+// => child_process module : used to excute external commands or scripts
+// => workers_thread : used to create more threads in same process
 
 // what is non-blocking I/O in node.js ? ============================
-// => non-blocking I/O means async tasks .
+// => I/O stands for Input/Output operations like reading file, quering database, making network requests + in blocking I/O program waits for each task to finish + non-blocking I/O means your program not wait + when one task is in progress, it keeps doing other task and when I/O is done it runs a callback or promise.
 
 // Event loop in node.js. ============================
 // => first request goes to event queue container + then event loop take one request and checks if request is sync(blocking) or async(non-blocking) + if async then goes to event queue and after solving event loop push it to evetn queue and the give respone to user + if blocking task then it goes to thread pool and if any thread is free then assign the task to that thread and thread gives the result , if not then it will wait for thread to be empty
@@ -47,7 +58,15 @@
 // Autometic memory cleanup by deleting objects, variables, functions that are no longer used + helps to manage memory + garbage collector dont remove global variables because they are always reachable in program running + GC only removes memory that is unrechable + unreachable means when your code has no way to access it anymore
 
 // What is the EventEmitter in Node.js, and how does it work? ==================================
-// provided by events module + used to click events + emitter.on('greet',(name)=>console.log(hello, ${name})); emitter.emit ('greet','Alice')
+// => provided by 'events' module + used to click events in node.js
+// => eg:
+
+// const EventEmitter = require("events");
+// const emitter = new EventEmitter();
+// emitter.on("greet", () => {
+//   console.log("Hello! An event was triggered.");
+// });
+// emitter.emit("greet"); 
 
 // What are streams in Node.js, and how do they improve performance? ==================================
 // under fs module + used to stream data + data is read or write in chunks + dont load entire file , besides use chucks + fs.createReadStream()
@@ -153,13 +172,10 @@
 
 // How to make import export work on node.js ? which is better import export or require() ? =========================
 
-// What kind of API function is supported by Node.js?  =======================
+// What kind of API function / modules is supported by Node.js?  =======================
 // => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io
 
-// What is a module in Node.js? ====================
-// => reusable block of code
-
-// What is middleware? give example to varify user========================
+// What is middleware? give example to varify user on protected routes ========================
 // =>eg:
 // const middleware = async (req, res, next) => {
 //   const userToken = req.cookies["usejwtToken"];
@@ -173,10 +189,8 @@
 
 // app.get("/getUser", middleware, (req, res) => {});
 
-
-
 // What is the control flow in Node.js? ============================================
-// 
+//
 // What are the main disadvantages of Node.js?
 // What is REPL in Node.js?
 // How to import a module in Node.js?
