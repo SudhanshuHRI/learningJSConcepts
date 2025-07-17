@@ -146,8 +146,6 @@
 // CORS =================================================
 // CSRF ===============================================
 // What is helmet library how to use it ? ==================================
-// What is cross-site scripting (XSS), and how can you prevent it in a Node.js application? ====================
-// attackers inject malicious script like <script>alert("hacked")</script> + can stole cookies or session + to prevent this we use "sanitize-html" library that removes html tags from user input + we can also use "helmet" library that include content-security-policy(CSP) in HTTP headers.
 
 // What is cross-site request forgery (CSRF), and how can you prevent it in Node.js? ====================
 // user is tricked to perform action they didn't intend + prevent it by csrf token + use csurf library + set cookies sameSite to "strict" + restrict which domain can send request using cors + avoid get request for changing data the data in db
