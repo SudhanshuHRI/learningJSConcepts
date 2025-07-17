@@ -156,7 +156,8 @@
 //   })
 // );
 
-// CSRF ===============================================
+// Cross-Site-Request-Forgery(CSRF) ===============================================
+// => it is a type of attack where malicious site tricks a user browser into sending request to your backend
 // What is helmet library how to use it ? ==================================
 
 // What is cross-site request forgery (CSRF), and how can you prevent it in Node.js? ====================
