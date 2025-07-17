@@ -143,7 +143,19 @@
 // import xss from 'xss';
 // const safeInput = xss(req.body.comment);
 
-// CORS =================================================
+// Cross-Origin-Resource-sharing(CORS) =================================================
+// => It is a security feature implemented by web browsers to restrict resource sharing + We have to use "cors" library
+// => eg :
+// import cors from "cors";
+// app.use(cors()); // allow all origin
+// app.use(
+//   cors({
+//     origin: "http://example.com",
+//     method: ["GET", "POST"],
+//     credentials: true, // allows cookies and headers
+//   })
+// );
+
 // CSRF ===============================================
 // What is helmet library how to use it ? ==================================
 
