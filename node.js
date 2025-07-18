@@ -157,72 +157,72 @@
 // );
 
 // Cross-Site-Request-Forgery(CSRF) ===============================================
-// => it is a type of attack where malicious site tricks a user browser into sending request to your backend
+// => it is a type of attack where malicious site tricks a user browser into sending request to your backend + to protect it we use "csurf" library
+// => eg:
+// import csrf from "csrf"
+// const csrfProtection = csrf({cookie:true});
+// app.get("/getData",csrfProtection,(req,res)=>{})
+
 // What is helmet library how to use it ? ==================================
-
-// What is cross-site request forgery (CSRF), and how can you prevent it in Node.js? ====================
-// user is tricked to perform action they didn't intend + prevent it by csrf token + use csurf library + set cookies sameSite to "strict" + restrict which domain can send request using cors + avoid get request for changing data the data in db
-
-// What is the helmet middleware in Express.js, and how does it help secure an app? ===================
-// security middleware + helps app for common web vulnerabies by setting secure http headers + it protect from : XSS, MIME sniffing, clickjacking, hides "X-powered-By: Express" header
+// => it is a middleware for express applications + it help in preventing Cross-site scription, clickjacking, MIME-sniffing, Information leak via headers
+// => eg:
+// import helmet from "helmet";
+// app.use(helmet());
 
 // How would you handle rate limiting in a Node.js application? =============
 // technique to control no of request by client in limited time + we use "express-rate-limit" library for that
 
-// What is CORS (Cross-Origin Resource Sharing), and how do you configure it in Node.js? ==================
-// Allows server to share resource to indicated origin
-
 // How do you manage OAuth 2.0 authentication in Node.js? =====================================
-// OAuth 2.0 means node will interact with third party (google,facebook,linkdin,github) to authenticate user
+// OAuth 2.0 means node will interact with third party (google,facebook,linkdin,github) to authenticate user + we use "passport library" for that
 
 // What are some best practices you follow when writing a Node.js application? ============
-//
+// we use modular architecture + use async/await instead of callbacks + security of app with helmet, csurf, validate user, sanitize inputs + use .env file + use middlewares 
 
 // How to make import export work on node.js ? which is better import export or require() ? =========================
+// we add {"type":"module"} in package.json + import / export comes from ECMAScript 2015 
 
 // What kind of API function / modules is supported by Node.js?  =======================
-// => fs module, http , buffer , stream, timer, events, child process, worker thread, path, url, crypto, network, passport, mongoose, mysql2, express, jsonwebtoken, ws, socket.io
+// => fs module : allows you to read, write, update, delete and manage files and directories directly.
+// => http : used to create http severs in node
+// => buffer : used to handle binary data directly in memory 
+// => stream : used to read data from source and wirte to desitnation in chuncks
+// => events : used to create,emit,listen events in backend + EventEmmiter comes in it
+// => child process : 
+// => worker thread :
+// => path :
+// => url :
+// => tls : 
+// => crypto :
+// => network :
+// => passport :
+// => mongoose :
+// => mysql2 :
+// => express : 
+// => jsonwebtoken :
+// => ws :
+// => socket.io : 
 
-// What is middleware? give example to varify user on protected routes ========================
-// =>eg:
-// const middleware = async (req, res, next) => {
-//   const userToken = req.cookies["usejwtToken"];
-//   const jwtSecreatKey = process.env.JWT_SECREAT_KEY;
-
-//   const result = await jwt.varify(userToken, jwtSecreatKey);
-
-//   if (result) next();
-//   else res.json("user not varified!!");
-// };
-
-// app.get("/getUser", middleware, (req, res) => {});
-
-// What is the control flow in Node.js? ============================================
-//
 // What are the main disadvantages of Node.js?
 // What is REPL in Node.js?
-// How to import a module in Node.js?
+
 // What is the difference between Node.js and AJAX?
 // What is event-driven programming in Node.js?
-// What is buffer in Node.js?
-// Explain crypto module in Node.js.
-// Explain the use of the timers module in Node.js.
+
 // What is the difference between spawn() and fork() methods?
-// Explain the use of the passport module in Node.js.
-// What is a fork in Node.js?
+
 // What is body-parser in Node.js?
-// Explain the tls module in Node.js.
+
 // How to manage sessions in Node.js?
+
 // How can we implement authentication and authorization in Node.js?
-// Explain the packages used for file uploading in Node.js.
-// How to handle database connections in Node.js?
+
 // How to read command line arguments in Node.js?
 
-// what is JWT ?
 // Difference between POST, PUT and GET and PATCH ?
+
 // Difference between RDBMS and No-sql DBMS ?
-// How do you deploy your Nodejs application?
-// Do you follow agile or any other SDLC model?
+// How do you deploy your Nodejs application ?
+// Do you follow agile or any other SDLC model ?
 // What is collection framework
 // What is error first callback function?
 // When did you used and where did you used redis cache
@@ -515,6 +515,8 @@
 
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
 // write a code for schema and model
-// write a code for middle Writable
+// write a code for middleware implimentation on Procted routes
 // write a code for connecting a database
 // write a code for get,put,patch, post, delete apis
+// write a Promise and Promise.all() code.
+// make authorization and authentication apis.
