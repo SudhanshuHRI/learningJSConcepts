@@ -300,45 +300,62 @@
 
 
 // How to retry a failed async operation? ===========================
-// => we can use "async-retry" library or 
+// => we can use "async-retry" library or we have  to use function for recall
 
-// What are async generators?
+// What are async generators? ===========================
+// => special kind of functions that allows you to  use await inside the generator + combination of async functions and generator functions
+// eg:
+// async function* myAsyncGenerator() {
+//   yield await Promise.resolve(1);
+//   yield await Promise.resolve(2);
+//   yield await Promise.resolve(3);
+// }
 
-// How do you test asynchronous code in Node.js?
+// How do you debug memory leaks? =====================
+// => memory leaks happens when app keeps holding onto memory that is no longer needs + cause of memory leaks : global variables, event listener not removed, closures capturing large data, timers, unresolved promises
 
-// What are the best practices for unit testing?
+// Difference between operational and programmer errors. ========================================
+// => Operational Errors : Failures that are expected to happen during normal operations as network failure and file not found
+// => Programmer Errors : Bugs and mistakes in logic code
 
-// Difference between mocha, jest, and ava.
+// What is unhandledRejection and how do you handle it? ========================================
+// => it is a event that occurs when a Promise is rejected and not catch() or try-catch handles it + We have to add listener for it to prevent 
+// => eg:
+// process.on('unhandledRejection', (reason, promise) => {
+//   console.error('Unhandled Rejection at:', promise);
+//   console.error('Reason:', reason);
 
-// How do you mock dependencies in tests?
+//   // Optionally exit
+//   process.exit(1);
+// });
 
-// How do you debug memory leaks?
 
-// Difference between operational and programmer errors.
+// Difference between process.exit() and uncaughtException. ===================================
+// => process.exit() : it immidiately ends the node process + dont wait for async opration to finish
+// => uncoughtException : this listens for errors that were not caught anywhere in your code
 
-// What is unhandledRejection and how do you handle it?
+// How to handle graceful shutdown in Node? ====================================.
+// => graceful shutdown means cleaning up resources properly before application exit + close http servers, end database connections , cancel background tasks, prevent data leaks
 
-// Difference between process.exit() and uncaughtException.
+// How to fork processes in Node? ===============================================
+// => fork is in "child_process" module + it creates seperate process to run concurrently and communicate with parent process + in "child_process" fork is used for child node process, spawn() is used to run shell commands and external scripts, exec() is used to run small shell commands.
 
-// How to handle graceful shutdown in Node?
+// What is a zombie process? =============================
+// => this is a process that has completed execution, but still remains in process table because it's parent hasn't yet read it's exit status + zombie processes can appear if you fork child processes and don't handle their termination properly + to prevent it always listen to exit event
+// => eg:
 
-// How to fork processes in Node?
+// child.on('exit', (code) => {
+//   console.log(`Child exited with code ${code}`);
+// });
 
-// Explain child_process.exec() vs spawn().
 
-// What is a zombie process?
+// How do you measure Node.js performance? =======================================
+// => to measure node performance we moniter CPU usage, memory usage, response time, event loop delay etc + we use "process" object to measure it
+// => eg:
+// console.log('Memory:', process.memoryUsage());
+// console.log('CPU:', process.cpuUsage());
 
-// How do you measure Node.js performance?
 
-// What are memory leaks and how to find them?
-
-// How to use clinic.js or node --inspect?
-
-// How do you improve startup time in Node?
-
-// How do you handle CPU-intensive tasks?
-
-// Difference between npm and yarn.
 
 // What is nvm and why use it?
 
@@ -346,7 +363,7 @@
 
 // What are monorepos and how do tools like Lerna help?
 
-// What is a microservice architecture in Node.js?
+
 
 // How do you handle inter-service communication?
 
@@ -354,12 +371,10 @@
 
 // How to use message queues with Node.js?
 
-// What is an event-driven architecture?
 
 // How to handle rate limiting in Express?
 
 // Difference between global and route-specific middleware.
-
 
 // How to handle file uploads securely?
 
