@@ -247,60 +247,60 @@
 // What is a first class function in Javascript? ========================================================
 // => means functions can be treated like any other value + we can assign function to variable, pass it as argument , return it from another function, store function in arrays or object
 
-// Why should you separate Express app and server? ========================================================
-// Explain what a Reactor Pattern in Node.js? ========================================================
-
-// What is WASI and why is it being introduced? ========================================================
 // cache vs cookies ?? ========================================================
-// explain these modules => zlib, stream, query string, url, os, fs, util, http ========================================================
+// => cookies : small key-value pairs stored in browser + used to manage login + automatically send to server with every request
+// => cache : stores data in browser to avoid re-downloading + reduces server load + it stores website images, scripts and data to help load webpage faster when you visit again
+
+// Q.What are microtasks queue and macrotasks queue in Node.js?========================================================
+// => Microtasks : high priority + excuted immidiately after corrent operation and before macrotasks + process.nextTick(), Promises + goes in Check Queue + Process.nextTick will excute first from promises
+// => Macrotasks : regular async tasks + excuted in next phase of event loop + setTimeout, SetIntervel, setImmediate etc + goes in Timer Queue
+
+// How can you monitor and debug event loop lag?===============================================
+// => event loop lag means when event loop is blocked + often caused by sync or blocking operations + we use perf_hooks built in library to moniter
+
+// How does backpressure work in streams?===============================================
+// => Backpressure happens when the data producer (Readable stream) is sending data faster than the consumer (Writable stream) can process.To prevent overload, Node.js provides built-in mechanisms to pause or slow down the producer until the consumer catches up.
+
+// Explain how Node handles connection pooling.===============================================
+// => A technique to manage or reuse open database connections + Connection pooling is a way to efficiently reuse existing connections instead of creating new ones repeatedly
+
+// How to handle socket hang-up errors?=================
+// => socket hangUp means client or server closed the connection before request is completed + We have to use try-catch block 
+
+// What’s the difference between "Connection : keep-alive" and "Connection : upgrade" headers?===================
+// => keep-alive : means reuse the same TCP connection for multiple http request/response + good for fast page loads
+// => upgrade : means once the connection is stabilshed, it will upgrade to webSocket Protocol + good for read-time apps
+
+// Difference between polling and WebSockets.=============================
+// => Polling : means client repetedly asks the server for new data at fixed intervals + only client send request continously
+// => WebSockets : means once connected then send request in both directions
+
+
+// How do you cache modules in Node.js? ==================================
+// modules are cached automatically with require() + means node loads a moule only once with it + if me import same module multiple times, cached varsion will be imported + to check we can use console.log(require.cache) + import-export also caches module
+
+// Difference between fs.readFile and fs.promises.readFile. ================================
+// => fs.readFile uses callback + fs.promises.readFile uses Promises
+
+// How to watch for file changes? ==============================
+// => we use fs.watch() 
+// => eg:
+// const fs = require('fs');
+
+// fs.watch('example.txt', (eventType, filename) => {
+//   console.log(`File ${filename} changed! Event: ${eventType}`);
+// });
+
+
+// What is the purpose of fs.fsync()? =================================
+// => When you write a file with fs.writeFile(), the data may be temporarily catched in memory by os + This means a crash could cause data loss before it written in disk + fs.fsync() reduces it by flusing the data of file to the disk
 
 
 
 
-// Q.What are microtasks and macrotasks in Node.js?========================================================
-// A.
-// 1)Microtasks : high priority + excuted immidiately after corrent operation and before macrotasks + process.nextTick(), Promises + goes in Check Queue + Process.nextTick will excute first from promises
-// 2)Macrotasks : regular async tasks + excuted in next phase of event loop + setTimeout, SetIntervel, setImmediate etc + goes in Timer Queue
 
-
-// How does Node.js handle blocking code?
-
-// How can you monitor and debug event loop lag?
-// event loop lag means when event loop is blocked + often caused by sync or blocking operations + we use perf_hooks built in library to moniter
-
-// How does backpressure work in streams?
-// Backpressure happens when the data producer (Readable stream) is sending data faster than the consumer (Writable stream) can process.To prevent overload, Node.js provides built-in mechanisms to pause or slow down the producer until the consumer catches up.
-
-// Explain how Node handles connection pooling.
-// A technique to manage or reuse open database connections + Connection pooling is a way to efficiently reuse existing connections instead of creating new ones repeatedly
-
-// How to handle socket hang-up errors?
-
-// What’s the difference between keep-alive and upgrade headers?
-
-// Difference between polling and WebSockets.
-
-// How does Socket.IO differ from native WebSockets?
-
-// What is a cyclic dependency, and how does Node handle it?
-
-// How to create custom native addons?
-
-// How do you cache modules in Node.js?
-
-// Difference between fs.readFile and fs.promises.readFile.
-
-// How to watch for file changes?
-
-// What is the purpose of fs.fsync()?
-
-// How does Node interact with the underlying OS?
-
-// How to handle multiple promises concurrently?
-
-// What is the Promise.race() method?
-
-// How to retry a failed async operation?
+// How to retry a failed async operation? ===========================
+// => we can use "async-retry" library or 
 
 // What are async generators?
 
