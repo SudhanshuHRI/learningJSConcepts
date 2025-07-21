@@ -179,25 +179,23 @@
 // OAuth 2.0 means node will interact with third party (google,facebook,linkdin,github) to authenticate user + we use "passport library" for that
 
 // What are some best practices you follow when writing a Node.js application? ============
-// we use modular architecture + use async/await instead of callbacks + security of app with helmet, csurf, validate user, sanitize inputs + use .env file + use middlewares 
+// we use modular architecture + use async/await instead of callbacks + security of app with helmet, csurf, validate user, sanitize inputs + use .env file + use middlewares
 
 // How to make import export work on node.js ? which is better import export or require() ? =========================
-// we add {"type":"module"} in package.json + import / export comes from ECMAScript 2015 
+// we add {"type":"module"} in package.json + import / export comes from ECMAScript 2015
 
 // What kind of API function / modules is supported by Node.js?  =======================
 // => fs module : allows you to read, write, update, delete and manage files and directories directly.
 // => http : used to create http severs in node
-// => buffer : used to handle binary data directly in memory 
+// => buffer : used to handle binary data directly in memory
 // => stream : used to read data from source and wirte to desitnation in chuncks
 // => events : used to create,emit,listen events in backend + EventEmmiter comes in it
 // => child process : used to excute external programs + run shell commands or scripts
 // => worker thread : used to run js in parallel threads
 // => path : used to work with file and directory path  + join , resolve paths
 // => url : used to work with urls
-// => tls : used to implement TLS and SSL in client-server communications + encrypt communication + authentication of server 
+// => tls : used to implement TLS and SSL in client-server communications + encrypt communication + authentication of server
 // => crypto : used to perform cryptographic operations + hashing,encryption,decryption,tokengeneration etc
-
-
 
 // What is REPL in Node.js? ========================================================
 // => REPL means READ, EVAL, PRINT, LOOP + used to run node on CMD
@@ -214,23 +212,19 @@
 
 // What is body-parser in Node.js? ========================================================
 // => this middleware is used to parse the body of incoming http requests + when client send request, usually node don's parse it autoamtically in JSON
- 
+
 // How to read command line arguments in Node.js? ========================================================
 // We can read cmd arguments using built-in "process.argv" array
 
 // Difference between PUT and PATCH ?========================================================
-// PUT updates the full record with new data, PATCH updates only specific fields 
+// PUT updates the full record with new data, PATCH updates only specific fields
 
-  
 // different functions to get,put,post,delete data in mongodb =================================
-// => To get all users : const allUsers = await users.find(); 
+// => To get all users : const allUsers = await users.find();
 // => To get Single user : const oneUser = await users.findById("123abcd...");
 // => to create singe User : const newUser = new User({name:"Alice",email:"exmple@gmail.com"}); await newUser.save();
 // => to put or patch : await User.findByIdAndUpdate("64abcd1234...", { name: "Updated Name" });
 // => to Delete user : await User.findByIdAndDelete("64abcd1234...");
-
-
-
 
 // What is error first callback function? ========================================================
 // where first argument of a callback is always the error + const callback = (err,result) => {if(err){}else{}} + used for async operations + helps avoid crashing the app beacuse it catches error early
@@ -239,7 +233,7 @@
 // Redis is a small database in server's RAM +  for storing and fetching small data in backend we dont use Main database every time, so we use redis as temperory database on server's RAM to store small data and if data is not find in redis then backend goes to main database  + we use if for caching
 
 // What's swagger and how to add authentication in swagger ========================================================
-// => tool for testing , building, desining REST APis + it provides web based UI 
+// => tool for testing , building, desining REST APis + it provides web based UI
 
 // What is cyclic dependency in. Node js ========================================================
 // => When 2 or more modules depends on each other directly or indirectly + it can cause type error or undefined values + We have 2 modules A,B. WE import B in A and again import A in B module then it will be create error
@@ -265,7 +259,7 @@
 // => A technique to manage or reuse open database connections + Connection pooling is a way to efficiently reuse existing connections instead of creating new ones repeatedly
 
 // How to handle socket hang-up errors?=================
-// => socket hangUp means client or server closed the connection before request is completed + We have to use try-catch block 
+// => socket hangUp means client or server closed the connection before request is completed + We have to use try-catch block
 
 // What’s the difference between "Connection : keep-alive" and "Connection : upgrade" headers?===================
 // => keep-alive : means reuse the same TCP connection for multiple http request/response + good for fast page loads
@@ -275,7 +269,6 @@
 // => Polling : means client repetedly asks the server for new data at fixed intervals + only client send request continously
 // => WebSockets : means once connected then send request in both directions
 
-
 // How do you cache modules in Node.js? ==================================
 // modules are cached automatically with require() + means node loads a moule only once with it + if me import same module multiple times, cached varsion will be imported + to check we can use console.log(require.cache) + import-export also caches module
 
@@ -283,7 +276,7 @@
 // => fs.readFile uses callback + fs.promises.readFile uses Promises
 
 // How to watch for file changes? ==============================
-// => we use fs.watch() 
+// => we use fs.watch()
 // => eg:
 // const fs = require('fs');
 
@@ -291,13 +284,8 @@
 //   console.log(`File ${filename} changed! Event: ${eventType}`);
 // });
 
-
 // What is the purpose of fs.fsync()? =================================
 // => When you write a file with fs.writeFile(), the data may be temporarily catched in memory by os + This means a crash could cause data loss before it written in disk + fs.fsync() reduces it by flusing the data of file to the disk
-
-
-
-
 
 // How to retry a failed async operation? ===========================
 // => we can use "async-retry" library or we have  to use function for recall
@@ -319,7 +307,7 @@
 // => Programmer Errors : Bugs and mistakes in logic code
 
 // What is unhandledRejection and how do you handle it? ========================================
-// => it is a event that occurs when a Promise is rejected and not catch() or try-catch handles it + We have to add listener for it to prevent 
+// => it is a event that occurs when a Promise is rejected and not catch() or try-catch handles it + We have to add listener for it to prevent
 // => eg:
 // process.on('unhandledRejection', (reason, promise) => {
 //   console.error('Unhandled Rejection at:', promise);
@@ -328,7 +316,6 @@
 //   // Optionally exit
 //   process.exit(1);
 // });
-
 
 // Difference between process.exit() and uncaughtException. ===================================
 // => process.exit() : it immidiately ends the node process + dont wait for async opration to finish
@@ -348,14 +335,11 @@
 //   console.log(`Child exited with code ${code}`);
 // });
 
-
 // How do you measure Node.js performance? =======================================
 // => to measure node performance we moniter CPU usage, memory usage, response time, event loop delay etc + we use "process" object to measure it
 // => eg:
 // console.log('Memory:', process.memoryUsage());
 // console.log('CPU:', process.cpuUsage());
-
-
 
 // What is nvm and why use it? ======================================
 // => NVM is Node Version Manager + CMD command to intall, manage, switch between multiple version of node.js
@@ -364,11 +348,11 @@
 // PM2 is Production Process Manager for node + it keeps apps alive even after crashes or restarts + npm install -g pm2 + pm2 start index.js
 
 // How to handle rate limiting in Express? ====================================
-// rate limiting is important to protext our express app from abuse [like DDos attacks, brute-froce login, api overuse] + it limits how many request can a client make in certain period of time + we use "express-rate-limit" library 
+// rate limiting is important to protext our express app from abuse [like DDos attacks, brute-froce login, api overuse] + it limits how many request can a client make in certain period of time + we use "express-rate-limit" library
 
 // Difference between global and route-specific middleware. ==============================
 // => Global MiddleWare : it applies of all imcomming request
-// => eg: 
+// => eg:
 // app.use(express.json()); // Applies to all routes
 
 // app.use((req, res, next) => {
@@ -376,7 +360,7 @@
 //   next();
 // });
 // => Specific middleware : it applies on specific routes
-// => eg: 
+// => eg:
 // function checkAdmin(req, res, next) {
 //   if (req.user && req.user.role === 'admin') {
 //     return next();
@@ -387,61 +371,38 @@
 //   res.send('Welcome, Admin!');
 // });
 
-
 // How to handle file uploads securely so that malicious files cannot be uploaded ===========================
-// => limit file size + restrict file types + rename uploaded files + we use "multer" library 
+// => limit file size + restrict file types + rename uploaded files + we use "multer" library
 // => eg:
 // const multer = require('multer');
-// const upload = multer({ dest: 'uploads/' }); 
+// const upload = multer({ dest: 'uploads/' });
 
 // How to handle JSON streaming? =====================================
+// JSON streaming means instead of sending or recieving full JSON you send it in chunks + used in large database exports, streaming apis, real-time dashboards
 
-// How to prevent JSON overflows?
+// What is schema validation and how to implement it? ============================================
+// => we use "joi" library
+// => eg:
+// const Joi = require("joi");
 
-// What is schema validation and how to implement it?
+// const userSchema = Joi.object({
+//   name: Joi.string().required(),
+//   age: Joi.number().integer().min(0),
+//   email: Joi.string().email().required(),
+// });
 
-// Difference between ORM and query builders.
+// app.post("/register", (req, res) => {
+//   const { error, value } = userSchema.validate(req.body);
 
-// How to handle database pooling in Node.js?
-
-
-// How to perform transactions in Node.js?
-
-// How to prevent N+1 query problems?
-
-// How to implement logging in production apps?
-
-// How to use winston or pino for logging?
-
-// How to monitor Node.js applications with tools like New Relic, Datadog, or Elastic?
-
-// How to enable application profiling in Node.js?
-
-// How to create and monitor health checks in Node.js?
+//   if (error) {
+//     return res.status(400).json({ error: error.details[0].message });
+//   }
+//   res.send("User is valid!");
+// });
 
 
-// What is the difference between Angular and Node.js?
-// Which database is more popularly used with Node.js?
-// What is the command used to import external libraries?
-// What does event-driven programming mean?
-// What is an Event Loop in Node.js?
-
-// What are the two types of API functions in Node.js?
-
-
-
-// 36. What is the control flow function?
-// 37. How does control flow manage the function calls?
-
-// What is piping in Node.js?
-// What are some of the flags used in read/write operations in files?
-// How do you open a file in Node.js?
-// What is a reactor pattern in Node.js?
-// What is a test pyramid in Node.js?
-// For Node.js, why does Google use the V8 engine?
-// Describe Node.js exit codes.
-// What is the purpose of NODE_ENV?
-// What is WASI, and why is it being introduced?
+// What is the purpose of NODE_ENV? ===================================
+// => it is a variable in .env + it tells if app is in development, test, production + NODE_ENV=development + it changes app behaviour based on environment  
 
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
 // write a code for schema and model
