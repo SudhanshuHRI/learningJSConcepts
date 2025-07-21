@@ -445,7 +445,7 @@
 
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
 // write a code for schema and model
-// write a code for middleware implimentation on Procted routes
+// write a code for middleware implimentation on Procted routes and global routes
 // write a code for connecting a database + write a functions for database add,update,delete functions
 // write a code for get,put,patch, post, delete apis
 // write a Promise and Promise.all() code.
