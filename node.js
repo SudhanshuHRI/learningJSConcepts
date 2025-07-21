@@ -357,28 +357,44 @@
 
 
 
-// What is nvm and why use it?
+// What is nvm and why use it? ======================================
+// => NVM is Node Version Manager + CMD command to intall, manage, switch between multiple version of node.js
 
-// How to use PM2 for process management?
+// How to use PM2 for process management? ========================================
+// PM2 is Production Process Manager for node + it keeps apps alive even after crashes or restarts + npm install -g pm2 + pm2 start index.js
 
-// What are monorepos and how do tools like Lerna help?
+// How to handle rate limiting in Express? ====================================
+// rate limiting is important to protext our express app from abuse [like DDos attacks, brute-froce login, api overuse] + it limits how many request can a client make in certain period of time + we use "express-rate-limit" library 
+
+// Difference between global and route-specific middleware. ==============================
+// => Global MiddleWare : it applies of all imcomming request
+// => eg: 
+// app.use(express.json()); // Applies to all routes
+
+// app.use((req, res, next) => {
+//   console.log(`${req.method} ${req.url}`);
+//   next();
+// });
+// => Specific middleware : it applies on specific routes
+// => eg: 
+// function checkAdmin(req, res, next) {
+//   if (req.user && req.user.role === 'admin') {
+//     return next();
+//   }
+//   res.status(403).send('Forbidden');
+// }
+// app.get('/admin', checkAdmin, (req, res) => {
+//   res.send('Welcome, Admin!');
+// });
 
 
+// How to handle file uploads securely so that malicious files cannot be uploaded ===========================
+// => limit file size + restrict file types + rename uploaded files + we use "multer" library 
+// => eg:
+// const multer = require('multer');
+// const upload = multer({ dest: 'uploads/' }); 
 
-// How do you handle inter-service communication?
-
-// Explain the 12-Factor App methodology.
-
-// How to use message queues with Node.js?
-
-
-// How to handle rate limiting in Express?
-
-// Difference between global and route-specific middleware.
-
-// How to handle file uploads securely?
-
-// How to handle JSON streaming?
+// How to handle JSON streaming? =====================================
 
 // How to prevent JSON overflows?
 
