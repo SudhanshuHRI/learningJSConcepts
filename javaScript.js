@@ -1684,11 +1684,7 @@
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Node.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-// 1. Interview Questions + give example code where required.
-// 2. Practice Questions
-// 3. Puzzles
 
-////////////////////////////////////////////  interview questions  //////////////////////////////////////////////////////
 // Q. How to setup node project ??=========================
 
 // 1. make a project folder.
@@ -2103,7 +2099,8 @@
 
 
 
-// What is Express.js, and why is it popular for web development?
+// What is Express.js, and why is it popular for web development? ===========================================
+// => 
 // How do you install Express.js in a Node.js project?
 // What are the main features of Express.js?
 // How do you create a basic Express.js server?
@@ -2177,7 +2174,7 @@
 // What is the purpose of morgan in an Express.js app, and how do you configure it?
 // How do you use Postman to test RESTful APIs built with Express.js?
 
-// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 
 // What are the trade-offs between embedding and referencing documents in MongoDB?
