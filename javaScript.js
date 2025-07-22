@@ -276,41 +276,39 @@
 // => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
 
 // Q.Private property and private fucntion in js ? ====================================================
-// => Works in function based components + only valid in classes + 
+// => Works in function based components + only valid in classes +
 
 // Q. What is Laxical Scope vs closures ? give code ===========================================================================
 // => laxical scope means where variables are accessible based on code structure + closures are a feature that comes because of laxical scope, allow a function to remember variables even after parent function has excuted
 
 // Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
 // => Promise.all : takes array of promise + wait for all of them to fulfill + if any rejected, all will reject + Promise.all([Promise1,Promise2, Promise3])
-// => Promise.allsettled : takes array of promise + wait for all of them to fulfilled +  returns an array with the result of each promise 
-// => Promise.race : takes array of promise + returnes as the first promise settles (fullfilled or rejected) + dont wait for others 
+// => Promise.allsettled : takes array of promise + wait for all of them to fulfilled +  returns an array with the result of each promise
+// => Promise.race : takes array of promise + returnes as the first promise settles (fullfilled or rejected) + dont wait for others
 
 // Q. What are Prototypes in JS  ? why we use them in js ? ==================
-// => Every object has hidden internal property called prototype + js use prototype based inharitence + we use it to share methods and properties between multiple objects 
-
+// => Every object has hidden internal property called prototype + js use prototype based inharitence + we use it to share methods and properties between multiple objects
 
 // Q. I want when a object/string is declared, a defalut variable or function is already present there . How can i do that using prototype ?====
 // => Sting.prototype.name = "Sudhanshu" + Object.prototype.name = "Srivastava"
 
 // Q. What is  Deep copy and shallow copy  of object ? give code ===================================================
-// => shallow copy means copy only first level of methods and property + deep copy means copy all level of methods and properties +  for deep copy : const deep = JSON.parse(JSON.stringify(original)); 
+// => shallow copy means copy only first level of methods and property + deep copy means copy all level of methods and properties +  for deep copy : const deep = JSON.parse(JSON.stringify(original));
 
 // Q. What are Generator functions in Js ?? give code =====================================================================
 // => a function that can pause and resume during excution + function* greet(){yield "hello"; yield "How are you?"; yield "Goodbye";}
 
 // Q. What is Quama Operator in js ===========================================================
-// => all expresions excutes from left to right + returns last expression only 
+// => all expresions excutes from left to right + returns last expression only
 
 // Q. Optinal chining operator in js ?========================================================
-// => ?. + insted of throwing error , it returns undefined + used to safely access nested object's properties without error 
+// => ?. + insted of throwing error , it returns undefined + used to safely access nested object's properties without error
 
 // Q. Nullish operator in js?? =============================================================
 // => used to set default value if left value is null or undefined + let result = a ?? b;
 
 // Q.  e.preventDefault() vs e.stopPropagation() ? ==================================
-// => preventDefault prevents the default browser of an element + stopPropogation is used to stop event bubbling 
-
+// => preventDefault prevents the default browser of an element + stopPropogation is used to stop event bubbling
 
 // Q. What is str.at() in js ?==============================================
 // => used to get character of specific index + str.at(index)
@@ -319,7 +317,7 @@
 // => map returns new array with transform element + forEach returns undefined + map is used when need to transform data into new array + forEach is used when do something with each element
 
 // Q. What is navigator in js ? ============================================
-// => built in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator) 
+// => built in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator)
 
 // Q. .has() vs .add() ? ===================================
 // => Both used in "Set" Objects + add is used to add value to a set + has is used to check if value exists
@@ -328,7 +326,7 @@
 // => we use element.addEventListner('click', (event)=>{event.isTrusted}) method to check it + if event.isTrusted is true then clicked by user
 
 // Q. What is object ? give advantages and disadvantages ==================================
-// => object is collection of data in key-value pairs + advantages : organized data , dynamically update properties + disadvantages : deep nested object cunsume more memory 
+// => object is collection of data in key-value pairs + advantages : organized data , dynamically update properties + disadvantages : deep nested object cunsume more memory
 
 // Q. How to loop a object ?? =========================================================
 // => for(let key in user){console.log(key, user[key])}
@@ -412,8 +410,6 @@
 // console.log(null == undefined);
 // console.log([] == false);
 // console.log([] == ![]);
-
-
 
 //////////////////////////////////////////////////////////  Puzzles in JS  ////////////////////////////////////////////////////////////////////
 
@@ -544,7 +540,7 @@
 //     a:"three"
 // }
 
-// console.log(obj) 
+// console.log(obj)
 // Ans. here on 'a'  key "three" will updated. and "one" will overwrited
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -572,7 +568,7 @@
 //     city:"hardoi"
 //  }
 
-//  console.table(data) 
+//  console.table(data)
 // Ans.  console data in table format
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -656,7 +652,7 @@
 // var x = 10;
 // var x = 14
 // var x = 20;
-// console.log(x) 
+// console.log(x)
 // Ans. we  can declare same varibale multiple times with var not let. but latest value will be considered . var have global scope and let have block scope.
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -680,7 +676,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 
 // a=20;
-// console.log(a) 
+// console.log(a)
 // Ans.  if no let var const is used to declare a variable it will be treat as var and global variable. it will be hoisted, reassigned and accessed from anywhare.
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -818,10 +814,8 @@
 //let z = [1,2,3,4];
 //console.log(...z) // output will come in 1 2 3 4 in string without array. when we use spread operator it will destruct.
 
-
-
 //let data = {name:"sudhanshu"}
-//console.log(delete data.name) 
+//console.log(delete data.name)
 //Ans.  true becz delete action is completed  successfully and it will return true. if action is not completed, then it will be false.
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -922,14 +916,14 @@
 // let a = "like";
 // let b = `like`
 
-// console.log(a === b) 
+// console.log(a === b)
 // Ans. true becz both are same. backticks are used to write multi line strings and to use variables in strings.
 
 // ---------------------------------------------------------------------------------------------------------------------
 
 // let a = 1;
 // let c=2;
-// console.log(--c===a) 
+// console.log(--c===a)
 //Ans.  true becz first c will be decremented then compared with a.
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -937,7 +931,7 @@
 // let a = 1;
 // let b = 1;
 // let c = 2;
-// console.log(a === b === --c); 
+// console.log(a === b === --c);
 // Ans. false becz first a===b will be true then it will compare with c.
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -1255,7 +1249,6 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-
 // function outer() {
 //   console.log("Outer Start");
 //   function inner() {
@@ -1266,5 +1259,3 @@
 // }
 // outer();
 // console.log("Global End");
-
-
