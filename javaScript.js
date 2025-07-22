@@ -1259,11 +1259,6 @@
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ React.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-// 1. interview questions
-// 2. practice questions
-// 3. Puzzles
-
-//////////////////////////////////////////////// Interview Questions ///////////////////////////////////////////
 
 // Q. element vs component ? =======================================================
 // element is plain js object that describes a DOM node , const element = <h1>Hello World</h1> + component is a function that returns react elements, comonents can be reused
@@ -1686,8 +1681,6 @@
 // };
 
 // export default APP;
-
-///////////////////////////////////////////////////////////////// END  ///////////////////////////////////////////////////
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Node.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -2184,6 +2177,113 @@
 // What is the purpose of morgan in an Express.js app, and how do you configure it?
 // How do you use Postman to test RESTful APIs built with Express.js?
 
+// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+
+// What are the trade-offs between embedding and referencing documents in MongoDB?
+
+// How would you model a one-to-many relationship in MongoDB?
+
+// How do you handle deeply nested documents that change frequently?
+
+// What strategies would you use to avoid document growth and padding factor issues?
+
+// How does MongoDB handle large arrays in documents? What are the limitations?
+
+// How would you implement a many-to-many relationship in MongoDB?
+
+// What is schema versioning in MongoDB and how do you manage it?
+
+// Explain the concept of polymorphic schema in MongoDB.
+
+// How do you design a schema for multi-tenant applications?
+
+// What is the impact of document size on performance and what is the max size?
+
+// ⚡ Performance and Indexing
+// How does MongoDB use indexes to optimize query performance?
+
+// What is an index cardinality and how does it affect index selection?
+
+// How do compound indexes work, and how does field order matter?
+
+// What is a covered query and why is it useful?
+
+// Explain how to analyze slow queries in MongoDB.
+
+// How can you optimize a $text search in MongoDB?
+
+// What is the role of explain() in query optimization?
+
+// How do wildcard indexes work and when would you use them?
+
+// What are partial indexes and how do they help with performance?
+
+// How do you handle write-heavy workloads in MongoDB?
+
+// 🔁 Aggregation Framework
+// Compare the MongoDB aggregation framework with SQL's GROUP BY.
+
+// How does the $facet stage work and when would you use it?
+
+// What is $bucket and $bucketAuto in MongoDB?
+
+// Explain the difference between $project, $addFields, and $set.
+
+// How do you perform a join-like operation in MongoDB using $lookup?
+
+// What are the limitations of $lookup in sharded clusters?
+
+// How can you use $merge in an aggregation pipeline?
+
+// Explain pipeline optimization and the $indexStats stage.
+
+// How do you aggregate on nested array fields?
+
+// What is $redact and when would you use it?
+
+// 🔒 Transactions and Consistency
+// How do multi-document transactions work in MongoDB?
+
+// What are the limitations of transactions in sharded clusters?
+
+// Compare readConcern and writeConcern levels in MongoDB.
+
+// How do you ensure atomic operations without using transactions?
+
+// What is the impact of using transactions on performance?
+
+// ⚙️ Replication and Sharding
+// How does MongoDB handle automatic failover in a replica set?
+
+// What are replica set elections and how do they work?
+
+// What is a hidden secondary in MongoDB and when would you use it?
+
+// Explain how read preference settings affect performance and availability.
+
+// How does MongoDB handle data balancing in a sharded cluster?
+
+// What are zone sharding and tag-aware sharding?
+
+// How would you perform a rolling upgrade on a replica set?
+
+// What are the steps to reshard a collection in MongoDB 5.0+?
+
+// Explain what happens when a primary goes down in a sharded cluster.
+
+// 🧠 Operational & Advanced Concepts
+// How does MongoDB handle memory and cache management?
+
+// What are capped collections and when should they be used?
+
+// How does MongoDB implement change streams and what are the use cases?
+
+// What are the differences between MongoDB Atlas and self-hosted MongoDB?
+
+// How would you monitor and tune MongoDB performance in production?
+
+// How do you back up and restore a large MongoDB database?
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ DSA Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
