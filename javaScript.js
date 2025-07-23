@@ -2274,7 +2274,7 @@
 // How do you structure a large-scale Express.js application for better maintainability?
 // What is the difference between synchronous and asynchronous middleware?
 // How do you use the compression middleware to optimize responses?
-// Security and Testing Questions
+
 // What are some common security vulnerabilities in Express.js, and how can you mitigate them?
 // How do you prevent XSS attacks in an Express.js application?
 // What is SQL injection, and how do you protect against it in an Express.js app?
