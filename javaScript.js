@@ -1256,9 +1256,7 @@
 // outer();
 // console.log("Global End");
 
-
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ React.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
 
 // Q. element vs component ? =======================================================
 // element is plain js object that describes a DOM node , const element = <h1>Hello World</h1> + component is a function that returns react elements, comonents can be reused
@@ -1684,7 +1682,6 @@
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Node.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-
 // Q. How to setup node project ??=========================
 
 // 1. make a project folder.
@@ -2082,9 +2079,8 @@
 //   res.send("User is valid!");
 // });
 
-
 // What is the purpose of NODE_ENV? ===================================
-// => it is a variable in .env + it tells if app is in development, test, production + NODE_ENV=development + it changes app behaviour based on environment  
+// => it is a variable in .env + it tells if app is in development, test, production + NODE_ENV=development + it changes app behaviour based on environment
 
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
 // write a code for schema and model
@@ -2094,10 +2090,7 @@
 // write a Promise and Promise.all() code.
 // make authorization and authentication apis.
 
-
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Express.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
-
 
 // What is Express.js, and why is it popular for web development? ===========================================
 // => Node.js web framework + it simplifies the process of creating server side logic and apis
@@ -2107,7 +2100,6 @@
 // import express from "express";
 // const app = express();
 // app.listen(3000,()=>{console.log("Server is running on port:3000")})
-
 
 // Explain the role of middleware in Express.js. =============================
 // => middleware used for request and authentication handling + middleware works on both request and response + if we want to check or update the request / response then we need middleware + Two type of middleware : global and route-specific
@@ -2173,9 +2165,8 @@
 // it is built-in middleware + helps server to understand JSON data send in body + whend client send data like "{"name":"john", "email":"John@example.com"}" , it parses that JSON as "req.body={name:"john",email:"john@example.com"}"
 
 // What are the differences between app.use() and app.get() in Express.js? ======================================
-// => app.use() : used to define middleware (logic that runs before routes) 
+// => app.use() : used to define middleware (logic that runs before routes)
 // => app.get() : used to define GET route handler
-
 
 // How do you handle query parameters in Express.js? =================================
 // => query parameters are part of url appear after "?" like "http://localhost:3000/search?name=John&age=25" + we can get these parameter in "req.query" variable
@@ -2183,45 +2174,90 @@
 // How do you retrieve route parameters in Express.js? ========================================
 // Route paramters are dynamic part of url defined useing ":" like "http://localhost:3000/users/42" + we can get these in "req.params" variable
 
-
-
 // How do you serve static files in an Express.js application? ===========================
-// => static files means that dont change + these can be assets like images, css, html, font etc + we can use use this with "app.use(express.static("public"))" middleware + make sure all static files should be in this "public" folder and dont nested files  + make sure public folder will be parallel with node_modules folder 
+// => static files means that dont change + these can be assets like images, css, html, font etc + we can use use this with "app.use(express.static("public"))" middleware + make sure all static files should be in this "public" folder and dont nested files  + make sure public folder will be parallel with node_modules folder
 
 // What is the difference between res.send() and res.json()? ====================================
-// => 
+// => res.send() : send any type of content like string, object,html
+// => res.json() : used to send only JSON + automatically sets "content-type : application/json"
+
 // absolute vs relative path ?? ===========================
-// How do you handle form data in Express.js?
-// What is the purpose of the body-parser middleware, and how do you use it?
-// How do you set up a 404 error handler in Express.js?
-// How do you implement URL encoding and decoding in Express.js?
-// What is the difference between synchronous and asynchronous route handlers in Express.js?
+// => paths are used to loacte files or dirctories + absolute path means full location from the root + "__dirname" gives absolute path to current directory + relative path refers to location relative to current file
 
-// What is the difference between global and route-specific middleware?
-// How do you chain middleware functions in Express.js?
-// Explain how to use third-party middleware in an Express.js app.
-// How do you handle file uploads in Express.js using multer?
-// What is the purpose of res.redirect(), and how is it used?
-// How do you set and retrieve cookies in Express.js?
-// How do you enable and configure CORS in an Express.js application?
-// What is the purpose of the express.json() and express.urlencoded() middleware?
-// How do you create modular routes using express.Router()?
-// What is a template engine, and how do you integrate one (e.g., EJS or Pug) in Express.js?
-// How do you handle errors globally in an Express.js app?
-// What is the difference between application-level and router-level middleware?
-// How do you handle sessions in Express.js?
-// What is the difference between a RESTful API and an Express.js application?
-// How do you integrate a database (e.g., MongoDB or MySQL) with Express.js?
-// How do you use environment variables in an Express.js app?
-// How can you log requests in an Express.js application?
-// How do you handle timeouts in an Express.js application?
-// What is the purpose of res.status() in Express.js?
-// How do you set custom headers in an Express.js response?
+// What is the purpose of the body-parser middleware, and how do you use it? =================
+// body-parser is middleware used to extract data from body + especially in post , put, patch requests + it is older way to get that + now we get it with "express.json()" and "express.urlencoded()" mehtods
 
-// How does the next() function work, and how do you pass errors to it?
-// How do you implement conditional middleware execution in Express.js?
-// What is the difference between middleware for all routes and middleware for a specific route?
-// How do you use async/await in Express.js route handlers?
+// How do you set up a 404 error handler in Express.js? =======================
+// => means what we should do if no routes found + we use a middleware in last of the code + app.use((req,res,next)=>{res.send("404. no routes found!!")})
+
+// How do you implement URL encoding and decoding in Express.js? ===================
+// => URL encodeing and decoding are important for safely handling data in URLs + for URL encodieng we use "encodeURIComponent()" + for decoding we use "decodeURIComponent()"
+// => eg:
+// const name = "sudhanshu";
+// const encodeName = encodeURIComponent(name);
+// const decodeName = decodeURIComponent(encodeName);
+
+// Explain how to use third-party middleware in an Express.js app.=======================
+// => as we use "cors" in node + cors is third party middleware
+
+// How do you handle file uploads in Express.js using multer? ==================================
+// "multer" is third party middlware + used to upload files +
+
+// What is the purpose of res.redirect(), and how is it used? =============================
+// => res.redirect() is used to redirect client to different URL or route + used for : redirect after form submission, redirect unauthorized users to login page , redirect from old URL to new + app.get("/",(req,res)=>{res.redirect("/home") || res.redirect("https://www.google.com")})
+
+// How do you set and retrieve cookies in Express.js? =========================
+// => first we have to use "cookie-parser" library +
+// => eg:
+// import express from "express";
+// import cookieParser from "cookie-parser";
+// const app = express();
+// app.use(cookieParser()) // to enable cookie parsing so that we CRUD cookies in browser
+// app.get("/putCookies",(req,res)=>{res.cookie("username","jonDoe",{maxAge:3600000,httpOnly:true,sameSite:true})}) // to set cookie for 1 hour
+// app.get("/getCookies",(req,res)=>{const userName = req.cookies.username}) // to get cookies stored in browser
+// app.get("/DeleteCookies",(req,res)=>{res.cleanCookie("username")}) // to delete cookie in browser
+
+// How do you create modular routes using express.Router()? ==============================
+// => modular routing means spliting routes into seprate files to keep code clean and organized + as done in management console project it MRM + we create all routes in different files and import them in main index.js
+
+// How do you handle sessions in Express.js? ==========================================
+// => to handle sessions we use "express-session" library + it lets you store user data like login info between request + session is like small memory box that stores data for one user on the server + suppose when user log in , you save his name in session like req.session.username = "john". now you can use it any page in application + session are safer then cookies because data is stored on server +
+// => eg:
+// import session from "express-session"
+// const app = express();
+// // use session middleware first
+// app.use(session({
+//   secret:"mySecreatKey",
+//   resave:false,
+//   saveUninitialized:true
+// }))
+
+// app.get("/login",(req,res)=>{req.session.username = "John"}) // how to save value in session
+// app.get("/getUser",(req,res)=>{console.log(req.session.username)}) // how to use session value
+// app.get("/deleteUser",(req,res)=>{req.session.destroy(()=>{res.send("session deleted")})}) // how to clean session
+
+// How can you log requests in an Express.js application? ====================================
+// => we use "morgan" library + it helps to see which route is hit, what method is used, how fast it was + it is used for debugging and tracking + it gives the output in console.log
+// => eg:
+// import morgan from "morgan";
+// app.use(morgan("dev"))
+
+// How do you handle timeouts in an Express.js application? ===========================================
+// => means stop the request if it takes too long to respond + we use "connect-timeout" library
+// => eg:
+// import timeout from "connect-timeout"
+// app.use(timeout("5s")) // means every request have 5 seconds to excute
+// app.get("/",(req,res)=>{if(req.timeout){res.send("taking too much time")}})
+
+
+// How do you set custom headers in an Express.js response?==============================================
+// => used to give custom instructions to client + we use use.set() to set custom headers + 
+// => eg:
+// app.get("/",(req,res)=>{res.set("x-Custom-Header","Hello Client")})
+
+
+
+
 // How do you implement rate limiting in an Express.js application?
 // What is the purpose of the helmet middleware, and how do you configure it?
 // How do you implement CSRF protection in an Express.js app?
@@ -2251,7 +2287,6 @@
 // How do you use Postman to test RESTful APIs built with Express.js?
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
 
 // What are the trade-offs between embedding and referencing documents in MongoDB?
 
@@ -2369,7 +2404,6 @@
 // 7. graph
 // 8. Hashing
 
-
 ///////////////////////////////////////////////////////////////  Theory  ///////////////////////////////////////////////////
 
 // * 2 type of data staructure :-
@@ -2442,8 +2476,8 @@
 // let position = undefined;
 
 // while (start <= end) {
-//   let mid = Math.floor((start + end) / 2); 
-  
+//   let mid = Math.floor((start + end) / 2);
+
 //   if (data[mid] == find) {
 //     position = mid;
 //     break;
@@ -2453,7 +2487,6 @@
 //     end = mid-1
 //   }
 
- 
 // }
 
 // console.log(position);
@@ -2577,15 +2610,13 @@
 // Input: "bbbbb"
 // Output: 1 (substring is "b")
 
-
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ SQL Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
 
 ///////////////////////////////////////////  Basics //////////////////////////////////////////
 
-// 
-// To create database : CREATE DATABASE <database_name>; 
-// check if not created then : CREATE DATABASE IF NOT EXISTS <database_name>; 
+//
+// To create database : CREATE DATABASE <database_name>;
+// check if not created then : CREATE DATABASE IF NOT EXISTS <database_name>;
 // Delete a database : DROP DATABASE <database_name>;[delete a database]
 // Select database for use : USE <database_name>;
 
@@ -2594,12 +2625,11 @@
 // DROP TABLE <table_name>;[delete a table]
 
 // Show all databases: SHOW DATABASES;
-// Show all tables : SHOW TABLES; 
+// Show all tables : SHOW TABLES;
 
 // Select all data of table : SELECT * FROM <table_name>;
 // Select specific column of table : SELECT column_1, column_2, ... FROM <table_name>;
 // Insert data in table : INSERT INTO <table_name> (column_1, column_2, ...) VALUES (value_1, value_2, ...);
-
 
 ////////////////////////////////////////// keys /////////////////////////////////////////
 
@@ -2678,7 +2708,7 @@
 // FORIGN KEY (dept_id) REFERENCES dept(id)
 // ON UPDATE CASCADE
 // ON DELETE CASCADE
-// ); 
+// );
 
 /////////////////////////////////////////////////////// AGGREGATE FUNCTIONS ///////////////////////////////
 
@@ -2704,8 +2734,6 @@
 // Timestamp => To save date and time values. (YYYY-MM-DD HH:MM:SS)
 // signed vs unsigned data types ==> signed can store negative values, unsigned can only store positive values.
 
-
-
 ////////////////////////////////////////////////  Joins in sql /////////////////////////////////////////////////
 
 // used to combine rows from 2 or more tables.
@@ -2723,12 +2751,11 @@
 
 // iii) Full Join : we use UNION between left join query and right join query to get all data of TableA and TableB;
 // eg: SELECT * FROM students LEFT JOIN courses ON students.student_id = courses.course_id
-//  UNION 
-// SELECT * FROM students as s RIGHT JOIN courses as c ON s.student_id = c.course_id ; 
+//  UNION
+// SELECT * FROM students as s RIGHT JOIN courses as c ON s.student_id = c.course_id ;
 
-// Left exculsive join / Right exclusive join : to get unique value in TableA / TableB + to do this we use WHERE command 
+// Left exculsive join / Right exclusive join : to get unique value in TableA / TableB + to do this we use WHERE command
 // eg: SELECT * FROM students LEFT JOIN courses ON students.student_id = courses.course_id WHERE courses.course_id IS NULL;
-
 
 //////////////////////////////////////////////////////////////  UNION  ///////////////////////
 
@@ -2739,13 +2766,9 @@
 // to write query into query + SELECT column FROM table_name WHERE col_name <operator> (subquery);
 // eg: select full_name,marks from students where marks > (select AVG(marks) from students);
 
-
 ///////////////////////////////////////////////  MySQL Views   ///////////////////////////////////
 
 // it is used to restrict column  data to user + CREATE VIEW view1 SELECT rollno, name FROM student;
-
-
-
 
 //////////////////////////////////////////////////////////////////  Questions for Practice  /////////////////////////////////////////
 
@@ -2795,15 +2818,13 @@
 //     FOREIGN KEY (employee_id) REFERENCES employees(id)
 // );
 
-
-
 // -- Departments
-// INSERT INTO departments (name) VALUES 
+// INSERT INTO departments (name) VALUES
 // ('Engineering'), ('HR'), ('Sales'), ('Finance');
 
 // -- Employees
 // INSERT INTO employees (first_name, last_name, email, department_id, manager_id, hire_date, job_title)
-// VALUES 
+// VALUES
 // ('John', 'Doe', 'john.doe@example.com', 1, NULL, '2020-01-10', 'Engineering Manager'),
 // ('Jane', 'Smith', 'jane.smith@example.com', 1, 1, '2021-03-15', 'Software Engineer'),
 // ('Mike', 'Taylor', 'mike.taylor@example.com', 2, NULL, '2019-08-01', 'HR Manager'),
@@ -2813,14 +2834,14 @@
 
 // -- Projects
 // INSERT INTO projects (name, start_date, end_date, budget)
-// VALUES 
+// VALUES
 // ('Website Revamp', '2023-01-01', '2023-06-30', 50000.00),
 // ('Recruitment Drive', '2023-02-15', '2023-04-15', 10000.00),
 // ('Product Launch', '2023-03-01', '2023-07-01', 75000.00);
 
 // -- Salaries
 // INSERT INTO salaries (employee_id, amount, effective_date)
-// VALUES 
+// VALUES
 // (1, 95000.00, '2023-01-01'),
 // (2, 65000.00, '2023-01-01'),
 // (3, 80000.00, '2023-01-01'),
@@ -2838,7 +2859,6 @@
 // (5, '2023-05-01', 'Present'),
 // (6, '2023-05-01', 'Present');
 
-
 //  Beginner Level (1–30)
 
 // List all columns of all employees.
@@ -2849,31 +2869,31 @@
 
 // Find all employees who work in the 'HR' department.
 
-// List all employees who joined after January 1, 2020. 
+// List all employees who joined after January 1, 2020.
 
-// Get the employee(s) with a salary greater than 70,000. 
+// Get the employee(s) with a salary greater than 70,000.
 
 // Show all employees ordered by their first names.
 
-// List employees ordered by hire date in descending order.  
+// List employees ordered by hire date in descending order.
 
-// How many employees are there in total? 
+// How many employees are there in total?
 
-// What is the maximum salary? 
+// What is the maximum salary?
 
 // What is the minimum salary?
 
-// What is the average salary?   
+// What is the average salary?
 
-// What is the total sum of all salaries? 
+// What is the total sum of all salaries?
 
-// Find all employees whose job title contains "Manager" 
+// Find all employees whose job title contains "Manager"
 
-// List all attendances marked as "Absent" 
+// List all attendances marked as "Absent"
 
 // Find employees with first names either "John" or "Jane".
 
-// Find all employees in department 1 with the job title "Engineer". <=============== 
+// Find all employees in department 1 with the job title "Engineer". <===============
 
 // Find employees who have a non-null email.
 
@@ -3043,7 +3063,6 @@
 
 // Display employees hired in the same year as their manager.
 
-
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[  Next.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 // Q.How does Next.js differ from React.js, and why would you choose it over plain React? =========================================
@@ -3097,4 +3116,3 @@
 // Q.How can you integrate GraphQL with Next.js for data fetching? =========================================
 // Q.What strategies would you use for managing state in a large Next.js application? =========================================
 // Q.How does Next.js handle SEO optimization for static pages, and what strategies would you recommend for improving SEO? =============================
-
