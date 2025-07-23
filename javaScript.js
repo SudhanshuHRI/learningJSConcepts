@@ -2178,18 +2178,25 @@
 
 
 // How do you handle query parameters in Express.js? =================================
-// How do you retrieve route parameters in Express.js?
-// What is the purpose of the req and res objects in Express.js?
-// How do you send a JSON response in Express.js?
-// What are the common HTTP methods supported by Express.js?
-// How do you serve static files in an Express.js application?
-// What is the difference between res.send() and res.json()?
+// => query parameters are part of url appear after "?" like "http://localhost:3000/search?name=John&age=25" + we can get these parameter in "req.query" variable
+
+// How do you retrieve route parameters in Express.js? ========================================
+// Route paramters are dynamic part of url defined useing ":" like "http://localhost:3000/users/42" + we can get these in "req.params" variable
+
+
+
+// How do you serve static files in an Express.js application? ===========================
+// => static files means that dont change + these can be assets like images, css, html, font etc + we can use use this with "app.use(express.static("public"))" middleware + make sure all static files should be in this "public" folder and dont nested files  + make sure public folder will be parallel with node_modules folder 
+
+// What is the difference between res.send() and res.json()? ====================================
+// => 
+// absolute vs relative path ?? ===========================
 // How do you handle form data in Express.js?
 // What is the purpose of the body-parser middleware, and how do you use it?
 // How do you set up a 404 error handler in Express.js?
 // How do you implement URL encoding and decoding in Express.js?
 // What is the difference between synchronous and asynchronous route handlers in Express.js?
-// Intermediate Express.js Questions
+
 // What is the difference between global and route-specific middleware?
 // How do you chain middleware functions in Express.js?
 // Explain how to use third-party middleware in an Express.js app.
@@ -2210,7 +2217,7 @@
 // How do you handle timeouts in an Express.js application?
 // What is the purpose of res.status() in Express.js?
 // How do you set custom headers in an Express.js response?
-// Advanced Express.js Questions
+
 // How does the next() function work, and how do you pass errors to it?
 // How do you implement conditional middleware execution in Express.js?
 // What is the difference between middleware for all routes and middleware for a specific route?
