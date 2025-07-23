@@ -2100,15 +2100,84 @@
 
 
 // What is Express.js, and why is it popular for web development? ===========================================
-// => 
-// How do you install Express.js in a Node.js project?
-// What are the main features of Express.js?
-// How do you create a basic Express.js server?
-// What is the difference between Node.js and Express.js?
-// Explain the role of middleware in Express.js.
-// What are the differences between app.use() and app.get() in Express.js?
-// How do you define a route in Express.js? Provide an example.
-// How do you handle query parameters in Express.js?
+// => Node.js web framework + it simplifies the process of creating server side logic and apis
+
+// How do you create a basic Express.js server? =====================================
+// => eg:
+// import express from "express";
+// const app = express();
+// app.listen(3000,()=>{console.log("Server is running on port:3000")})
+
+
+// Explain the role of middleware in Express.js. =============================
+// => middleware used for request and authentication handling + middleware works on both request and response + if we want to check or update the request / response then we need middleware + Two type of middleware : global and route-specific
+// => Global Middelware: runs on all routes + declared with "app.use()"
+// => Route Specific Middleware : runs on specific routes + passed as 2nd argument in routes
+// => Route-level middleware : applied on all route within a router
+// => eg:
+// import express from "express";
+// const app = express();
+// const adminRouter = express.Router();
+
+// // Global middelware
+
+// app.use((req, res, next) => {
+//   console.log('Middleware 1');
+//   req.body.name = "Sudhanshu" // here req is updated before going to server;
+//   next(); // Go to next middleware
+// });
+
+// app.use((req, res, next) => {
+//   console.log(req.body.name);
+//   console.log('Middleware 2');
+//   next();
+// });
+
+// // Route-Specific middleware
+
+// const RouteMiddleware = (req,res,next) =>{
+//   if(req.body.name=="Sudhanshu"){
+//     next()
+//   }else{
+//     res.json({message:"user is not sudhanshu"})
+//   }
+// }
+// app.get("/getUsers",RouteMiddleware,()=>{})
+
+// // Route-Level middleware
+
+// // Route-level middleware for all /admin routes
+// adminRouter.use((req, res, next) => {
+//   if (req.headers.authorization === 'admin-token') {
+//     next();
+//   } else {
+//     res.status(403).send('Admin Access Denied');
+//   }
+// });
+
+// // These inherit the above middleware
+// adminRouter.get('/dashboard', (req, res) => {
+//   res.send('Admin Dashboard');
+// });
+
+// adminRouter.get('/settings', (req, res) => {
+//   res.send('Admin Settings');
+// });
+
+// app.use('/admin', adminRouter);
+
+// what is "app.use(express.urlencoded({extended:false}))" middleware do ? ================================
+// => it is built-in middleware + when form is submits from client , it recieves in URL-encoded format like "username=john&password=12345" + express.urlencoded converts it in js Object like "{username:"John",password:"12345"}"
+
+// what is "app.use(express.json());" middleware do ? ===================================
+// it is built-in middleware + helps server to understand JSON data send in body + whend client send data like "{"name":"john", "email":"John@example.com"}" , it parses that JSON as "req.body={name:"john",email:"john@example.com"}"
+
+// What are the differences between app.use() and app.get() in Express.js? ======================================
+// => app.use() : used to define middleware (logic that runs before routes) 
+// => app.get() : used to define GET route handler
+
+
+// How do you handle query parameters in Express.js? =================================
 // How do you retrieve route parameters in Express.js?
 // What is the purpose of the req and res objects in Express.js?
 // How do you send a JSON response in Express.js?
