@@ -2257,10 +2257,27 @@
 
 
 // What is the purpose of res.locals, and how is it used? ==============================
-// => it is a object that lets you store data for single request + 
-// How do you debug an Express.js application effectively?
-// What is the difference between app.use() and app.all() in Express.js?
-// How do you optimize the performance of an Express.js application?
+// => it is a object in express +  used to store and share data during a single request + data is cleaned after the request + it helps share data between middlware and api function without using global variables + means it's value will store for only one api hit 
+// => eg:
+// app.use((req, res, next) => {
+//   res.locals.username = 'John Doe';  // Store data in res.locals
+//   next();  // Move to the next middleware or route
+// });
+
+// app.get('/', (req, res) => {
+//   res.send(`Hello, ${res.locals.username}`); // Access data stored earlier
+// });
+
+// How do you debug an Express.js application effectively? ===================================================
+// => use console.log() + use app.use((err,req,res,next)) + use "morgan" logging libraries
+
+// What is the difference between app.use() and app.all() in Express.js? ===================================
+// => app.use() is used for middlewares + app.all() is used for all http requsets, used when you want to handle all methods on one specific route
+// => eg:
+// app.all("/health",(req,res)=>{res.send("working")}) // it will work for GET, POST, DELETE, PUT etc
+
+// How do you optimize the performance of an Express.js application? =====================================
+// => 
 // How do you implement clustering in Express.js for better scalability?
 // What is middleware chaining, and how does it impact the request-response cycle?
 // How do you configure HTTPS for an Express.js application?
