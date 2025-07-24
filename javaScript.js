@@ -2310,111 +2310,7 @@
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-// What are the trade-offs between embedding and referencing documents in MongoDB?
-// => 
 
-// How would you model a one-to-many relationship in MongoDB?
-
-// How do you handle deeply nested documents that change frequently?
-
-// What strategies would you use to avoid document growth and padding factor issues?
-
-// How does MongoDB handle large arrays in documents? What are the limitations?
-
-// How would you implement a many-to-many relationship in MongoDB?
-
-// What is schema versioning in MongoDB and how do you manage it?
-
-// Explain the concept of polymorphic schema in MongoDB.
-
-// How do you design a schema for multi-tenant applications?
-
-// What is the impact of document size on performance and what is the max size?
-
-// ⚡ Performance and Indexing
-// How does MongoDB use indexes to optimize query performance?
-
-// What is an index cardinality and how does it affect index selection?
-
-// How do compound indexes work, and how does field order matter?
-
-// What is a covered query and why is it useful?
-
-// Explain how to analyze slow queries in MongoDB.
-
-// How can you optimize a $text search in MongoDB?
-
-// What is the role of explain() in query optimization?
-
-// How do wildcard indexes work and when would you use them?
-
-// What are partial indexes and how do they help with performance?
-
-// How do you handle write-heavy workloads in MongoDB?
-
-// 🔁 Aggregation Framework
-// Compare the MongoDB aggregation framework with SQL's GROUP BY.
-
-// How does the $facet stage work and when would you use it?
-
-// What is $bucket and $bucketAuto in MongoDB?
-
-// Explain the difference between $project, $addFields, and $set.
-
-// How do you perform a join-like operation in MongoDB using $lookup?
-
-// What are the limitations of $lookup in sharded clusters?
-
-// How can you use $merge in an aggregation pipeline?
-
-// Explain pipeline optimization and the $indexStats stage.
-
-// How do you aggregate on nested array fields?
-
-// What is $redact and when would you use it?
-
-// 🔒 Transactions and Consistency
-// How do multi-document transactions work in MongoDB?
-
-// What are the limitations of transactions in sharded clusters?
-
-// Compare readConcern and writeConcern levels in MongoDB.
-
-// How do you ensure atomic operations without using transactions?
-
-// What is the impact of using transactions on performance?
-
-// ⚙️ Replication and Sharding
-// How does MongoDB handle automatic failover in a replica set?
-
-// What are replica set elections and how do they work?
-
-// What is a hidden secondary in MongoDB and when would you use it?
-
-// Explain how read preference settings affect performance and availability.
-
-// How does MongoDB handle data balancing in a sharded cluster?
-
-// What are zone sharding and tag-aware sharding?
-
-// How would you perform a rolling upgrade on a replica set?
-
-// What are the steps to reshard a collection in MongoDB 5.0+?
-
-// Explain what happens when a primary goes down in a sharded cluster.
-
-// 🧠 Operational & Advanced Concepts
-// How does MongoDB handle memory and cache management?
-
-// What are capped collections and when should they be used?
-
-// How does MongoDB implement change streams and what are the use cases?
-
-// What are the differences between MongoDB Atlas and self-hosted MongoDB?
-
-// How would you monitor and tune MongoDB performance in production?
-
-// How do you back up and restore a large MongoDB database?
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ DSA Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -2545,7 +2441,7 @@
 // Q.Remove duplicates from a sorted linked list.
 // Q.Add two numbers represented as linked lists.
 // Q.Flatten a multilevel linked list.
-// Q.Find the intersection point of two linked lists.
+// Q.Find the intersectioa point of two linked lists.
 // Q.Check if a linked list is a palindrome.
 // Q.Rotate a linked list by k nodes.
 
@@ -3086,56 +2982,3 @@
 
 // Display employees hired in the same year as their manager.
 
-// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[  Next.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
-// Q.How does Next.js differ from React.js, and why would you choose it over plain React? =========================================
-// Q.What are the key features of Next.js that improve performance? =========================================
-// Q.Explain how Next.js handles server-side rendering (SSR) and static site generation (SSG). =========================================
-// Q.What is the difference between getServerSideProps and getStaticProps? =========================================
-// Q.How does Next.js handle code splitting? =========================================
-// Q.What are the benefits of using the Image component in Next.js? =========================================
-// Q.What is Incremental Static Regeneration (ISR), and how does it work in Next.js? =========================================
-// Q.What is the purpose of the next/head component, and how do you use it? =========================================
-// Q.How can you configure custom Webpack in Next.js? =========================================
-
-// Q.What is the useRouter hook in Next.js, and when would you use it? =========================================
-// Q.Can you explain the concept of dynamic routing in Next.js? =========================================
-// Q.How would you implement API routes in Next.js? =========================================
-// Q.Explain the Next.js Link component and how it differs from the standard HTML anchor (<a>) tag. =========================================
-// Q.What is the purpose of next.config.js in Next.js, and how do you configure custom settings? =========================================
-// Q.Explain the concept of "file-system routing" in Next.js. =========================================
-// Q.How do you implement authentication and authorization in a Next.js application? =========================================
-// Q.Can Next.js be used for building a PWA (Progressive Web App)? If so, how? =========================================
-// Q.What is the role of the getInitialProps method in Next.js, and how does it compare to getServerSideProps? =========================================
-// Q.Explain the concept of "static optimization" in Next.js. =========================================
-// Q.How would you handle error pages (404, 500, etc.) in Next.js? =========================================
-// Q.What is the difference between a client-side navigation and a server-side navigation in Next.js? =========================================
-// Q.How would you set up a custom 404 page in Next.js? =========================================
-// Q.What are the limitations of static site generation (SSG) in Next.js? =========================================
-// Q.Can you explain how Next.js handles caching and revalidation for static pages? =========================================
-// Q.How can you deploy a Next.js application on Vercel? =========================================
-// Q.What are the best practices for managing environment variables in Next.js? =========================================
-// Q.What is the role of getStaticPaths in Next.js, and how is it used for dynamic routes? =========================================
-// Q.How do you implement internationalization (i18n) in Next.js? =========================================
-// Q.What are the performance implications of using SSR versus SSG? =========================================
-// Q.How does Next.js handle styling? Can you use CSS, Sass, or styled-components? =========================================
-// Q.How can you integrate a CMS (Content Management System) with Next.js for dynamic content? =========================================
-// Q.Explain the concept of “API routes” in Next.js, and give an example use case. =========================================
-// Q.How can you optimize large images in Next.js applications? =========================================
-// Q.What is the purpose of the next/image component and how does it improve performance? =========================================
-// Q.Explain the getServerSideProps lifecycle, and how does it differ from other data-fetching methods? =========================================
-// Q.How does Next.js support multiple deployment options like serverless, static, and hybrid? =========================================
-// Q.What are some strategies for serverless rendering with Next.js? =========================================
-// Q.How would you implement a custom server (e.g., Express) with Next.js? =========================================
-// Q.Can you explain the concept of dynamic import() in Next.js? How does it improve the performance of the application? ===============================
-// Q.What are the pros and cons of using Next.js for building large-scale applications? =========================================
-// Q.How do you handle SSR with caching in Next.js to optimize performance? =========================================
-// Q.What is the Next.js Image Optimization feature, and how does it work under the hood? =========================================
-// Q.How would you implement a search feature in a Next.js application? =========================================
-// Q.How do you handle deployments for a large Next.js app with multiple environments (staging, production, etc.)? =====================================
-// Q.What is the role of Next.js's _document.js and _app.js files in the app structure? =========================================
-// Q.How do you debug a Next.js application effectively?=========================================
-// Q.Can you explain the concept of “shallow routing” in Next.js? =========================================
-// Q.How can you integrate GraphQL with Next.js for data fetching? =========================================
-// Q.What strategies would you use for managing state in a large Next.js application? =========================================
-// Q.How does Next.js handle SEO optimization for static pages, and what strategies would you recommend for improving SEO? =============================
