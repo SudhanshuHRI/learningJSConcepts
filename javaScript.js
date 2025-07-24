@@ -2256,7 +2256,8 @@
 // app.get("/",(req,res)=>{res.set("x-Custom-Header","Hello Client")})
 
 
-// What is the purpose of res.locals, and how is it used?
+// What is the purpose of res.locals, and how is it used? ==============================
+// => it is a object that lets you store data for single request + 
 // How do you debug an Express.js application effectively?
 // What is the difference between app.use() and app.all() in Express.js?
 // How do you optimize the performance of an Express.js application?
