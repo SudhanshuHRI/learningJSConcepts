@@ -2256,13 +2256,6 @@
 // app.get("/",(req,res)=>{res.set("x-Custom-Header","Hello Client")})
 
 
-
-
-// How do you implement rate limiting in an Express.js application?
-// What is the purpose of the helmet middleware, and how do you configure it?
-// How do you implement CSRF protection in an Express.js app?
-// What is streaming in Express.js, and when would you use it?
-// How do you implement request validation in Express.js using libraries like Joi or express-validator?
 // What is the purpose of res.locals, and how is it used?
 // How do you debug an Express.js application effectively?
 // What is the difference between app.use() and app.all() in Express.js?
