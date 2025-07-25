@@ -2373,40 +2373,13 @@
 // => it is a query where mongo gives result using only index, without scanning the actual document + it is very fast + first we have to createIndex "db.users.createIndex({ name: 1, age: 1 })" then "db.users.find({ name: "Alice" }, { name: 1, age: 1, _id: 0 })" will be covered query becz name is in filter , name and age are in projection
 
 // When should you normalize data in MongoDB? ============================
+// => normalize means breaking data in seprate collections and using references(id) to connect them + when a user appears in orders, posts or comments, then we dont copy user everywhere 
 
-// How would you model a many-to-many relationship?
 
-// Can you enforce foreign keys in MongoDB?
-
-// What are document validation rules?
-
-// How do you update a specific item inside an array?
-
-// What is the use of the $elemMatch operator?
-
-// What is the $addToSet operator used for?
-
-// How would you design a schema for an e-commerce app?
 
 // What is aggregation in MongoDB?
+// => Aggregation in MongoDB means processing and combining data from your documents to get summarized results — like totals, averages, counts, or grouped data 
 
-// Explain the aggregation pipeline stages.
-
-// What is the difference between $group and $project?
-
-// What are MongoDB transactions and how do they work?
-
-// How is sharding implemented in MongoDB?
-
-// What is a replica set and how does it help with high availability?
-
-// How do you handle backups and restores in MongoDB?
-
-// What are the common security practices in MongoDB?
-
-// How do you handle pagination in MongoDB?
-
-// How do you monitor performance in a production MongoDB deployment?
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ DSA Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
