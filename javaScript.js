@@ -2310,7 +2310,105 @@
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
+// What is MongoDB and how does it differ from traditional RDBMS? ===================================
 
+// What is a document in MongoDB?
+
+// What are collections in MongoDB?
+
+// What are the advantages of using MongoDB?
+
+// What are the limitations of MongoDB?
+
+// Explain BSON in MongoDB.
+
+// How does MongoDB store data internally?
+
+// What is the maximum size of a document in MongoDB?
+
+// What are the different data types supported by MongoDB?
+
+// How does MongoDB handle schema?
+
+// How do you insert a document in MongoDB?
+
+// How do you update nested fields in a document?
+
+// What is the difference between updateOne() and updateMany()?
+
+// What does the $set operator do?
+
+// How do you delete documents in MongoDB?
+
+// How do you query an array field in MongoDB?
+
+// What is the difference between find() and findOne()?
+
+// What is projection in MongoDB?
+
+// How do you use regular expressions in MongoDB queries?
+
+// How can you sort, skip, and limit results?
+
+// What is an index in MongoDB?
+
+// How do you create an index in MongoDB?
+
+// What types of indexes are available in MongoDB?
+
+// How does indexing affect performance?
+
+// What is a compound index?
+
+// What is an index cardinality?
+
+// How do you view and analyze indexes?
+
+// What is the purpose of explain() in MongoDB?
+
+// What is a covered query?
+
+// What are some common performance bottlenecks in MongoDB?
+
+// How do you model one-to-many relationships in MongoDB?
+
+// What’s the trade-off between embedding vs referencing?
+
+// When should you normalize data in MongoDB?
+
+// How would you model a many-to-many relationship?
+
+// Can you enforce foreign keys in MongoDB?
+
+// What are document validation rules?
+
+// How do you update a specific item inside an array?
+
+// What is the use of the $elemMatch operator?
+
+// What is the $addToSet operator used for?
+
+// How would you design a schema for an e-commerce app?
+
+// What is aggregation in MongoDB?
+
+// Explain the aggregation pipeline stages.
+
+// What is the difference between $group and $project?
+
+// What are MongoDB transactions and how do they work?
+
+// How is sharding implemented in MongoDB?
+
+// What is a replica set and how does it help with high availability?
+
+// How do you handle backups and restores in MongoDB?
+
+// What are the common security practices in MongoDB?
+
+// How do you handle pagination in MongoDB?
+
+// How do you monitor performance in a production MongoDB deployment?
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ DSA Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
