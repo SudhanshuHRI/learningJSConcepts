@@ -2311,36 +2311,46 @@
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Mongo DB Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 // What is MongoDB and how does it differ from traditional RDBMS? ===================================
+// => NoSQL database that stores data in JSON like format called BSON [Binary JSON]
 
-// What is a document in MongoDB?
+// What is a document in MongoDB? =================================
+// => Mongo DB stores each piece of data as document - a single object + every document has a unique _id field + it holds all the related information about one thing + document = one record
 
-// What are collections in MongoDB?
+// What are collections in MongoDB? ===========================
+// => it is like a table + it is a group of documents stored togather + collection is like folders and document are like files + collection dont require a fixed schema so each document can be different + one database have many collections
 
-// What are the advantages of using MongoDB?
+// What are the advantages of using MongoDB? =====================
+// => flexible Schema means every doucment can have different format + mongo is fast for reading and writing large data + Mongo DB supports horizontal scaling + data stored in BSON which is easy to read and write + we dont have to use SQL + 
 
-// What are the limitations of MongoDB?
 
-// Explain BSON in MongoDB.
+// Explain BSON in MongoDB. ==================================
+// => it is a data format mongo uses to store data + it is a faster and smarter verison on JSON + it looks like json but it  stored in binary form for better performance + JSON is text based good for human not for computers
 
-// How does MongoDB store data internally?
 
-// What is the maximum size of a document in MongoDB?
 
-// What are the different data types supported by MongoDB?
+// What is the maximum size of a document in MongoDB? =====================================
+// max size of a single document is : 16 MB + there is a size limit to keep document fast to read
 
-// How does MongoDB handle schema?
+// How do you insert a document in MongoDB? =================================
+// db.collectionName.insertOne({ key1: value1, key2: value2 }); + if collection doesnot exist then mongoDB creates it automatically + an "_id" field will be added automatically if you dont provide it + if want to add multiple documents then : db.collectionName.insertMany([ {doc1}, {doc2}, ... ]); 
 
-// How do you insert a document in MongoDB?
+// How do you update nested fields in a document?=============================
+// we use $set for updating 
+// => eg:
+// db.users.updateOne(
+//   { _id: 1 },
+//   { $set: { "address.city": "Mumbai" } }
+// )
 
-// How do you update nested fields in a document?
+// What does the $set operator do? ========================================
+// => it is used to add or update field in document + if feild exist then update otherwise creates
 
-// What is the difference between updateOne() and updateMany()?
+// How do you delete documents in MongoDB? ======================================
+// => for one document : db.users.deleteOne({ name: "Alice" }) + for many document : db.users.deleteMany({ city: "Delhi" }) it delete all users where city is delhi 
 
-// What does the $set operator do?
 
-// How do you delete documents in MongoDB?
-
-// How do you query an array field in MongoDB?
+// How do you query an array field in MongoDB? ==========================
+// =>
 
 // What is the difference between find() and findOne()?
 
