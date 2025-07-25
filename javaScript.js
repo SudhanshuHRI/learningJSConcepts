@@ -2348,13 +2348,8 @@
 // How do you delete documents in MongoDB? ======================================
 // => for one document : db.users.deleteOne({ name: "Alice" }) + for many document : db.users.deleteMany({ city: "Delhi" }) it delete all users where city is delhi 
 
-
-// How do you query an array field in MongoDB? ==========================
-// =>
-
-// What is the difference between find() and findOne()?
-
-// What is projection in MongoDB?
+// What is projection in MongoDB? ============================
+// => 
 
 // How do you use regular expressions in MongoDB queries?
 
