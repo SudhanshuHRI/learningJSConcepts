@@ -2349,29 +2349,28 @@
 // => for one document : db.users.deleteOne({ name: "Alice" }) + for many document : db.users.deleteMany({ city: "Delhi" }) it delete all users where city is delhi 
 
 // What is projection in MongoDB? ============================
-// => 
+// => means only get those keys from document that we require + if we use "db.users.find({ name: "Alice" })" then it will give all the doucment that name is alice + so we can use "db.users.find({name:"Alice"},{name:1,email:1})" . this will give only name and email from the document and  _id + if we use "db.users.find({name:"Alice"},{age:0,address:0})" then it will not give age and address and other fields will be return
 
 // How do you use regular expressions in MongoDB queries?
+// => We can also search the doucment using RegEx + db.users.find({ name: /^A/ })
 
-// How can you sort, skip, and limit results?
+// How can you sort, skip, and limit results? ===================================
+// => these commands runs on all the doucments in collection + here users,products,orders are collections
+// => sorting : db.users.find().sort({ age: 1 })   // Sort by age (youngest to oldest) + if we use "{age:-1}" then it will be oldest to newest
+// => limiting : db.products.find().limit(10) // get top 10 products
+// => skiping : db.orders.find().skip(20)   // Skip first 20 orders
 
-// What is an index in MongoDB?
+// What is an index in MongoDB? ======================================
+// => index is like book's index + mongo directly jumps to matching data using index + without index mongo scans every document + if you oftern search by "name" then create a index by "db.users.createIndex({name:1})". now query will be faster
 
-// How do you create an index in MongoDB?
+// What is a compound index? ==========================
+// => compound index means making index for more then one + db.users.createIndex({ age: 1, city: 1 }) if you use age and city often for search
 
-// What types of indexes are available in MongoDB?
+// What is the purpose of explain() in MongoDB? ==============================
+// => explain () shows whether your query uses an index or not, how many documents it scans + db.users.find({ email: "a@example.com" }).explain("executionStats")
 
-// How does indexing affect performance?
-
-// What is a compound index?
-
-// What is an index cardinality?
-
-// How do you view and analyze indexes?
-
-// What is the purpose of explain() in MongoDB?
-
-// What is a covered query?
+// What is a covered query? =================================
+// => it is a query where mongo gives result using only index, without scanning the actual document + it is very fast + first we have to createIndex "db.users.createIndex({ name: 1, age: 1 })" then "db.users.find({ name: "Alice" }, { name: 1, age: 1, _id: 0 })" will be covered query becz name is in filter , name and age are in projection
 
 // What are some common performance bottlenecks in MongoDB?
 
