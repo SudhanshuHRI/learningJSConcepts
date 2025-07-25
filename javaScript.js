@@ -2372,13 +2372,7 @@
 // What is a covered query? =================================
 // => it is a query where mongo gives result using only index, without scanning the actual document + it is very fast + first we have to createIndex "db.users.createIndex({ name: 1, age: 1 })" then "db.users.find({ name: "Alice" }, { name: 1, age: 1, _id: 0 })" will be covered query becz name is in filter , name and age are in projection
 
-// What are some common performance bottlenecks in MongoDB?
-
-// How do you model one-to-many relationships in MongoDB?
-
-// What’s the trade-off between embedding vs referencing?
-
-// When should you normalize data in MongoDB?
+// When should you normalize data in MongoDB? ============================
 
 // How would you model a many-to-many relationship?
 
