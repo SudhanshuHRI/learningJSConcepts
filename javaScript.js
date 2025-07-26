@@ -48,7 +48,7 @@
 // => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
-// Q. What are premitive and non premetive data types in js ? =============================================
+// Q. What are premitive and non-premetive data types in js ? =============================================
 // => Premitive : immutable (unable to change) + copied by value + stored in Stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
 // => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory +
 
@@ -113,7 +113,7 @@
 
 // Q. Why are functions called first class objects ? ======================================
 // => becz functions can assign to variables + passed as arguments
-// Q. "Array.prototype.map" ?? ========================================
+
 
 // Q. how to create a object without a prototype ? ===============================
 // => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() functions
