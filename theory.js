@@ -2072,10 +2072,13 @@
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
 // write a code for schema and model
 // write a code for middleware implimentation on Procted routes and global routes
-// write a code for connecting a database + write a functions for database add,update,delete functions
-// write a code for get,put,patch, post, delete apis
+// write a code for connecting a database
+// write a code for get,put,patch, post, delete apis with database functions
 // write a Promise and Promise.all() code.
+// write a code for jwt auth
 // make authorization and authentication apis.
+// write a code for refresh token and accesstoken
+
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Express.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
