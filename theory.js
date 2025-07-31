@@ -1864,7 +1864,7 @@
 // => crypto : used to perform cryptographic operations + hashing,encryption,decryption,tokengeneration etc
 
 // What is REPL in Node.js? ========================================================
-// => REPL means READ, EVAL, PRINT, LOOP + used to run node on CMD
+// => REPL means READ, EVAL, PRINT, LOOP + used to run node.js on CMD
 
 // What is the difference between Node.js and AJAX? ========================================================
 // => Node : runs on server side + runs js on server + used to build api,server,backend app
@@ -2153,7 +2153,7 @@
 
 // What are the differences between app.use() and app.get() in Express.js? ======================================
 // => app.use() : used to define middleware (logic that runs before routes)
-// => app.get() : used to define GET route handler
+// => app.get() : used to define GET route handler 
 
 // How do you handle query parameters in Express.js? =================================
 // => query parameters are part of url appear after "?" like "http://localhost:3000/search?name=John&age=25" + we can get these parameter in "req.query" variable
@@ -2236,7 +2236,7 @@
 // app.use(timeout("5s")) // means every request have 5 seconds to excute
 // app.get("/",(req,res)=>{if(req.timeout){res.send("taking too much time")}})
 
-// How do you set custom headers in an Express.js response?==============================================
+// How do you set custom headers in an Express.js response? ==============================================
 // => used to give custom instructions to client + we use use.set() to set custom headers +
 // => eg:
 // app.get("/",(req,res)=>{res.set("x-Custom-Header","Hello Client")})
