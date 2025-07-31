@@ -1836,11 +1836,7 @@
 // const csrfProtection = csrf({cookie:true});
 // app.get("/getData",csrfProtection,(req,res)=>{})
 
-// What is helmet library how to use it ? ==================================
-// => it is a middleware for express applications + it help in preventing Cross-site scription, clickjacking, MIME-sniffing, Information leak via headers
-// => eg:
-// import helmet from "helmet";
-// app.use(helmet());
+
 
 // How would you handle rate limiting in a Node.js application? =============
 // technique to control no of request by client in limited time + we use "express-rate-limit" library for that
