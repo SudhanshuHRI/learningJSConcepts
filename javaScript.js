@@ -5,10 +5,8 @@
 // => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
 // => Memeory Heap :- where variable are saved. browser's memeory
 // => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
-// => js is single threaded. means it has single call stack so it can do only one task in one time.
-// => js is single threaded and syncronous by default but it has built in features to handle async operations like callback, Promises, async/await, Event loop.
 
-// working of js----------------------
+// working of js ----------------------
 // 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: This is where JavaScript runs your code one step at a time.
 // 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬: Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
 // 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞: Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
@@ -50,10 +48,9 @@
 
 // Q. What are premitive and non-premetive data types in js ? =============================================
 // => Premitive : immutable (unable to change) + copied by value + stored in Stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
-// => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory +
+// => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory 
 
-// Q. all built - in array functions in react ? give all ==================================================
-// Ans. React dont have any built in methods. it takes form js.
+// Q. Explain all built in functions of js ?? =================================================
 
 // 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early + only works on array not objects or string + used when you want to do something with each element
 
@@ -97,7 +94,7 @@
 
 // 21. lastIndexOf() : returns the last index at which element is found + serches from backword
 
-// 22. join() : used to combine all elements of array into single atring with specified operator + array.join("-")
+// 22. join() : used to combine all elements of array into single string with specified operator + array.join("-")
 
 // Q. sort [1,2,3,11,22,33] using sort() method. =========================
 // => arr.sort((a,b)=>a-b) for increment + arr.sort((a,b)=>b-a) for decriment
@@ -106,14 +103,10 @@
 // => beacuse object are declared by refrence
 
 // Q. slice vs splice who modify orignal array?? give example =================================================================
-// => splice is used to modify orignal array + slice give only shallow copy + splict(1,0,12,13) + slice (2,5)
+// => splice is used to modify orignal array + slice give only shallow copy + splice(1,0,12,13) + slice (2,5)
 
 // Q. what is IIFE ? why it is usefull? ====================================
 // => immidiately inveked function + runs code immidiately + variables and functions inside it are not accessible outsite it
-
-// Q. Why are functions called first class objects ? ======================================
-// => becz functions can assign to variables + passed as arguments
-
 
 // Q. how to create a object without a prototype ? ===============================
 // => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() functions
@@ -2249,15 +2242,13 @@
 // app.use(timeout("5s")) // means every request have 5 seconds to excute
 // app.get("/",(req,res)=>{if(req.timeout){res.send("taking too much time")}})
 
-
 // How do you set custom headers in an Express.js response?==============================================
-// => used to give custom instructions to client + we use use.set() to set custom headers + 
+// => used to give custom instructions to client + we use use.set() to set custom headers +
 // => eg:
 // app.get("/",(req,res)=>{res.set("x-Custom-Header","Hello Client")})
 
-
 // What is the purpose of res.locals, and how is it used? ==============================
-// => it is a object in express +  used to store and share data during a single request + data is cleaned after the request + it helps share data between middlware and api function without using global variables + means it's value will store for only one api hit 
+// => it is a object in express +  used to store and share data during a single request + data is cleaned after the request + it helps share data between middlware and api function without using global variables + means it's value will store for only one api hit
 // => eg:
 // app.use((req, res, next) => {
 //   res.locals.username = 'John Doe';  // Store data in res.locals
@@ -2299,8 +2290,6 @@
 // │   └── user.validation.js
 // └── .env                   # Environment variables
 
-
-
 // How do you use the compression middleware to optimize responses? ===================================================
 // => when server response the data can be compressed + browser automatically unzips it + we use "compression" library + express will compress the response automatically + on browser network tab headers will be "content-encoding:gzip"
 // eg:
@@ -2320,22 +2309,19 @@
 // => it is like a table + it is a group of documents stored togather + collection is like folders and document are like files + collection dont require a fixed schema so each document can be different + one database have many collections
 
 // What are the advantages of using MongoDB? =====================
-// => flexible Schema means every doucment can have different format + mongo is fast for reading and writing large data + Mongo DB supports horizontal scaling + data stored in BSON which is easy to read and write + we dont have to use SQL + 
-
+// => flexible Schema means every doucment can have different format + mongo is fast for reading and writing large data + Mongo DB supports horizontal scaling + data stored in BSON which is easy to read and write + we dont have to use SQL +
 
 // Explain BSON in MongoDB. ==================================
 // => it is a data format mongo uses to store data + it is a faster and smarter verison on JSON + it looks like json but it  stored in binary form for better performance + JSON is text based good for human not for computers
-
-
 
 // What is the maximum size of a document in MongoDB? =====================================
 // max size of a single document is : 16 MB + there is a size limit to keep document fast to read
 
 // How do you insert a document in MongoDB? =================================
-// db.collectionName.insertOne({ key1: value1, key2: value2 }); + if collection doesnot exist then mongoDB creates it automatically + an "_id" field will be added automatically if you dont provide it + if want to add multiple documents then : db.collectionName.insertMany([ {doc1}, {doc2}, ... ]); 
+// db.collectionName.insertOne({ key1: value1, key2: value2 }); + if collection doesnot exist then mongoDB creates it automatically + an "_id" field will be added automatically if you dont provide it + if want to add multiple documents then : db.collectionName.insertMany([ {doc1}, {doc2}, ... ]);
 
 // How do you update nested fields in a document?=============================
-// we use $set for updating 
+// we use $set for updating
 // => eg:
 // db.users.updateOne(
 //   { _id: 1 },
@@ -2346,7 +2332,7 @@
 // => it is used to add or update field in document + if feild exist then update otherwise creates
 
 // How do you delete documents in MongoDB? ======================================
-// => for one document : db.users.deleteOne({ name: "Alice" }) + for many document : db.users.deleteMany({ city: "Delhi" }) it delete all users where city is delhi 
+// => for one document : db.users.deleteOne({ name: "Alice" }) + for many document : db.users.deleteMany({ city: "Delhi" }) it delete all users where city is delhi
 
 // What is projection in MongoDB? ============================
 // => means only get those keys from document that we require + if we use "db.users.find({ name: "Alice" })" then it will give all the doucment that name is alice + so we can use "db.users.find({name:"Alice"},{name:1,email:1})" . this will give only name and email from the document and  _id + if we use "db.users.find({name:"Alice"},{age:0,address:0})" then it will not give age and address and other fields will be return
@@ -2373,13 +2359,10 @@
 // => it is a query where mongo gives result using only index, without scanning the actual document + it is very fast + first we have to createIndex "db.users.createIndex({ name: 1, age: 1 })" then "db.users.find({ name: "Alice" }, { name: 1, age: 1, _id: 0 })" will be covered query becz name is in filter , name and age are in projection
 
 // When should you normalize data in MongoDB? ============================
-// => normalize means breaking data in seprate collections and using references(id) to connect them + when a user appears in orders, posts or comments, then we dont copy user everywhere 
-
-
+// => normalize means breaking data in seprate collections and using references(id) to connect them + when a user appears in orders, posts or comments, then we dont copy user everywhere
 
 // What is aggregation in MongoDB?
-// => Aggregation in MongoDB means processing and combining data from your documents to get summarized results — like totals, averages, counts, or grouped data 
-
+// => Aggregation in MongoDB means processing and combining data from your documents to get summarized results — like totals, averages, counts, or grouped data
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ DSA Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -2599,7 +2582,6 @@
 // Output: 1 (substring is "b")
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ SQL Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
 
 //
 // To create database : CREATE DATABASE <database_name>;
@@ -3049,4 +3031,3 @@
 // Find employees whose names appear more than once (duplicates).
 
 // Display employees hired in the same year as their manager.
-
