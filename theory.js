@@ -137,7 +137,8 @@
 // in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
 
 // Q. Function expression and function declaration ? =====================================
-// => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")} + function declaration : when defined with function keyword , hoisted, can be called before , eg: function sayHi(){console.log("hi")}
+// => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")}
+// => function declaration : when defined with function keyword , hoisted, can be called before , eg: function sayHi(){console.log("hi")}
 
 // Q. How to check if value is null ?  why typeof null == object ? ===============================
 // => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object
@@ -265,7 +266,7 @@
 // => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
 
 // Q.Private property and private fucntion in js ? ====================================================
-// => Works in function based components + only valid in classes +
+// => Works in class based components + only valid in classes +
 
 // Q. What is Laxical Scope vs closures ? give code ===========================================================================
 // => laxical scope means where variables are accessible based on code structure + closures are a feature that comes because of laxical scope, allow a function to remember variables even after parent function has excuted
@@ -302,11 +303,8 @@
 // Q. What is str.at() in js ?==============================================
 // => used to get character of specific index + str.at(index)
 
-// Q. map vs foreach function ? ==========================================
-// => map returns new array with transform element + forEach returns undefined + map is used when need to transform data into new array + forEach is used when do something with each element
-
 // Q. What is navigator in js ? ============================================
-// => built in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator)
+// => built-in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator)
 
 // Q. .has() vs .add() ? ===================================
 // => Both used in "Set" Objects + add is used to add value to a set + has is used to check if value exists
@@ -1267,7 +1265,7 @@
 
 //   return (
 //     <>
-//       <Child sendData={handleDataFromChild} />
+//       <Child sendData={handleDataFromChild} />  
 //     </>
 //   );
 // };
