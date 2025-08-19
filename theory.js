@@ -2235,7 +2235,7 @@
 // How do you handle timeouts in an Express.js application? ===========================================
 // => means stop the request if it takes too long to respond + we use "connect-timeout" library
 // => eg:
-// import timeout from "connect-timeout"
+// import timeout from "connect-timeout";
 // app.use(timeout("5s")) // means every request have 5 seconds to excute
 // app.get("/",(req,res)=>{if(req.timeout){res.send("taking too much time")}})
 
