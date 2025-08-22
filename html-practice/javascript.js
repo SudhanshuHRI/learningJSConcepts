@@ -1,4 +1,0 @@
-////////////////////////////////////////////////////////// React.js Seciton //////////////////////////////////////////////
-// write a code to fetch data from child to parent
-// make a custom hook for fetching data from apis : "" , ""
-// Write a code for context api
