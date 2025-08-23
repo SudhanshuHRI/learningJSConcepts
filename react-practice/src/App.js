@@ -1,8 +1,6 @@
 import "./App.css";
 
 function App() {
-
-  
   return (
     <div className="App">
       <h1>Hello World</h1>
@@ -11,7 +9,6 @@ function App() {
 }
 
 export default App;
-
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ React.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -31,7 +28,7 @@ export default App;
 
 //   return (
 //     <>
-//       <Child sendData={handleDataFromChild} />  
+//       <Child sendData={handleDataFromChild} />
 //     </>
 //   );
 // };
@@ -436,5 +433,3 @@ export default App;
 // };
 
 // export default APP;
-
-
