@@ -1,18 +1,19 @@
-// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Theory ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+// 1. Theory Section   2. Practice Section
 
-// Q. Explain the working of JavaScript ? =============================================================================
-// Ans.
-// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack.
-// => Memeory Heap :- where variable are saved. browser's memeory
-// => Call Stack :- a container in which tasks are stored line wise. it works on FILO(first in last out).
 
-// working of js ----------------------
+
+// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Theory Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+// Explain the working of JavaScript ? =============================================================================
+// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack. + variables stored in memory Heap. Browser's memory + call stack is a container in which tasks are stored line wise. works on FILO 
+
+// => JS excution :-
 // 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: This is where JavaScript runs your code one step at a time.
 // 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬: Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
 // 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞: Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
 // 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
-// ==> while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
+// => while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
 
 // reference links :- 1. https://www.jsv9000.app
 //                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
@@ -20,24 +21,9 @@
 
 // Q. diff between var , let ,const ? ============================================================
 // => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + all 3 are hosted but only var is initialised as undefined
-// => eg:
-// const scope = () => {
-//   if (true) {
-//     var a = 10;
-//     let b = 20;
-//     const c = 30;
-//   }
-//   console.log("Inside Function Scope", a);
-//   console.log("Inside Function Scope", b);
-//   console.log("Inside Function Scope", c);
-// };
-// scope();
 
-// Q. What are callback function ? Give advantages and disadvantages ============================================================
-// => function passed as argument to another function + advantage : async + disadvantage : callback hell
-
-// Q. What is callback hell or pyramid of doom? =================================================
-// => passing too much calback functions will become call back hell +  to avoid use Promises or async/await
+// Q. What are callback function ?  ============================================================
+// => function passed as argument to another function 
 
 // Q. What are ES6 features ?? ==========================================================
 // => Blocke scoped variables(let,const) + arrow function + templete letrals + default parameters + array , object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures
@@ -47,69 +33,46 @@
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
 // Q. What are premitive and non-premetive data types in js ? =============================================
-// => Premitive : immutable (unable to change) + copied by value + stored in Stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
-// => Non-premetive : mutable (able to change) + copied by reference + stores collention or more complex data + Object, Array, Function, all built in objects (Date,Map,Set etc) + stored in Heap memory
+// => Premitive : immutable (unable to change) + copied by value + stored in stack memory string, Number, Boolean, undefined, null, symbol, bigInt
+// => Non-premetive : mutable (able to change) + copied by reference + stored in Heap memory + Object, Array, Function, all built in objects (Date,Map,Set etc)
 
 // Q. Explain all built in functions of js ?? =================================================
 
-// 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early + only works on array not objects or string + used when you want to do something with each element
-
+// => these functions are also called "array prototype functions" beacuse it works only on array not on object or string + we can use them indirectly using split() or object.entries() methods.
+// 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early
 // 2. map() : itrates over each element + return a new array with transform values + dont change original array
-
 // 3. filter() : create a new array of only condition passed elements + returns a new array + dont change original array
-
-// 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined +
-
+// 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined
 // 5. findIndex() : search the array and return first element's index that satisfies the condition +if no element passed, it will return "-1"
-
 // 6. some() : tests wheather at least one element pass the test + it will return boolean + if no element passed, it will return false
-
-// 7. every() : tests wheater all element pass the test +  it will also return boolean +  if any of the elemnt dont pass the test, it will return false.
-
+// 7. every() : tests wheater all element pass the test +  it will return boolean +  if any of the elemnt dont pass the test, it will return false.
 // 8. push() : add one or more element in end or array and returns new length of array + modifies orignal array
-
 // 9. pop() : remove last elemnt of array + return removed element +  modifies original array
-
 // 10. unshift() : add element in beginning + return new length of array + modifies orignal array
-
 // 11. shift () : remove first element of array + return removed element + modifies original array
-
 // 12. splice() : add,remove,replace element in array + modifies original array + return array of removed elements , if no element removed,it returns blank array + array.splice(startIndex, noOfValuesToDelete, addItem1,addItem2,addItem3,.....)
-
-// 13. concat() : merge 2 or more array + returns new concated array +
-
-// 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion +
-
-// 15. reduce() : used to reduce an array to single value +
-
+// 13. concat() : merge 2 or more array + returns new concated array
+// 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion
+// 15. reduce() : used to reduce an array to single value
 // 16. reduceRight() : works from right index of array
-
-// 17. sort() : used to sort the array + returns sorted array + element are converted in string then short
-
+// 17. sort() : used to sort the array + returns sorted array + element are converted in string then sort
 // 18. reverse() : reverse the order of elements in array + modifies orignal array + returns the reverse array
-
 // 19. includes() : checks if an array or string contains certain element or substring + returns boolean
-
 // 20. indexOf() : used to find first index of specified element in array or string + if not found returns -1
-
 // 21. lastIndexOf() : returns the last index at which element is found + serches from backword
-
 // 22. join() : used to combine all elements of array into single string with specified operator + array.join("-")
 
 // Q. sort [1,2,3,11,22,33] using sort() method. =========================
 // => arr.sort((a,b)=>a-b) for increment + arr.sort((a,b)=>b-a) for decriment
 
-// Q. why 2 similer objects comparing returns false ? =========================================
-// => beacuse object are declared by refrence
-
 // Q. slice vs splice who modify orignal array?? give example =================================================================
 // => splice is used to modify orignal array + slice give only shallow copy + splice(1,0,12,13) + slice (2,5)
 
 // Q. what is IIFE ? why it is usefull? ====================================
-// => immidiately inveked function + runs code immidiately + variables and functions inside it are not accessible outsite it
+// => immidiately inveked function + runs code immidiately + keeps variable and functions private and safe beacuse it create private scope so IIFE variables and functions dont conflict with global scope.
 
 // Q. how to create a object without a prototype ? ===============================
-// => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() functions
+// => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() default prototype functions in it + dont conflict with inherit functions
 
 // Q. how to destructure object ?? ========================
 // => const person = {name:"sudhanshu",age:28} ; const {name,age} = person ;
@@ -125,7 +88,7 @@
 // => coercion means converting value from one type to another + js is dynamic typed so automatically convert types + explicit means when manually changed , eg: Number("42") it will convert it in number + implicit means when convert automatically , eg: console.log("5" + 1 )
 
 // Q. How to check value is NaN ? ================================
-// => Number.isNan(value) + give boolean
+// => Number.isNaN(value) + give boolean
 
 // Q. How to check a number is even or odd without using modular operator ? ============================
 // => Math.floor(num/2)*2===num ; + if it is true the even other false
@@ -134,7 +97,7 @@
 // => using "in" operator + obj.hasOwnProperty("name")
 
 // Q. "in " vs "hasOwnProperty" ? =================================
-// in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
+// => in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
 
 // Q. Function expression and function declaration ? =====================================
 // => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")}
@@ -156,12 +119,10 @@
 // => const merged = [...str1, ' ',...str2].join("")
 
 // Q.  What is AJAX ? =======================================
-// => Asyncronous JavaScript And XML + it is a technique that send or recieve data form server without reloading the entire page + with ajax send request to server , receive the response in json, update the webpage without refreshing it + eg: you fill a form, you enter email to check if already registered, it check in real time without refreshing the page
+// => Asyncronous JavaScript And XML + it is a technique that send or recieve data form server without reloading the entire page + eg: you fill a form, you enter email to check if already registered, it check in real time without refreshing the page + fetch and axios automatically uses AJAX method
 
 // Q.all object buit-in functions?? give examples ========================================================================
-
 // 1.Object.create() : used to create new object with choosen prototype + const dog = Object.create(animal) + here dog will have animal's properties
-
 // 2.Object.assign() : used to copy properties from source object to target objects + Object.assign(target, source1,source2,......)
 
 // 3.Object.keys() : returns the array of keys + const keys = Object.keys(user)
@@ -331,6 +292,8 @@
 // => delete object.key || delete object['key']
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Practical ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+// Q. Give Example for let, const, var
 
 // Q. Guess the output of the following ? ===================================================================
 
