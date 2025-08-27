@@ -9,11 +9,11 @@
 
 // => JS excution :-
 // 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: This is where JavaScript runs your code one step at a time.
-// 𝟐. 𝐖𝐞𝐛 𝐀𝐏𝐈𝐬: Things like setTimeout or fetching data are handled outside the Call Stack by Web APIs provided by the browser.
-// 𝟑. 𝐂𝐚𝐥𝐥𝐛𝐚𝐜𝐤 𝐐𝐮𝐞𝐮𝐞: Once a task (like a timer or data fetch) is done, the result goes to the Callback Queue, waiting for the Call Stack to be empty.
+// 𝟐. Micro Task Queue: it contains Async functions, Promises + it has priority over Macro Task Queue
+// 𝟑. Macro Task Queue: it contains all setTimeout,setIntervel type functions
 // 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
-// => while excuting call stack container 's task, if any task comes who takes time, it send to callback que container(container that contains all callbacks). tasks stored in  callback que goes to webAPI container to excute(excuted by ajax and DOM) one by one. when task is completed by webAPI then it comes back in callback que. Then event loop pushes that task back in call stack.
+// => when request comes, after catogarise in sync task or async task , event loop sends all async tasks to microtask Queue and macrotask Queue to excute
 
 // reference links :- 1. https://www.jsv9000.app
 //                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
@@ -26,7 +26,7 @@
 // => function passed as argument to another function 
 
 // Q. What are ES6 features ?? ==========================================================
-// => Blocke scoped variables(let,const) + arrow function + templete letrals + default parameters + array , object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures
+// => Block scoped variables(let,const) + arrow function + templete letrals + default parameters + array and object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures
 
 // Q. difference between normal funciton and arrow funciton ? ====================================================
 // => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted
@@ -37,8 +37,9 @@
 // => Non-premetive : mutable (able to change) + copied by reference + stored in Heap memory + Object, Array, Function, all built in objects (Date,Map,Set etc)
 
 // Q. Explain all built in functions of js ?? =================================================
-
+ 
 // => these functions are also called "array prototype functions" beacuse it works only on array not on object or string + we can use them indirectly using split() or object.entries() methods.
+
 // 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early
 // 2. map() : itrates over each element + return a new array with transform values + dont change original array
 // 3. filter() : create a new array of only condition passed elements + returns a new array + dont change original array
@@ -97,7 +98,7 @@
 // => using "in" operator + obj.hasOwnProperty("name")
 
 // Q. "in " vs "hasOwnProperty" ? =================================
-// => in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
+// => in operator finds in object's prototype, also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
 
 // Q. Function expression and function declaration ? =====================================
 // => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")}
@@ -170,7 +171,7 @@
 // => Callbacks : a function passed as an argument + using too much callback will result to callback hell + hard to read, debug, maintain + should used when code is simple
 
 // Q. "throw" keyword in js ? =============================================================================
-// => used to throw manually error + should be used with try-catch + should throw error with "throw new Error("something went wrong")" object for good practice +  it stops excution of all the loops (map or for) +
+// => used to throw manually error + should be used with try-catch + should throw error with "throw new Error("something went wrong")" object for good practice +  it stops excution of all the loops (in-built or for)
 
 // Q.controlled and uncontrolled components? ========================================================================
 // => component that used in form can be controlled or uncontrolled + controlled means react state controls the form data + uncontrolled means when DOM direactly controls the elements , using useRef hook in react is used to directly cange in DOM, value is stored in DOM
