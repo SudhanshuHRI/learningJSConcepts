@@ -42,17 +42,8 @@
 // Explain the non-blocking I/O model in Node.js. How does it impact performance? =====================
 // I/O means operations like reading files, quering database, makeing network requests + blocking I/O means program waits until the operation completes before moveing to next task + Non-blocking I/O means program initiates the operation and keeps running other code immidiately + non-blocking I/O is important in node because it is single theread + if it blocked on I/O operation, node could not handle other requests.
 
-// Event loop in node.js. ============================
-// => first request goes to event queue container + then event loop take one request and checks if request is sync(blocking) or async(non-blocking) + if async then goes to event queue and after solving event loop push it to evetn queue and the give respone to user + if blocking task then it goes to thread pool and if any thread is free then assign the task to that thread and thread gives the result , if not then it will wait for thread to be empty
-
-// Microtask Queue vs Macrotask Queue ===============================
-// => when request comes, after catogarise in sync task or async task , event loop sends all async tasks to microtask Queue and macrotask Queue to excute + microtask has priority over macroTask + MicroTask : async functions, promise, process.nextTick etc + MacroTask : setIntervel, setTimeout etc.
-
 // process.nextTick() vs setImmidiate()? ============================
 // => both used for async task + process.nextTick() has priority on setImmidiate () + process.nextTick() will excute after current JS Call Stack completes [before the event loop conticues] and setImmidiate will excute on the next iteration of the event loop
-
-// setTimeout() vs setIntervel() ============================
-// => setTimeout() used when a task should excute a specific delay, it will exucte once after delay + setIntervel() used when a task should retedely after a specific delay, it will excute again and again after delay
 
 // How does Node.js manage memory?===================================
 // manages memory using v8 engine + node uses main 2 memory: stack (stores primitive data types, fast,small in size,managed by call stack), heap (stores object, array, larger than stack, managed by garbage collector)
@@ -72,7 +63,7 @@
 // emitter.emit("greet");
 
 // What are streams in Node.js, and how do they improve performance? ==================================
-// => under "fs" module + used to stream data + data is read or write in chunks + dont load entire file , besides use chucks
+// => under "fs" module + used to stream data + data is read or write in chunks + dont load entire file
 // => eg:
 // const fs = require('fs');
 // const readStream = fs.createReadStream('largefile.txt', { encoding: 'utf8' });
@@ -97,7 +88,7 @@
 // readStream.pipe(writeStream);
 
 // How would you manage concurrency in node.js application ?  =========================================
-// through event loop , callback, Promises, async/await etc.
+// through callback, Promises, async/await etc.
 
 // What are the advantages of using the async/await syntax over callbacks and promises? =======================================
 // simplified syntex + avoid callback hell + better error handling with try-catch
@@ -106,20 +97,12 @@
 // using callback ((err,data)=>{}) + using promises (.catch()) + async/await (try-catch block)
 
 // is event loop in react.js and node.js different ? =========================================
-// => yes + react.js doesn't have its own event loop , it works on browser's event loop + react's async ops handles with web api +  node's event loop provided by libuv + node handles async ops with libuv
+// => yes + react.js doesn't have its own event loop , it works on browser's event loop +  node's event loop provided by libuv + node handles async ops with libuv
 
 // What are Promises in Node.js, and how do they differ from callbacks?  =======================================
 // => promise is an object represent eventual compilation of async operation + states: pending, fulfilled, rejected + more powerful than callback + error handling and chaining cleaner
-// => eg:
-//  const myPromise = new Promise ((resolve,reject)=>{
-//     const success = true;
-//     if(success) resolve("it worked")
-//         else reject("Something went wrong")
-//  })
 
-//  myPromise.then((result) => console.log("result is :",result)).catch((error)=>console.log("This is error:",err)).finally(()=>console.log("finally it wil exucte is success or reject"));
-
-// How do you handle WebSockets in Node.js for real-time communication? ============================
+// Q. How do you handle WebSockets in Node.js for real-time communication? ============================
 // => it allows realTime, 2 way communication between client and server without repeating http requests + used for chat apps, instant notifications, live dashboards + only once http connection is stablished + "ws" library is used + instead of using it we use socket.io library for better functions + socket.io is library over websocket + websocket is a protocol
 
 // How can you manage session state in a stateless environment like Node.js? ===========================
@@ -395,6 +378,7 @@
 // => it is a variable in .env + it tells if app is in development, test, production + NODE_ENV=development + it changes app behaviour based on environment
 
 //////////////////////////////////////////////////// Practice /////////////////////////////////////////
+
 // write a code for schema and model
 // write a code for middleware implimentation on Procted routes and global routes
 // write a code for connecting a database
