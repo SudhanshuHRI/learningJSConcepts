@@ -178,10 +178,10 @@
 
 // Q.Explain about the Oops concepts 4 principle.========================================================================
 // 4 principle of oops :-
-// 1. Encapsulation : Keep inner working of machine hidden + keep data safety + only give result
-// 2. Polymorphism : Using same command to do different things according to context
-// 3. Inheritence : Taking parents properties in child
-// 4. Abstraction : Hiding complex stuff and only show simple things.
+// 1. Encapsulation : all the info of the program is grouped is in one place
+// 2. Polymorphism : Single Object doing different things according to context
+// 3. Inheritence : sharing parents properties with child
+// 4. Abstraction : hiding inrelevent info and only showing relevent info to user + ease of using the program to user
 
 // Q.what is use strict in js? ===========================================
 // => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined
