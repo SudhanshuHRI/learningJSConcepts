@@ -8,26 +8,7 @@ function App() {
 
   // Q. how lifting state up in react or pass data from childen to parent ? =======================================================
   // => lifting state means moving state from child to parent + used to share data with sibling component
-  // eg:
-
-  // const ParentComp = () => {
-  //   const [data, setData] = useState("");
-  //   const handleDataFromChild = (childData) => {
-  //     setData(childData);
-  //   };
-  //   console.log("Data got from child is :", data);
-
-  //   return (
-  //     <>
-  //       <Child sendData={handleDataFromChild} />
-  //     </>
-  //   );
-  // };
-
-  // const ChildComp = ({ sendData }) => {
-  //   sendData("Hello");
-  // };
-
+  
   // Q.why fragments are better then div container =======================================================
   // fragments dont add extra nodes to DOM + so app gets render quickly + reduce memory usage
 
@@ -42,12 +23,6 @@ function App() {
 
   // Q.What are higher-order components? ============================================================
   // => a function that takes component as arguments and returns a new component with additional behaviour
-  // eg:
-  // function withMessage(WrappedComponent) {
-  //   return function EnhancedComponent() {
-  //     return <WrappedComponent message="Hello from HOC!" />;
-  //   };
-  // }
 
   // Q.  typescript vs js. ============================================================
   // => Js dont provide type checking of variables + in js error catching is at runtime while typescript catch error at compile time
@@ -60,16 +35,7 @@ function App() {
 
   // Q.What is  currying in react? ====================================================
   // => in Currying, function dont take all arguments at once + instead takes only one argument at a time and return a new function each time + useful for breaking one function to many reusable pieces
-  // eg:
-
-  // function addCurried(a) {
-  //   return function (b) {
-  //     return a + b;
-  //   };
-  // }
-
-  // console.log(addCurried(2)(3));
-
+  
   // Q.What is Data binding in react js? ==================================================================
   // => Data binding means a process where data is connected to UI so that UI updates automatically when data changes + in react default is one-way data binding (UniDirectional)
 
@@ -118,20 +84,7 @@ function App() {
 
   // Q. Explain the concept of lazy loading in React and how it can be implemented? ==============================================
   // => means only render component when needed, instead of loading everything at once + reduces initial load time + we can lazy load routes, pages, models etc.
-  // eg:
-  // import React,{Suspense} from "react";
-  // const LazyCompnent = React.lazy(()=>import('./myComponent'));
-
-  // function App() {
-  //   return (
-  //     <div>
-  //       <Suspense fallback={<div>Loading...</div>}>
-  //         <LazyCompnent />
-  //       </Suspense>
-  //     </div>
-  //   );
-  // }
-
+  
   // Q. Describe static site generation (SSG) in the context of React. ============================
   // => SSG is a method where react pages are pre-rendered to HTML at bulid time + when user visit site, server just send prebulit files directly + We can use SSG when page content not changes often, We dont need reat time dynamic content + React dont use SSG directly instead of Next.js uses it + good for SEO because search engines see prebuilt HTML  + SSR means page is rendered on Server on each request , SSG means page is Pre-rendered on built time and served as static file
 
@@ -173,41 +126,9 @@ function App() {
 
   // Q.API polling ? =========================================================================
   // => a technique where fron-end repeatedly sends request to server at regular intervals to check for new updated data. + to keep UI updated with real time without websockets + used to check for new messages, monitoring job progress, tracking live status +
-  // eg:
-  // useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       fetch("https://api.example.com/data")
-  //         .then((res) => res.json())
-  //         .then((json) => setData(json));
-  //     }, 5000); // every 5 seconds
-
-  //     return () => clearInterval(interval); // cleanup on unmount
-  //   }, []);
 
   // Q. React Profiler ============================================
-  // => a tool helps to measure and analyze performance of react components + we have to use react's Profiler to do so +
-  // eg:
-  // import React, { Profiler } from 'react';
-
-  // function onRenderCallback(
-  //   id, // the "id" prop of the Profiler tree
-  //   phase, // "mount" or "update"
-  //   actualDuration, // time spent rendering
-  //   baseDuration, // estimated time without memoization
-  //   startTime, // when React started rendering
-  //   commitTime, // when React committed changes
-  //   interactions // Set of interactions
-  // ) {
-  //   console.log(`${id} rendered in ${actualDuration}ms`);
-  // }
-
-  // function App() {
-  //   return (
-  //     <Profiler id="MyApp" onRender={onRenderCallback}>
-  //       <MyComponent />
-  //     </Profiler>
-  //   );
-  // }
+  // => a tool helps to measure and analyze performance of react components + import React, { Profiler } from 'react'
 
   // Q.What is React Fiber, and how does it improve React’s performance? ============================================================
   // => it is a reconciliation engine of react from react 16 + before fiber react was unable to prioritise the task and renders as syncronous
@@ -217,32 +138,7 @@ function App() {
 
   // Q.How does useTransition work in React? ============================================================
   // => used to prioritize state updates in UI + if 2 states are updating , one is updating suddenly then a loop is running 20000000 times, then second is updating , first state is updating soon and other is updating in some time then we use useTransiton
-  // eg:
-  // const [isPending, startTransiton] = useTransition();
-  // const [val, setVal] = useState();
-  // const [items, setItems] = useState();
-
-  // function changeHandler(e) {
-  //   setVal(e.target.value);
-
-  //   startTransiton(() => {
-  //     const arr = [];
-  //     for (let i = 0; i < 2000000; i++) {
-  //       arr.push(e.target.value);
-  //     }
-  //     setItems(arr);
-  //   });
-  // }
-
-  // return (
-  //   <>
-  //     <div>
-  //       <input type="text" value={val} onchange={changeHandler} />
-  //       {isPending ? "Loading..." : items.map((item, i) => <div>{item}</div>)}
-  //     </div>
-  //   </>
-  // );
-
+  
   // Q.What is the difference between Concurrent Mode and Legacy Mode? ============================================================
   // => before react 18 legacy mode is working now concurrent mode is working + in legacy mode, every state change blocks the UI until it's fully done , no built-in prioritize method + in concurrent mode react can pause, resume rendring, allows non blocking rendering with large state updates
 
@@ -298,137 +194,32 @@ function App() {
   // const userWithNameABCD = useMemo(()=>{numbers.find((item)=>{item.name=="Salil"})},[])
 
   // Q. how to make custom hooks ? ============================================================
-  // custom hooks are normal js function that starts with "use" and can use useState and useEffect in it + custom hooks are used to reuse the logic like fetching data, handling forms accross mulitple components without repeating code.
-  // eg :
-  // import { useState, useEffect } from "react";
-
-  // function useFetch(url) {
-  //   const [data, setData] = useState(null);
-  //   const [loading, setLoading] = useState(true);
-
-  //   useEffect(() => {
-  //     fetch(url)
-  //       .then(res => res.json())
-  //       .then(json => {
-  //         setData(json);
-  //         setLoading(false);
-  //       });
-  //   }, [url]);
-
-  //   return { data, loading };
-  // }
-
+  // => custom hooks are normal js function that starts with "use" and can use useState and useEffect in it + custom hooks are used to reuse the logic like fetching data, handling forms accross mulitple components without repeating code.
   // => how to use custom hooks : const { data, loading } = useFetch("https://api.example.com/users");
 
   // Q. how to implement context api? give code. ============================================================
   // => it have 3 steps :
   // Step 1. createContext : to initiate Context API.
   // Step 2. Provider : used for update or provide data.
-  // Step 3. useContext : get data from context api
-
-  // => Step 1 : create context
-
-  // import React, { createContext, useState } from "react";
-  // export const GlobalData = createContext();
-  // export default App = () => {return (<></>)};
-
-  // => Step 2 : Provider
-
-  // export default App = () => {
-  //     const [color, setColor] = useState("green");   // used to send data from parent to child using context not props
-  //     const getDay = (item) =>{console.log("data got from child:",item)}  // used to recieve data from chilt to parent using context
-  //   return (
-  //     <>
-  //       <GlobalData.Provider value={{ appColor : color , getDay : getDay }}>
-  //         <div>
-  //           <h1>App component</h1>
-  //         </div>
-  //       </GlobalData.Provider>
-  //     </>
-  //   );
-  // };
-
-  // Step 3 : useContext
-
-  // import React, { useContext } from "react";
-  // import { GlobalData } from "./App";
-  // export default SuperChild = () => {
-  //   const { appColor, getDay } = useContext(GlobalData);
-  //   const day = "Sunday";
-  //   return (
-  //     <div>
-  //       <h1 style={{ color: appColor }}>SuperChild Component</h1>
-  //       <button onClick={() => getDay(day)}>Click Me</button>
-  //     </div>
-  //   );
-  // };
+  // Step 3. useContext : get data from context api.
 
   // Q.Explain all hooks in React.js. why react hooks are use full? ============================================================
   // Ans. hooks are usefull becz = manage state easily + use lifecycle method easily + Reusability of hooks and others.
   // => UseState : for update state
   // => useEffect : for lifeCycle method
   // => useCallback : used for rerendering
-  // => useMemo : used for reredering
+  // => useMemo : used for reredering optamisation
   // => useContext : used in Context API
-  // => useReducer : alternate of useState hook + it works like redux
-  // eg:
-  // import React, { useReducer } from "react";
-
-  // const App = () => {
-  //   const [count, dispatch] = useReducer(reducer, 0);
-
-  //   const reducer = (state, action) => {
-  //     if(action.type=="Increment") return state+1;
-  //     if(action.type=="Decrement") return state-1;
-  //   };
-
-  //   return (
-  //     <div>
-  //       <h1>{count}</h1>
-  //       <button onClick={() => { dispatch({ type: "Increment" })}}>Increment</button>
-  //       <button onClick={() => {dispatch({ type: "Decrement" })}}>Decrement</button>
-  //     </div>
-  //   );
-  // };
-
-  // export default App;
-
-  // => useRef : used to change dom directely without re-render + used to control any html element + we gell all the control of input field in useRef +
-  // eg:
-  // import { useRef } from "react";
-
-  // const APP = () => {
-  //   const inputRef = useRef(null);
-  //   const h1Ref = useRef(null);
-  //   const inputHandle = () => {
-  //     inputRef.current.focus();
-  //     inputRef.current.style.color = "red";
-  //     inputRef.current.placeholder = "New Placeholder";
-  //   };
-
-  //   const h1Handler = ()=>{
-
-  //     h1Ref.current.style.color="green"
-  //   }
-  //   return (
-  //     <>
-  //       <h1 ref={h1Ref}>This is h1</h1>
-  //       <input ref={inputRef} placeholder="Enter user name" />
-  //       <button onClick={inputHandle}>Focus on input field</button>
-  //       <button onClick={h1Handler}>H1 useRef</button>
-  //     </>
-  //   );
-  // };
-
-  // export default APP;
+  // => useReducer : alternate of useState hook + it works like redux 
+  // => useRef : used to change dom directely without re-render + used to control any html element + we gell all the control of input field in useRef 
 
   // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Practical Section]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // => Write a code to get data from child to component
-  // => give example of curring.
   // => give exmple to update array and object
   // => give example to create only one state with mulitple states and update it.
   // => give example of lazy loading
+  // => give exmple of api polling
   // => example of useTransiton Hook
   // => give example of React.memo()
   // => give example of useCallback.
@@ -439,6 +230,8 @@ function App() {
   // => give example of useRef
   // => give code for debouncing
   // => give code for throttling
+  // => give example of curring.
+  // => give example of High Order component
 
   return (
     <div className="App">
