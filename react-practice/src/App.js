@@ -80,10 +80,10 @@ export default App;
 // console.log(addCurried(2)(3));
 
 // Q.What is Data binding in react js? ==================================================================
-// => Data binding means a process where data is connected to UI so that UI updates automatically when data changes + in react default is one-way data binding (UniDirectional) means data flows in one direction from parent to child to UI
+// => Data binding means a process where data is connected to UI so that UI updates automatically when data changes + in react default is one-way data binding (UniDirectional) 
 
 // Q. what is uni directioanl data flow in react? ====================================================================
-// => means data goes in one direction from parent to child to UI
+// => means data goes in one direction only + Parent component holds the state. + It passes data to child components using props + If a child wants to change data, it cannot modify the parent's state directly + Instead, the child calls a function provided by the parent through props + The parent updates the state, and the new data flows down again 
 
 // Q.What is anti pattern in react? =========================================================================================
 // => anti pattern means common coding practice + patterns you should avoid
@@ -94,8 +94,8 @@ export default App;
 // Q. we have so many states declared in a component. How to avoid to declare it multiple times ?? ======================
 // => const [form,setForm] = useState({name:"",email:"",age:0}) + to update : setForm(prev=>({...prev,name:"john"}))
 
-// Q. What is reconcilation in ReactJs? ===============================================================================
-// => react process to update the DOM Effectiently + updating only the changed part of your UI, innstead of rebuilding the whole thing.
+// Q. What is reconcilation in ReactJs? how it works ===============================================================================
+// => it is a process React uses to update the UI effectively when state/props changes + instead re-rendering the entire DOM, react updates only updated parts
 
 // Q. statefull component vs stateless component ? ===========================================================
 // => stateless compnent dont have state inside. it only shows data it gets from props + statefull component has it's own state and changes overtime
@@ -120,7 +120,7 @@ export default App;
 // useEffect(()=>{console.log("updated Count is :",count)},[count]);
 
 // Q.how to update array and object that is in state in React?? ===========================================
-// => for array : setCount(prev=> []...prev , newValue]) + for object : setCount(prev =>{ ...prev, name:"Jane" })
+// => for array : setCount(prev=> [...prev , newValue]) + for object : setCount(prev =>{ ...prev, name:"Jane" })
 
 // Q.What is StrictMode in React ? Why we use it ? ===================================
 // => used to highlight potential problems + helps to write better code + sends warnings + re-renders component twice in development mode + it does not impact production + it doesnot fix bugs automatically, it just warns you
@@ -218,8 +218,7 @@ export default App;
 //   );
 // }
 
-// Q. How does React’s reconciliation algorithm work? ============================================================
-// => Reconciliation is the process of comparing the new Virtural DOM with previous one + algorithm : first creates a new virtual DOM > compares it with previous virtual DOM > calculates the difference > updates the real DOM only when necessory
+
 
 // Q.What is React Fiber, and how does it improve React’s performance? ============================================================
 // => it is a reconciliation engine of react from react 16 + before fiber react was unable to prioritise the task and renders as syncronous

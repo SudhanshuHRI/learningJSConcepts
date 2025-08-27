@@ -9,8 +9,8 @@
 
 // => JS excution :-
 // 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: This is where JavaScript runs your code one step at a time.
-// 𝟐. Micro Task Queue: it contains Async functions, Promises + it has priority over Macro Task Queue
-// 𝟑. Macro Task Queue: it contains all setTimeout,setIntervel type functions
+// 𝟐. Micro Task Queue: also called job queue + runs immidiately after current task + have high priority + async/await,Promises etc
+// 𝟑. Macro Task Queue: also called task queue + runs after call stack is empty + setTiemout, setInterval etc
 // 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
 // => when request comes, after catogarise in sync task or async task , event loop sends all async tasks to microtask Queue and macrotask Queue to excute
@@ -186,18 +186,6 @@
 // Q.what is use strict in js? ===========================================
 // => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined
 
-// Q. setTimeout vs setInterval ============================================================
-// => setTimeout : excute function after delay +
-// => setInterval : excute functions repeted after give time +
-
-// Q. macroTask Queue vs MicroTask Queue ===============================================================
-// => macroTask queue : also called task queue + runs after call stack is empty + setTiemout, setInterval etc
-// => microTask queue : also called job queue + runs immidiately after current task + have high priority + Promises etc
-
-// Q.spread and rest operator ? =====================================================================
-// => spread : used to spread elements of array or object
-// => rest : used to collect multiple elements in single array + used in params, destructuring of array and object + const [first, ...rest] = [10, 20, 30, 40] + const { a, ...rest } = { a: 1, b: 2, c: 3 };
-
 // Q.event bubbling and event capturing =====================================
 // => event bubbling : from bottom to up side component + addEventListner('click',handler)
 // => event capturing : from top component to bottom component + addEveentListner ('click', handler, true)
@@ -219,7 +207,7 @@
 //=> JSON.stringify is used to convert JSON to string + JSON.parse is used to convert string to JSON data
 
 // Q.what is dead zone in js ? ========================================================
-// => Only let and const have dead zone(TDZ) + we cannot uset let and const before it's declaration +  that is called dead zone
+// => Only let and const have dead zone(TDZ) + Dead zone is the time between when variable is declared and when it is initialized + we cannot uset let and const before it's declaration
 
 // Q.what is mutation observer in js? =====================================================================
 //=> it is built-in api in js which lets you watch changes in DOM tree + const observer = new MutationObserver(callback) + detect new elements or removed elements + good for dynamic UI
@@ -228,7 +216,7 @@
 // => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
 
 // Q.Private property and private fucntion in js ? ====================================================
-// => Works in class based components + only valid in classes +
+// => Works in class based components
 
 // Q. What is Laxical Scope vs closures ? give code ===========================================================================
 // => laxical scope means where variables are accessible based on code structure + closures are a feature that comes because of laxical scope, allow a function to remember variables even after parent function has excuted
