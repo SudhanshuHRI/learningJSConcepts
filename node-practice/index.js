@@ -105,7 +105,7 @@
 // Q. How do you handle WebSockets in Node.js for real-time communication? ============================
 // => it allows realTime, 2 way communication between client and server without repeating http requests + used for chat apps, instant notifications, live dashboards + only once http connection is stablished + "ws" library is used + instead of using it we use socket.io library for better functions + socket.io is library over websocket + websocket is a protocol
 
-// How can you manage session state in a stateless environment like Node.js? ===========================
+// Q. How can you manage session state in a stateless environment like Node.js? ===========================
 // => restfull api are stateless means each request from client must contain all the info every time , server dont retain any info + so we use token or cookies that validate on each request
 
 // Explain the concept of caching in Node.js. How would you implement caching for better performance? =====================
@@ -185,7 +185,7 @@
 // => both are used in Child_process + spawn() is used to run any script like cmd, python scripts while fork() is used to run only node.js scripts
 
 // What is body-parser in Node.js? ========================================================
-// => this middleware is used to parse the body of incoming http requests + when client send request, usually node don's parse it autoamtically in JSON
+// => this middleware is used to parse the body of incoming http requests + when client send request, usually node dont parse it autoamtically in JSON
 
 // How to read command line arguments in Node.js? ========================================================
 // We can read cmd arguments using built-in "process.argv" array
@@ -326,30 +326,10 @@
 
 // Difference between global and route-specific middleware. ==============================
 // => Global MiddleWare : it applies of all imcomming request
-// => eg:
-// app.use(express.json()); // Applies to all routes
-
-// app.use((req, res, next) => {
-//   console.log(`${req.method} ${req.url}`);
-//   next();
-// });
 // => Specific middleware : it applies on specific routes
-// => eg:
-// function checkAdmin(req, res, next) {
-//   if (req.user && req.user.role === 'admin') {
-//     return next();
-//   }
-//   res.status(403).send('Forbidden');
-// }
-// app.get('/admin', checkAdmin, (req, res) => {
-//   res.send('Welcome, Admin!');
-// });
 
-// How to handle file uploads securely so that malicious files cannot be uploaded ===========================
+// Q. How to handle file uploads securely so that malicious files cannot be uploaded ===========================
 // => limit file size + restrict file types + rename uploaded files + we use "multer" library
-// => eg:
-// const multer = require('multer');
-// const upload = multer({ dest: 'uploads/' });
 
 // How to handle JSON streaming? =====================================
 // JSON streaming means instead of sending or recieving full JSON you send it in chunks + used in large database exports, streaming apis, real-time dashboards
@@ -383,80 +363,23 @@
 // write a code for middleware implimentation on Procted routes and global routes
 // write a code for connecting a database
 // write a code for get,put,patch, post, delete apis with database functions
-// write a Promise and Promise.all() code.
+// write a Promise
+// write a code for Promise.all()
+// write a code for Promise.race()
+// write a code for Promise.getSettled();
 // write a code for jwt auth
 // make authorization and authentication apis.
 // write a code for refresh token and accesstoken
+// write a code to click a event using EventEmmiter
+// write a code to validate the schema using Joi library
+
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Express.js Section ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-// What is Express.js, and why is it popular for web development? ===========================================
-// => Node.js web framework + it simplifies the process of creating server side logic and apis
+// Q. What is Express.js, and why is it popular for web development? ===========================================
+// => Node's web framework + it simplifies the process of creating server side logic and apis
 
-// How do you create a basic Express.js server? =====================================
-// => eg:
-// import express from "express";
-// const app = express();
-// app.listen(3000,()=>{console.log("Server is running on port:3000")})
-
-// Explain the role of middleware in Express.js. =============================
-// => middleware used for request and authentication handling + middleware works on both request and response + if we want to check or update the request / response then we need middleware + Two type of middleware : global and route-specific
-// => Global Middelware: runs on all routes + declared with "app.use()"
-// => Route Specific Middleware : runs on specific routes + passed as 2nd argument in routes
-// => Route-level middleware : applied on all route within a router
-// => eg:
-// import express from "express";
-// const app = express();
-// const adminRouter = express.Router();
-
-// // Global middelware
-
-// app.use((req, res, next) => {
-//   console.log('Middleware 1');
-//   req.body.name = "Sudhanshu" // here req is updated before going to server;
-//   next(); // Go to next middleware
-// });
-
-// app.use((req, res, next) => {
-//   console.log(req.body.name);
-//   console.log('Middleware 2');
-//   next();
-// });
-
-// // Route-Specific middleware
-
-// const RouteMiddleware = (req,res,next) =>{
-//   if(req.body.name=="Sudhanshu"){
-//     next()
-//   }else{
-//     res.json({message:"user is not sudhanshu"})
-//   }
-// }
-// app.get("/getUsers",RouteMiddleware,()=>{})
-
-// // Route-Level middleware
-
-// // Route-level middleware for all /admin routes
-// adminRouter.use((req, res, next) => {
-//   if (req.headers.authorization === 'admin-token') {
-//     next();
-//   } else {
-//     res.status(403).send('Admin Access Denied');
-//   }
-// });
-
-// // These inherit the above middleware
-// adminRouter.get('/dashboard', (req, res) => {
-//   res.send('Admin Dashboard');
-// });
-
-// adminRouter.get('/settings', (req, res) => {
-//   res.send('Admin Settings');
-// });
-
-// app.use('/admin', adminRouter);
-
-// what is "app.use(express.urlencoded({extended:false}))" middleware do ? ================================
+// Q. what is "app.use(express.urlencoded({extended:false}))" middleware do ? ================================
 // => it is built-in middleware + when form is submits from client , it recieves in URL-encoded format like "username=john&password=12345" + express.urlencoded converts it in js Object like "{username:"John",password:"12345"}"
 
 // what is "app.use(express.json());" middleware do ? ===================================
@@ -516,7 +439,7 @@
 // app.get("/DeleteCookies",(req,res)=>{res.cleanCookie("username")}) // to delete cookie in browser
 
 // How do you create modular routes using express.Router()? ==============================
-// => modular routing means spliting routes into seprate files to keep code clean and organized + as done in management console project it MRM + we create all routes in different files and import them in main index.js
+// => modular routing means spliting routes into seprate files to keep code clean and organized + as done in management console project in MRM + we create all routes in different files and import them in main index.js
 
 // How do you handle sessions in Express.js? ==========================================
 // => to handle sessions we use "express-session" library + it lets you store user data like login info between request + session is like small memory box that stores data for one user on the server + suppose when user log in , you save his name in session like req.session.username = "john". now you can use it any page in application + session are safer then cookies because data is stored on server +
