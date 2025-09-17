@@ -575,9 +575,6 @@
 // => give example of curring.
 // => give example of High Order component
 
-
-
-
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Node.js ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 // Q. How to setup node project ??=========================
@@ -952,7 +949,6 @@
 // write a code for refresh token and accesstoken
 // write a code to click a event using EventEmmiter
 // write a code to validate the schema using Joi library
-
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Express.js ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
