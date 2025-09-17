@@ -1,6 +1,352 @@
+// [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ JavaScript ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
+// Explain the working of JavaScript ? =============================================================================
+// => Crome's v8 engine have 2 parts :- 1.Memeory Heap, 2. Call Stack. + variables stored in memory Heap. Browser's memory + call stack is a container in which tasks are stored line wise. works on FILO
 
+// => JS excution :-
+// 𝟏. 𝐂𝐚𝐥𝐥 𝐒𝐭𝐚𝐜𝐤: This is where JavaScript runs your code one step at a time.
+// 𝟐. Micro Task Queue: also called job queue + runs immidiately after current task + have high priority + async/await,Promises etc
+// 𝟑. Macro Task Queue: also called task queue + runs after call stack is empty + setTiemout, setInterval etc
+// 𝟒. 𝐄𝐯𝐞𝐧𝐭 𝐋𝐨𝐨𝐩: The Event Loop keeps checking if the Call Stack is empty. When it is, it takes the next task from the Callback Queue and puts it in the Call Stack to run.
 
+// => when request comes, after catogarise in sync task or async task , event loop sends all async tasks to microtask Queue and macrotask Queue to excute
+
+// reference links :- 1. https://www.jsv9000.app
+//                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
+//                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
+
+// Q. diff between var , let ,const ? ============================================================
+// => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + all 3 are hosted but only var is initialised as undefined
+
+// Q. What are callback function ?  ============================================================
+// => function passed as argument to another function
+
+// Q. What are ES6 features ?? ==========================================================
+// => Block scoped variables(let,const) + arrow function + templete letrals + default parameters + array and object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures
+
+// Q. difference between normal funciton and arrow funciton ? ====================================================
+// => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted
+// => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
+
+// Q. What are premitive and non-premetive data types in js ? =============================================
+// => Premitive : immutable (unable to change) + copied by value + stored in stack memory string, Number, Boolean, undefined, null, symbol, bigInt
+// => Non-premetive : mutable (able to change) + copied by reference + stored in Heap memory + Object, Array, Function, all built in objects (Date,Map,Set etc)
+
+// Q. Explain all built in functions of js ?? =================================================
+
+// => these functions are also called "array prototype functions" beacuse it works only on array not on object or string + we can use them indirectly using split() or object.entries() methods.
+
+// 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early
+// 2. map() : itrates over each element + return a new array with transform values + dont change original array
+// 3. filter() : create a new array of only condition passed elements + returns a new array + dont change original array
+// 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined
+// 5. findIndex() : search the array and return first element's index that satisfies the condition +if no element passed, it will return "-1"
+// 6. some() : tests wheather at least one element pass the test + it will return boolean + if no element passed, it will return false
+// 7. every() : tests wheater all element pass the test +  it will return boolean +  if any of the elemnt dont pass the test, it will return false.
+// 8. push() : add one or more element in end or array and returns new length of array + modifies orignal array
+// 9. pop() : remove last elemnt of array + return removed element +  modifies original array
+// 10. unshift() : add element in beginning + return new length of array + modifies orignal array
+// 11. shift () : remove first element of array + return removed element + modifies original array
+// 12. splice() : add,remove,replace element in array + modifies original array + return array of removed elements , if no element removed,it returns blank array + array.splice(startIndex, noOfValuesToDelete, addItem1,addItem2,addItem3,.....)
+// 13. concat() : merge 2 or more array + returns new concated array
+// 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion
+// 15. reduce() : used to reduce an array to single value
+// 16. reduceRight() : works from right index of array
+// 17. sort() : used to sort the array + returns sorted array + element are converted in string then sort
+// 18. reverse() : reverse the order of elements in array + modifies orignal array + returns the reverse array
+// 19. includes() : checks if an array or string contains certain element or substring + returns boolean
+// 20. indexOf() : used to find first index of specified element in array or string + if not found returns -1
+// 21. lastIndexOf() : returns the last index at which element is found + serches from backword
+// 22. join() : used to combine all elements of array into single string with specified operator + array.join("-")
+
+// Q. sort [1,2,3,11,22,33] using sort() method. =========================
+// => arr.sort((a,b)=>a-b) for increment + arr.sort((a,b)=>b-a) for decriment
+
+// Q. slice vs splice who modify orignal array?? give example =================================================================
+// => splice is used to modify orignal array + slice give only shallow copy + splice(1,0,12,13) + slice (2,5)
+
+// Q. what is IIFE ? why it is usefull? ====================================
+// => immidiately inveked function + runs code immidiately + keeps variable and functions private and safe beacuse it create private scope so IIFE variables and functions dont conflict with global scope.
+
+// Q. how to create a object without a prototype ? ===============================
+// => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() default prototype functions in it + dont conflict with inherit functions
+
+// Q. how to destructure object ?? ========================
+// => const person = {name:"sudhanshu",age:28} ; const {name,age} = person ;
+
+// Q. how to destructure array ? ===================
+// => const [a,b] = [1,2]
+
+// Q. What are wrapper Objects ? ========================
+// => primitive values like string,numbers,booleans are not objects but they behave like objects when you access their properties or methods + js automatically wraps these with temperory objects called wraper objects + string - String, number - Number, boolean - Boolean
+// => eg: const str = "hello" ; console.log(str.toUpperCase()); + here str is primitive still js automatically converts it in String Object so .toUpperCase() will work
+
+// Q. implicit vs explicit coercion ? =================================
+// => coercion means converting value from one type to another + js is dynamic typed so automatically convert types + explicit means when manually changed , eg: Number("42") it will convert it in number + implicit means when convert automatically , eg: console.log("5" + 1 )
+
+// Q. How to check value is NaN ? ================================
+// => Number.isNaN(value) + give boolean
+
+// Q. How to check a number is even or odd without using modular operator ? ============================
+// => Math.floor(num/2)*2===num ; + if it is true the even other false
+
+// Q. How to check certain property exists in object ? =============================================
+// => using "in" operator + obj.hasOwnProperty("name")
+
+// Q. "in " vs "hasOwnProperty" ? =================================
+// => in operator finds in object's prototype, also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
+
+// Q. Function expression and function declaration ? =====================================
+// => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")}
+// => function declaration : when defined with function keyword , hoisted, can be called before , eg: function sayHi(){console.log("hi")}
+
+// Q. How to check if value is null ?  why typeof null == object ? ===============================
+// => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object
+
+// Q. What is "new" keyword do ? ===============================
+// => new keyword is used to create instance of object form constructor function or class
+
+// Q. concat 2 array using spread operator ? =======================================
+// => [...arr1,...arr2]
+
+// Q. merge 2 objects using spread operator ? =======================================
+// => {...obj1,...obj2}
+
+// Q. merge 2 strings using spread operator ? =======================================
+// => const merged = [...str1, ' ',...str2].join("")
+
+// Q.  What is AJAX ? =======================================
+// => Asyncronous JavaScript And XML + it is a technique that send or recieve data form server without reloading the entire page + eg: you fill a form, you enter email to check if already registered, it check in real time without refreshing the page + fetch and axios automatically uses AJAX method
+
+// Q.all object buit-in functions?? give examples ========================================================================
+// 1.Object.create() : used to create new object with choosen prototype + const dog = Object.create(animal) + here dog will have animal's properties
+// 2.Object.assign() : used to copy properties from source object to target objects + Object.assign(target, source1,source2,......)
+
+// 3.Object.keys() : returns the array of keys + const keys = Object.keys(user)
+
+// 4.object.values() : returns the array of values + returns Own values not prototype + const values = Object.values(user)
+
+// 5.object.entries() : returns the array of key-value pairs + [[key1,value1],[key2,value2],.......]
+
+// 6.Object.getOwnPropertyNames() : returns array of all own property names of object
+
+// 7.Object.defineProperty() : lets you to add or modify a property + Object.defineProperty(objectName, propertyName, {value:"value"}) + Object.defineProperty(person,"name",{value:"Sudhanshu"})
+
+// 8.object.freeze() : cannot add,remove,change property + object becoms immutable(read-only) + only freeze first level
+
+// 9.object.seal() : prevent adding and deleting property + allows to modify existing properties + only woks on first level +
+
+// 10. object.is() : compare 2 values to check if same + like === + returns boolean + Object.is(25,25)
+
+// Q. What are Call, apply and bind methods? ============================================================
+
+// Problem:-
+// function getFullName(greet) { console.log(`${greet}! My full name is ${this.firstName} ${this.lastName}`);}
+// const person = { firstName: "Sudhanshu",lastName:"Srivastava" };
+// getFullName("Hello") // this will give undefined
+
+// => all of three are used to attach this keyword's value to a function
+// 1.Call : invoked immidiatedly + pass the arguments individually + func.call(object, arg1, arg2)
+// 2.Apply : invoked immidiately + pass the arguments in array + func.apply(object,[arg1, arg2])
+// 3.Bind : dont call immidiately + pass the argument individually + const newFunc = func.bind(object,arg1,arg2)
+
+// Q. object.seal vs object.freeze ==============================================================
+// => object.seal : prevent adding or removing properties from an object + modify the existing objects
+// => object.freeze : prevent adding or removing or modifying the existing objects
+
+// Q. pure functions and impure functions in js ? ==============================================
+// => Pure functions : always give same output for same input + has no side effects + dont change any external states
+// => impure function : always give different output + has side effects like modifying a global variable + changes external states
+
+// Q. what are side effects in js ? ======================================
+// => when function changes the value of states or global variables , it is called side effects
+
+// Q.Difference between promise , async await, callbacks? ===========================================================================================
+// => Promises : a object that represent 3 states + Pending, fulfilled, rejected + cleaner and easier avoids deep nesting + should use when api calling or chaining tasks
+// => Async/Await : makes async code look like synchronous + vary clean and readable + easy error handling with try-catch blocks +
+// => Callbacks : a function passed as an argument + using too much callback will result to callback hell + hard to read, debug, maintain + should used when code is simple
+
+// Q. "throw" keyword in js ? =============================================================================
+// => used to throw manually error + should be used with try-catch + should throw error with "throw new Error("something went wrong")" object for good practice +  it stops excution of all the loops (in-built or for)
+
+// Q.controlled and uncontrolled components? ========================================================================
+// => component that used in form can be controlled or uncontrolled + controlled means react state controls the form data + uncontrolled means when DOM direactly controls the elements , using useRef hook in react is used to directly cange in DOM, value is stored in DOM
+
+// Q.Explain about the Oops concepts 4 principle.========================================================================
+// 4 principle of oops :-
+// 1. Encapsulation : all the info of the program is grouped is in one place
+// 2. Polymorphism : Single Object doing different things according to context
+// 3. Inheritence : sharing parents properties with child
+// 4. Abstraction : hiding inrelevent info and only showing relevent info to user + ease of using the program to user
+
+// Q.what is use strict in js? ===========================================
+// => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined
+
+// Q.event bubbling and event capturing =====================================
+// => event bubbling : from bottom to up side component + addEventListner('click',handler)
+// => event capturing : from top component to bottom component + addEveentListner ('click', handler, true)
+
+// Q. how to stop event prapagation in js ?=================================================
+// => prapagation means when we click on a componet , three phases  activated : Capturing phase > target phase > bubbling Phase + this is called event prapagation + to stop prapagation : element.addEventListner('click',(event)=> event.stopPropagation();)
+
+// Q. null vs undefined ====================================================================
+// => undefined : variable is diclared but not assigned any value
+// => null : variable is declared but assigned  no value or empty value
+
+// Q. all false values in js? ====================================================
+// => false + 0 + -0 + "" + null + undefined + NaN
+
+// Q. all true values in js? ==========================================
+//=>  true + "hello" + ' ' + any non-zero number + [] + {} + function(){} + any float that isn't 0 or NaN
+
+// Q.json.stringify vs parse ==================================================================
+//=> JSON.stringify is used to convert JSON to string + JSON.parse is used to convert string to JSON data
+
+// Q.what is dead zone in js ? ========================================================
+// => Only let and const have dead zone(TDZ) + Dead zone is the time between when variable is declared and when it is initialized + we cannot uset let and const before it's declaration
+
+// Q.what is mutation observer in js? =====================================================================
+//=> it is built-in api in js which lets you watch changes in DOM tree + const observer = new MutationObserver(callback) + detect new elements or removed elements + good for dynamic UI
+
+// Q.high order functions ?? ================================================================
+// => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
+
+// Q.Private property and private fucntion in js ? ====================================================
+// => Works in class based components
+
+// Q. What is Laxical Scope vs closures ? give code ===========================================================================
+// => laxical scope means where variables are accessible based on code structure + closures are a feature that comes because of laxical scope, allow a function to remember variables even after parent function has excuted
+
+// Q. Promise.all / Promies.allsettled / Promise.race ? =========================================================================
+// => Promise.all : takes array of promise + wait for all of them to fulfill + if any rejected, all will reject + Promise.all([Promise1,Promise2, Promise3])
+// => Promise.allsettled : takes array of promise + wait for all of them to fulfilled +  returns an array with the result of each promise
+// => Promise.race : takes array of promise + returnes as the first promise settles (fullfilled or rejected) + dont wait for others
+
+// Q. What are Prototypes in JS  ? why we use them in js ? ==================
+// => Every object has hidden internal property called prototype + js use prototype based inharitence + we use it to share methods and properties between multiple objects
+
+// Q. I want when a object/string is declared, a defalut variable or function is already present there . How can i do that using prototype ?====
+// => Sting.prototype.name = "Sudhanshu" + Object.prototype.name = "Srivastava"
+
+// Q. What is  Deep copy and shallow copy  of object ? give code ===================================================
+// => shallow copy means copy only first level of methods and property + deep copy means copy all level of methods and properties +  for deep copy : const deep = JSON.parse(JSON.stringify(original));
+
+// Q. What are Generator functions in Js ?? give code =====================================================================
+// => a function that can pause and resume during excution + function* greet(){yield "hello"; yield "How are you?"; yield "Goodbye";}
+
+// Q. What is Quama Operator in js ===========================================================
+// => all expresions excutes from left to right + returns last expression only
+
+// Q. Optinal chining operator in js ?========================================================
+// => ?. + insted of throwing error , it returns undefined + used to safely access nested object's properties without error
+
+// Q. Nullish operator in js?? =============================================================
+// => used to set default value if left value is null or undefined + let result = a ?? b;
+
+// Q.  e.preventDefault() vs e.stopPropagation() ? ==================================
+// => preventDefault prevents the default browser of an element + stopPropogation is used to stop event bubbling
+
+// Q. What is str.at() in js ?==============================================
+// => used to get character of specific index + str.at(index)
+
+// Q. What is navigator in js ? ============================================
+// => built-in Object + provids info about browser and device environment as giolocations, user online or offline + part of window object (window.navigator)
+
+// Q. .has() vs .add() ? ===================================
+// => Both used in "Set" Objects + add is used to add value to a set + has is used to check if value exists
+
+// Q. how to know in js if function is called by use click or by any script ? =======================================
+// => we use element.addEventListner('click', (event)=>{event.isTrusted}) method to check it + if event.isTrusted is true then clicked by user
+
+// Q. What is object ? give advantages and disadvantages ==================================
+// => object is collection of data in key-value pairs + advantages : organized data , dynamically update properties + disadvantages : deep nested object cunsume more memory
+
+// Q. How to loop a object ?? =========================================================
+// => for(let key in user){console.log(key, user[key])}
+
+// Q. In object how you can add "pin code" key with space ? ==========================
+// => address["pin code"] = 241001
+
+// Q. In object how you can add key dynamically ? ==============================
+// => user[keyName] = "test@example.com"
+
+// Q.  In object if we decalre it as const can we reassign it or add only properties ? ======================================
+// =>  we cannot reassign but modify it's contents
+
+// Q. how to delete a key in object ? ==============================
+// => delete object.key || delete object['key']
+
+///////////////////////////////////////////////////////////////////// Practical /////////////////////////////////////////////////////
+
+// Q. Give Example for let, const, var
+
+// Q. Guess the output of the following ? ===================================================================
+
+// let data = "    Hello, How are you?    ";
+
+// console.log(data.split())
+// console.log(data.split(''))
+// console.log(data.split(' '))
+// console.log(data.split('a'))
+
+// console.log(data.replace('H','_'))
+// console.log(data.replace(/H/g,'_'))
+
+// console.log(data.substring(1,data.length))
+// console.log(data.substring(0,data.length-1))
+// console.log(data.split('o')[0])
+// console.log(data.split('o')[1])
+// console.log(data.split('').reverse().join(''))
+// console.log(data.trim())
+
+// Q. guess the output of the following ? ==================================================================================
+// Ans.
+// console.log(1 + "2" + "2");
+// console.log(1 + +"2" + "2");
+// console.log(1 + +"2" + +"2");
+// console.log(1 + -"2" + "2");
+// console.log("A" - "B" + "2");
+// console.log("A" - "B" + 2);
+// console.log(typeof NaN);
+// console.log(0==false)
+// console.log(''==false)
+// console.log(-0===false)
+// console.log(null <=0)
+// console.log(null>=0)
+// console.log(NaN==NaN)
+// console.log( true && 'hello')
+// console.log(Array(3)==",,")
+// console.log(!!10+20)
+// console.log(typeof typeof 1)
+// console.log([..."Sudhanshu"])
+// console.log(!!undefined);
+// console.log(!!null);
+// console.log(!!"a");
+// console.log(!!"");
+// console.log(!!-2);
+// console.log(!!0);
+// console.log(!!2);
+// console.log(typeof 3 + 4 + "5");
+// console.log(false || "Hello");
+// console.log(true && "World");
+// console.log(null || undefined);
+// console.log("" && 0);
+// console.log(0 || (1 && 2));
+// console.log("5" - 2);
+// console.log("5" + 2);
+// console.log("5" * "2");
+// console.log(true + false);
+// console.log("5" - true);
+// console.log(1 === "1");
+// console.log(0 === false);
+// console.log(null === undefined);
+// console.log([] === []);
+// console.log({} === {});
+// console.log(1 == "1");
+// console.log(0 == false);
+// console.log(null == undefined);
+// console.log([] == false);
+// console.log([] == ![]);
 
 
 
