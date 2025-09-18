@@ -15,11 +15,8 @@
 //                     2. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=14
 //                     3. https://www.youtube.com/watch?v=knLtKU4XvaU&list=PL8p2I9GklV44pN_8iYi2pPl2Gw4Pwb70f&index=15
 
-// Q. diff between var , let ,const ? ============================================================
-// => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + all 3 are hosted but only var is initialised as undefined
-
-// Q. What are callback function ?  ============================================================
-// => function passed as argument to another function
+// Q. diff between var , let ,const ? give example ============================================================
+// => let and const inrtoduces in ES6 + var has function scope and let,const have block scope + all 3 are hosted but only var is initialised as undefined + var can redeclare
 
 // Q. What are ES6 features ?? ==========================================================
 // => Block scoped variables(let,const) + arrow function + templete letrals + default parameters + array and object destructuring + spread and rest operators + Promises + import/export modules + for-of loop + map,set data structures
@@ -27,6 +24,9 @@
 // Q. difference between normal funciton and arrow funciton ? ====================================================
 // => normal function : has it's own "this" + "arguments" object available + can work as constructor with "new" + hoisted
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
+
+// Q. What is hoisting ?? ================================================================
+// => all variable and function declarations are moved to the top of their scope (before code runs).
 
 // Q. What are premitive and non-premetive data types in js ? =============================================
 // => Premitive : immutable (unable to change) + copied by value + stored in stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
@@ -78,8 +78,8 @@
 // => const [a,b] = [1,2]
 
 // Q. What are wrapper Objects ? ========================
-// => primitive values like string,numbers,booleans are not objects but they behave like objects when you access their properties or methods + js automatically wraps these with temperory objects called wraper objects + string - String, number - Number, boolean - Boolean
-// => eg: const str = "hello" ; console.log(str.toUpperCase()); + here str is primitive still js automatically converts it in String Object so .toUpperCase() will work
+// => premitives [string,number,boolean,null,undefined] dont have methods + So, When try to use methods on primitive, JS wraps it temperory in an object called Wrapper Object + like string = String, number = Number + let str = "hello"; console.log(str.toUpperCase()); + null and undefined dont have wrapper objects
+
 
 // Q. implicit vs explicit coercion ? =================================
 // => coercion means converting value from one type to another + js is dynamic typed so automatically convert types + explicit means when manually changed , eg: Number("42") it will convert it in number + implicit means when convert automatically , eg: console.log("5" + 1 )
