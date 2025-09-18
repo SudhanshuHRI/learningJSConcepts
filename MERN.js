@@ -94,26 +94,17 @@
 // => using "in" operator + obj.hasOwnProperty("name")
 
 // Q. "in " vs "hasOwnProperty" ? =================================
-// => in operator finds in object's prototype, also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
+// => in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
 
 // Q. Function expression and function declaration ? =====================================
-// => function expression : when function is assigned to variable , not hoisted , cannot called before it defined ,eg: const sayHi = function(){console.log("Hi")}
-// => function declaration : when defined with function keyword , hoisted, can be called before , eg: function sayHi(){console.log("hi")}
+// => function expression : const sayHi = function(){console.log("Hi")}
+// => function declaration : function sayHi(){console.log("hi")}
 
 // Q. How to check if value is null ?  why typeof null == object ? ===============================
 // => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object
 
 // Q. What is "new" keyword do ? ===============================
-// => new keyword is used to create instance of object form constructor function or class
-
-// Q. concat 2 array using spread operator ? =======================================
-// => [...arr1,...arr2]
-
-// Q. merge 2 objects using spread operator ? =======================================
-// => {...obj1,...obj2}
-
-// Q. merge 2 strings using spread operator ? =======================================
-// => const merged = [...str1, ' ',...str2].join("")
+// => used to create instance of object form constructor function or class
 
 // Q.  What is AJAX ? =======================================
 // => Asyncronous JavaScript And XML + it is a technique that send or recieve data form server without reloading the entire page + eg: you fill a form, you enter email to check if already registered, it check in real time without refreshing the page + fetch and axios automatically uses AJAX method
