@@ -29,7 +29,7 @@
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
 // Q. What are premitive and non-premetive data types in js ? =============================================
-// => Premitive : immutable (unable to change) + copied by value + stored in stack memory string, Number, Boolean, undefined, null, symbol, bigInt
+// => Premitive : immutable (unable to change) + copied by value + stored in stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
 // => Non-premetive : mutable (able to change) + copied by reference + stored in Heap memory + Object, Array, Function, all built in objects (Date,Map,Set etc)
 
 // Q. Explain all built in functions of js ?? =================================================
@@ -672,6 +672,29 @@
 
 // How do you handle errors in asynchronous code in Node.js? =======================================
 // using callback ((err,data)=>{}) + using promises (.catch()) + async/await (try-catch block)
+
+// Q. Give Status codes =========================================
+// => 200 OK – Request successful (standard response).
+// => 201 Created – New resource created (e.g., after POST).
+// => 202 Accepted – Request accepted, but processing not finished.
+// => 204 No Content – Request succeeded, no content to return.
+// => 200 OK – Request successful (standard response).
+// => 206 Partial Content – Partial response (e.g., for range requests like video streaming).
+// => 400 Bad Request – Invalid request syntax.
+// => 401 Unauthorized – Authentication required.
+// => 403 Forbidden – Request understood but not allowed.
+// => 404 Not Found – Resource not found.
+// => 405 Method Not Allowed – Request method not supported.
+// => 408 Request Timeout – Server timed out waiting for request.
+// => 409 Conflict – Conflict in request (e.g., duplicate entry).
+// => 429 Too Many Requests – Rate limit exceeded.
+// => 500 Internal Server Error – Generic server error.
+// => 501 Not Implemented – Server doesn’t support the request method.
+// => 502 Bad Gateway – Invalid response from upstream server.
+// => 503 Service Unavailable – Server temporarily overloaded or down.
+// => 504 Gateway Timeout – Upstream server didn’t respond in time.
+// => 505 HTTP Version Not Supported – Unsupported HTTP version.
+
 
 // is event loop in react.js and node.js different ? =========================================
 // => yes + react.js doesn't have its own event loop , it works on browser's event loop +  node's event loop provided by libuv + node handles async ops with libuv
