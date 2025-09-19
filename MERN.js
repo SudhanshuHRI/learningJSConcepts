@@ -103,7 +103,7 @@
 
 
 // Q. How to check value is NaN ? ================================
-// => Number.isNaN(value) + give boolean
+// => Number.isNaN(value) + gives boolean
 
 // Q. How to check a number is even or odd without using modular operator ? ============================
 // => Math.floor(num/2)*2===num ; + if it is true the even other false
@@ -112,14 +112,15 @@
 // => using "in" operator + obj.hasOwnProperty("name")
 
 // Q. "in " vs "hasOwnProperty" ? =================================
-// => in operator finds in object's prototype also to check if value is present or not + hasOwnProperty only check in object's keys not in prototype
+// => "hasOwnProperty" only check in object's keys not in prototype + "in" operator finds in object's prototype also.
 
 // Q. Function expression and function declaration ? =====================================
 // => function expression : const sayHi = function(){console.log("Hi")}
 // => function declaration : function sayHi(){console.log("hi")}
 
 // Q. How to check if value is null ?  why typeof null == object ? ===============================
-// => using '===' operator + if(value===null) + typeof null== object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object
+// => using '===' operator
+// => typeof null == object becz it is a historical hub in js, null means novalue or empty , now it cannot be changed because live old code working on typeof null = object
 
 // Q. What is "new" keyword do ? ===============================
 // => used to create instance of object form constructor function or class
@@ -128,7 +129,9 @@
 // => Asyncronous JavaScript And XML + it is a technique that send or recieve data form server without reloading the entire page + eg: you fill a form, you enter email to check if already registered, it check in real time without refreshing the page + fetch and axios automatically uses AJAX method
 
 // Q.all object buit-in functions?? give examples ========================================================================
+
 // 1.Object.create() : used to create new object with choosen prototype + const dog = Object.create(animal) + here dog will have animal's properties
+
 // 2.Object.assign() : used to copy properties from source object to target objects + Object.assign(target, source1,source2,......)
 
 // 3.Object.keys() : returns the array of keys + const keys = Object.keys(user)
@@ -168,7 +171,7 @@
 // => impure function : always give different output + has side effects like modifying a global variable + changes external states
 
 // Q. what are side effects in js ? ======================================
-// => when function changes the value of states or global variables , it is called side effects
+// => when function changes the value of states or global variables
 
 // Q.Difference between promise , async await, callbacks? ===========================================================================================
 // => Promises : a object that represent 3 states + Pending, fulfilled, rejected + cleaner and easier avoids deep nesting + should use when api calling or chaining tasks
