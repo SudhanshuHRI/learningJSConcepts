@@ -37,26 +37,47 @@
 // => these functions are also called "array prototype functions" beacuse it works only on array not on object or string + we can use them indirectly using split() or object.entries() methods.
 
 // 1. forEach() : Itrate over each element + dont return any array + change original array + cannot break or return early
+
 // 2. map() : itrates over each element + return a new array with transform values + dont change original array
+
 // 3. filter() : create a new array of only condition passed elements + returns a new array + dont change original array
+
 // 4. find() : search the array and return first element that satisfies the condition + if no element pass , it will return undefined
+
 // 5. findIndex() : search the array and return first element's index that satisfies the condition +if no element passed, it will return "-1"
+
 // 6. some() : tests wheather at least one element pass the test + it will return boolean + if no element passed, it will return false
+
 // 7. every() : tests wheater all element pass the test +  it will return boolean +  if any of the elemnt dont pass the test, it will return false.
+
 // 8. push() : add one or more element in end or array and returns new length of array + modifies orignal array
+
 // 9. pop() : remove last elemnt of array + return removed element +  modifies original array
+
 // 10. unshift() : add element in beginning + return new length of array + modifies orignal array
+
 // 11. shift () : remove first element of array + return removed element + modifies original array
+
 // 12. splice() : add,remove,replace element in array + modifies original array + return array of removed elements , if no element removed,it returns blank array + array.splice(startIndex, noOfValuesToDelete, addItem1,addItem2,addItem3,.....)
+
 // 13. concat() : merge 2 or more array + returns new concated array
+
 // 14. slice() : used to get a portion of array + dont modify original array + array.slice(startIndex,endIndex); + return new array with portion
+
 // 15. reduce() : used to reduce an array to single value
+
 // 16. reduceRight() : works from right index of array
+
 // 17. sort() : used to sort the array + returns sorted array + element are converted in string then sort
+
 // 18. reverse() : reverse the order of elements in array + modifies orignal array + returns the reverse array
+
 // 19. includes() : checks if an array or string contains certain element or substring + returns boolean
+
 // 20. indexOf() : used to find first index of specified element in array or string + if not found returns -1
+
 // 21. lastIndexOf() : returns the last index at which element is found + serches from backword
+
 // 22. join() : used to combine all elements of array into single string with specified operator + array.join("-")
 
 // Q. sort [1,2,3,11,22,33] using sort() method. =========================
@@ -71,18 +92,15 @@
 // Q. how to create a object without a prototype ? ===============================
 // => const obj = Object.create(null) + It dont have .toString(),.hasOwnProperty() default prototype functions in it + dont conflict with inherit functions
 
-// Q. how to destructure object ?? ========================
-// => const person = {name:"sudhanshu",age:28} ; const {name,age} = person ;
-
-// Q. how to destructure array ? ===================
-// => const [a,b] = [1,2]
-
 // Q. What are wrapper Objects ? ========================
 // => premitives [string,number,boolean,null,undefined] dont have methods + So, When try to use methods on primitive, JS wraps it temperory in an object called Wrapper Object + like string = String, number = Number + let str = "hello"; console.log(str.toUpperCase()); + null and undefined dont have wrapper objects
 
 
 // Q. implicit vs explicit coercion ? =================================
-// => coercion means converting value from one type to another + js is dynamic typed so automatically convert types + explicit means when manually changed , eg: Number("42") it will convert it in number + implicit means when convert automatically , eg: console.log("5" + 1 )
+// => Coercion means converting value from one type to another
+// => implicit Coercion : when convert automatically,  eg: console.log("5" + 1 )
+// => explicit coercion : when manually changed , eg: Number("42")
+
 
 // Q. How to check value is NaN ? ================================
 // => Number.isNaN(value) + give boolean
@@ -189,9 +207,6 @@
 
 // Q. all true values in js? ==========================================
 //=>  true + "hello" + ' ' + any non-zero number + [] + {} + function(){} + any float that isn't 0 or NaN
-
-// Q.json.stringify vs parse ==================================================================
-//=> JSON.stringify is used to convert JSON to string + JSON.parse is used to convert string to JSON data
 
 // Q.what is dead zone in js ? ========================================================
 // => Only let and const have dead zone(TDZ) + Dead zone is the time between when variable is declared and when it is initialized + we cannot uset let and const before it's declaration
