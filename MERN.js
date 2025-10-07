@@ -217,7 +217,7 @@
 // Q.what is mutation observer in js? =====================================================================
 //=> it is built-in api in js which lets you watch changes in DOM tree + const observer = new MutationObserver(callback) + detect new elements or removed elements + good for dynamic UI
 
-// Q.high order functions ?? ================================================================
+// Q. high order functions ?? ================================================================
 // => takes function as a argument + returns function as a result + they are called high order functions becz they operate on other functions + some built-in HOF in js : map(), filter(), reduce(), forEach(),sort()
 
 // Q.Private property and private fucntion in js ? ====================================================
