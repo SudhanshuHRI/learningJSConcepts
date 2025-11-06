@@ -212,7 +212,7 @@
 //=>  true + "hello" + ' ' + any non-zero number + [] + {} + function(){} + any float that isn't 0 or NaN
 
 // Q.what is dead zone in js ? ========================================================
-// => Only let and const have dead zone(TDZ) + Dead zone is the time between when variable is declared and when it is initialized + we cannot uset let and const before it's declaration
+// => Only let and const have dead zone(TDZ) + Dead zone is the time between when variable is declared and when it is initialized + we cannot use let and const before it's declaration
 
 // Q.what is mutation observer in js? =====================================================================
 //=> it is built-in api in js which lets you watch changes in DOM tree + const observer = new MutationObserver(callback) + detect new elements or removed elements + good for dynamic UI
