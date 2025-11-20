@@ -108,7 +108,7 @@
 // Q. How to check a number is even or odd without using modular operator ? ============================
 // => Math.floor(num/2)*2===num ; + if it is true the even other false
 
-// Q. How to check certain property exists in object ? =============================================
+// Q. How to check certain property exists in object ? also "in"vs "hasOwnProperty" =============================================
 // => using "in" operator + obj.hasOwnProperty("name")
 
 // Q. "in " vs "hasOwnProperty" ? =================================
