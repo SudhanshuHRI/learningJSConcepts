@@ -567,10 +567,10 @@
 
 // Q. Write a Code for Practical ============================================================
 // => Write a code to get data from child to component
-// => give exmple to update array and object
-// => give example to create only one state with mulitple states and update it.
-// => give example of lazy loading
-// => give exmple of api polling
+// => Write a code to update array and object that is in useState
+// => Write a code to create only one state with mulitple states and update it.
+// => Write a code of lazy loading
+// => Write a code of api polling
 // => example of useTransiton Hook
 // => give example of React.memo()
 // => give example of useCallback.
@@ -582,7 +582,7 @@
 // => give code for debouncing
 // => give code for throttling
 // => give example of curring.
-// => give example of High Order component
+// => Write a code for closures.
 
 // [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Node.js ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
