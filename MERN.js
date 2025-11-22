@@ -95,12 +95,10 @@
 // Q. What are wrapper Objects ? ========================
 // => premitives [string,number,boolean,null,undefined] dont have methods + So, When try to use methods on primitive, JS wraps it temperory in an object called Wrapper Object + like string = String, number = Number + let str = "hello"; console.log(str.toUpperCase()); + null and undefined dont have wrapper objects
 
-
 // Q. implicit vs explicit coercion ? =================================
 // => Coercion means converting value from one type to another
 // => implicit Coercion : when convert automatically,  eg: console.log("5" + 1 )
 // => explicit coercion : when manually changed , eg: Number("42")
-
 
 // Q. How to check value is NaN ? ================================
 // => Number.isNaN(value) + gives boolean
@@ -704,7 +702,6 @@
 // => 504 Gateway Timeout – Upstream server didn’t respond in time.
 // => 505 HTTP Version Not Supported – Unsupported HTTP version.
 
-
 // is event loop in react.js and node.js different ? =========================================
 // => yes + react.js doesn't have its own event loop , it works on browser's event loop +  node's event loop provided by libuv + node handles async ops with libuv
 
@@ -942,26 +939,6 @@
 
 // How to handle JSON streaming? =====================================
 // JSON streaming means instead of sending or recieving full JSON you send it in chunks + used in large database exports, streaming apis, real-time dashboards
-
-// What is schema validation and how to implement it? ============================================
-// => we use "joi" library
-// => eg:
-// const Joi = require("joi");
-
-// const userSchema = Joi.object({
-//   name: Joi.string().required(),
-//   age: Joi.number().integer().min(0),
-//   email: Joi.string().email().required(),
-// });
-
-// app.post("/register", (req, res) => {
-//   const { error, value } = userSchema.validate(req.body);
-
-//   if (error) {
-//     return res.status(400).json({ error: error.details[0].message });
-//   }
-//   res.send("User is valid!");
-// });
 
 // What is the purpose of NODE_ENV? ===================================
 // => it is a variable in .env + it tells if app is in development, test, production + NODE_ENV=development + it changes app behaviour based on environment

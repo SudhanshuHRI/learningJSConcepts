@@ -1,6 +1,17 @@
 import "./App.css";
+import React,{useState} from "react";
 
 function App() {
+const [data,setData] = useState("hello!!");
+
+
+const getDataFromChild = (data) =>{
+  console.log("got data",data)
+}
+
+
+
+
   
 
   return (
@@ -9,5 +20,9 @@ function App() {
     </div>
   );
 }
+
+
+
+
 
 export default App;
