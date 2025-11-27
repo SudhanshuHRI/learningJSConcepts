@@ -311,17 +311,17 @@
 // console.log("A" - "B" + "2");
 // console.log("A" - "B" + 2);
 // console.log(typeof NaN);
-// console.log(0==false)
-// console.log(''==false)
-// console.log(-0===false)
-// console.log(null <=0)
-// console.log(null>=0)
-// console.log(NaN==NaN)
-// console.log( true && 'hello')
-// console.log(Array(3)==",,")
-// console.log(!!10+20)
-// console.log(typeof typeof 1)
-// console.log([..."Sudhanshu"])
+// console.log(0==false);
+// console.log(''==false);
+// console.log(-0===false);
+// console.log(null <=0);
+// console.log(null>=0);
+// console.log(NaN==NaN);
+// console.log( true && 'hello');
+// console.log(Array(3)==",,");
+// console.log(!!10+20);
+// console.log(typeof typeof 1);
+// console.log([..."Sudhanshu"]);
 // console.log(!!undefined);
 // console.log(!!null);
 // console.log(!!"a");
