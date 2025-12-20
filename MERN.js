@@ -26,7 +26,7 @@
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
 // Q. What is hoisting ?? ================================================================
-// => all variable and function declarations are moved to the top of their scope (before code runs).
+// => We can access the function and variable before their initialization + variable will be undefined + When excution of code is started, all variables and function get stored in memory. So when they go to that line , it is already present in memory. So they can be accessed before initialization.
 
 // Q. What are premitive and non-premetive data types in js ? =============================================
 // => Premitive : immutable (unable to change) + copied by value + stored in stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
@@ -188,6 +188,17 @@
 // 2. Polymorphism : Single Object doing different things according to context
 // 3. Inheritence : sharing parents properties with child
 // 4. Abstraction : hiding inrelevent info and only showing relevent info to user + ease of using the program to user
+
+
+// 1. 𝐀𝐛𝐬𝐭𝐫𝐚𝐜𝐭𝐢𝐨𝐧: Only show the 𝐫𝐞𝐥𝐞𝐯𝐚𝐧𝐭 𝐟𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐚𝐥𝐢𝐭𝐲 to the user and 𝐡𝐢𝐝𝐞 all other logic. Example: Calling functionality in your phone, you can only see the calling button but not the whole logic behind how it works.
+
+// 2. 𝐄𝐧𝐜𝐚𝐩𝐬𝐮𝐥𝐚𝐭𝐢𝐨𝐧: All the functionality related to an object should be 𝐛𝐢𝐧𝐝 inside the class. Functions/Methods, variable, all should be inside the class. 
+// Example: Your Mobile Phone, all the features like calling, messaging, audio, video, all are inside your mobile phone.
+
+// 3. 𝐏𝐨𝐥𝐲𝐦𝐨𝐫𝐩𝐡𝐢𝐬𝐦: Same Method name but 𝐝𝐢𝐟𝐟𝐞𝐫𝐞𝐧𝐭 𝐩𝐚𝐫𝐚𝐦𝐞𝐭𝐞𝐫𝐬 passed to the function. Example: IPhone 15 and IPhone 15 Pro. Same functionality just camera pixel different(slightly 😂 ).
+
+// 4. 𝐈𝐧𝐡𝐞𝐫𝐢𝐭𝐚𝐧𝐜𝐞: Taking properties, methods of parent class from the child class. 
+// Example: Chunki Pandey and Ananya Pandey (I guess I don't need to explain it any more 🤣 ).
 
 // Q.what is use strict in js? ===========================================
 // => react's useStrict is differenct +  in js it is used to apply normal rules in the application + makes app more secure and less error + in react we dont want to put "use Strict" because babel, webpack etc enables it automatically + use Strict throw undeclare variables's error, duplicate params name will not accept + this in functions is undifined
