@@ -26,11 +26,11 @@
 // => Arrow function : dont have own "this" + "arguments" object not available + connot work as constructor + not hoisted
 
 // Q. What is hoisting ?? ================================================================
-// => We can access the function and variable before their initialization + variable will be undefined + When excution of code is started, all variables and function get stored in memory. So when they go to that line , it is already present in memory. So they can be accessed before initialization.
+// => We can access the function and variable before their initialization + When excution of code is started, all variables and function get stored in memory. So when they go to that line , it is already present in memory. So they can be accessed before initialization + variable will be undefined and function will be copied same + When function is declare as arrow function, it behaves like a variable so it is saved as undefined + let and const also hoisted but stay in temporal Dead Zone until declared, so we cant use them before declaration.
 
 // Q. What are premitive and non-premetive data types in js ? =============================================
-// => Premitive : immutable (unable to change) + copied by value + stored in stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
-// => Non-premetive : mutable (able to change) + copied by reference + stored in Heap memory + Object, Array, Function, all built in objects (Date,Map,Set etc)
+// => Premitive : can hold only single value + immutable/things that cannot be changed (values once assigned cannot be changed. if we update the value of the variable, new address will be allocated) + copied by value + stored in stack memory + string, Number, Boolean, undefined, null, symbol, bigInt
+// => Non-premetive :can hold multiple valued +  mutable/ things that can be changed ( if we updated the value in array , it will udpated on same memory address) + copied by reference + stored in Heap memory + Object, Array, Function, all built in objects (Date,Map,Set etc)
 
 // Q. Explain all built in functions of js ?? =================================================
 
