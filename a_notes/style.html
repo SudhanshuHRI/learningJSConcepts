@@ -1,0 +1,325 @@
+<!-- 
+ 
+1️⃣ CSS Fundamentals (Must-Know)
+
+What is the CSS box model?
+
+Difference between class and id
+
+display vs visibility vs opacity
+
+Inline, internal, external CSS
+
+Block vs Inline vs Inline-block
+
+!important – when should you avoid it?
+
+What are CSS units (px, %, em, rem, vw, vh)?
+
+Default browser styles – how to reset?
+
+Difference between margin and padding
+
+z-index – when does it work?
+
+2️⃣ CSS Selectors & Specificity (Very Important)
+
+Types of selectors
+
+Attribute selectors
+
+Pseudo-class vs Pseudo-element
+
+What is specificity order?
+
+Inline vs ID vs Class – priority
+
+How does inherit work?
+
+:nth-child() vs :nth-of-type()
+
+:not() selector
+
+Universal selector *
+
+How to override CSS safely?
+
+3️⃣ Layout Systems (🔥 High Priority)
+Flexbox
+
+Main axis vs Cross axis
+
+justify-content vs align-items
+
+flex-grow, flex-shrink, flex-basis
+
+align-self
+
+When NOT to use flexbox?
+
+Grid
+
+Grid vs Flexbox
+
+grid-template-columns
+
+fr unit
+
+auto-fit vs auto-fill
+
+Grid areas
+
+Implicit vs explicit grid
+
+4️⃣ Positioning & Stacking Context
+
+static, relative, absolute, fixed, sticky
+
+How position: absolute works
+
+What creates a stacking context?
+
+Why z-index doesn’t work sometimes?
+
+Sticky header implementation
+
+Centering div (multiple ways)
+
+Overlapping elements
+
+Modal positioning
+
+Tooltip positioning
+
+Fixed vs sticky use cases
+
+5️⃣ Responsive Design
+
+Mobile-first vs Desktop-first
+
+Media queries syntax
+
+Breakpoint strategy
+
+Responsive typography
+
+min-width vs max-width
+
+clamp() usage
+
+Fluid layouts
+
+Viewport meta tag
+
+Responsive images
+
+Common responsive mistakes
+
+6️⃣ Advanced CSS Concepts (🔥 Interview Gold)
+
+What is CSS Cascade?
+
+What are CSS variables?
+
+Shadow DOM vs CSS scope
+
+@layer – why introduced?
+
+@supports feature queries
+
+Logical properties (margin-inline)
+
+calc() performance
+
+contain property
+
+will-change – when to avoid?
+
+CSS isolation strategies
+
+7️⃣ Animations & Transitions
+
+Transition vs Animation
+
+transform vs top/left
+
+Hardware acceleration
+
+requestAnimationFrame vs CSS animation
+
+Keyframes syntax
+
+Animation performance best practices
+
+Infinite animation issues
+
+Staggered animations
+
+animation-fill-mode
+
+Reduce motion support (prefers-reduced-motion)
+
+8️⃣ Performance Optimization (🔥 Advanced)
+
+Render-blocking CSS
+
+Critical CSS
+
+CSS vs JS animation performance
+
+Avoiding layout shift (CLS)
+
+Reflow vs Repaint
+
+Font loading strategies
+
+Large CSS file optimization
+
+Unused CSS removal
+
+CSS bundling strategies
+
+How browsers render CSS?
+
+9️⃣ CSS Architecture & Scalability
+
+BEM naming convention
+
+OOCSS vs SMACSS
+
+CSS Modules
+
+Styled-components pros & cons
+
+Utility-first CSS (Tailwind)
+
+Global vs Scoped CSS
+
+Design systems
+
+Theming strategies
+
+Dark mode implementation
+
+CSS in micro-frontends
+
+🔟 Real-World Scenario Questions
+
+CSS works locally but breaks in production – why?
+
+Modal goes behind header – how to fix?
+
+Layout breaks on small devices – approach?
+
+Fix overlapping elements issue
+
+Smooth scrolling performance issue
+
+Prevent layout shift on image load
+
+Fix flickering animation
+
+Maintain consistent spacing across app
+
+Debug CSS specificity conflict
+
+Handle third-party CSS conflicts
+
+📌 Bonus (Asked in Senior Interviews)
+
+How browsers parse CSS?
+
+CSSOM vs DOM
+
+How CSS affects performance?
+
+Rendering pipeline
+
+GPU vs CPU rendering
+
+Modern CSS features you use
+
+Accessibility with CSS
+
+CSS testing strategies
+
+Progressive enhancement
+
+Future of CSS
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+/* 1. InterView Questions */
+/* ////////////////////////////////////////////////////////// InterView Questions ///////////////////////////////// */
+
+/* What is CSS, and why is it used in web development?
+add a div in html using css ?
+can we pass data in html through css or in css through html?
+What are the different types of CSS (inline, internal, external)?
+What is the difference between id and class selectors in CSS?
+What is the syntax of a CSS rule?
+How do you include CSS in an HTML document?
+What is the difference between relative, absolute, fixed, and sticky positioning in CSS?
+What are pseudo-classes in CSS? Give examples.
+What are pseudo-elements in CSS? How do they differ from pseudo-classes?
+What is the difference between em and rem units in CSS?
+What is the difference between px, %, and vh/vw units?
+Selectors
+What are the different types of CSS selectors?
+How do child and descendant selectors differ?
+What is the difference between the > and + selectors in CSS?
+How do attribute selectors work in CSS? Provide examples.
+How do you select multiple elements in CSS?
+Box Model
+What is the CSS box model?
+What is the difference between content-box and border-box?
+How do margin, border, padding, and width work together in the box model?
+What is the difference between inline, block, and inline-block elements?
+How do you make an element's box model ignore its child elements' margins?
+Layout and Positioning
+What is the difference between relative and absolute positioning?
+How does the z-index property work?
+What is the difference between inline, block, and flex containers?
+How do you center an element vertically and horizontally in CSS?
+What is the purpose of the float property, and how is it used?
+Flexbox and Grid
+What is Flexbox, and why is it used in CSS?
+What is the difference between justify-content and align-items in Flexbox?
+What is the difference between Flexbox and CSS Grid?
+How do you create a responsive layout using CSS Grid?
+What are the differences between auto-fit and auto-fill in Grid layouts?
+Typography
+How do you specify custom fonts in CSS?
+What is the difference between relative, absolute, and fixed font sizes?
+How do you control text spacing using CSS?
+What is the difference between line-height and letter-spacing?
+What are the different font-family categories in CSS?
+Responsive Design
+What are media queries, and how are they used in CSS?
+How do you create a mobile-first design using CSS?
+What is the difference between max-width and min-width in media queries?
+How do you make images responsive using CSS?
+What is the viewport meta tag, and why is it important?
+Animations and Transitions
+What is the difference between CSS animations and transitions?
+How do you create a CSS animation using the @keyframes rule?
+What is the purpose of the transition property in CSS?
+How do you make an animation infinite in CSS?
+How does the animation-timing-function property work?
+Advanced CSS Questions
+What is the difference between CSS preprocessors like SASS and LESS?
+How do you use CSS variables (custom properties)?
+What is the clip-path property, and how is it used?
+What is the difference between opacity and visibility in CSS?
+How do you optimize CSS for better performance? */
+/* do this : https://www.linkedin.com/posts/varunvp_responsivedesign-csstips-frontenddevelopment-activity-7284954940614066178-J_y1?utm_source=social_share_send&utm_medium=member_desktop_web */
