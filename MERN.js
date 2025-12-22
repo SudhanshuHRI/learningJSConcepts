@@ -491,10 +491,10 @@
 // Q. React Profiler ============================================
 // => a tool helps to measure and analyze performance of react components + import React, { Profiler } from 'react'
 
-// Q.What is React Fiber, and how does it improve React’s performance? ============================================================
+// Q. What is React Fiber, and how does it improve React’s performance? ============================================================
 // => it is a reconciliation engine of react from react 16 + before fiber react was unable to prioritise the task and renders as syncronous
 //
-// Q.What is Concurrent Mode in React, and how does it improve UI responsiveness? ============================================================
+// Q. What is Concurrent Mode in React, and how does it improve UI responsiveness? ============================================================
 // => it is a set of new features that let react work on multiple tasks at once + also pause, abort, resume and prioritise rendering tasks. + it is a part of react fiber
 
 // Q.How does useTransition work in React? ============================================================
@@ -779,7 +779,7 @@
 // => fs module : allows you to read, write, update, delete and manage files and directories directly.
 // => http : used to create http severs in node
 // => buffer : used to handle binary data directly in memory
-// => stream : used to read data from source and wirte to desitnation in chuncks
+// => stream : used to read data from source and wirte to desitnation in chunks
 // => events : used to create,emit,listen events in backend + EventEmmiter comes in it
 // => child process : used to excute external programs + run shell commands or scripts
 // => worker thread : used to run js in parallel threads
