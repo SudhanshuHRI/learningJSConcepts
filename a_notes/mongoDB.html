@@ -1,271 +1,285 @@
 <!-- 
  
-1️⃣ MongoDB Fundamentals (Must-Know)
+🔹 MongoDB – Basic Interview Questions
 
-What is MongoDB and why use it?
+⭐ What is MongoDB?
 
-Difference between SQL vs MongoDB
+⭐ MongoDB vs RDBMS – key differences
 
-What is a document and a collection?
+⭐ What is NoSQL?
 
-BSON vs JSON
+⭐ What is a document in MongoDB?
 
-What is _id? Can we customize it?
+⭐ What is a collection?
 
-Data types supported in MongoDB
+⭐ What is BSON?
 
-What is a schema-less database?
+⭐ What is the _id field?
 
-When should you NOT use MongoDB?
+Does MongoDB allow duplicate documents?
 
-What is replication?
+⭐ Does MongoDB support schema?
 
-MongoDB vs MySQL (use cases)
+What are the supported data types in MongoDB?
 
-2️⃣ Schema Design (Very Important 🔥)
+What is ObjectId?
 
-Embedded documents vs References
+What is a namespace in MongoDB?
 
-When to embed and when to reference?
+What is the default port of MongoDB?
 
-One-to-many relationship design
+What are databases in MongoDB?
 
-Many-to-many relationship
+⭐ What are CRUD operations in MongoDB?
 
-Schema design for large datasets
+Difference between insertOne() and insertMany()
 
-Handling optional fields
+Difference between updateOne() and updateMany()
 
-Anti-patterns in MongoDB schema
+Difference between replaceOne() and update()
 
-Designing for read vs write heavy apps
+Difference between deleteOne() and deleteMany()
 
-Document size limit (16MB) – how to handle?
+Difference between find() and findOne()
 
-Versioning MongoDB schemas
+⭐ What is projection?
 
-3️⃣ Indexing & Performance (Advanced 🔥)
+How does MongoDB handle NULL values?
 
-What is an index?
+What is a cursor?
 
-Types of indexes:
+What is batch size?
 
-Single field
+🔹 MongoDB – Indexing & Querying (MOST ASKED)
 
-Compound
+⭐ What is indexing in MongoDB?
 
-Multikey
+⭐ Why are indexes important?
 
-Text
+⭐ What types of indexes are available in MongoDB?
 
-Hashed
+⭐ What is a single-field index?
 
-TTL
+⭐ What is a compound index?
 
-How indexes improve performance?
+⭐ What is a multikey index?
 
-Downsides of indexes
+What is a hashed index?
 
-Index selectivity
+⭐ What is a text index?
 
-Covered queries
+What is a wildcard index?
 
-Explain explain() output
+What is index intersection?
 
-Indexing on embedded fields
+⭐ How does MongoDB decide which index to use?
 
-When indexes are not used?
+⭐ What happens if an index is not used?
 
-Slow query optimization
+⭐ What is explain()?
 
-4️⃣ CRUD Operations (Deep Knowledge)
+What is query planner?
 
-Difference between insertOne vs insertMany
+What is covered query?
 
-updateOne vs updateMany
+What is index selectivity?
 
-replaceOne vs update
+🔹 MongoDB – Aggregation Framework (EXTREMELY COMMON)
 
-$set, $unset, $push, $pull
+⭐ What is the aggregation framework?
 
-Atomic updates
+⭐ What is an aggregation pipeline?
 
-Upserts
+⭐ Difference between find() and aggregation
 
-Bulk operations
+⭐ Explain $match
 
-Transactions vs atomicity
+⭐ Explain $group
 
-Find vs Aggregate
+⭐ Explain $project
 
-Pagination methods (skip/limit vs cursor)
+⭐ Explain $sort
 
-5️⃣ Aggregation Framework (🔥 Very Important)
+⭐ Explain $lookup
 
-What is aggregation?
+⭐ How does MongoDB perform joins?
 
-Aggregation vs Map-Reduce
+⭐ What is $unwind?
 
-Common stages:
+What is $addFields?
 
-$match
+What is $replaceRoot?
 
-$group
+What is $facet?
 
-$project
+What is $bucket?
 
-$sort
+What is $merge?
 
-$lookup
+What is $out?
 
-$unwind
+What is pipeline optimization?
 
-$facet
+What is aggregation memory limit?
 
-$lookup performance impact
+What is allowDiskUse?
 
-Pipeline optimization
+🔹 MongoDB – Schema Design & Data Modeling (VERY IMPORTANT)
 
-Aggregation indexes usage
+⭐ Embedded vs referenced documents
 
-$expr usage
+⭐ When should you embed documents?
 
-Handling large aggregations
+⭐ When should you reference documents?
 
-Real-world aggregation example
+⭐ One-to-one relationship modeling
 
-Aggregation vs SQL JOIN
+⭐ One-to-many relationship modeling
 
-6️⃣ Transactions & Concurrency (Advanced)
+⭐ Many-to-many relationship modeling
 
-What are MongoDB transactions?
+What is document growth?
 
-Single-document atomicity
+What is unbounded array?
 
-Multi-document transactions
+What is schema anti-pattern?
 
-ACID support in MongoDB
+What is polymorphic schema?
 
-Read & Write concerns
+What is bucket pattern?
 
-Isolation levels
+What is outlier pattern?
 
-Locking mechanism
+What is extended reference pattern?
 
-Optimistic concurrency control
+🔹 MongoDB – Replication & High Availability
 
-Handling race conditions
+⭐ What is replication in MongoDB?
 
-Transaction performance tradeoffs
+⭐ What is a replica set?
 
-7️⃣ Replication & High Availability
+⭐ Role of Primary node
 
-What is a replica set?
+⭐ Role of Secondary node
 
-Primary vs Secondary
+⭐ What is an Arbiter?
 
-Election process
+⭐ How does failover work?
 
-Failover handling
+What is election process?
 
-Read preferences
+What is oplog?
 
-Write concern levels
+What is rollback?
 
-Replication lag
+⭐ What is read preference?
 
-Hidden members
+⭐ What is write concern?
 
-Arbiter usage
+What is read concern?
 
-Monitoring replication health
+What is majority write concern?
 
-8️⃣ Sharding & Scalability (🔥 Advanced)
+🔹 MongoDB – Sharding & Scalability (Advanced)
 
-What is sharding?
+⭐ What is sharding?
 
-Shard key selection
+⭐ Difference between replication and sharding
 
-Hashed vs ranged shard key
+⭐ What is horizontal scaling?
 
-Chunk migration
+⭐ What is a shard?
 
-Balancer role
+⭐ What is a shard key?
 
-Hot shard problem
+⭐ How do you choose a shard key?
 
-Scatter-gather queries
+⭐ What is chunk?
 
-Zone sharding
+What is chunk migration?
 
-Resharding
+What is balancer?
 
-Sharding best practices
+What is mongos?
 
-9️⃣ Security & Best Practices
+What is config server?
 
-MongoDB authentication methods
+What is zone sharding?
 
-Role-based access control
+What is hotspotting?
 
-Data encryption (at rest & in transit)
+🔹 MongoDB – Transactions & Consistency
 
-IP whitelisting
+⭐ Does MongoDB support ACID transactions?
 
-Preventing NoSQL injection
+⭐ What are multi-document transactions?
 
-Secure connection string
+What is snapshot isolation?
 
-Secrets management
+What is two-phase commit?
 
-Backup strategies
+⭐ Limitations of MongoDB transactions
 
-Point-in-time recovery
+When should you avoid transactions?
 
-Auditing
+What is eventual consistency?
 
-🔟 Mongoose (Node.js Integration)
+What is causal consistency?
 
-Mongoose vs Native driver
+🔹 MongoDB – Performance, Storage & Internals
 
-Schema & model
+⭐ How do you optimize MongoDB performance?
 
-Middleware (pre/post hooks)
+⭐ What causes slow queries?
 
-Validation vs business logic
+⭐ What is WiredTiger?
 
-Populate – how it works internally?
+What is journaling?
 
-Lean queries
+What is compression?
 
-Virtuals
+What is checkpoint?
 
-Transactions in Mongoose
+What is memory-mapped files?
 
-Handling large collections
+What is cache eviction?
 
-Performance pitfalls in Mongoose
+What is working set?
 
-🔥 Real-World Scenario Questions
+What is document-level locking?
 
-Collection has 100M documents – how to optimize?
+What is concurrency control?
 
-Queries slow after data growth – what steps?
+🔹 MongoDB – Security, Backup & Ops
 
-Frequent writes causing performance issues
+⭐ How do you secure MongoDB?
 
-Data duplication vs performance – how to decide?
+⭐ What authentication mechanisms does MongoDB support?
 
-MongoDB CPU usage high – debugging steps
+⭐ What is role-based access control (RBAC)?
 
-Handling soft deletes
+What is TLS/SSL in MongoDB?
 
-Designing audit logs
+What is encryption at rest?
 
-Multi-tenant schema design
+⭐ How do you back up MongoDB?
 
-Migrating schema without downtime
+⭐ Difference between mongodump and mongoexport
 
-MongoDB backup & restore strategy
+⭐ How do you restore MongoDB?
+
+What is point-in-time recovery?
+
+What is monitoring in MongoDB?
+
+What is profiler?
+
+What is Atlas?
+
+What is Ops Manager?
+
+
+
+
 
 -->
