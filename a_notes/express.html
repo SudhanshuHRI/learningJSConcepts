@@ -1,120 +1,51 @@
-Basics
-What is Express.js?
-Difference between Express.js and Node.js
-How Express handles HTTP requests
-What is routing?
-Request & Response
-req vs res
-req.params, req.query, req.body
-Sending responses (res.send, res.json, res.status)
-Routing
-app.get, app.post, etc.
-app.use vs route handlers
-Route parameters
-Using express.Router()
-Middleware Basics
-What is middleware?
-Types of middleware
-Purpose of next()
-🟡 Intermediate (Core Backend Skills)
-Middleware Deep Dive
-Built-in vs custom middleware
-Execution order of middleware
-Chaining middleware
-Async middleware
-What happens if next() is not called?
-Error Handling
-Default error handling in Express
-Custom error middleware
-next(error) vs throw error
-Centralized error handling
-Async Handling
-Using async/await in routes
-Handling async errors
-Wrapper functions for error handling
-Request Validation
-Why validation is needed
-Libraries (Joi, Zod, express-validator)
-Where to place validation logic
-Authentication & Authorization
-JWT authentication flow
-Sessions vs JWT
-Middleware for protected routes
-Role-based access control (RBAC)
-REST API Design
-REST principles
-Naming conventions
-HTTP methods (GET, POST, PUT, PATCH, DELETE)
-Status codes
-API versioning
-🟠 Advanced (Senior-Level Knowledge)
-Performance & Optimization
-Event loop basics
-Handling concurrency
-Clustering (Node cluster module)
-Load balancing
-Compression middleware
-Caching (Redis)
-Security
-XSS, CSRF, SQL Injection
-Using helmet
-Rate limiting
-Input sanitization
-CORS handling
-Project Architecture
-MVC architecture
-Layered architecture (controller, service, repo)
-Folder structure for large apps
-Dependency injection basics
-Database Handling
-Connection pooling
-ORM vs raw queries
-Transactions
-Handling failures
-Logging & Monitoring
-Logging tools (Winston, Morgan)
-Structured logging
-Monitoring tools (PM2, New Relic)
-Debugging production issues
-File Handling
-File uploads (multer)
-Streams vs buffers
-Handling large files
-🔴 Expert / System Design
-Scalability
-Horizontal vs vertical scaling
-Stateless APIs
-Load balancers
-Reverse proxies (NGINX)
-Microservices
-Monolith vs microservices
-Service communication (REST, queues)
-API gateway role
-Caching Strategy
-Client vs server caching
-Redis usage
-Cache invalidation strategies
-Real-Time Systems
-WebSockets vs SSE
-Implementing chat systems
-Event-driven architecture
-🧪 Practical Coding Questions
-Build CRUD API
-Create authentication middleware
-Implement rate limiter
-Global error handler
-Pagination logic
-File upload API
-Logging middleware
-🧠 Debugging & Production
-Why API is slow
-Memory leaks in Node.js
-Handling crashes
-Environment configs
-Logs analysis
-🎯 Tricky / Opinion Questions
-Why use Express?
-When NOT to use Express?
-Express vs Fastify
-Express vs NestJS
-Limitations of Express
+What is Express.js and how does it differ from the core Node.js HTTP module?
+Explain the concept of middleware in Express and how the request-response lifecycle works.
+What are the differences between app.use() and app.get() in routing?
+How does Express handle HTTP methods like GET, POST, PUT, DELETE internally?
+What is the purpose of next() in middleware chaining?
+Explain route parameters vs query parameters with examples.
+What is req, res, and next in Express middleware functions?
+How do you serve static files using Express?
+What is the role of body-parsing middleware like express.json()?
+🟡 Intermediate Level
+How does Express implement routing mechanism and what is the role of the internal router stack?
+What are error-handling middleware functions, and how are they different from normal middleware?
+How do you structure a scalable Express application using MVC architecture?
+What is the difference between synchronous vs asynchronous middleware in Express?
+How does Express handle promise rejections and async/await errors?
+What are route-level middleware vs application-level middleware?
+Explain CORS (Cross-Origin Resource Sharing) and how you would configure it in Express.
+What is the purpose of helmet.js and how does it enhance security?
+How do you implement logging middleware (e.g., using morgan)?
+Explain template engines (like EJS, Pug) and their integration with Express.
+🟠 Advanced Level
+How does Express internally manage the event loop and non-blocking I/O with Node.js?
+Explain how you would implement rate limiting and throttling in an Express API.
+How do you handle JWT-based authentication and authorization in Express?
+What are stateless vs stateful authentication strategies in Express apps?
+How do you implement role-based access control (RBAC) in Express middleware?
+Explain how session management works in Express with cookies and express-session.
+What is the difference between horizontal scaling vs vertical scaling in Express applications?
+How would you optimize an Express app for high concurrency and performance?
+Explain memory leaks in Node.js/Express and how you would debug them.
+How do you implement API versioning strategies in Express?
+🔴 Expert / System Design & Deep Dive
+How would you design a microservices architecture using Express as an API gateway?
+Explain how Express handles streaming responses and large file uploads.
+What are backpressure mechanisms in Node.js streams and how do they affect Express apps?
+How would you implement graceful shutdown in an Express server?
+Explain how to integrate WebSockets (e.g., Socket.IO) with an Express application.
+How do you secure an Express API against common vulnerabilities (XSS, CSRF, SQL Injection)?
+What are idempotent APIs, and how do you ensure idempotency in Express routes?
+How would you design a multi-tenant Express application?
+Explain the concept of dependency injection in Express apps.
+How do you monitor and debug production Express apps using tools like PM2, New Relic, or APM?
+🧠 Scenario-Based / Practical Questions
+You notice high latency in your Express API—how would you debug and optimize it?
+How would you design a file upload service handling large files efficiently?
+A middleware is not calling next()—what issues can this cause in the request lifecycle?
+How would you handle database connection pooling in an Express app?
+Your API is facing DDoS attacks—what mitigation strategies would you apply?
+How would you implement caching (Redis) in an Express application?
+How do you ensure data validation and sanitization in incoming requests?
+You need to build a real-time chat system—how would Express fit into the architecture?

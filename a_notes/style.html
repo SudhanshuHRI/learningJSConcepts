@@ -1,70 +1,85 @@
-What is CSS and how does it work as a style sheet language for rendering HTML?
-What are the different types of CSS (inline, internal, external stylesheets)?
-What is CSS specificity (inline > id > class > element)?
-What is the cascade and inheritance in CSS?
-What is the box model (content, padding, border, margin)?
-Difference between margin vs padding
-What is box-sizing (content-box vs border-box)?
-What are display properties (block, inline, inline-block, none)?
-Difference between display: none vs visibility: hidden
+What is CSS, and how does it work with HTML?
+What are the different types of CSS (inline, internal, external)?
+What is the CSS box model, and what are its components?
+What is the difference between margin vs padding vs border?
+What is the difference between block-level vs inline vs inline-block elements?
+What is the purpose of the display property?
+What is the difference between display: none vs visibility: hidden?
+What is the difference between class and id selectors?
+What are combinators in CSS (descendant, child, sibling)?
+What is specificity, and how is it calculated?
+What is the difference between em, rem, px, % units?
+What is the difference between color vs background-color?
+What is the purpose of the z-index property?
+What is the difference between overflow: hidden vs auto vs scroll?
+What are pseudo-classes vs pseudo-elements?
+🟡 Intermediate Level
+What is Flexbox, and how does it work for layout design?
+What is the difference between justify-content vs align-items vs align-content?
+What is CSS Grid, and how is it different from Flexbox?
+What is the difference between grid-template-columns vs grid-auto-columns?
 What is positioning (static, relative, absolute, fixed, sticky)?
-Difference between relative vs absolute positioning
-What is z-index (stacking context)?
-What is float and clear (legacy layout)?
-What is flexbox (flex container, flex items)?
-What are flex properties (justify-content, align-items, flex-direction)?
-What is CSS Grid (grid container, grid items)?
-Difference between Flexbox vs Grid
-What is responsive design?
-What are media queries (breakpoints, mobile-first design)?
-What is viewport meta tag?
-What are units (px, %, em, rem, vw, vh)?
-Difference between em vs rem
-What is overflow (hidden, scroll, auto)?
-What is opacity vs visibility?
-What is pseudo-classes (:hover, :focus, :nth-child)?
-What is pseudo-elements (::before, ::after)?
-What is CSS variables (custom properties)?
-What is calc() function?
-What is CSS preprocessor (SASS, LESS)?
-What is BEM methodology (Block Element Modifier)?
-What is CSS architecture (SMACSS, OOCSS)?
-What is inline vs block vs inline-block difference?
-What is object-fit property (images handling)?
-What is background properties (size, repeat, position)?
-What is border vs outline?
-What is transform (translate, rotate, scale)?
-What is transition (smooth animation)?
-What is animation (keyframes)?
-Difference between transition vs animation
-What is will-change (performance hint)?
-What is GPU acceleration in CSS?
-What is reflow and repaint (rendering performance)?
-What is critical rendering path (CSS blocking rendering)?
-What is lazy loading concept (CSS/Images)?
-What is CSS specificity conflicts and how to resolve them?
-What is important keyword (!important) and why avoid it?
-What is shadow DOM (encapsulation)?
-What is CSS modules (scoped styling)?
-What is Tailwind CSS (utility-first framework)?
-What is Bootstrap (component-based CSS framework)?
-What is cross-browser compatibility?
-What is accessibility in CSS (contrast, focus states)?
-What is dark mode implementation?
-What are CSS best practices (clean, reusable styles)?
-What are limitations of CSS?
-🧪 Scenario-Based Questions (VERY IMPORTANT)
-Layout is breaking — how do you debug CSS issues (inspect, box model, overflow)?
-Elements not aligning — how do you fix using Flexbox or Grid?
-How would you design a responsive layout for mobile, tablet, desktop?
-How do you fix z-index issues (stacking context debugging)?
-How do you avoid CSS conflicts in large projects (BEM, modular CSS)?
-How do you optimize CSS performance (minify, remove unused CSS)?
-How do you implement dark mode (CSS variables, prefers-color-scheme)?
-How do you handle cross-browser issues?
-How do you center a div horizontally and vertically (Flexbox/Grid)?
-How do you create sticky header or fixed navbar?
-How do you implement animations without hurting performance?
-How do you debug unexpected spacing issues (margin collapse, box model)?
-How do you handle large CSS codebase (scalable architecture)?
-How do you ensure accessibility (focus states, contrast ratios)?
+What is the difference between absolute vs relative positioning?
+What is float, and why is it considered outdated for layouts?
+What is clear, and how does it work with floats?
+What is the difference between min-width vs max-width vs width?
+What is media queries, and how do they enable responsive design?
+What is mobile-first design approach?
+What is the difference between inline styles vs CSS classes for performance?
+What is object-fit, and how does it work for images?
+What are custom properties (CSS variables)?
+What is the difference between opacity and rgba() transparency?
+🟠 Advanced Level
+How does the CSS cascade work, and what are its rules?
+What is specificity hierarchy, and how does !important affect it?
+What is stacking context, and how is it created?
+What is the difference between reflow vs repaint vs composite?
+What are CSS preprocessors like Sass, and why are they used?
+What is BEM (Block Element Modifier) methodology?
+What is CSS architecture, and how do you scale styles in large applications?
+What is critical CSS, and how does it improve performance?
+What is CSS containment (contain)?
+What are CSS Houdini APIs, and how do they extend CSS capabilities?
+What is the difference between transform vs transition vs animation?
+What are keyframes, and how do CSS animations work?
+What is will-change property, and how does it affect performance?
+What are logical properties (margin-inline, padding-block)?
+What is the difference between inline formatting context vs block formatting context (BFC)?
+🔴 Expert / System Design / Internals
+How does the browser render CSS (CSSOM → render tree → layout → paint → composite)?
+What is the critical rendering path, and how does CSS affect it?
+What are render-blocking resources, and how do you optimize them?
+What is layout thrashing, and how can you prevent it?
+What are GPU acceleration and compositing layers in CSS?
+What is containment and isolation in modern CSS rendering?
+How does CSS interact with JavaScript and the DOM?
+What are scoped styles vs global styles, and their trade-offs?
+What is Shadow DOM styling, and how does encapsulation work?
+What are design tokens, and how do they relate to CSS variables?
+What is CSS-in-JS, and what are its pros and cons?
+How do you handle cross-browser compatibility issues in CSS?
+What is progressive enhancement vs graceful degradation in CSS?
+How do you design a scalable design system using CSS?
+What is the role of CSS in Core Web Vitals optimization?
+🧠 Scenario-Based / Practical Questions
+A layout breaks on mobile devices—how would you debug and fix it?
+How would you center a div both vertically and horizontally using different techniques?
+How would you design a responsive grid layout using CSS Grid?
+You are facing z-index issues—how would you debug stacking context problems?
+How would you optimize CSS for a large-scale application?
+How would you implement dark mode using CSS variables?
+How would you reduce CSS bundle size in production?
+How would you debug overflow and scroll issues?
+How would you handle cross-browser inconsistencies?
+How would you structure CSS for a component-based frontend (React/Vue)?
+⚡ Tricky / Experienced Developer Questions
+Why can z-index not work even when applied correctly?
+Why is height: 100% sometimes not working as expected?
+What are the pitfalls of using position: absolute excessively?
+Why is float discouraged in modern layouts?
+What are the issues with using too many !important rules?
+Why can CSS specificity cause unexpected styling bugs?
+What are the drawbacks of global CSS in large applications?
+Why can animations cause performance issues?
+What are the problems with fixed pixel-based layouts?
+Why is CSS often considered difficult to scale compared to JS?

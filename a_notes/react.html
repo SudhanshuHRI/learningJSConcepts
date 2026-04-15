@@ -1,69 +1,85 @@
-What is React.js and how does it work using component-based architecture and virtual DOM?
-Difference between React vs traditional DOM manipulation
-What is Virtual DOM and reconciliation algorithm (diffing)?
-What are functional components vs class components?
-What are JSX (JavaScript XML)?
-How JSX gets compiled using Babel transpiler?
-What are props (immutable data passing)?
-What is state (mutable component data)?
-Difference between props vs state
-What is useState hook (state management)?
-What is useEffect hook (side effects, lifecycle replacement)?
-What is component lifecycle (mount, update, unmount)?
-What are React hooks?
-Rules of hooks (top-level, not inside loops/conditions)
-What is useContext (context API for global state)?
-What is useReducer (complex state management)?
-What is useRef (DOM reference, persistent values)?
-What is useMemo (memoization optimization)?
-What is useCallback (function memoization)?
-What is React.memo (component memoization)?
-What is controlled vs uncontrolled components (forms)?
-What is lifting state up?
-What is prop drilling?
-What is Context API (global state management)?
-What is Redux (centralized state management)?
-Difference between Redux vs Context API
-What is middleware in Redux (redux-thunk, redux-saga)?
-What is React Router (client-side routing)?
-Difference between BrowserRouter vs HashRouter
-What is lazy loading (React.lazy, Suspense)?
-What is code splitting (performance optimization)?
-What is SSR (Server-Side Rendering)?
-What is CSR (Client-Side Rendering)?
-What is hydration in React?
-What is Next.js (React framework for SSR/SSG)?
-What is key prop in lists (reconciliation optimization)?
-Why keys should be unique and stable?
-What is event handling in React (synthetic events)?
-Difference between controlled form vs uncontrolled form
-What is error boundary (class component error handling)?
-What is strict mode in React?
-What is portals (render outside DOM hierarchy)?
-What is fragments (<></>)?
-What is custom hooks (reusable logic)?
-What is forwardRef?
-What is dangerouslySetInnerHTML (XSS risk)?
-What is React performance optimization techniques?
-What is debouncing and throttling in UI?
-What is bundle optimization (tree shaking, minification)?
-What is testing in React (Jest, React Testing Library)?
-What are React design patterns (HOC, render props)?
-What is state immutability?
-What are React limitations?
-🧪 Scenario-Based Questions (VERY IMPORTANT)
-Your React app is slow — how do you optimize performance (memoization, lazy loading, code splitting)?
-You have prop drilling issue — how do you fix it (Context API, Redux)?
-How would you design a large-scale React app architecture?
-How do you manage global state (Redux vs Context trade-offs)?
-How do you handle API calls and side effects (useEffect, async logic)?
-How do you prevent unnecessary re-renders?
-How do you implement form validation (controlled components, libraries)?
-How do you handle authentication in React (JWT, protected routes)?
-How would you implement role-based UI rendering (RBAC)?
-How do you handle error handling in UI (error boundaries)?
-How do you implement infinite scrolling or pagination?
-How do you optimize large lists rendering (virtualization, react-window)?
-How do you structure component folders in large projects?
-How do you debug React production issues?
-How do you manage environment configs (env variables)?
+What is React, and how does it differ from frameworks like Angular?
+What are components in React, and what is the difference between functional vs class components?
+What is JSX, and how does it get transformed into JavaScript?
+What are props, and how are they used to pass data between components?
+What is state in React, and how is it different from props?
+What is the difference between controlled vs uncontrolled components?
+What is the purpose of the key prop in lists?
+What is conditional rendering, and how is it implemented?
+What are fragments in React, and why are they useful?
+What is the difference between onClick vs addEventListener in React?
+What is the purpose of ReactDOM.render() / createRoot()?
+What are synthetic events in React?
+What is the difference between default export vs named export in React components?
+What is component re-rendering, and what triggers it?
+What is the purpose of useState hook?
+🟡 Intermediate Level
+What are React Hooks, and why were they introduced?
+What is the difference between useEffect, useLayoutEffect, and their execution timing?
+What is the dependency array in useEffect, and how does it affect execution?
+What is lifting state up, and when would you use it?
+What is prop drilling, and how can it be avoided?
+What is Context API, and how does it solve state sharing issues?
+What is React Router, and how does client-side routing work?
+What are custom hooks, and how do you create reusable logic with them?
+What is the difference between useRef vs useState?
+What is memoization, and how do React.memo, useMemo, and useCallback help?
+What is the difference between controlled vs uncontrolled form handling?
+What are higher-order components (HOC)?
+What is render props pattern, and how does it work?
+What is the difference between class lifecycle methods vs hooks lifecycle?
+What is code splitting, and how does React.lazy work?
+🟠 Advanced Level
+What is the Virtual DOM, and how does React use diffing (reconciliation algorithm)?
+How does React’s reconciliation process determine what to update?
+What is Fiber architecture, and why was it introduced in React?
+What is concurrent rendering in React?
+What are Strict Mode and its purpose in development?
+What is error boundary, and how do you implement it?
+What is hydration, and how does it work in server-side rendering?
+What is Server-Side Rendering (SSR) vs Client-Side Rendering (CSR)?
+What is Static Site Generation (SSG)?
+What are portals, and when would you use them?
+What is batching of state updates, and how does React optimize renders?
+What is the difference between useReducer vs useState?
+What is React Suspense, and how does it handle async rendering?
+What are transitions (startTransition) in React?
+How does React handle event delegation internally?
+🔴 Expert / System Design / Internals
+How does React internally manage the Fiber tree and scheduling?
+What is priority-based scheduling in React Fiber?
+How does React optimize rendering performance at scale?
+What are React performance bottlenecks, and how do you identify them?
+How does React handle state consistency in concurrent mode?
+What is tearing, and how does React avoid it?
+How do you design a scalable state management architecture (Redux, Zustand, Context)?
+What is Redux, and how does it compare to Context API?
+What are middleware in Redux, and how do they work (Thunk, Saga)?
+How do you implement real-time updates in React apps (WebSockets)?
+What is micro-frontend architecture, and how does React fit into it?
+How do you implement accessibility (a11y) best practices in React?
+How does React interact with the browser rendering pipeline?
+What is tree shaking, and how does it optimize bundle size?
+How do you implement code splitting and lazy loading at scale?
+🧠 Scenario-Based / Practical Questions
+Your React app is slow—how would you debug and optimize performance?
+How would you avoid unnecessary re-renders in a complex component tree?
+How would you design a large-scale React application structure?
+How would you manage global state in a large app?
+How would you implement form validation in React?
+How would you handle API data fetching and caching (React Query, SWR)?
+How would you design a real-time dashboard in React?
+How would you implement infinite scrolling or virtualization?
+How would you handle error handling and fallback UI?
+How would you optimize bundle size and load time?
+⚡ Tricky / Experienced Developer Questions
+Why can improper key usage break React rendering?
+Why is directly mutating state considered a bad practice?
+What are the pitfalls of using useEffect incorrectly?
+Why can closures cause stale state issues in hooks?
+What are the dangers of overusing Context API?
+Why is useRef not triggering re-renders?
+What are the issues with inline functions in JSX?
+Why is React re-rendering even when props seem unchanged?
+What are the trade-offs between useMemo and readability?
+Why can large component trees cause performance degradation?

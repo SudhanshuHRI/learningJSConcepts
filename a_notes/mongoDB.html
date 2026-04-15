@@ -1,76 +1,85 @@
-What is MongoDB and how does it work as a NoSQL, document-oriented database?
-Difference between SQL (RDBMS) and NoSQL databases
-What is a document in MongoDB?
-What is a collection?
-Difference between collection vs table
-What is BSON (Binary JSON) and how it differs from JSON?
-How MongoDB stores data internally using BSON format
-What is the _id field (primary key)?
-How is _id generated using ObjectId?
-What are CRUD operations (Create, Read, Update, Delete) in MongoDB?
-Difference between insertOne vs insertMany
-Difference between find vs findOne (query operations)
-How does update work using updateOne, updateMany, $set operator?
-Difference between update vs replace operations
-What are query operators ($gt, $lt, $in, $or, $and)?
-What is projection (field selection) in queries?
-How to limit fields using projection operators
-What is indexing in MongoDB?
-Why are indexes (B-tree indexes) important for performance?
-Types of indexes: single-field, compound, multikey, text, hashed, unique index
-What is a compound index?
-What are index performance trade-offs (write vs read optimization)?
-What is the aggregation framework?
-What is $match stage (filtering)?
-What is $group stage (aggregation)?
-What is $project stage (reshaping documents)?
-What is $lookup (left outer join equivalent)?
-Difference between aggregation pipeline vs normal queries
-What is sharding (horizontal scaling)?
-Why use sharding for large datasets?
-What is a shard key?
-What is a replica set (high availability cluster)?
-Difference between primary vs secondary nodes
-What is replication (data redundancy)?
-What is eventual consistency?
-What are ACID transactions in MongoDB?
-When to use multi-document transactions?
-Limitations of transactions in distributed systems
-What is schema design in MongoDB?
-Difference between embedded documents vs referenced documents
-When to use embedding vs referencing (data modeling)?
-What is denormalization?
-Pros and cons of denormalized schema design
-What is schema validation using JSON Schema?
-How to enforce schema in MongoDB?
-What is Mongoose (ODM – Object Data Modeling)?
-Difference between MongoDB native driver vs Mongoose ODM
-What are schemas and models in Mongoose?
-What are middleware/hooks (pre, post) in Mongoose?
-What is population (reference resolving / join-like behavior)?
-What is lean query (performance optimization)?
-What is pagination using skip and limit?
-What is a cursor (lazy data retrieval)?
-What is a capped collection (fixed size collection)?
-What is a TTL index (time-to-live auto deletion)?
-What is full-text search using text indexes?
-What is a geospatial index?
-What is $geoNear (location-based query)?
-What are performance best practices in MongoDB?
-How to optimize queries using indexes and query planning
-What causes slow queries (collection scan, missing index)?
-What is an explain plan (query execution stats)?
-How to debug performance issues using profiling tools
-What is connection pooling?
-How MongoDB handles concurrency (locking, WiredTiger engine)
-What are write concerns (acknowledgment levels)?
-What are read preferences (primary, secondary reads)?
-What is data consistency vs availability (CAP theorem)?
-What is backup and restore strategy (mongodump, mongorestore)?
-What are security features (authentication, authorization)?
-What is RBAC (Role-Based Access Control)?
-How to prevent NoSQL injection attacks?
-What are limitations of MongoDB?
-When NOT to use MongoDB?
-MongoDB vs PostgreSQL (relational vs document)
-MongoDB vs MySQL (schema flexibility vs structured data)
+What is MongoDB, and how does it differ from relational databases like MySQL?
+What is a document-oriented database, and how are documents stored in BSON format?
+What is the difference between a collection and a document in MongoDB?
+What is BSON, and how is it different from JSON?
+What are the basic CRUD operations in MongoDB?
+What is the purpose of the _id field in a document?
+What are embedded documents vs referenced documents?
+What is the difference between insertOne() and insertMany()?
+What is the difference between find() and findOne()?
+What are projection queries, and how do you limit fields in results?
+What is the purpose of the updateOne() vs updateMany() methods?
+What is the difference between $set and $unset operators?
+What are query operators like $gt, $lt, $in, $or?
+What is the difference between deleteOne() and deleteMany()?
+How do you create and drop collections in MongoDB?
+🟡 Intermediate Level
+What are indexes in MongoDB, and why are they important for query performance?
+What is the difference between single-field index vs compound index?
+What is a multikey index, and when is it used?
+What are text indexes, and how do they support full-text search?
+What is the difference between embedding vs referencing in schema design?
+What is schema design, and why is it important in a schema-less database?
+What are aggregation pipelines, and how do they work?
+What are stages like $match, $group, $project, $sort, $lookup?
+What is the difference between aggregation framework vs MapReduce?
+What is $lookup, and how does it simulate joins in MongoDB?
+What is the purpose of $unwind in aggregation?
+What are cursors, and how do they work in MongoDB queries?
+What is pagination, and how would you implement it using limit and skip?
+What is the difference between covered queries vs non-covered queries?
+What are TTL indexes, and when would you use them?
+🟠 Advanced Level
+What is replication in MongoDB, and how does a replica set work?
+What are primary and secondary nodes, and how does failover occur?
+What is read preference and write concern in MongoDB?
+What is sharding, and how does MongoDB achieve horizontal scaling?
+What is a shard key, and how do you choose an optimal one?
+What are chunks and how are they distributed across shards?
+What is the difference between range-based vs hashed sharding?
+What are transactions in MongoDB, and when should you use them?
+What are ACID properties, and how are they supported in MongoDB?
+What is the difference between atomic operations vs multi-document transactions?
+What are change streams, and how do they enable real-time data updates?
+What is index intersection, and how does MongoDB use multiple indexes?
+What are partial indexes and sparse indexes?
+How do you optimize query performance using explain plans?
+What is the working set, and how does it affect performance?
+🔴 Expert / System Design / Internals
+How does MongoDB manage storage engines like WiredTiger?
+What is document-level locking, and how does it improve concurrency?
+How does MongoDB handle memory management and caching internally?
+What is the oplog (operations log), and how is it used in replication?
+How does MongoDB ensure eventual consistency in distributed systems?
+What are the trade-offs between strong consistency vs eventual consistency?
+How does MongoDB handle network partitions in a replica set?
+What is the role of the mongos router in a sharded cluster?
+How does MongoDB balance data across shards (balancer process)?
+What are write amplification and read amplification in MongoDB?
+How do you secure MongoDB using authentication and authorization mechanisms?
+What is Role-Based Access Control (RBAC) in MongoDB?
+How does MongoDB integrate with cloud services like MongoDB Atlas?
+What are backup and restore strategies in MongoDB?
+How would you design a multi-region distributed MongoDB architecture?
+🧠 Scenario-Based / Practical Questions
+You have a slow query—how would you analyze it using explain() and indexes?
+How would you design a schema for a social media app (posts, comments, likes)?
+You need to store highly relational data—would you embed or reference, and why?
+How would you handle real-time notifications using MongoDB?
+Your database size is growing rapidly—how would you scale it?
+How would you design a logging system using MongoDB collections?
+You need to implement soft deletes—how would you design it?
+How would you handle data migration in MongoDB without downtime?
+How would you optimize aggregation pipelines for large datasets?
+You are facing hot shard issues—how would you resolve them?
+⚡ Tricky / Experienced Developer Questions
+Why can over-indexing degrade performance in MongoDB?
+What are the risks of using skip() for pagination at scale?
+Why is choosing a bad shard key dangerous for scalability?
+What happens if the primary node in a replica set goes down?
+Why are large documents (>16MB) problematic in MongoDB?
+What are the trade-offs of embedding deeply nested documents?
+Why can $lookup become expensive in large collections?
+What is the impact of unbounded arrays on performance?
+Why is MongoDB not always a good fit for highly relational data?
+What are the limitations of transactions in MongoDB compared to SQL databases?

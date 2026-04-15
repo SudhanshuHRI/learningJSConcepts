@@ -1,92 +1,82 @@
-What is JavaScript?
-Difference between JavaScript and other programming languages
-What are data types in JavaScript?
-Difference between primitive and non-primitive types
-Difference between var, let, and const
-What is hoisting?
-What is scope in JavaScript?
-Difference between global, function, and block scope
-What is closure?
-What are higher-order functions?
-What is a callback function?
-What is callback hell?
-What are promises?
-Difference between callbacks and promises
-What is async/await?
-How does async/await work internally?
-What is the event loop?
-What is the call stack?
-What is the task queue / microtask queue?
-Difference between synchronous and asynchronous code
-What is this keyword?
-How does this behave in different contexts?
-Difference between arrow functions and regular functions
-What are first-class functions?
-What is function currying?
-What is function binding (bind, call, apply)?
-Difference between == and ===
-What is type coercion?
-What are falsy and truthy values?
-What is NaN?
-Difference between null and undefined
-What is an object in JavaScript?
-How to create objects?
-What is object destructuring?
-What is array destructuring?
-What are spread and rest operators?
-What are template literals?
-What are default parameters?
-What is optional chaining (?.)?
-What is nullish coalescing (??)?
-What are arrays in JavaScript?
-Common array methods (map, filter, reduce)
-Difference between map and forEach
-What is immutability?
-What is shallow copy vs deep copy?
-How to clone objects?
-What are prototypes?
-What is prototype chain?
-What is inheritance in JavaScript?
-Difference between classical and prototypal inheritance
-What are classes in JavaScript?
-What are constructors?
-What is super keyword?
-What are modules in JavaScript?
-Difference between CommonJS and ES Modules
-What is strict mode?
-What are IIFE (Immediately Invoked Function Expressions)?
-What is debouncing?
-What is throttling?
-What is memoization?
-What is event delegation?
-What is DOM?
-How to select elements in DOM?
-Difference between querySelector and getElementById
-What is event bubbling?
-What is event capturing?
-How to prevent default behavior?
-What is CORS?
-What is JSON?
-Difference between JSON and JavaScript object
-What is fetch API?
-Difference between fetch and axios
-What are cookies?
-What is localStorage and sessionStorage?
-What is error handling in JavaScript?
-Difference between try/catch and promise .catch()
-What is garbage collection?
-What causes memory leaks?
-What are Web APIs?
-What is single-threaded nature of JavaScript?
-What is concurrency in JavaScript?
-What are workers (Web Workers)?
-What is SSR vs CSR?
-What are JavaScript engines (like V8)?
-How JavaScript code is executed internally?
-What is tree shaking?
-What is bundling?
-What are polyfills?
-What is transpilation?
-What is functional programming in JS?
-What is reactive programming?
-What are limitations of JavaScript?
+What is JavaScript, and how is it different from statically typed languages?
+Explain the difference between var, let, and const in terms of scope and hoisting.
+What is hoisting, and how does it affect variable and function declarations?
+What are primitive vs non-primitive (reference) data types in JavaScript?
+What is the difference between == and === (type coercion vs strict equality)?
+What is the difference between null and undefined?
+What is a function expression vs a function declaration?
+What are arrow functions, and how do they differ from regular functions in terms of this binding?
+What is truthy vs falsy in JavaScript?
+What is the difference between shallow copy vs deep copy?
+What is type coercion, and how does JavaScript handle implicit conversions?
+What are template literals, and how do they improve string handling?
+🟡 Intermediate Level
+What is closure, and how does it work with lexical scoping?
+Explain lexical scope and the scope chain in JavaScript.
+What is the this keyword, and how does its value change in different contexts?
+What are first-class functions and higher-order functions?
+What is callback hell, and how can it be avoided?
+What are Promises, and how do they improve asynchronous programming?
+What is the difference between .then() chaining and async/await?
+How does the event loop work in JavaScript?
+What are microtasks vs macrotasks in the event loop queue?
+What is debouncing vs throttling, and where would you use them?
+What is event delegation, and why is it useful for performance?
+What is the difference between call, apply, and bind methods?
+What are ES6 modules, and how do import and export work?
+What is destructuring, and how is it used with arrays and objects?
+What are default parameters and rest/spread operators?
+🟠 Advanced Level
+How does prototypal inheritance work in JavaScript?
+What is the difference between __proto__, prototype, and the prototype chain?
+What are classes in ES6, and how are they syntactic sugar over prototypes?
+What are generators and how do yield and iterators work?
+What are iterables and iterators, and how do they differ?
+What is currying, and how is it implemented in JavaScript?
+What is memoization, and how does it improve performance?
+What are weak references (WeakMap, WeakSet) and when would you use them?
+What is garbage collection in JavaScript, and how does memory management work?
+What are pure functions and side effects?
+What is functional programming in JavaScript?
+What is the difference between deep equality vs reference equality?
+How do you implement deep cloning in JavaScript?
+What is optional chaining (?.) and nullish coalescing (??)?
+What are dynamic imports and code splitting?
+🔴 Expert / System Design / Internals
+How does the JavaScript engine (like V8 engine) parse and execute code?
+What are the phases of execution: parsing, compilation, and execution context creation?
+What is the execution context and call stack in JavaScript?
+What is the difference between synchronous vs asynchronous execution models?
+How does just-in-time (JIT) compilation optimize JavaScript performance?
+What is tail call optimization, and is it supported in JavaScript engines?
+What are Web Workers, and how do they enable multithreading in JavaScript?
+How does JavaScript handle concurrency vs parallelism?
+What are Atomics and SharedArrayBuffer, and when are they used?
+How do you detect and prevent memory leaks in JavaScript applications?
+What are proxy objects, and how can they be used for metaprogramming?
+What is reflection in JavaScript, and how does the Reflect API work?
+What are decorators (proposal), and how might they be used?
+What is the role of JavaScript in hydration and SSR frameworks?
+How does JavaScript interact with the DOM and browser APIs under the hood?
+🧠 Scenario-Based / Practical Questions
+You have a performance issue due to excessive re-renders—how would you debug it?
+How would you handle API failures and retries in an async JavaScript application?
+You notice a memory leak—what tools and strategies would you use to debug it?
+How would you design a rate-limited API call handler in JavaScript?
+How would you implement a custom event emitter system?
+How would you optimize a large list rendering problem (e.g., virtualization)?
+How would you implement caching (memoization) for expensive computations?
+A function is returning stale data—how would you debug closure-related issues?
+How would you implement a debounce function from scratch?
+How would you build a Promise.all polyfill?
+⚡ Tricky / Experienced Developer Questions
+Why does this behave differently in arrow functions vs regular functions?
+Why is JavaScript considered single-threaded but asynchronous?
+What are the pitfalls of using setTimeout for timing-critical operations?
+Why can floating-point operations like 0.1 + 0.2 !== 0.3 occur?
+What are the dangers of mutating objects in shared references?
+Why is NaN !== NaN, and how do you properly check for NaN?
+What are the edge cases of typeof null === "object"?
+Why can closures sometimes lead to memory leaks?
+What are the risks of using global variables in large applications?
+Why is immutability important in large-scale JavaScript apps?
