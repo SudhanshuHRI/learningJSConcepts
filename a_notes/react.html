@@ -1,272 +1,69 @@
-<!-- 
-
-1️⃣ React Core (Must-Know)
-
-What is React and why is it used?
-
-Virtual DOM vs Real DOM
-
-JSX – how does it work internally?
-
-Controlled vs Uncontrolled components
-
-Props vs State
-
-Lifting state up
-
-One-way data binding
-
-Key prop – why is it important?
-
-Fragment vs <div>
-
-React component lifecycle (class vs hooks)
-
-2️⃣ Hooks (Very Important)
-
-useState – batching and async updates
-
-useEffect – dependency array deep dive
-explain lifecycle methods in useEffect.
-
-How single page application works internally
-
-how ssr and csr works internally
-
-Cleanup function in useEffect
-
-useRef vs useState
-
-useMemo vs useCallback
-
-Custom hooks – when & how
-
-Rules of hooks
-
-useLayoutEffect vs useEffect
-
-useReducer – when to use it
-
-Common mistakes with hooks
-
-3️⃣ State Management (Advanced)
-
-Prop drilling – solutions
-
-Context API – when NOT to use it
-
-Redux vs Context
-
-Redux Toolkit advantages
-
-Redux middleware (thunk, saga)
-
-Zustand / Recoil comparison
-
-Global vs local state
-
-Normalizing state shape
-
-Immutable updates
-
-Handling large state trees
-
-4️⃣ Rendering & Performance (🔥 Very Important)
-
-Reconciliation algorithm
-
-How React decides to re-render
-
-React.memo – when it helps
-
-Avoiding unnecessary re-renders
-
-Code splitting & lazy loading
-
-Suspense – how it works
-
-Virtualization (large lists)
-
-Why keys should not be index
-
-Debouncing & throttling in React
-
-Performance profiling tools
-
-5️⃣ Advanced React Concepts
-
-Higher Order Components (HOC)
-
-Render props
-
-Compound components
-
-Portals – real use cases
-
-Error Boundaries
-
-Forward refs
-
-Controlled re-rendering
-
-Strict Mode – why double render?
-
-Concurrent rendering (React 18)
-
-Server Components (overview)
-
-6️⃣ React 18 & Modern Features
-
-Automatic batching
-
-useTransition
-
-useDeferredValue
-
-Streaming SSR
-
-Client vs Server Components
-
-Hydration
-
-Why React 18 changed rendering
-
-createRoot vs render
-
-Suspense for data fetching
-
-Future of React
-
-7️⃣ Forms & Validation
-
-Controlled forms
-
-Formik vs React Hook Form
-
-Validation strategies
-
-Handling large forms
-
-Dynamic form fields
-
-File uploads
-
-Debounced validations
-
-Accessibility in forms
-
-Error handling UX
-
-Multi-step forms
-
-8️⃣ Routing & API Integration
-
-React Router – core concepts
-
-Protected routes
-
-Lazy loaded routes
-
-Query params vs params
-
-API calls – axios vs fetch
-
-Error handling in APIs
-
-Retry & fallback logic
-
-Pagination & infinite scroll
-
-Canceling API requests
-
-Optimistic UI updates
-
-9️⃣ Testing (Important for Product Companies)
-
-Unit vs Integration testing
-
-Jest basics
-
-React Testing Library
-
-Mocking API calls
-
-Snapshot testing – pros/cons
-
-Testing hooks
-
-Testing async components
-
-Code coverage
-
-E2E testing (Cypress)
-
-Test best practices
-
-🔟 Architecture & Folder Structure
-
-Feature-based folder structure
-
-Atomic design
-
-Reusable components
-
-Separation of concerns
-
-Environment configs
-
-Handling constants
-
-Scalable CSS strategy
-
-Monorepo basics
-
-Design system integration
-
-Micro-frontend basics
-
-1️⃣1️⃣ Security & Best Practices
-
-XSS prevention in React
-
-Secure storage (tokens)
-
-CSRF handling
-
-Role-based access control
-
-Environment variables
-
-Protecting routes
-
-Third-party script risks
-
-Content Security Policy
-
-Dependency vulnerabilities
-
-Secure file uploads
-
-1️⃣2️⃣ Real Interview Scenario Questions
-
-App is slow – how do you debug?
-
-Component re-renders too often – fix it
-
-Large list performance issue
-
-API fails intermittently – UX handling
-
-Form with 100+ fields – design
-
-State syncing issues
-
-Memory leaks in React
-
-White screen in production
-
-SEO issues in React app
-
-Explain a tough bug you solved
-
--->
+What is React.js and how does it work using component-based architecture and virtual DOM?
+Difference between React vs traditional DOM manipulation
+What is Virtual DOM and reconciliation algorithm (diffing)?
+What are functional components vs class components?
+What are JSX (JavaScript XML)?
+How JSX gets compiled using Babel transpiler?
+What are props (immutable data passing)?
+What is state (mutable component data)?
+Difference between props vs state
+What is useState hook (state management)?
+What is useEffect hook (side effects, lifecycle replacement)?
+What is component lifecycle (mount, update, unmount)?
+What are React hooks?
+Rules of hooks (top-level, not inside loops/conditions)
+What is useContext (context API for global state)?
+What is useReducer (complex state management)?
+What is useRef (DOM reference, persistent values)?
+What is useMemo (memoization optimization)?
+What is useCallback (function memoization)?
+What is React.memo (component memoization)?
+What is controlled vs uncontrolled components (forms)?
+What is lifting state up?
+What is prop drilling?
+What is Context API (global state management)?
+What is Redux (centralized state management)?
+Difference between Redux vs Context API
+What is middleware in Redux (redux-thunk, redux-saga)?
+What is React Router (client-side routing)?
+Difference between BrowserRouter vs HashRouter
+What is lazy loading (React.lazy, Suspense)?
+What is code splitting (performance optimization)?
+What is SSR (Server-Side Rendering)?
+What is CSR (Client-Side Rendering)?
+What is hydration in React?
+What is Next.js (React framework for SSR/SSG)?
+What is key prop in lists (reconciliation optimization)?
+Why keys should be unique and stable?
+What is event handling in React (synthetic events)?
+Difference between controlled form vs uncontrolled form
+What is error boundary (class component error handling)?
+What is strict mode in React?
+What is portals (render outside DOM hierarchy)?
+What is fragments (<></>)?
+What is custom hooks (reusable logic)?
+What is forwardRef?
+What is dangerouslySetInnerHTML (XSS risk)?
+What is React performance optimization techniques?
+What is debouncing and throttling in UI?
+What is bundle optimization (tree shaking, minification)?
+What is testing in React (Jest, React Testing Library)?
+What are React design patterns (HOC, render props)?
+What is state immutability?
+What are React limitations?
+🧪 Scenario-Based Questions (VERY IMPORTANT)
+Your React app is slow — how do you optimize performance (memoization, lazy loading, code splitting)?
+You have prop drilling issue — how do you fix it (Context API, Redux)?
+How would you design a large-scale React app architecture?
+How do you manage global state (Redux vs Context trade-offs)?
+How do you handle API calls and side effects (useEffect, async logic)?
+How do you prevent unnecessary re-renders?
+How do you implement form validation (controlled components, libraries)?
+How do you handle authentication in React (JWT, protected routes)?
+How would you implement role-based UI rendering (RBAC)?
+How do you handle error handling in UI (error boundaries)?
+How do you implement infinite scrolling or pagination?
+How do you optimize large lists rendering (virtualization, react-window)?
+How do you structure component folders in large projects?
+How do you debug React production issues?
+How do you manage environment configs (env variables)?
