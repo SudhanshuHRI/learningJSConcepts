@@ -1,82 +1,163 @@
-What is JavaScript, and how is it different from statically typed languages?
-Explain the difference between var, let, and const in terms of scope and hoisting.
-What is hoisting, and how does it affect variable and function declarations?
-What are primitive vs non-primitive (reference) data types in JavaScript?
-What is the difference between == and === (type coercion vs strict equality)?
-What is the difference between null and undefined?
-What is a function expression vs a function declaration?
-What are arrow functions, and how do they differ from regular functions in terms of this binding?
-What is truthy vs falsy in JavaScript?
-What is the difference between shallow copy vs deep copy?
-What is type coercion, and how does JavaScript handle implicit conversions?
-What are template literals, and how do they improve string handling?
-🟡 Intermediate Level
-What is closure, and how does it work with lexical scoping?
-Explain lexical scope and the scope chain in JavaScript.
-What is the this keyword, and how does its value change in different contexts?
-What are first-class functions and higher-order functions?
-What is callback hell, and how can it be avoided?
-What are Promises, and how do they improve asynchronous programming?
-What is the difference between .then() chaining and async/await?
-How does the event loop work in JavaScript?
-What are microtasks vs macrotasks in the event loop queue?
-What is debouncing vs throttling, and where would you use them?
-What is event delegation, and why is it useful for performance?
-What is the difference between call, apply, and bind methods?
-What are ES6 modules, and how do import and export work?
-What is destructuring, and how is it used with arrays and objects?
-What are default parameters and rest/spread operators?
-🟠 Advanced Level
-How does prototypal inheritance work in JavaScript?
-What is the difference between __proto__, prototype, and the prototype chain?
-What are classes in ES6, and how are they syntactic sugar over prototypes?
-What are generators and how do yield and iterators work?
-What are iterables and iterators, and how do they differ?
-What is currying, and how is it implemented in JavaScript?
-What is memoization, and how does it improve performance?
-What are weak references (WeakMap, WeakSet) and when would you use them?
-What is garbage collection in JavaScript, and how does memory management work?
-What are pure functions and side effects?
-What is functional programming in JavaScript?
-What is the difference between deep equality vs reference equality?
-How do you implement deep cloning in JavaScript?
-What is optional chaining (?.) and nullish coalescing (??)?
-What are dynamic imports and code splitting?
-🔴 Expert / System Design / Internals
-How does the JavaScript engine (like V8 engine) parse and execute code?
-What are the phases of execution: parsing, compilation, and execution context creation?
-What is the execution context and call stack in JavaScript?
-What is the difference between synchronous vs asynchronous execution models?
-How does just-in-time (JIT) compilation optimize JavaScript performance?
-What is tail call optimization, and is it supported in JavaScript engines?
-What are Web Workers, and how do they enable multithreading in JavaScript?
-How does JavaScript handle concurrency vs parallelism?
-What are Atomics and SharedArrayBuffer, and when are they used?
-How do you detect and prevent memory leaks in JavaScript applications?
-What are proxy objects, and how can they be used for metaprogramming?
-What is reflection in JavaScript, and how does the Reflect API work?
-What are decorators (proposal), and how might they be used?
-What is the role of JavaScript in hydration and SSR frameworks?
-How does JavaScript interact with the DOM and browser APIs under the hood?
-🧠 Scenario-Based / Practical Questions
-You have a performance issue due to excessive re-renders—how would you debug it?
-How would you handle API failures and retries in an async JavaScript application?
-You notice a memory leak—what tools and strategies would you use to debug it?
-How would you design a rate-limited API call handler in JavaScript?
-How would you implement a custom event emitter system?
-How would you optimize a large list rendering problem (e.g., virtualization)?
-How would you implement caching (memoization) for expensive computations?
-A function is returning stale data—how would you debug closure-related issues?
-How would you implement a debounce function from scratch?
-How would you build a Promise.all polyfill?
-⚡ Tricky / Experienced Developer Questions
-Why does this behave differently in arrow functions vs regular functions?
-Why is JavaScript considered single-threaded but asynchronous?
-What are the pitfalls of using setTimeout for timing-critical operations?
-Why can floating-point operations like 0.1 + 0.2 !== 0.3 occur?
-What are the dangers of mutating objects in shared references?
-Why is NaN !== NaN, and how do you properly check for NaN?
-What are the edge cases of typeof null === "object"?
-Why can closures sometimes lead to memory leaks?
-What are the risks of using global variables in large applications?
-Why is immutability important in large-scale JavaScript apps?
+1. What is JavaScript, and how is it different from statically typed languages?
+
+2. Explain the difference between var, let, and const in terms of scope and hoisting.
+
+3. What is hoisting, and how does it affect variable and function declarations?
+
+4. What are primitive vs non-primitive (reference) data types in JavaScript?
+
+5. What is the difference between == and === (type coercion vs strict equality)?
+
+6. What is the difference between null and undefined?
+
+7. What is a function expression vs a function declaration?
+
+8. What are arrow functions, and how do they differ from regular functions in terms of this binding?
+
+9. What is truthy vs falsy in JavaScript?
+
+10. What is the difference between shallow copy vs deep copy?
+
+11. What is type coercion, and how does JavaScript handle implicit conversions?
+
+12. What are template literals, and how do they improve string handling?
+
+--- Intermediate Level ---
+
+13. What is closure, and how does it work with lexical scoping?
+
+14. Explain lexical scope and the scope chain in JavaScript.
+
+15. What is the this keyword, and how does its value change in different contexts?
+
+16. What are first-class functions and higher-order functions?
+
+17. What is callback hell, and how can it be avoided?
+
+18. What are Promises, and how do they improve asynchronous programming?
+
+19. What is the difference between .then() chaining and async/await?
+
+20. How does the event loop work in JavaScript?
+
+21. What are microtasks vs macrotasks in the event loop queue?
+
+22. What is debouncing vs throttling, and where would you use them?
+
+23. What is event delegation, and why is it useful for performance?
+
+24. What is the difference between call, apply, and bind methods?
+
+25. What are ES6 modules, and how do import and export work?
+
+26. What is destructuring, and how is it used with arrays and objects?
+
+27. What are default parameters and rest/spread operators?
+
+--- Advanced Level ---
+
+28. How does prototypal inheritance work in JavaScript?
+
+29. What is the difference between __proto__, prototype, and the prototype chain?
+
+30. What are classes in ES6, and how are they syntactic sugar over prototypes?
+
+31. What are generators and how do yield and iterators work?
+
+32. What are iterables and iterators, and how do they differ?
+
+33. What is currying, and how is it implemented in JavaScript?
+
+34. What is memoization, and how does it improve performance?
+
+35. What are weak references (WeakMap, WeakSet) and when would you use them?
+
+36. What is garbage collection in JavaScript, and how does memory management work?
+
+37. What are pure functions and side effects?
+
+38. What is functional programming in JavaScript?
+
+39. What is the difference between deep equality vs reference equality?
+
+40. How do you implement deep cloning in JavaScript?
+
+41. What is optional chaining (?.) and nullish coalescing (??)?
+
+42. What are dynamic imports and code splitting?
+
+--- Expert / System Design / Internals ---
+
+43. How does the JavaScript engine (like V8 engine) parse and execute code?
+
+44. What are the phases of execution: parsing, compilation, and execution context creation?
+
+45. What is the execution context and call stack in JavaScript?
+
+46. What is the difference between synchronous vs asynchronous execution models?
+
+47. How does just-in-time (JIT) compilation optimize JavaScript performance?
+
+48. What is tail call optimization, and is it supported in JavaScript engines?
+
+49. What are Web Workers, and how do they enable multithreading in JavaScript?
+
+50. How does JavaScript handle concurrency vs parallelism?
+
+51. What are Atomics and SharedArrayBuffer, and when are they used?
+
+52. How do you detect and prevent memory leaks in JavaScript applications?
+
+53. What are proxy objects, and how can they be used for metaprogramming?
+
+54. What is reflection in JavaScript, and how does the Reflect API work?
+
+55. What are decorators (proposal), and how might they be used?
+
+56. What is the role of JavaScript in hydration and SSR frameworks?
+
+57. How does JavaScript interact with the DOM and browser APIs under the hood?
+
+--- Scenario-Based / Practical Questions ---
+
+58. You have a performance issue due to excessive re-renders—how would you debug it?
+
+59. How would you handle API failures and retries in an async JavaScript application?
+
+60. You notice a memory leak—what tools and strategies would you use to debug it?
+
+61. How would you design a rate-limited API call handler in JavaScript?
+
+62. How would you implement a custom event emitter system?
+
+63. How would you optimize a large list rendering problem (e.g., virtualization)?
+
+64. How would you implement caching (memoization) for expensive computations?
+
+65. A function is returning stale data—how would you debug closure-related issues?
+
+66. How would you implement a debounce function from scratch?
+
+67. How would you build a Promise.all polyfill?
+
+--- Tricky / Experienced Developer Questions ---
+
+68. Why does this behave differently in arrow functions vs regular functions?
+
+69. Why is JavaScript considered single-threaded but asynchronous?
+
+70. What are the pitfalls of using setTimeout for timing-critical operations?
+
+71. Why can floating-point operations like 0.1 + 0.2 !== 0.3 occur?
+
+72. What are the dangers of mutating objects in shared references?
+
+73. Why is NaN !== NaN, and how do you properly check for NaN?
+
+74. What are the edge cases of typeof null === "object"?
+
+75. Why can closures sometimes lead to memory leaks?
+
+76. What are the risks of using global variables in large applications?
+
+77. Why is immutability important in large-scale JavaScript apps?

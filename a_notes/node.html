@@ -1,85 +1,169 @@
-What is Node.js, and how does it differ from browser-based JavaScript execution?
-What is the role of the V8 engine in Node.js?
-What is event-driven architecture, and how is it implemented in Node.js?
-What is non-blocking I/O, and why is it important for Node.js?
-What is the difference between synchronous vs asynchronous execution in Node.js?
-What is the event loop, and how does it work?
-What are modules in Node.js, and how do require and import differ?
-What is the difference between CommonJS vs ES Modules?
-What is the purpose of package.json in a Node.js project?
-What is the difference between dependencies vs devDependencies?
-What is npm, and how does it manage packages?
-What is the purpose of node_modules?
-What is process object in Node.js?
-What are environment variables, and how do you manage them?
-What is the difference between __dirname and __filename?
-🟡 Intermediate Level
-What are streams in Node.js, and what are their types (Readable, Writable, Duplex, Transform)?
-What is buffer, and how does Node.js handle binary data?
-What is the difference between process.nextTick() vs setImmediate()?
-What is the difference between setTimeout() vs setImmediate()?
-What are child processes, and how do you spawn them in Node.js?
-What is the difference between exec, spawn, and fork?
-What is event emitter, and how does it work internally?
-What is middleware in the context of Node.js frameworks?
-What is error-first callback pattern?
-What are global objects in Node.js?
-What is clustering, and how does it improve performance?
-What is the difference between single-threaded vs multi-threaded execution in Node.js?
-What are worker threads, and when should you use them?
-What is the difference between blocking vs non-blocking code?
-How does Node.js handle file system operations?
-🟠 Advanced Level
-How does the event loop phases work (timers, I/O callbacks, idle, poll, check, close callbacks)?
-What are microtasks vs macrotasks in Node.js?
-How does libuv handle asynchronous operations under the hood?
-What is the difference between thread pool vs event loop?
-What is backpressure in streams, and how do you handle it?
-What is memory leak in Node.js, and how do you detect it?
-What is heap vs stack memory in Node.js?
-What is garbage collection, and how does V8 manage memory?
-What are circular dependencies in modules, and how do they affect execution?
-What is rate limiting, and how do you implement it in Node.js?
-What is caching, and how do you implement it (e.g., Redis)?
-What is API throttling, and how is it different from rate limiting?
-How do you handle large file uploads/downloads efficiently?
-What is graceful shutdown, and how do you implement it?
-What are design patterns commonly used in Node.js (Singleton, Factory, Observer)?
-🔴 Expert / System Design / Internals
-How does Node.js achieve high concurrency with a single thread?
-What is the role of libuv thread pool, and how does it manage I/O tasks?
-How does Node.js handle CPU-intensive tasks, and what are the limitations?
-What is the difference between horizontal scaling vs vertical scaling in Node.js apps?
-How do you implement load balancing in Node.js (e.g., using Nginx or PM2)?
-What is cluster module, and how does it utilize multi-core CPUs?
-What are event loop bottlenecks, and how do you detect them?
-How does Node.js integrate with WebSockets for real-time applications?
-What is server-side rendering (SSR), and how does Node.js support it?
-What is microservices architecture, and how does Node.js fit into it?
-How do you implement authentication and authorization (JWT, OAuth) in Node.js?
-What are security best practices in Node.js (XSS, CSRF, injection attacks)?
-How do you monitor Node.js apps using tools like PM2, APM, or New Relic?
-What is observability (logging, tracing, metrics) in Node.js systems?
-How would you design a highly scalable Node.js backend system?
-🧠 Scenario-Based / Practical Questions
-Your Node.js server is slow under load—how would you debug and optimize it?
-How would you handle CPU-intensive tasks without blocking the event loop?
-You are facing a memory leak—what tools and steps would you use to debug it?
-How would you design a real-time chat application using Node.js?
-How would you implement file streaming for large files?
-How would you handle API rate limiting and abuse prevention?
-How would you implement retry logic for failed API calls?
-How would you structure a large-scale Node.js application for maintainability?
-How would you integrate caching layer (Redis) in Node.js?
-How would you ensure zero downtime deployment in Node.js?
-⚡ Tricky / Experienced Developer Questions
-Why is Node.js not suitable for CPU-heavy tasks?
-Why can blocking the event loop crash performance?
-What are the pitfalls of using callbacks extensively?
-Why is error handling tricky in async Node.js code?
-What are the risks of using synchronous file system methods?
-Why can unhandled promise rejections be dangerous?
-What are the issues with global state in Node.js apps?
-Why is clustering not always enough for scaling?
-What are the dangers of not handling backpressure in streams?
-Why can improper use of process.nextTick() lead to starvation?
+1. What is Node.js, and how does it differ from browser-based JavaScript execution?
+
+2. What is the role of the V8 engine in Node.js?
+
+3. What is event-driven architecture, and how is it implemented in Node.js?
+
+4. What is non-blocking I/O, and why is it important for Node.js?
+
+5. What is the difference between synchronous vs asynchronous execution in Node.js?
+
+6. What is the event loop, and how does it work?
+
+7. What are modules in Node.js, and how do require and import differ?
+
+8. What is the difference between CommonJS vs ES Modules?
+
+9. What is the purpose of package.json in a Node.js project?
+
+10. What is the difference between dependencies vs devDependencies?
+
+11. What is npm, and how does it manage packages?
+
+12. What is the purpose of node_modules?
+
+13. What is process object in Node.js?
+
+14. What are environment variables, and how do you manage them?
+
+15. What is the difference between __dirname and __filename?
+
+--- Intermediate Level ---
+
+16. What are streams in Node.js, and what are their types (Readable, Writable, Duplex, Transform)?
+
+17. What is buffer, and how does Node.js handle binary data?
+
+18. What is the difference between process.nextTick() vs setImmediate()?
+
+19. What is the difference between setTimeout() vs setImmediate()?
+
+20. What are child processes, and how do you spawn them in Node.js?
+
+21. What is the difference between exec, spawn, and fork?
+
+22. What is event emitter, and how does it work internally?
+
+23. What is middleware in the context of Node.js frameworks?
+
+24. What is error-first callback pattern?
+
+25. What are global objects in Node.js?
+
+26. What is clustering, and how does it improve performance?
+
+27. What is the difference between single-threaded vs multi-threaded execution in Node.js?
+
+28. What are worker threads, and when should you use them?
+
+29. What is the difference between blocking vs non-blocking code?
+
+30. How does Node.js handle file system operations?
+
+--- Advanced Level ---
+
+31. How does the event loop phases work (timers, I/O callbacks, idle, poll, check, close callbacks)?
+
+32. What are microtasks vs macrotasks in Node.js?
+
+33. How does libuv handle asynchronous operations under the hood?
+
+34. What is the difference between thread pool vs event loop?
+
+35. What is backpressure in streams, and how do you handle it?
+
+36. What is memory leak in Node.js, and how do you detect it?
+
+37. What is heap vs stack memory in Node.js?
+
+38. What is garbage collection, and how does V8 manage memory?
+
+39. What are circular dependencies in modules, and how do they affect execution?
+
+40. What is rate limiting, and how do you implement it in Node.js?
+
+41. What is caching, and how do you implement it (e.g., Redis)?
+
+42. What is API throttling, and how is it different from rate limiting?
+
+43. How do you handle large file uploads/downloads efficiently?
+
+44. What is graceful shutdown, and how do you implement it?
+
+45. What are design patterns commonly used in Node.js (Singleton, Factory, Observer)?
+
+--- Expert / System Design / Internals ---
+
+46. How does Node.js achieve high concurrency with a single thread?
+
+47. What is the role of libuv thread pool, and how does it manage I/O tasks?
+
+48. How does Node.js handle CPU-intensive tasks, and what are the limitations?
+
+49. What is the difference between horizontal scaling vs vertical scaling in Node.js apps?
+
+50. How do you implement load balancing in Node.js (e.g., using Nginx or PM2)?
+
+51. What is cluster module, and how does it utilize multi-core CPUs?
+
+52. What are event loop bottlenecks, and how do you detect them?
+
+53. How does Node.js integrate with WebSockets for real-time applications?
+
+54. What is server-side rendering (SSR), and how does Node.js support it?
+
+55. What is microservices architecture, and how does Node.js fit into it?
+
+56. How do you implement authentication and authorization (JWT, OAuth) in Node.js?
+
+57. What are security best practices in Node.js (XSS, CSRF, injection attacks)?
+
+58. How do you monitor Node.js apps using tools like PM2, APM, or New Relic?
+
+59. What is observability (logging, tracing, metrics) in Node.js systems?
+
+60. How would you design a highly scalable Node.js backend system?
+
+--- Scenario-Based / Practical Questions ---
+
+61. Your Node.js server is slow under load—how would you debug and optimize it?
+
+62. How would you handle CPU-intensive tasks without blocking the event loop?
+
+63. You are facing a memory leak—what tools and steps would you use to debug it?
+
+64. How would you design a real-time chat application using Node.js?
+
+65. How would you implement file streaming for large files?
+
+66. How would you handle API rate limiting and abuse prevention?
+
+67. How would you implement retry logic for failed API calls?
+
+68. How would you structure a large-scale Node.js application for maintainability?
+
+69. How would you integrate caching layer (Redis) in Node.js?
+
+70. How would you ensure zero downtime deployment in Node.js?
+
+--- Tricky / Experienced Developer Questions ---
+
+71. Why is Node.js not suitable for CPU-heavy tasks?
+
+72. Why can blocking the event loop crash performance?
+
+73. What are the pitfalls of using callbacks extensively?
+
+74. Why is error handling tricky in async Node.js code?
+
+75. What are the risks of using synchronous file system methods?
+
+76. Why can unhandled promise rejections be dangerous?
+
+77. What are the issues with global state in Node.js apps?
+
+78. Why is clustering not always enough for scaling?
+
+79. What are the dangers of not handling backpressure in streams?
+
+80. Why can improper use of process.nextTick() lead to starvation?

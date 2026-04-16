@@ -1,51 +1,95 @@
-What is Express.js and how does it differ from the core Node.js HTTP module?
-Explain the concept of middleware in Express and how the request-response lifecycle works.
-What are the differences between app.use() and app.get() in routing?
-How does Express handle HTTP methods like GET, POST, PUT, DELETE internally?
-What is the purpose of next() in middleware chaining?
-Explain route parameters vs query parameters with examples.
-What is req, res, and next in Express middleware functions?
-How do you serve static files using Express?
-What is the role of body-parsing middleware like express.json()?
-🟡 Intermediate Level
-How does Express implement routing mechanism and what is the role of the internal router stack?
-What are error-handling middleware functions, and how are they different from normal middleware?
-How do you structure a scalable Express application using MVC architecture?
-What is the difference between synchronous vs asynchronous middleware in Express?
-How does Express handle promise rejections and async/await errors?
-What are route-level middleware vs application-level middleware?
-Explain CORS (Cross-Origin Resource Sharing) and how you would configure it in Express.
-What is the purpose of helmet.js and how does it enhance security?
-How do you implement logging middleware (e.g., using morgan)?
-Explain template engines (like EJS, Pug) and their integration with Express.
-🟠 Advanced Level
-How does Express internally manage the event loop and non-blocking I/O with Node.js?
-Explain how you would implement rate limiting and throttling in an Express API.
-How do you handle JWT-based authentication and authorization in Express?
-What are stateless vs stateful authentication strategies in Express apps?
-How do you implement role-based access control (RBAC) in Express middleware?
-Explain how session management works in Express with cookies and express-session.
-What is the difference between horizontal scaling vs vertical scaling in Express applications?
-How would you optimize an Express app for high concurrency and performance?
-Explain memory leaks in Node.js/Express and how you would debug them.
-How do you implement API versioning strategies in Express?
-🔴 Expert / System Design & Deep Dive
-How would you design a microservices architecture using Express as an API gateway?
-Explain how Express handles streaming responses and large file uploads.
-What are backpressure mechanisms in Node.js streams and how do they affect Express apps?
-How would you implement graceful shutdown in an Express server?
-Explain how to integrate WebSockets (e.g., Socket.IO) with an Express application.
-How do you secure an Express API against common vulnerabilities (XSS, CSRF, SQL Injection)?
-What are idempotent APIs, and how do you ensure idempotency in Express routes?
-How would you design a multi-tenant Express application?
-Explain the concept of dependency injection in Express apps.
-How do you monitor and debug production Express apps using tools like PM2, New Relic, or APM?
+1. What is Express.js and how does it differ from the core Node.js HTTP module?
+
+2. Explain the concept of middleware in Express and how the request-response lifecycle works.
+
+3. What are the differences between app.use() and app.get() in routing?
+
+4. How does Express handle HTTP methods like GET, POST, PUT, DELETE internally?
+
+5. What is the purpose of next() in middleware chaining?
+
+6. Explain route parameters vs query parameters with examples.
+
+7. What is req, res, and next in Express middleware functions?
+
+8. How do you serve static files using Express?
+
+9. What is the role of body-parsing middleware like express.json()?
+
+10. How does Express implement routing mechanism and what is the role of the internal router stack?
+
+11. What are error-handling middleware functions, and how are they different from normal middleware?
+
+12. How do you structure a scalable Express application using MVC architecture?
+
+13. What is the difference between synchronous vs asynchronous middleware in Express?
+
+14. How does Express handle promise rejections and async/await errors?
+
+15. What are route-level middleware vs application-level middleware?
+
+16. Explain CORS (Cross-Origin Resource Sharing) and how you would configure it in Express.
+
+17. What is the purpose of helmet.js and how does it enhance security?
+
+18. How do you implement logging middleware (e.g., using morgan)?
+
+19. Explain template engines (like EJS, Pug) and their integration with Express.
+
+20. How does Express internally manage the event loop and non-blocking I/O with Node.js?
+
+21. Explain how you would implement rate limiting and throttling in an Express API.
+
+22. How do you handle JWT-based authentication and authorization in Express?
+
+23. What are stateless vs stateful authentication strategies in Express apps?
+
+24. How do you implement role-based access control (RBAC) in Express middleware?
+
+25. Explain how session management works in Express with cookies and express-session.
+
+26. What is the difference between horizontal scaling vs vertical scaling in Express applications?
+
+27. How would you optimize an Express app for high concurrency and performance?
+
+28. Explain memory leaks in Node.js/Express and how you would debug them.
+
+29. How do you implement API versioning strategies in Express?
+
+30. How would you design a microservices architecture using Express as an API gateway?
+
+31. Explain how Express handles streaming responses and large file uploads.
+
+32. What are backpressure mechanisms in Node.js streams and how do they affect Express apps?
+
+33. How would you implement graceful shutdown in an Express server?
+
+34. Explain how to integrate WebSockets (e.g., Socket.IO) with an Express application.
+
+35. How do you secure an Express API against common vulnerabilities (XSS, CSRF, SQL Injection)?
+
+36. What are idempotent APIs, and how do you ensure idempotency in Express routes?
+
+37. How would you design a multi-tenant Express application?
+
+38. Explain the concept of dependency injection in Express apps.
+
+39. How do you monitor and debug production Express apps using tools like PM2, New Relic, or APM?
+
 🧠 Scenario-Based / Practical Questions
-You notice high latency in your Express API—how would you debug and optimize it?
-How would you design a file upload service handling large files efficiently?
-A middleware is not calling next()—what issues can this cause in the request lifecycle?
-How would you handle database connection pooling in an Express app?
-Your API is facing DDoS attacks—what mitigation strategies would you apply?
-How would you implement caching (Redis) in an Express application?
-How do you ensure data validation and sanitization in incoming requests?
-You need to build a real-time chat system—how would Express fit into the architecture?
+
+40. You notice high latency in your Express API—how would you debug and optimize it?
+
+41. How would you design a file upload service handling large files efficiently?
+
+42. A middleware is not calling next()—what issues can this cause in the request lifecycle?
+
+43. How would you handle database connection pooling in an Express app?
+
+44. Your API is facing DDoS attacks—what mitigation strategies would you apply?
+
+45. How would you implement caching (Redis) in an Express application?
+
+46. How do you ensure data validation and sanitization in incoming requests?
+
+47. You need to build a real-time chat system—how would Express fit into the architecture?

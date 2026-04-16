@@ -1,85 +1,169 @@
-What is MySQL, and how does it differ from NoSQL databases like MongoDB?
-What is a relational database, and how are tables, rows, and columns structured?
-What are primary keys and foreign keys, and why are they important?
-What is the difference between CHAR vs VARCHAR data types?
-What is the difference between INT, BIGINT, and DECIMAL?
-What is NULL, and how is it different from an empty string?
-What are constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY)?
-What is the difference between DDL, DML, DCL, and TCL commands?
-What is the purpose of the AUTO_INCREMENT attribute?
-What is the difference between DELETE, TRUNCATE, and DROP?
-What is the difference between WHERE and HAVING clauses?
-What is the difference between ORDER BY and GROUP BY?
-What are aggregate functions like COUNT, SUM, AVG, MAX, MIN?
-What is the purpose of the LIMIT clause?
-What is a schema in MySQL?
-🟡 Intermediate Level
-What are different types of JOINs (INNER, LEFT, RIGHT, FULL OUTER), and how do they work?
-What is the difference between INNER JOIN vs LEFT JOIN?
-What are indexes, and how do they improve query performance?
-What is the difference between clustered vs non-clustered index?
-What is a composite (multi-column) index?
-What is the difference between UNIQUE index vs PRIMARY KEY index?
-What is normalization, and what are normal forms (1NF, 2NF, 3NF)?
-What is denormalization, and when would you use it?
-What are views, and how do they differ from tables?
-What are stored procedures, and how are they used?
-What are triggers, and when should you use them?
-What are subqueries, and what is the difference between correlated and non-correlated subqueries?
-What are temporary tables, and when would you use them?
-What is the difference between UNION and UNION ALL?
-What is pagination, and how would you implement it using LIMIT and OFFSET?
-🟠 Advanced Level
-What are transactions in MySQL, and how do they ensure data integrity?
-What are ACID properties (Atomicity, Consistency, Isolation, Durability)?
-What are different isolation levels (READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE)?
-What is the difference between InnoDB vs MyISAM storage engines?
-What is row-level locking vs table-level locking?
-What is deadlock, and how do you detect and resolve it?
-What is query optimization, and how do you use EXPLAIN?
-What are covering indexes, and how do they improve performance?
-What is the difference between index scan vs full table scan?
-What is partitioning in MySQL, and how does it improve performance?
-What are window functions, and how are they used?
-What is the difference between CTE (Common Table Expression) and subqueries?
-What is replication in MySQL, and how does master-slave architecture work?
-What is sharding, and how is it different from replication?
-What are materialized views (and how are they simulated in MySQL)?
-🔴 Expert / System Design / Internals
-How does MySQL internally execute a query (query execution plan)?
-What is the query optimizer, and how does it choose indexes?
-How does MySQL manage buffer pool and caching in InnoDB?
-What is the redo log and undo log, and how do they ensure durability?
-What is binary logging (binlog), and how is it used in replication?
-What is the difference between logical vs physical replication?
-How does MySQL handle concurrency control (MVCC - Multi-Version Concurrency Control)?
-What are phantom reads, dirty reads, and non-repeatable reads?
-How does MySQL ensure crash recovery?
-What is connection pooling, and why is it important?
-How do you secure MySQL using authentication and privileges?
-What is Role-Based Access Control (RBAC) in MySQL?
-How do you design a highly available MySQL architecture?
-What are read replicas, and how do they improve scalability?
-How would you design a multi-tenant database schema in MySQL?
-🧠 Scenario-Based / Practical Questions
-A query is running slowly—how would you analyze and optimize it?
-How would you design a database schema for an e-commerce system?
-You are facing frequent deadlocks—how would you troubleshoot them?
-How would you implement soft deletes in MySQL?
-How would you handle large datasets (millions of rows) efficiently?
-How would you optimize a query with multiple JOINs?
-How would you design a logging/audit system in MySQL?
-How would you migrate a large database with zero downtime?
-How would you implement caching (e.g., Redis) with MySQL?
-How would you handle data consistency across microservices?
-⚡ Tricky / Experienced Developer Questions
-Why can over-indexing degrade performance in MySQL?
-Why is SELECT * considered a bad practice in production systems?
-What are the risks of using OFFSET in pagination at scale?
-Why can normalization sometimes hurt performance?
-What happens when a transaction is not properly committed or rolled back?
-Why are NULL values tricky in comparisons and indexing?
-What are the dangers of long-running transactions?
-Why can JOINs on non-indexed columns be expensive?
-What are the pitfalls of using triggers excessively?
-Why is MySQL not always suitable for certain use cases compared to NoSQL databases?
+1. What is MySQL, and how does it differ from NoSQL databases like MongoDB?
+
+2. What is a relational database, and how are tables, rows, and columns structured?
+
+3. What are primary keys and foreign keys, and why are they important?
+
+4. What is the difference between CHAR vs VARCHAR data types?
+
+5. What is the difference between INT, BIGINT, and DECIMAL?
+
+6. What is NULL, and how is it different from an empty string?
+
+7. What are constraints (NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY)?
+
+8. What is the difference between DDL, DML, DCL, and TCL commands?
+
+9. What is the purpose of the AUTO_INCREMENT attribute?
+
+10. What is the difference between DELETE, TRUNCATE, and DROP?
+
+11. What is the difference between WHERE and HAVING clauses?
+
+12. What is the difference between ORDER BY and GROUP BY?
+
+13. What are aggregate functions like COUNT, SUM, AVG, MAX, MIN?
+
+14. What is the purpose of the LIMIT clause?
+
+15. What is a schema in MySQL?
+
+--- Intermediate Level ---
+
+16. What are different types of JOINs (INNER, LEFT, RIGHT, FULL OUTER), and how do they work?
+
+17. What is the difference between INNER JOIN vs LEFT JOIN?
+
+18. What are indexes, and how do they improve query performance?
+
+19. What is the difference between clustered vs non-clustered index?
+
+20. What is a composite (multi-column) index?
+
+21. What is the difference between UNIQUE index vs PRIMARY KEY index?
+
+22. What is normalization, and what are normal forms (1NF, 2NF, 3NF)?
+
+23. What is denormalization, and when would you use it?
+
+24. What are views, and how do they differ from tables?
+
+25. What are stored procedures, and how are they used?
+
+26. What are triggers, and when should you use them?
+
+27. What are subqueries, and what is the difference between correlated and non-correlated subqueries?
+
+28. What are temporary tables, and when would you use them?
+
+29. What is the difference between UNION and UNION ALL?
+
+30. What is pagination, and how would you implement it using LIMIT and OFFSET?
+
+--- Advanced Level ---
+
+31. What are transactions in MySQL, and how do they ensure data integrity?
+
+32. What are ACID properties (Atomicity, Consistency, Isolation, Durability)?
+
+33. What are different isolation levels (READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE)?
+
+34. What is the difference between InnoDB vs MyISAM storage engines?
+
+35. What is row-level locking vs table-level locking?
+
+36. What is deadlock, and how do you detect and resolve it?
+
+37. What is query optimization, and how do you use EXPLAIN?
+
+38. What are covering indexes, and how do they improve performance?
+
+39. What is the difference between index scan vs full table scan?
+
+40. What is partitioning in MySQL, and how does it improve performance?
+
+41. What are window functions, and how are they used?
+
+42. What is the difference between CTE (Common Table Expression) and subqueries?
+
+43. What is replication in MySQL, and how does master-slave architecture work?
+
+44. What is sharding, and how is it different from replication?
+
+45. What are materialized views (and how are they simulated in MySQL)?
+
+--- Expert / System Design / Internals ---
+
+46. How does MySQL internally execute a query (query execution plan)?
+
+47. What is the query optimizer, and how does it choose indexes?
+
+48. How does MySQL manage buffer pool and caching in InnoDB?
+
+49. What is the redo log and undo log, and how do they ensure durability?
+
+50. What is binary logging (binlog), and how is it used in replication?
+
+51. What is the difference between logical vs physical replication?
+
+52. How does MySQL handle concurrency control (MVCC - Multi-Version Concurrency Control)?
+
+53. What are phantom reads, dirty reads, and non-repeatable reads?
+
+54. How does MySQL ensure crash recovery?
+
+55. What is connection pooling, and why is it important?
+
+56. How do you secure MySQL using authentication and privileges?
+
+57. What is Role-Based Access Control (RBAC) in MySQL?
+
+58. How do you design a highly available MySQL architecture?
+
+59. What are read replicas, and how do they improve scalability?
+
+60. How would you design a multi-tenant database schema in MySQL?
+
+--- Scenario-Based / Practical Questions ---
+
+61. A query is running slowly—how would you analyze and optimize it?
+
+62. How would you design a database schema for an e-commerce system?
+
+63. You are facing frequent deadlocks—how would you troubleshoot them?
+
+64. How would you implement soft deletes in MySQL?
+
+65. How would you handle large datasets (millions of rows) efficiently?
+
+66. How would you optimize a query with multiple JOINs?
+
+67. How would you design a logging/audit system in MySQL?
+
+68. How would you migrate a large database with zero downtime?
+
+69. How would you implement caching (e.g., Redis) with MySQL?
+
+70. How would you handle data consistency across microservices?
+
+--- Tricky / Experienced Developer Questions ---
+
+71. Why can over-indexing degrade performance in MySQL?
+
+72. Why is SELECT * considered a bad practice in production systems?
+
+73. What are the risks of using OFFSET in pagination at scale?
+
+74. Why can normalization sometimes hurt performance?
+
+75. What happens when a transaction is not properly committed or rolled back?
+
+76. Why are NULL values tricky in comparisons and indexing?
+
+77. What are the dangers of long-running transactions?
+
+78. Why can JOINs on non-indexed columns be expensive?
+
+79. What are the pitfalls of using triggers excessively?
+
+80. Why is MySQL not always suitable for certain use cases compared to NoSQL databases?

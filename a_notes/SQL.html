@@ -1,85 +1,169 @@
-What is SQL, and how is it used to interact with relational databases?
-What are the different types of SQL commands (DDL, DML, DCL, TCL)?
-What is the difference between SELECT and SELECT DISTINCT?
-What is the purpose of the WHERE clause?
-What is the difference between AND, OR, NOT operators?
-What is the difference between ORDER BY ASC vs DESC?
-What are aggregate functions like COUNT, SUM, AVG, MAX, MIN?
-What is the difference between GROUP BY vs HAVING?
-What is a primary key, and why is it important?
-What is a foreign key, and how does it maintain referential integrity?
-What is the difference between NULL vs NOT NULL?
-What is the difference between UNION vs UNION ALL?
-What is the purpose of the LIMIT / OFFSET clause?
-What is the difference between DELETE, TRUNCATE, and DROP?
-What is a schema in SQL?
-🟡 Intermediate Level
-What are different types of JOINs (INNER, LEFT, RIGHT, FULL OUTER), and how do they work?
-What is the difference between INNER JOIN vs LEFT JOIN?
-What are subqueries, and what is the difference between correlated and non-correlated subqueries?
-What are indexes, and how do they improve query performance?
-What is the difference between clustered vs non-clustered indexes?
-What is a composite index, and when would you use it?
-What is normalization, and what are normal forms (1NF, 2NF, 3NF)?
-What is denormalization, and when is it useful?
-What are views, and how are they different from tables?
-What are stored procedures, and when should they be used?
-What are triggers, and what are their use cases?
-What is the difference between EXISTS vs IN?
-What is the difference between CASE statement vs IF condition?
-What are constraints and their types?
-What is data integrity, and how is it maintained in SQL?
-🟠 Advanced Level
-What are transactions, and how do they ensure consistency?
-What are ACID properties (Atomicity, Consistency, Isolation, Durability)?
-What are different isolation levels, and what problems do they solve?
-What are dirty reads, non-repeatable reads, and phantom reads?
-What is index optimization, and how do you use EXPLAIN?
-What is the difference between index scan vs full table scan?
-What are window functions (e.g., ROW_NUMBER, RANK, DENSE_RANK)?
-What is the difference between CTE (Common Table Expression) and subqueries?
-What are recursive CTEs, and when are they used?
-What is query execution plan, and how do you analyze it?
-What is partitioning, and how does it improve performance?
-What is sharding, and how is it different from partitioning?
-What is materialized view, and how is it different from a normal view?
-What is the difference between OLTP vs OLAP systems?
-What is data warehousing, and how does SQL fit into it?
-🔴 Expert / System Design / Internals
-How does a database engine execute an SQL query internally (parser → optimizer → executor)?
-What is a query optimizer, and how does it choose execution strategies?
-What is cost-based optimization in SQL engines?
-What is Multi-Version Concurrency Control (MVCC)?
-How do databases handle locking mechanisms (row-level, table-level)?
-What is deadlock, and how do you detect and resolve it?
-What is replication, and what are its types (master-slave, master-master)?
-What is eventual consistency vs strong consistency in distributed SQL systems?
-What is CAP theorem, and how does it apply to SQL databases?
-What is connection pooling, and why is it important?
-What are read replicas, and how do they improve scalability?
-What is failover, and how is high availability achieved?
-What is write-ahead logging (WAL)?
-What are index fragmentation and maintenance strategies?
-How do you design a highly scalable SQL database architecture?
-🧠 Scenario-Based / Practical Questions
-A query is running slowly—how would you analyze and optimize it?
-How would you design a database schema for an e-commerce platform?
-How would you handle millions of rows efficiently?
-How would you optimize a query with multiple JOINs and aggregations?
-How would you implement pagination for large datasets?
-How would you design a logging/audit system in SQL?
-How would you migrate a large database with zero downtime?
-How would you handle data consistency across distributed systems?
-How would you implement soft deletes in SQL?
-How would you integrate caching (Redis) with SQL queries?
-⚡ Tricky / Experienced Developer Questions
-Why is SELECT * considered bad practice in production systems?
-Why can indexes sometimes slow down performance instead of improving it?
-What are the risks of using OFFSET in pagination at scale?
-Why is normalization not always the best choice?
-What are the pitfalls of using NULL values in SQL?
-Why can JOINs on non-indexed columns be expensive?
-What are the dangers of long-running transactions?
-Why can subqueries sometimes be slower than JOINs?
-What are the trade-offs between consistency and performance?
-Why is SQL sometimes not suitable for certain distributed use cases?
+1. What is SQL, and how is it used to interact with relational databases?
+
+2. What are the different types of SQL commands (DDL, DML, DCL, TCL)?
+
+3. What is the difference between SELECT and SELECT DISTINCT?
+
+4. What is the purpose of the WHERE clause?
+
+5. What is the difference between AND, OR, NOT operators?
+
+6. What is the difference between ORDER BY ASC vs DESC?
+
+7. What are aggregate functions like COUNT, SUM, AVG, MAX, MIN?
+
+8. What is the difference between GROUP BY vs HAVING?
+
+9. What is a primary key, and why is it important?
+
+10. What is a foreign key, and how does it maintain referential integrity?
+
+11. What is the difference between NULL vs NOT NULL?
+
+12. What is the difference between UNION vs UNION ALL?
+
+13. What is the purpose of the LIMIT / OFFSET clause?
+
+14. What is the difference between DELETE, TRUNCATE, and DROP?
+
+15. What is a schema in SQL?
+
+--- Intermediate Level ---
+
+16. What are different types of JOINs (INNER, LEFT, RIGHT, FULL OUTER), and how do they work?
+
+17. What is the difference between INNER JOIN vs LEFT JOIN?
+
+18. What are subqueries, and what is the difference between correlated and non-correlated subqueries?
+
+19. What are indexes, and how do they improve query performance?
+
+20. What is the difference between clustered vs non-clustered indexes?
+
+21. What is a composite index, and when would you use it?
+
+22. What is normalization, and what are normal forms (1NF, 2NF, 3NF)?
+
+23. What is denormalization, and when is it useful?
+
+24. What are views, and how are they different from tables?
+
+25. What are stored procedures, and when should they be used?
+
+26. What are triggers, and what are their use cases?
+
+27. What is the difference between EXISTS vs IN?
+
+28. What is the difference between CASE statement vs IF condition?
+
+29. What are constraints and their types?
+
+30. What is data integrity, and how is it maintained in SQL?
+
+--- Advanced Level ---
+
+31. What are transactions, and how do they ensure consistency?
+
+32. What are ACID properties (Atomicity, Consistency, Isolation, Durability)?
+
+33. What are different isolation levels, and what problems do they solve?
+
+34. What are dirty reads, non-repeatable reads, and phantom reads?
+
+35. What is index optimization, and how do you use EXPLAIN?
+
+36. What is the difference between index scan vs full table scan?
+
+37. What are window functions (e.g., ROW_NUMBER, RANK, DENSE_RANK)?
+
+38. What is the difference between CTE (Common Table Expression) and subqueries?
+
+39. What are recursive CTEs, and when are they used?
+
+40. What is query execution plan, and how do you analyze it?
+
+41. What is partitioning, and how does it improve performance?
+
+42. What is sharding, and how is it different from partitioning?
+
+43. What is materialized view, and how is it different from a normal view?
+
+44. What is the difference between OLTP vs OLAP systems?
+
+45. What is data warehousing, and how does SQL fit into it?
+
+--- Expert / System Design / Internals ---
+
+46. How does a database engine execute an SQL query internally (parser → optimizer → executor)?
+
+47. What is a query optimizer, and how does it choose execution strategies?
+
+48. What is cost-based optimization in SQL engines?
+
+49. What is Multi-Version Concurrency Control (MVCC)?
+
+50. How do databases handle locking mechanisms (row-level, table-level)?
+
+51. What is deadlock, and how do you detect and resolve it?
+
+52. What is replication, and what are its types (master-slave, master-master)?
+
+53. What is eventual consistency vs strong consistency in distributed SQL systems?
+
+54. What is CAP theorem, and how does it apply to SQL databases?
+
+55. What is connection pooling, and why is it important?
+
+56. What are read replicas, and how do they improve scalability?
+
+57. What is failover, and how is high availability achieved?
+
+58. What is write-ahead logging (WAL)?
+
+59. What are index fragmentation and maintenance strategies?
+
+60. How do you design a highly scalable SQL database architecture?
+
+--- Scenario-Based / Practical Questions ---
+
+61. A query is running slowly—how would you analyze and optimize it?
+
+62. How would you design a database schema for an e-commerce platform?
+
+63. How would you handle millions of rows efficiently?
+
+64. How would you optimize a query with multiple JOINs and aggregations?
+
+65. How would you implement pagination for large datasets?
+
+66. How would you design a logging/audit system in SQL?
+
+67. How would you migrate a large database with zero downtime?
+
+68. How would you handle data consistency across distributed systems?
+
+69. How would you implement soft deletes in SQL?
+
+70. How would you integrate caching (Redis) with SQL queries?
+
+--- Tricky / Experienced Developer Questions ---
+
+71. Why is SELECT * considered bad practice in production systems?
+
+72. Why can indexes sometimes slow down performance instead of improving it?
+
+73. What are the risks of using OFFSET in pagination at scale?
+
+74. Why is normalization not always the best choice?
+
+75. What are the pitfalls of using NULL values in SQL?
+
+76. Why can JOINs on non-indexed columns be expensive?
+
+77. What are the dangers of long-running transactions?
+
+78. Why can subqueries sometimes be slower than JOINs?
+
+79. What are the trade-offs between consistency and performance?
+
+80. Why is SQL sometimes not suitable for certain distributed use cases?

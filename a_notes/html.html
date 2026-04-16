@@ -1,85 +1,169 @@
-<!-- What is HTML, and why is it called a markup language instead of a programming language?
-What is the difference between <!DOCTYPE html> and normal HTML tags?
-What is the purpose of the <html>, <head>, and <body> elements in the document structure?
-What is the difference between block-level elements and inline elements in HTML?
-What is the difference between <div> and <span>?
-What are semantic HTML elements, and why are they important?
-What is the difference between <strong> and <b> in terms of semantics?
-What is the difference between <em> and <i>?
-What are void elements in HTML, and can you give examples?
-What is the purpose of the alt attribute in the <img> tag?
-What is the difference between an absolute URL and a relative URL in the <a> tag?
-What is the purpose of the target="_blank" attribute, and what security issue can it introduce?
-What is the difference between id and class attributes in HTML?
-What is the purpose of the meta tag in the document head?
-Why is the viewport meta tag important in responsive web design?
-Intermediate Level
-What is the difference between semantic tags like <section>, <article>, <aside>, and <nav>?
-How do HTML forms work internally when submitting data to the server?
-What is the difference between GET and POST in the context of the <form> element?
-What are the roles of the name, value, and action attributes in form submission?
-What is the difference between <button> and <input type="submit">?
-How do label elements improve accessibility and form usability?
-What is the purpose of the for attribute in a <label> tag?
-What are data attributes in HTML, and when would you use data-* attributes?
-What is the difference between <script async> and <script defer> in the parsing lifecycle?
-How does the browser parse HTML into the DOM tree?
-What is the difference between the DOM and the raw HTML source?
-What happens when HTML is malformed, and how do browsers perform error recovery?
-What is the role of the <noscript> tag?
-How do <iframe> elements work, and what are the security concerns associated with them?
-What is the purpose of the srcset and sizes attributes in responsive images?
-Advanced Level
-Explain the importance of semantic markup for SEO, accessibility, and maintainability.
-What is ARIA, and when should you use ARIA roles and attributes in HTML?
-What is the difference between native semantic elements and adding ARIA roles manually?
-How would you build an accessible form using proper landmarks, labels, and validation semantics?
-What is the purpose of the tabindex attribute, and what are the risks of misusing it?
-How does focus management work in HTML for keyboard navigation?
-What is the difference between hidden, display: none, and aria-hidden="true" from an accessibility perspective?
-What is the purpose of the <picture> element, and how is it different from <img>?
-How do lazy loading techniques work in HTML using the loading="lazy" attribute?
-What are custom data attributes versus custom elements in Web Components?
-What are Web Components, and how do Shadow DOM, custom elements, and HTML templates relate to HTML?
-What is the purpose of the <template> tag, and how is it used in modern frontend architectures?
-How does HTML support internationalization (i18n) through attributes like lang and dir?
-What are the risks of improper HTML structure in screen readers and assistive technologies?
-How would you optimize HTML markup for performance, progressive rendering, and Core Web Vitals?
-Expert / Deep Technical Questions
-How does the browser rendering engine convert HTML into the DOM, and how does that interact with CSSOM and render tree generation?
-What is the impact of critical rendering path optimization on HTML structure?
-How do preload, prefetch, and preconnect relate to HTML resource loading?
-What are the differences between parser-blocking scripts and non-blocking resource loading strategies?
-How does HTML contribute to hydration in server-side rendered frontend frameworks?
-What are the trade-offs between semantic purity and component-driven frontend architectures?
-How do search engine crawlers interpret HTML structure for indexing and ranking?
-What is microdata, and how does structured data markup such as Schema.org help SEO?
-How do browser accessibility trees derive information from HTML semantics?
-What is the significance of landmark elements like <main>, <header>, <footer>, and <nav> for assistive technologies?
-How do you prevent layout shift at the HTML level when loading media assets?
-What are the security implications of embedding third-party content through HTML elements like <script>, <iframe>, and <embed>?
-How does HTML interact with Content Security Policy (CSP)?
-What are progressive enhancement and graceful degradation in the context of HTML-first development?
-How would you architect HTML for a large-scale design system with reusable and accessible components?
-Scenario-Based / Practical Questions
-If a page is SEO-friendly but inaccessible, what HTML improvements would you make first?
-How would you debug a case where a form field is visible but its value is not being submitted?
-A screen reader user cannot understand your page layout clearly—what HTML issues would you check?
-How would you structure HTML for a blog page containing articles, sidebars, breadcrumbs, and navigation?
-If an image-heavy page has poor performance, what HTML-level optimizations would you apply?
-How would you design a multi-step form using semantic and accessible HTML?
-If a modal dialog is built with generic <div> tags only, how would you improve its HTML semantics?
-How would you mark up a data table with complex headers so that it remains accessible?
-If JavaScript fails to load, how would you ensure the HTML still provides a usable fallback?
-How would you structure HTML for an e-commerce product page to balance SEO, accessibility, and maintainability?
-Tricky / Experienced Developer Questions
-Why is overusing <div> considered an anti-pattern in semantic HTML?
-When would you choose <button> over <a> even if both can appear clickable?
-Why should placeholder text not be treated as a replacement for <label>?
-What problems can duplicate id values create in a document?
-Why is nesting interactive elements like a <button> inside an <a> invalid HTML?
-What are the pitfalls of using tables for layout instead of tabular data?
-Why is semantic HTML often considered a foundation for accessibility rather than an optional enhancement?
-What are the limitations of HTML validation tools in guaranteeing accessibility correctness?
-How would you explain the difference between valid HTML and meaningful HTML?
-Why is native HTML behavior often preferred over custom JavaScript-based UI implementations?   -->
+<!-- 1. What is HTML, and why is it called a markup language instead of a programming language?
+
+2. What is the difference between <!DOCTYPE html> and normal HTML tags?
+
+3. What is the purpose of the <html>, <head>, and <body> elements in the document structure?
+
+4. What is the difference between block-level elements and inline elements in HTML?
+
+5. What is the difference between <div> and <span>?
+
+6. What are semantic HTML elements, and why are they important?
+
+7. What is the difference between <strong> and <b> in terms of semantics?
+
+8. What is the difference between <em> and <i>?
+
+9. What are void elements in HTML, and can you give examples?
+
+10. What is the purpose of the alt attribute in the <img> tag?
+
+11. What is the difference between an absolute URL and a relative URL in the <a> tag?
+
+12. What is the purpose of the target="_blank" attribute, and what security issue can it introduce?
+
+13. What is the difference between id and class attributes in HTML?
+
+14. What is the purpose of the meta tag in the document head?
+
+15. Why is the viewport meta tag important in responsive web design?
+
+--- Intermediate Level ---
+
+16. What is the difference between semantic tags like <section>, <article>, <aside>, and <nav>?
+
+17. How do HTML forms work internally when submitting data to the server?
+
+18. What is the difference between GET and POST in the context of the <form> element?
+
+19. What are the roles of the name, value, and action attributes in form submission?
+
+20. What is the difference between <button> and <input type="submit">?
+
+21. How do label elements improve accessibility and form usability?
+
+22. What is the purpose of the for attribute in a <label> tag?
+
+23. What are data attributes in HTML, and when would you use data-* attributes?
+
+24. What is the difference between <script async> and <script defer> in the parsing lifecycle?
+
+25. How does the browser parse HTML into the DOM tree?
+
+26. What is the difference between the DOM and the raw HTML source?
+
+27. What happens when HTML is malformed, and how do browsers perform error recovery?
+
+28. What is the role of the <noscript> tag?
+
+29. How do <iframe> elements work, and what are the security concerns associated with them?
+
+30. What is the purpose of the srcset and sizes attributes in responsive images?
+
+--- Advanced Level ---
+
+31. Explain the importance of semantic markup for SEO, accessibility, and maintainability.
+
+32. What is ARIA, and when should you use ARIA roles and attributes in HTML?
+
+33. What is the difference between native semantic elements and adding ARIA roles manually?
+
+34. How would you build an accessible form using proper landmarks, labels, and validation semantics?
+
+35. What is the purpose of the tabindex attribute, and what are the risks of misusing it?
+
+36. How does focus management work in HTML for keyboard navigation?
+
+37. What is the difference between hidden, display: none, and aria-hidden="true" from an accessibility perspective?
+
+38. What is the purpose of the <picture> element, and how is it different from <img>?
+
+39. How do lazy loading techniques work in HTML using the loading="lazy" attribute?
+
+40. What are custom data attributes versus custom elements in Web Components?
+
+41. What are Web Components, and how do Shadow DOM, custom elements, and HTML templates relate to HTML?
+
+42. What is the purpose of the <template> tag, and how is it used in modern frontend architectures?
+
+43. How does HTML support internationalization (i18n) through attributes like lang and dir?
+
+44. What are the risks of improper HTML structure in screen readers and assistive technologies?
+
+45. How would you optimize HTML markup for performance, progressive rendering, and Core Web Vitals?
+
+--- Expert / Deep Technical Questions ---
+
+46. How does the browser rendering engine convert HTML into the DOM, and how does that interact with CSSOM and render tree generation?
+
+47. What is the impact of critical rendering path optimization on HTML structure?
+
+48. How do preload, prefetch, and preconnect relate to HTML resource loading?
+
+49. What are the differences between parser-blocking scripts and non-blocking resource loading strategies?
+
+50. How does HTML contribute to hydration in server-side rendered frontend frameworks?
+
+51. What are the trade-offs between semantic purity and component-driven frontend architectures?
+
+52. How do search engine crawlers interpret HTML structure for indexing and ranking?
+
+53. What is microdata, and how does structured data markup such as Schema.org help SEO?
+
+54. How do browser accessibility trees derive information from HTML semantics?
+
+55. What is the significance of landmark elements like <main>, <header>, <footer>, and <nav> for assistive technologies?
+
+56. How do you prevent layout shift at the HTML level when loading media assets?
+
+57. What are the security implications of embedding third-party content through HTML elements like <script>, <iframe>, and <embed>?
+
+58. How does HTML interact with Content Security Policy (CSP)?
+
+59. What are progressive enhancement and graceful degradation in the context of HTML-first development?
+
+60. How would you architect HTML for a large-scale design system with reusable and accessible components?
+
+--- Scenario-Based / Practical Questions ---
+
+61. If a page is SEO-friendly but inaccessible, what HTML improvements would you make first?
+
+62. How would you debug a case where a form field is visible but its value is not being submitted?
+
+63. A screen reader user cannot understand your page layout clearly—what HTML issues would you check?
+
+64. How would you structure HTML for a blog page containing articles, sidebars, breadcrumbs, and navigation?
+
+65. If an image-heavy page has poor performance, what HTML-level optimizations would you apply?
+
+66. How would you design a multi-step form using semantic and accessible HTML?
+
+67. If a modal dialog is built with generic <div> tags only, how would you improve its HTML semantics?
+
+68. How would you mark up a data table with complex headers so that it remains accessible?
+
+69. If JavaScript fails to load, how would you ensure the HTML still provides a usable fallback?
+
+70. How would you structure HTML for an e-commerce product page to balance SEO, accessibility, and maintainability?
+
+--- Tricky / Experienced Developer Questions ---
+
+71. Why is overusing <div> considered an anti-pattern in semantic HTML?
+
+72. When would you choose <button> over <a> even if both can appear clickable?
+
+73. Why should placeholder text not be treated as a replacement for <label>?
+
+74. What problems can duplicate id values create in a document?
+
+75. Why is nesting interactive elements like a <button> inside an <a> invalid HTML?
+
+76. What are the pitfalls of using tables for layout instead of tabular data?
+
+77. Why is semantic HTML often considered a foundation for accessibility rather than an optional enhancement?
+
+78. What are the limitations of HTML validation tools in guaranteeing accessibility correctness?
+
+79. How would you explain the difference between valid HTML and meaningful HTML?
+
+80. Why is native HTML behavior often preferred over custom JavaScript-based UI implementations? -->
